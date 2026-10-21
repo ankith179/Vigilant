@@ -1,0 +1,20 @@
+Command: ['scripts/restore_checkpoint.py']
+Recorded database restored if absent; repository paths repaired.
+Command: ['scripts/sync_dashboard.py']
+Dashboard synchronized with recorded analyses and experiments.
+Command: ['scripts/run_pipeline.py', '--repo', 'data/changebench/08-api-changed', '--base', '1762adac6', '--head', '892a3d521', '--model', 'none']
+Traceback (most recent call last):
+  File "/tmp/vigilant-portable-mivjg69v/VIGILANT/scripts/run_pipeline.py", line 10, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/vigilant-portable-mivjg69v/VIGILANT/scripts/run_pipeline.py", line 9, in main
+    r=analyze(Store(),a.repo,a.base,a.head,model=a.model,semantic=a.semantic);path,_=save_run('pipeline',r);print(json.dumps({'report':str(path),'changes':len(r['changes']['artifacts']),'affected':len(r['affected_artifacts']),'findings':len(r['findings']),'evidence':len(r['evidence']),'model_error':r['model']['validation_error'],'metrics':r['metrics']},indent=2))
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/vigilant-portable-mivjg69v/VIGILANT/evaluation/runs.py", line 7, in save_run
+    result={'run_id':rid,'kind':kind,'python':sys.version,'platform':platform.platform(),'rss_mib_at_save':psutil.Process().memory_info().rss/1048576,**payload};(path/'results.json').write_text(json.dumps(result,indent=2,ensure_ascii=False));return path,result
+                                                                                                           ^^^^^^^^^^^^^^^^
+  File "/tmp/vigilant-check/lib/python3.12/site-packages/psutil/__init__.py", line 317, in __init__
+    self._init(pid)
+  File "/tmp/vigilant-check/lib/python3.12/site-packages/psutil/__init__.py", line 363, in _init
+    raise NoSuchProcess(pid, msg=msg) from None
+psutil.NoSuchProcess: process PID not found (pid=15)

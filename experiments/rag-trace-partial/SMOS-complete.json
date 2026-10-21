@@ -1,0 +1,7 @@
+{
+  "dataset": "SMOS",
+  "dataset_fingerprint": "12afce130591dd711fffe8f68a227f3a8c79ed92d259b2c6c5b17ddf857f6eba",
+  "result_path": "experiments/retrieval/20261007T104905-4064b602/results.json",
+  "run_id": "20261007T104905-4064b602",
+  "linked_queries": 67
+}

@@ -1,0 +1,13 @@
+services:
+  vigilant:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      VIGILANT_ACCESS_TOKEN: ${VIGILANT_ACCESS_TOKEN:-}
+      VIGILANT_FREE_ONLY: "1"
+    volumes:
+      - vigilant-data:/app/data
+    restart: unless-stopped
+volumes:
+  vigilant-data:

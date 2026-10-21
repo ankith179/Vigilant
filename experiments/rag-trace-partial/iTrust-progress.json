@@ -1,0 +1,10 @@
+{
+  "dataset": "iTrust",
+  "dataset_fingerprint": "0872f9e4d24c92811b5b4a68da481aae39c813f85e569b12c49409057c8a7895",
+  "completed_queries": 105,
+  "expected_queries": 105,
+  "actual_inference_observations": 105,
+  "reused_calls": 90,
+  "new_calls": 15,
+  "last_query_id": "UC9S2"
+}

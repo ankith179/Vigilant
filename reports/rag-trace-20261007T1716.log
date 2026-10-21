@@ -1,0 +1,11 @@
+RTMX-module-valid 1/22 REQ-HARNESS-001 supported 4 valid True NEW
+RTMX-module-valid 2/22 REQ-HARNESS-002 supported 1 valid True NEW
+RTMX-module-valid 3/22 REQ-HARNESS-003 supported 0 valid True NEW
+RTMX-module-valid 4/22 REQ-HARNESS-004 supported 2 valid True NEW
+RTMX-module-valid 5/22 REQ-HARNESS-005 supported 4 valid True NEW
+RTMX-module-valid 6/22 REQ-ENTROPY-001 supported 4 valid True NEW
+RTMX-module-valid 7/22 REQ-ENTROPY-002 supported 4 valid True NEW
+RTMX-module-valid 8/22 REQ-ENTROPY-003 supported 3 valid True NEW
+RTMX-module-valid 9/22 REQ-ENTROPY-004 supported 4 valid True NEW
+RTMX-module-valid 10/22 REQ-ENTROPY-005 supported 4 valid True NEW
+RTMX-module-valid 11/22 REQ-EXP-001 supported 4 valid True NEW

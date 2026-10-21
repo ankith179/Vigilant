@@ -1,0 +1,25 @@
+{
+  "id": "12-requirement-test-drift",
+  "repo": "rtmx",
+  "file": ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+  "mode": "append",
+  "new": "Controlled benchmark change: verify zero shared process state across consecutive runs.",
+  "status": "POTENTIAL_INCONSISTENCY",
+  "target": "tests/test_harness.sh",
+  "base_commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+  "change_commit": "fcdee3d2618be769f96d744cddbf5902557d9032",
+  "origin": "https://github.com/rtmx-ai/rtmx-bench.git",
+  "expected_affected_artifacts": [
+    "6ee83fbbd87f15c736995d9bd39c5483147f8fb540d4e5a4d4f8994a75376a93"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "c6a26f2135a19616ec909972937eeed07bcb3eda03c4356f6c70a0348be32a8f",
+      "target_artifact": "6ee83fbbd87f15c736995d9bd39c5483147f8fb540d4e5a4d4f8994a75376a93",
+      "relation_type": "VALIDATES",
+      "method": "upstream-rtmx-module-declaration"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

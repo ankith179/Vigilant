@@ -1,0 +1,305 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Survey-Paper-Draft.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/workspace/scratch/e4ff17049f79/VIGILANT/submission/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 210mm x 297mm (a4) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file Survey-Paper-Draft.aux.
+-- Lines per column: 56 (exact).
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+Underfull \hbox (badness 3417) in paragraph at lines 33--34
+\T1/ptm/m/n/10 ac-cess lim-i-ta-tions do not in-val-i-date those works. The
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+
+LaTeX Warning: Citation `bm25' on page 2 undefined on input line 37.
+
+
+LaTeX Warning: Citation `sbert' on page 2 undefined on input line 37.
+
+
+LaTeX Warning: Citation `rrf' on page 2 undefined on input line 37.
+
+
+LaTeX Warning: Citation `rag' on page 2 undefined on input line 42.
+
+
+LaTeX Warning: Citation `lissa' on page 2 undefined on input line 42.
+
+
+LaTeX Warning: Citation `transarc' on page 2 undefined on input line 47.
+
+
+LaTeX Warning: Citation `ardoco' on page 2 undefined on input line 47.
+
+
+LaTeX Warning: Citation `graphrag' on page 2 undefined on input line 47.
+
+
+LaTeX Warning: Citation `sweagent' on page 2 undefined on input line 52.
+
+
+LaTeX Warning: Citation `bm25' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `rrf' on page 2 undefined on input line 63.
+
+
+LaTeX Warning: Citation `sbert' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `rag' on page 2 undefined on input line 65.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\T1/ptm/m/n/8 Knowledge-intensive lan-guage
+
+LaTeX Warning: Citation `lissa' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `transarc' on page 2 undefined on input line 67.
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 67--67
+[]|\T1/ptm/m/n/8 Documentation-to-code trace re-
+
+LaTeX Warning: Citation `ardoco' on page 2 undefined on input line 68.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 ARDoCo-related
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 Trace-supported
+
+Underfull \hbox (badness 6316) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 Architectural doc-u-men-ta-tion in-
+
+LaTeX Warning: Citation `graphrag' on page 2 undefined on input line 69.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\T1/ptm/m/n/8 Graph-supported
+
+LaTeX Warning: Citation `sweagent' on page 2 undefined on input line 70.
+
+
+LaTeX Warning: Reference `tab:literature' on page 2 undefined on input line 75.
+
+
+
+LaTeX Warning: Citation `minilm' on page 2 undefined on input line 77.
+
+
+LaTeX Warning: Citation `qwen' on page 2 undefined on input line 77.
+
+[2]
+
+LaTeX Warning: Reference `tab:literature' on page 3 undefined on input line 102
+.
+
+[3]
+Underfull \hbox (badness 5022) in paragraph at lines 126--127
+[]\T1/ptm/m/n/8 J. Keim, S. Corallo, D. Fuchss and A. Kozi-olek. \T1/ptm/m/it/8
+ De-tect-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+\T1/ptm/m/it/8 In-con-sis-ten-cies in Soft-ware Ar-chi-tec-ture Doc-u-men-ta-ti
+on Us-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+\T1/ptm/m/it/8 Trace-abil-ity Link Re-cov-ery\T1/ptm/m/n/8 . ICSA 2023, pp. 141
+-152. DOI:
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+[]\T1/ptm/m/n/8 Qwen. \T1/ptm/m/it/8 Qwen2.5-1.5B-Instruct model card\T1/ptm/m/
+n/8 . []Model pub-lisher[].
+
+Underfull \hbox (badness 6173) in paragraph at lines 130--131
+\T1/ptm/m/n/8 Ac-cessed 7 Oc-to-ber 2026. Ex-per-i-men-tal re-vi-sion recorded 
+in
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[4] (./Survey-Paper-Draft.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Survey-Paper-Draft.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
+mbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Survey-Paper-Draft.pdf (4 pages, 92102 bytes).
+Transcript written on Survey-Paper-Draft.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Survey-Paper-Draft.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/workspace/scratch/e4ff17049f79/VIGILANT/submission/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 210mm x 297mm (a4) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./Survey-Paper-Draft.aux)
+-- Lines per column: 56 (exact).
+(./Survey-Paper-Draft.out) (./Survey-Paper-Draft.out)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+Underfull \hbox (badness 3417) in paragraph at lines 33--34
+\T1/ptm/m/n/10 ac-cess lim-i-ta-tions do not in-val-i-date those works. The
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\T1/ptm/m/n/8 Knowledge-intensive lan-guage
+
+Underfull \hbox (badness 3428) in paragraph at lines 67--67
+[]|\T1/ptm/m/n/8 Documentation-to-code trace re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 ARDoCo-related
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 Trace-supported
+
+Underfull \hbox (badness 6316) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 Architectural doc-u-men-ta-tion in-
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\T1/ptm/m/n/8 Graph-supported
+[2] [3]
+Underfull \hbox (badness 5022) in paragraph at lines 126--127
+[]\T1/ptm/m/n/8 J. Keim, S. Corallo, D. Fuchss and A. Kozi-olek. \T1/ptm/m/it/8
+ De-tect-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+\T1/ptm/m/it/8 In-con-sis-ten-cies in Soft-ware Ar-chi-tec-ture Doc-u-men-ta-ti
+on Us-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+\T1/ptm/m/it/8 Trace-abil-ity Link Re-cov-ery\T1/ptm/m/n/8 . ICSA 2023, pp. 141
+-152. DOI:
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+[]\T1/ptm/m/n/8 Qwen. \T1/ptm/m/it/8 Qwen2.5-1.5B-Instruct model card\T1/ptm/m/
+n/8 . []Model pub-lisher[].
+
+Underfull \hbox (badness 6173) in paragraph at lines 130--131
+\T1/ptm/m/n/8 Ac-cessed 7 Oc-to-ber 2026. Ex-per-i-men-tal re-vi-sion recorded 
+in
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[4] (./Survey-Paper-Draft.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
+mbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Survey-Paper-Draft.pdf (4 pages, 93781 bytes).
+Transcript written on Survey-Paper-Draft.log.

@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-17T07:25:28.837391+00:00",
+  "call_limit": 6,
+  "model": "qwen3:8b",
+  "version": {
+    "version": "0.40.5"
+  },
+  "pull_exit_code": 1,
+  "error": "Model download failed; see pull-session.log",
+  "finished_at": "2026-10-17T07:25:34.725927+00:00"
+}

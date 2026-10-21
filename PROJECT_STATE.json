@@ -1,0 +1,659 @@
+{
+  "project": "VIGILANT",
+  "version": 1,
+  "updated_at": "2026-10-21T06:15:54.778480+00:00",
+  "requested_destination": "C:\\Users\\Ankith\\Downloads\\Code- Vigilant",
+  "automation_id": "6ac5074cf11881918f2f9e8db081c398",
+  "automation_cadence": "hourly continuation check, not an exact quota-reset trigger",
+  "active_lease": {
+    "owner": "citation-fix-20261021",
+    "updated_at": "2026-10-21T06:31:51.234042+00:00",
+    "purpose": "Citation-only controlled comparison and evidence/label audit"
+  },
+  "tasks": [
+    {
+      "id": "implementation",
+      "title": "Core pipeline and canonical artifacts",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "knowledge_graph",
+      "title": "Structural graph and versioned relationships",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [
+        "implementation"
+      ]
+    },
+    {
+      "id": "datasets",
+      "title": "Pinned datasets and validation",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/prepare_data.py"
+      ],
+      "depends_on": []
+    },
+    {
+      "id": "lexical",
+      "title": "TF-IDF and BM25 comparisons",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_baselines.py"
+      ],
+      "depends_on": [
+        "datasets"
+      ]
+    },
+    {
+      "id": "embeddings",
+      "title": "Pretrained MiniLM and hybrid retrieval",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_embeddings.py"
+      ],
+      "depends_on": [
+        "datasets"
+      ]
+    },
+    {
+      "id": "graph_comparison",
+      "title": "Hybrid plus graph retrieval experiment",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_graph_baseline.py"
+      ],
+      "depends_on": [
+        "embeddings",
+        "knowledge_graph"
+      ]
+    },
+    {
+      "id": "ranker",
+      "title": "Train/validation/test ranker selection",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/train_ranker.py"
+      ],
+      "depends_on": [
+        "embeddings"
+      ]
+    },
+    {
+      "id": "changebench",
+      "title": "Twelve controlled change scenarios",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_change_scenarios.py"
+      ],
+      "depends_on": [
+        "implementation"
+      ]
+    },
+    {
+      "id": "safa",
+      "title": "SAFA temporal artifact comparison",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_safa.py"
+      ],
+      "depends_on": [
+        "datasets"
+      ]
+    },
+    {
+      "id": "local_llm",
+      "title": "Pinned Qwen runtime and schema validation",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [
+        "implementation"
+      ]
+    },
+    {
+      "id": "ablation",
+      "title": "Paired local LLM/RAG/KG/workflow study",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_ablation.py"
+      ],
+      "depends_on": [
+        "changebench",
+        "local_llm",
+        "embeddings"
+      ],
+      "log": "reports/ablation-resumed-20261006.log",
+      "resume_policy": "Reuse exact saved inference; preserve replaced partial observations; stop on no-inference runtime errors.",
+      "generated_observations_saved": 60,
+      "expected_observations": 60,
+      "result": "experiments/ablation/20261006T194639-30694b4d/results.json",
+      "resumed_calls": 17,
+      "new_calls": 43,
+      "conclusion": "All five variants: status agreement 0.25, uncertainty rate 1.0; no model improvement established."
+    },
+    {
+      "id": "rag_trace",
+      "title": "Complete linked-query RAG reranking",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_rag_trace.py"
+      ],
+      "depends_on": [
+        "embeddings",
+        "local_llm",
+        "ablation"
+      ],
+      "started_at": "2026-10-07T03:00:42.475323+00:00",
+      "expected_linked_queries": 251,
+      "resume_policy": "Reuse only generated outputs whose prompt, evidence, schema, model/decode settings, provider source, prepared dataset and protocol fingerprints match. Stop on no-inference runtime failures.",
+      "runtime_restored_at": "2026-10-07T15:45:19+00:00",
+      "actual_inference_observations": 251,
+      "log": "reports/rag-trace-20261007T2043.log",
+      "process_session": null,
+      "completed_datasets": {
+        "SMOS": "experiments/retrieval/20261007T104905-4064b602/results.json",
+        "iTrust": "experiments/retrieval/20261007T163255-0dfbb833/results.json",
+        "eTour_en": "experiments/retrieval/20261007T171402-64fa98d8/results.json",
+        "RTMX-module-valid": "experiments/retrieval/20261007T210208-3f0803cc/results.json"
+      },
+      "partial_datasets": {},
+      "remaining_datasets": {},
+      "next_command": null,
+      "last_batch_exit_code": 0,
+      "last_batch_interpretation": "RTMX completed. MAP/MRR decreased from 0.751515 to 0.698485. All 251 actual generations passed provenance/schema audits; 23 method rows and 1484 query rows passed independent metric recomputation. No general improvement established.",
+      "finished_at": "2026-10-07T21:03:57.026453+00:00"
+    },
+    {
+      "id": "model_pipeline",
+      "title": "Full pipeline with local model",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_pipeline.py",
+        "--model",
+        "local",
+        "--semantic"
+      ],
+      "depends_on": [
+        "local_llm",
+        "ablation"
+      ],
+      "result": "experiments/pipeline/20261006T195007-e56e6b8d/results.json",
+      "log": "reports/model-pipeline-restored-20261006.log",
+      "tool_stages": 12,
+      "model_decision": "UNCERTAIN",
+      "schema_valid": true
+    },
+    {
+      "id": "tests",
+      "title": "Parser, Git, evidence, API and integration tests",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "depends_on": [
+        "implementation"
+      ],
+      "verified_tests": 74,
+      "logs": [
+        "reports/tests-after-resume-refactor.log",
+        "reports/tests-resume-20261006.log",
+        "reports/tests-experiment-view.log"
+      ],
+      "finished_at": "2026-10-17T02:30:05.239782+00:00",
+      "log": "reports/accuracy-20261017/tests-after.log",
+      "passed": 74,
+      "exit_code": 0
+    },
+    {
+      "id": "frontend_build",
+      "title": "Real-data frontend production build",
+      "status": "COMPLETED",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "build"
+      ],
+      "depends_on": [
+        "implementation"
+      ],
+      "finished_at": "2026-10-17T02:30:05.239782+00:00",
+      "log": "reports/accuracy-20261017/frontend-build.log"
+    },
+    {
+      "id": "frontend_browser",
+      "title": "Browser interaction and visual checks",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_frontend_check.py"
+      ],
+      "depends_on": [
+        "frontend_build"
+      ],
+      "last_checked": "2026-10-16T17:05:15.858923+00:00",
+      "evidence": [
+        "reports/browser-install-20261007T2103.log",
+        "reports/browser-download-probe-20261008.log",
+        "reports/browser-availability-20261008.json"
+      ],
+      "finished_at": "2026-10-17T02:30:05.239782+00:00",
+      "outputs": [
+        "reports/frontend/20261017-local-models/validation.json"
+      ],
+      "scope": "Chromium 138 Linux: all 13 pages, graph/evidence, report JSON/CSV/HTML exports, free provider selector, settings, isolated deterministic investigation and mobile layout passed.",
+      "extension_scope": "Live OmniRoute inference and native Windows remain unverified."
+    },
+    {
+      "id": "tables_figures",
+      "title": "Generate measured results tables and plots",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/evaluate.py"
+      ],
+      "depends_on": [
+        "ablation",
+        "rag_trace"
+      ],
+      "finished_at": "2026-10-07T21:03:57.026453+00:00",
+      "outputs": "reports/results/; reports/ablation/; reports/rag/paired-comparisons.json",
+      "verified_scope": "23 retrieval method rows, four RAG datasets, twelve controlled cases, sixty-call ablation, pipeline and SAFA records. Additional architecture/demo diagrams belong to manuscript and presentation drafting."
+    },
+    {
+      "id": "thesis",
+      "title": "Thesis draft with actual results",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [
+        "tables_figures"
+      ],
+      "finished_at": "2026-10-08T02:13:11.882584+00:00",
+      "scope": "27-page technical draft; author/institution formatting and independent review remain external.",
+      "outputs": [
+        "submission/output/Thesis-Draft.pdf",
+        "submission/thesis-content.md",
+        "reports/submission/thesis-source-provenance.json"
+      ]
+    },
+    {
+      "id": "research_paper",
+      "title": "IEEE research paper draft",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [
+        "tables_figures"
+      ],
+      "finished_at": "2026-10-16T11:06:25.684105+00:00",
+      "scope": "Five-page reviewed IEEE PDF and editable Word manuscript; additional saved-result analysis. Consistency capability and independent/external review remain unresolved.",
+      "outputs": [
+        "submission/research-20261016/VIGILANT-Research-Paper.pdf",
+        "submission/research-20261016/VIGILANT-Research-Paper.docx",
+        "submission/research-20261016/REVIEW-RESPONSE.md",
+        "submission/research-20261016/VERIFICATION.md"
+      ]
+    },
+    {
+      "id": "survey_paper",
+      "title": "Separate targeted literature survey draft",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [],
+      "finished_at": "2026-10-08T02:21:34.427066+00:00",
+      "scope": "Four-page targeted IEEE survey draft; nine research records and two model cards. Not a complete systematic/full-text review.",
+      "outputs": [
+        "submission/output/Survey-Paper-Draft.pdf",
+        "submission/survey-paper.tex.in"
+      ]
+    },
+    {
+      "id": "presentation",
+      "title": "Demonstration deck and walkthrough",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [
+        "tables_figures"
+      ],
+      "finished_at": "2026-10-08T08:14:37.216436+00:00",
+      "outputs": [
+        "submission/output/VIGILANT-Demonstration.pptx",
+        "scripts/build_demo_deck.mjs",
+        "docs/DEMO_RECORD.md"
+      ],
+      "scope": "14-slide deck with recorded evidence, editable charts/tables and graph/architecture diagrams. All rendered slides reviewed; native PowerPoint remains unverified; Linux browser validation completed 2026-10-12."
+    },
+    {
+      "id": "independent_review",
+      "title": "Independent labels and semantic grounding review",
+      "status": "BLOCKED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "venue",
+      "title": "Select and verify publication destination",
+      "status": "BLOCKED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "windows",
+      "title": "Windows execution on user computer",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [],
+      "finished_at": "2026-10-21T06:14:40.574241+00:00",
+      "result": "reports/windows-20261021/VERIFICATION.md",
+      "scope": "Native Windows setup, 75 tests, production build, browser acceptance, running local app and 36 Ollama diagnostic generations."
+    },
+    {
+      "id": "package",
+      "title": "Unified project package and durable checkpoint (refresh after changes)",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [],
+      "library_file_id": "libfile_62832ff34ccc8191947359933746ec53",
+      "refresh_required_after_changes": true,
+      "release_date": "2026-10-16",
+      "scope": "Full local research application release; 62 tests, browser exports/settings, free-only selection, persisted queue, immutable restore and run/code guide. Broader production architecture remains partial.",
+      "windows_refresh_at": "2026-10-21T06:15:54.778480+00:00",
+      "latest_local_package": "../VIGILANT-project.zip",
+      "latest_local_checksum": "../VIGILANT-project-checksum.json",
+      "scope_windows": "Native Windows fixes, 75 tests, browser acceptance and 36 local diagnostic generations; dependencies excluded; all historical files preserved."
+    },
+    {
+      "id": "submission_review",
+      "title": "Author/institution details, final format, expanded full-text review and external manuscript checks",
+      "status": "BLOCKED",
+      "command": null,
+      "depends_on": [
+        "thesis",
+        "research_paper",
+        "survey_paper",
+        "presentation"
+      ]
+    },
+    {
+      "id": "omniroute_integration",
+      "title": "Explicit free-route OmniRoute adapter and bounded evaluator",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": [
+        "implementation"
+      ],
+      "finished_at": "2026-10-13T02:46:07.109838+00:00",
+      "outputs": [
+        "llm/omniroute.py",
+        "scripts/check_omniroute.py",
+        "scripts/evaluate_omniroute.py",
+        "docs/OMNIROUTE_FREE.md"
+      ]
+    },
+    {
+      "id": "omniroute_live_evaluation",
+      "title": "Connect eligible free provider and evaluate OmniRoute model",
+      "status": "BLOCKED",
+      "command": null,
+      "depends_on": [
+        "omniroute_integration"
+      ]
+    },
+    {
+      "id": "windows_local_models_20261021",
+      "title": "Native Windows three-model diagnostic evaluation",
+      "status": "COMPLETED",
+      "finished_at": "2026-10-21T06:14:40.574241+00:00",
+      "result": "experiments/local-model-comparison/windows-20261021/latest.json",
+      "new_generations": 36,
+      "resume_check_new_calls": 0
+    }
+  ],
+  "blockers": {
+    "independent_review": "Needs external annotation/review; controlled mutation labels are authored.",
+    "venue": "No journal/conference specified; submission and indexing not verified.",
+    "submission_review": "Drafts are complete for their stated scope. Confirmed authorship/institutional requirements, expanded survey coverage as required, external scientific/plagiarism review and acceptance remain unresolved.",
+    "omniroute_live_evaluation": "No connected local gateway or eligible provider credentials. Adapter tests are synthetic; live accuracy NOT RUN. Configure free-only routing, no paid billing/fallback, then run bounded evaluation.",
+    "independent_accuracy": "Diagnostic agreement is 0%, 8.33%, 0%; citation failures and semantic/label disagreement remain. Independent labels and a frozen held-out protocol are still needed. No >75% accuracy established."
+  },
+  "saved_files": {
+    "source": "libfile_f68b012833688191a771b623813ccd24",
+    "data": "libfile_b8166c70bb908191adf712a38cba56c5",
+    "resume": "libfile_9a7493f12bb88191bdbe5d5abade3499",
+    "state": "libfile_2929bdde983081919b1763d10fd6e043",
+    "installer": "libfile_977a69c7876881918a0239f3195175a1",
+    "project": "libfile_62832ff34ccc8191947359933746ec53",
+    "thesis": "libfile_837b9d2a76f08191aae025e7deb0315d",
+    "research_paper": "libfile_ad5d31a0c35c8191ba978c75f1c53244",
+    "survey_paper": "libfile_22df1f33c14081918b8a4ee486932985"
+  },
+  "next_action": "Windows setup and three-model diagnostic comparison are complete. Do not repeat saved generations. Review citation failures and authored labels; evaluate any revised protocol separately on development data, then select/freeze using independently annotated validation/test data. Independent accuracy remains unestablished.",
+  "research_claim_status": "Not established: current local-model ablation does not outperform always-UNCERTAIN; independent labels and semantic grounding review remain pending.",
+  "restoration": "All twelve controlled Git worktrees restored at exact saved change_commit hashes; contracts and completed benchmark results unchanged.",
+  "continuation_events": [
+    {
+      "at": "2026-10-07T02:58:29.640204+00:00",
+      "event": "Recovered expired reservation; no Python model job observed; previous preparation produced no RAG output.",
+      "previous_lease": {
+        "owner": "automation-20261006T2055Z",
+        "expires_at": "2026-10-07T02:55:05+00:00"
+      }
+    },
+    {
+      "at": "2026-10-07T10:53:17.677254+00:00",
+      "event": "Completed SMOS RAG with 67 actual generations. All provenance and metric audits passed. Temporary runtime was restored twice; original project and outputs preserved.",
+      "result": "experiments/retrieval/20261007T104905-4064b602/results.json"
+    },
+    {
+      "at": "2026-10-07T12:04:00+00:00",
+      "event": "Completed a bounded 30-generation iTrust batch. All saved observations passed evidence, fingerprint, raw-output, decision and strict-schema audits. The dataset remains partial and unscored.",
+      "progress": "30/105",
+      "batch_exit_code": 75
+    },
+    {
+      "at": "2026-10-07T15:57:27+00:00",
+      "event": "Recovered a temporary-runtime interruption at iTrust 44/105, restored the exact pinned model runtime, and completed a bounded 16-generation continuation to 60/105. All 127 saved RAG observations passed the independent audit; iTrust remains partial and unscored.",
+      "progress": "60/105",
+      "batch_exit_code": 75
+    },
+    {
+      "at": "2026-10-07T16:21:17+00:00",
+      "event": "Completed a bounded 30-generation iTrust continuation from 60/105 to 90/105. All 157 saved RAG observations passed the independent audit; iTrust remains partial and unscored.",
+      "progress": "90/105",
+      "batch_exit_code": 75
+    },
+    {
+      "at": "2026-10-07T16:34:07+00:00",
+      "event": "Completed all 105 iTrust linked-query generations and wrote immutable result experiments/retrieval/20261007T163255-0dfbb833/results.json. All 172 saved RAG observations and all 21 completed method rows passed independent audits. The frozen RAG reranker slightly underperformed hybrid on iTrust validation MAP, MRR, nDCG@10 and macro Recall@1; no improvement claim is made.",
+      "result": "experiments/retrieval/20261007T163255-0dfbb833/results.json",
+      "batch_exit_code": 0
+    },
+    {
+      "at": "2026-10-07T16:54:47+00:00",
+      "event": "Completed the first bounded 30-generation eTour English RAG batch. All 202 saved RAG observations passed the independent audit; eTour remains partial and unscored.",
+      "progress": "30/57",
+      "batch_exit_code": 75
+    },
+    {
+      "at": "2026-10-07T17:14:20+00:00",
+      "event": "Completed all 57 eTour English linked-query generations and wrote immutable result experiments/retrieval/20261007T171402-64fa98d8/results.json. All 229 saved RAG observations and all 22 completed method rows passed independent audits. The frozen RAG reranker produced a mixed test result: slightly higher MAP and nDCG@10, slightly lower MRR and macro Recall@1; no improvement claim is made.",
+      "result": "experiments/retrieval/20261007T171402-64fa98d8/results.json",
+      "batch_exit_code": 0
+    },
+    {
+      "at": "2026-10-07T21:03:57.026453+00:00",
+      "event": "Completed final RTMX continuation with 11 saved calls reused and 11 new calls. Independent audits passed for all 251 actual RAG generations. A zero-new-call run skipped all four complete datasets. Full measured tables and two scientific figure families regenerated and visually checked.",
+      "result": "experiments/retrieval/20261007T210208-3f0803cc/results.json",
+      "batch_exit_code": 0
+    },
+    {
+      "at": "2026-10-08T01:59:16.297555+00:00",
+      "event": "Recovered after runtime interruption. All 251 RAG calls, final RTMX result and complete audited figures survived in working files. No model process exists and no inference is rerun. Browser installation was interrupted before completion."
+    },
+    {
+      "at": "2026-10-08T02:13:11.882584+00:00",
+      "event": "Built and visually reviewed the thesis draft with result-derived tables, all 19 requested topics, references and reproduction appendix; no superiority or independent grounding claim."
+    },
+    {
+      "at": "2026-10-08T08:08:01.658219+00:00",
+      "event": "Recovered saved manuscript drafts and existing deck source after temporary workspace interruption. No inference rerun. Deck failure identified as missing runtime environment variables."
+    },
+    {
+      "at": "2026-10-08T08:14:37.216436+00:00",
+      "event": "Completed 14-slide demonstration deck from saved graph and experiment records. Native chart/workbook and package checks passed, all slides visually reviewed. Thesis and separate paper drafts remain preserved."
+    },
+    {
+      "at": "2026-10-12T06:02:34.562603+00:00",
+      "event": "Revalidated preserved code: 34 tests and 13-page Chromium browser acceptance passed, including full deterministic UI investigation and mobile checks. Synchronized all 14 experiment records, added dataset/method labels, accessible form labels and an isolated browser runner. Reaudited 251 generations, 23 method rows and 1484 query rows. No new model inference. Earlier browser success was not present in recoverable files; this release includes a new completed record.",
+      "result": "reports/frontend/2026-10-12T06-01-24-831Z/validation.json"
+    },
+    {
+      "at": "2026-10-13T02:46:07.109838+00:00",
+      "event": "Restored verified Library release 12 before edits. Added OmniRoute route configuration, expanded evidence profile, no client model fallback, gateway setup docs/Windows launchers and resumable 5-call evaluation. 53 tests and frontend build passed; live endpoint/account absent, no new model calls or accuracy claims."
+    },
+    {
+      "at": "2026-10-14T11:53:45.997532+00:00",
+      "event": "Completed exact-title five-page IEEE research manuscript with two vector figures, two tables, 14 verified references and editable LaTeX. No new inference; mixed and negative results retained."
+    },
+    {
+      "at": "2026-10-16T17:05:15.858923+00:00",
+      "event": "Completed codebase reliability release: 62 tests, production build, 13-page browser acceptance including report exports, frozen metric/RAG audits. All 418 original experiment files unchanged. Added run/code guide and architecture coverage. No new LLM inference. Windows, Docker, live OmniRoute and high-accuracy claims remain unverified. Portable extraction/restore and CLI passed after fixing unavailable optional process telemetry."
+    },
+    {
+      "at": "2026-10-17T02:30:05.239782+00:00",
+      "event": "Implemented neutral paired context and three local Ollama candidates with resumable comparison. 74 tests, build and 13-page browser passed. Graphify generic exports prepared. No live local model runtime; no new inference or independent accuracy claim. Historical 418 files and three snapshots preserved. Enabled bounded hourly continuation."
+    },
+    {
+      "at": "2026-10-17T07:26:17.660979+00:00",
+      "event": "Ollama 0.40.5 installed and loopback version endpoint verified. Qwen3 8B pull failed: redirect target not allowed; Cloudflare R2 DNS/network unreachable. No weights or new inference. Hosted memory limit 8 GiB, no GPU; 14B candidates not attempted. Independent labels and native Windows access still absent. Continuation paused; original experiments not rerun.",
+      "result": "reports/runtime-20261017/session.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-21T05:36:08.275228+00:00",
+      "event": "Native Windows setup resumed. Fixed worktree metadata, SQLite backup handles and UTF-8 launchers. 74 tests and Windows browser acceptance passed; Ollama local-only server running.",
+      "result": "reports/windows-20261021/"
+    },
+    {
+      "at": "2026-10-21T05:42:40.105997+00:00",
+      "event": "Qwen3 8B completed 12 genuine local generations: all invalid under citation/output validation, diagnostic accuracy 0%. No independent accuracy claim. Original 423 files preserved.",
+      "result": "reports/windows-20261021/eval-qwen3-8b-batch2.log"
+    },
+    {
+      "at": "2026-10-21T06:00:09.488094+00:00",
+      "event": "Qwen2.5 Coder 14B completed twelve local diagnostic calls. Next evaluating Qwen3 14B with exact resume of the completed models.",
+      "result": "reports/windows-20261021/eval-qwen25-coder-14b.log"
+    },
+    {
+      "at": "2026-10-21T06:14:40.574241+00:00",
+      "event": "Completed native Windows continuation: 75 tests and browser acceptance pass; 36 genuine local generations, scores 0/12, 1/12, 0/12. Exact resume makes zero calls. All 423 historical files unchanged. No paid/cloud inference or high-accuracy claim.",
+      "result": "reports/windows-20261021/VERIFICATION.md"
+    }
+  ],
+  "metric_verification": {
+    "report": "reports/verification/metrics-audit.json",
+    "verified_method_rows": 23,
+    "verified_query_rows": 1484,
+    "rag_observation_audit": "reports/verification/rag-observations-audit.json",
+    "verified_rag_generations": 251,
+    "batch_check": "reports/verification/rag-batch-check.json",
+    "resume_check": "reports/rag-resume-check-20261007.log"
+  },
+  "history": [
+    {
+      "at": "2026-10-16T11:06:25.684105+00:00",
+      "event": "Completed review revision and editable Word after recovery of saved v14 project. Recomputed descriptive paired-query intervals and consistency diagnostics with zero inference calls. Both documents five pages; all pages inspected. All 418 experiment files preserved. Independent labels, controlled follow-up and external submission validation remain open."
+    }
+  ],
+  "engineering_release": {
+    "date": "2026-10-16",
+    "verification": "reports/codebase-20261016/VERIFICATION.md",
+    "guide": "docs/RUN_AND_CODE_GUIDE.md",
+    "coverage": "docs/ARCHITECTURE_COVERAGE.md",
+    "tests_passed": 62,
+    "browser": "PASSED",
+    "metrics_rows": 23,
+    "rag_generations_verified": 251,
+    "original_experiment_files_unchanged": 418,
+    "production_architecture": "PARTIAL",
+    "live_omniroute": "NOT_RUN",
+    "portable_restore_and_cli": "PASS"
+  },
+  "local_model_release": {
+    "date": "2026-10-17",
+    "models": [
+      "qwen3:8b",
+      "qwen2.5-coder:14b",
+      "qwen3:14b"
+    ],
+    "tests_passed": 74,
+    "browser": "PASSED",
+    "model_inference": "NOT_RUN",
+    "target_accuracy": ">0.75",
+    "target_status": "NOT_ESTABLISHED",
+    "guide": "docs/LOCAL_MODELS_32GB.md",
+    "verification": "reports/accuracy-20261017/VERIFICATION.md",
+    "graphify": "Unavailable; generic handoff/graphify exported",
+    "automation": "PAUSED: model download network blocker and independent annotations required",
+    "native_windows": "NOT_VERIFIED",
+    "runtime_check": "reports/runtime-20261017/VERIFICATION.md"
+  },
+  "windows_continuation": {
+    "date": "2026-10-21",
+    "root": "C:\\Users\\H-B-RS-720-17\\Downloads\\VIGILANT-project (1)\\VIGILANT",
+    "verification": "reports/windows-20261021/VERIFICATION.md",
+    "tests_passed": 75,
+    "browser": "PASSED",
+    "ollama_version": "0.40.7",
+    "cloud_disabled": true,
+    "model_results": [
+      {
+        "model": "qwen2.5-coder:14b",
+        "observations": 12,
+        "correct": 1,
+        "valid": 10,
+        "accuracy": 0.08333333333333333,
+        "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849"
+      },
+      {
+        "model": "qwen3:8b",
+        "observations": 12,
+        "correct": 0,
+        "valid": 0,
+        "accuracy": 0.0,
+        "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+      },
+      {
+        "model": "qwen3:14b",
+        "observations": 12,
+        "correct": 0,
+        "valid": 0,
+        "accuracy": 0.0,
+        "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8"
+      }
+    ],
+    "historical_files_unchanged": 423,
+    "model_api_cost_usd": 0,
+    "target_status": "NOT_ESTABLISHED",
+    "application_url": "http://127.0.0.1:8000",
+    "runtime_launcher": "Start-Ollama-Local.ps1",
+    "evaluation_output": "experiments/local-model-comparison/windows-20261021",
+    "package": "../VIGILANT-project.zip",
+    "persistence": "Local files; saved Library file IDs describe historical releases."
+  }
+}

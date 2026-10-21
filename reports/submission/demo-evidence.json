@@ -1,0 +1,477 @@
+{
+  "run": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "source": "experiments/pipeline/20261006T195007-e56e6b8d/results.json",
+  "sha256": "fd6ed9a79aefd2b9b0432582cd6c7c03e60259a6d6be611f575735cb7e885721",
+  "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+  "head_commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "trajectory": [
+    {
+      "role": "Planner",
+      "tool": "resolve-commits",
+      "status": "SUCCESS",
+      "seconds": 0.003371553999841126
+    },
+    {
+      "role": "Artifact Investigator",
+      "tool": "import-snapshots",
+      "status": "SUCCESS",
+      "seconds": 1.9204124059999685
+    },
+    {
+      "role": "Change Investigator",
+      "tool": "git-diff-symbol-hashes",
+      "status": "SUCCESS",
+      "seconds": 0.007739377000007153
+    },
+    {
+      "role": "Traceability Investigator",
+      "tool": "base-graph",
+      "status": "SUCCESS",
+      "seconds": 1.460422233999907
+    },
+    {
+      "role": "Traceability Investigator",
+      "tool": "head-graph",
+      "status": "SUCCESS",
+      "seconds": 2.053846409000016
+    },
+    {
+      "role": "Change Investigator",
+      "tool": "two-snapshot-impact",
+      "status": "SUCCESS",
+      "seconds": 0.07253118799985714
+    },
+    {
+      "role": "Traceability Investigator",
+      "tool": "bounded-trace-recovery",
+      "status": "SUCCESS",
+      "seconds": 0.00031641600003240455
+    },
+    {
+      "role": "Evidence Investigator",
+      "tool": "retrieve-grounded-context",
+      "status": "SUCCESS",
+      "seconds": 2.96003435800003
+    },
+    {
+      "role": "Consistency Investigator",
+      "tool": "deterministic-rules",
+      "status": "SUCCESS",
+      "seconds": 0.0007829480000509648
+    },
+    {
+      "role": "Verifier",
+      "tool": "validate-quotes-ranges-hashes",
+      "status": "SUCCESS",
+      "seconds": 0.0004101079998690693
+    },
+    {
+      "role": "Traceability Investigator",
+      "tool": "structured-model-call",
+      "status": "SUCCESS",
+      "seconds": 25.104712457000005
+    },
+    {
+      "role": "Explanation Generator",
+      "tool": "persist-report",
+      "status": "SUCCESS",
+      "seconds": 0.04382690900001762
+    }
+  ],
+  "graph_slices": {
+    "base": {
+      "nodes": [
+        {
+          "artifact_id": "04e123793780c88400dd4a369ca47e8f8e7205ebbe55d17acf10c0e63610b381",
+          "repository": "bfd0a91b4e7cf92f2e23f785de1e57394169201187a6ae4c7bc46681a7ec4abe",
+          "project_id": "changebench/07-frontend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api_caller",
+          "file": "frontend/src/client/sdk.gen.ts",
+          "symbol": "GET /api/v1/items/{id}::ItemsService.readItem",
+          "id": "e178ee665adc73157e8137aec42f17fe24ddeabc88f5bf640980517138ed67b4"
+        },
+        {
+          "artifact_id": "0c20e55caf91183acbcfc72deb81bc85faa3de8fe2b52a898c063c5376fff8ec",
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api_caller",
+          "file": "frontend/src/client/sdk.gen.ts",
+          "symbol": "GET /api/v1/items/{id}::ItemsService.readItem",
+          "id": "22b93991555936b7463cb50af6a2914b553419e8f5821cb6ded6c0b50a7d2972"
+        },
+        {
+          "artifact_id": "13385d82d09d6ff976e317a9bfb1485642021a08baa1acfe0b7da64de770b379",
+          "repository": "bfd0a91b4e7cf92f2e23f785de1e57394169201187a6ae4c7bc46681a7ec4abe",
+          "project_id": "changebench/07-frontend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "afa8aa101fcb3325efa291f5b58e0ce7c5e8775bc69e1e5fbf889ff4a65a8c05"
+        },
+        {
+          "artifact_id": "22edf546abc01befc6743f2b93d106fdcb9ee95001e9886b1603b1d686513233",
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /items/{id}::read_item",
+          "id": "86da3c9dba4055f4ef45184ec4915578d21abc4b5dc75613d0d4651db77ae587"
+        },
+        {
+          "artifact_id": "3cd1175393ca849b72563d8dd51160618c077c63144e17506f95a4a28f564e50",
+          "repository": "3331a87aca1ff62b448ec3140f45833ff60d1df3bcf472a77484ff4da13bb7ee",
+          "project_id": "changebench/10-consumer-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "2a715199c7795c4026b6dc5a89b4e7c03c035a07d32fa4d97b87e433769cd618"
+        },
+        {
+          "artifact_id": "5250dcfeacc0cee0902e1cf3b143554ec584b64577bb08d45ff662ac83518f6f",
+          "repository": "31a8e54879a95971b726e4ba056b040173396a754537c3e44bd4b32445075ead",
+          "project_id": "changebench/09-backend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "32a7346caa43c3790e09d2334c9246956840b614c8ec4ae8661bae47232a349f"
+        },
+        {
+          "artifact_id": "5cfa3a5703d16b777db05b6a1d3acc95d9ca3db73b1acc996e62057b5b6861a5",
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api_caller",
+          "file": "frontend/src/client/sdk.gen.ts",
+          "symbol": "GET /api/v1/items/{id}::ItemsService.readItem",
+          "id": "ece283bcac982b26b8f23631372cc72df10b7b31bd5b9a681c0460c4b799b478"
+        },
+        {
+          "artifact_id": "6047e172650f68bf8d13bf428e1642dedad24189c030bcc667a2fb6c1b32bc4d",
+          "repository": "3331a87aca1ff62b448ec3140f45833ff60d1df3bcf472a77484ff4da13bb7ee",
+          "project_id": "changebench/10-consumer-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /items/{id}::read_item",
+          "id": "9e404acbb811b2bd40cdd76ccef2923213c08a18804d4b8369475943db9222b3"
+        },
+        {
+          "artifact_id": "a4c7762aaed3bdf7a246104c4aa4d3bfff7fcd2353b48859d06e3e64f08e2d6c",
+          "repository": "31a8e54879a95971b726e4ba056b040173396a754537c3e44bd4b32445075ead",
+          "project_id": "changebench/09-backend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api_caller",
+          "file": "frontend/src/client/sdk.gen.ts",
+          "symbol": "GET /api/v1/items/{id}::ItemsService.readItem",
+          "id": "aba587d7dee0d9d99093c880311b8860f4e857d778fb680adbe3ea58b13ceb79"
+        },
+        {
+          "artifact_id": "c0c273c7834c04b2a95068228e080f4aa824794a3248be302d5a1fc6bb82b515",
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /items/{id}::read_item",
+          "id": "46b51aaa15d11de9e6fc6f7a14abfc45fa235ef89cee84ccb74ec21f0b8a1978"
+        },
+        {
+          "artifact_id": "c3a0ef321140ea6457778b75292b300d0668ef45135b080bf739a2863348cb62",
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "988740e5bea4c4bec515804f4c0e53e1eaa4fcf245f11597688609793ee82203"
+        },
+        {
+          "artifact_id": "c95f84615b507af2ef5fc8e3d249216997e5e3d43f1767dbd6419be9191a3702",
+          "repository": "31a8e54879a95971b726e4ba056b040173396a754537c3e44bd4b32445075ead",
+          "project_id": "changebench/09-backend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /items/{id}::read_item",
+          "id": "9a9508af43b5017b34f941dd987bd0850978cd14913237fd94cdb42e133282b8"
+        },
+        {
+          "artifact_id": "cabe5de40c4d4304a6eaa59b1235c2bad1bf77ab616335098b2c045df928be21",
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "958ff64fba4bba673798d6c1d6d6d1a6e0a49b4af07e3015fc6bf372014f5463"
+        },
+        {
+          "artifact_id": "de0eda3243cfc5a32a8130e137efd8767e2ceb20aabc2db8b1190cea8cd1728f",
+          "repository": "3331a87aca1ff62b448ec3140f45833ff60d1df3bcf472a77484ff4da13bb7ee",
+          "project_id": "changebench/10-consumer-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api_caller",
+          "file": "frontend/src/client/sdk.gen.ts",
+          "symbol": "GET /api/v1/items/{id}::ItemsService.readItem",
+          "id": "0b12cb28badbe7ce2b64dd0f2777546c8ca0bd531adabc93dcfb6855c6a50750"
+        },
+        {
+          "artifact_id": "f767841bf8326d5c6fc8f1f9f2753ea750672ffbae15f68befd47346efb71d84",
+          "repository": "bfd0a91b4e7cf92f2e23f785de1e57394169201187a6ae4c7bc46681a7ec4abe",
+          "project_id": "changebench/07-frontend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /items/{id}::read_item",
+          "id": "a51a151fc9339f609281521e0ec6e795bc69e5ed9bd8794f799f4da3e9413458"
+        }
+      ],
+      "edges": [
+        {
+          "id": "0ffe65a33bb02176e484d5f698e1afd62a6f0db2f5b41068c8b2914782c678c8",
+          "source_artifact": "c3a0ef321140ea6457778b75292b300d0668ef45135b080bf739a2863348cb62",
+          "target_artifact": "22edf546abc01befc6743f2b93d106fdcb9ee95001e9886b1603b1d686513233",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "c3a0ef321140ea6457778b75292b300d0668ef45135b080bf739a2863348cb62",
+            "22edf546abc01befc6743f2b93d106fdcb9ee95001e9886b1603b1d686513233"
+          ],
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "a0a5fb64d5e7d4c42fd7a88fb3b0f86bddf468a3d07895cef5231683fd6bf5bc",
+          "source_artifact": "0c20e55caf91183acbcfc72deb81bc85faa3de8fe2b52a898c063c5376fff8ec",
+          "target_artifact": "22edf546abc01befc6743f2b93d106fdcb9ee95001e9886b1603b1d686513233",
+          "relation_type": "CONSUMES_API",
+          "method": "exact-literal-contract",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "0c20e55caf91183acbcfc72deb81bc85faa3de8fe2b52a898c063c5376fff8ec",
+            "22edf546abc01befc6743f2b93d106fdcb9ee95001e9886b1603b1d686513233"
+          ],
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "55191163aadc5f82c2cab3fc3e831f9f26155f25a30a7af05e9c52322f10ced8",
+          "source_artifact": "13385d82d09d6ff976e317a9bfb1485642021a08baa1acfe0b7da64de770b379",
+          "target_artifact": "f767841bf8326d5c6fc8f1f9f2753ea750672ffbae15f68befd47346efb71d84",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "13385d82d09d6ff976e317a9bfb1485642021a08baa1acfe0b7da64de770b379",
+            "f767841bf8326d5c6fc8f1f9f2753ea750672ffbae15f68befd47346efb71d84"
+          ],
+          "repository": "bfd0a91b4e7cf92f2e23f785de1e57394169201187a6ae4c7bc46681a7ec4abe",
+          "project_id": "changebench/07-frontend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "61cd91683f79d0a81165e859d68f3a55d8c84547a92b3090c4f56e18c7f422cd",
+          "source_artifact": "04e123793780c88400dd4a369ca47e8f8e7205ebbe55d17acf10c0e63610b381",
+          "target_artifact": "f767841bf8326d5c6fc8f1f9f2753ea750672ffbae15f68befd47346efb71d84",
+          "relation_type": "CONSUMES_API",
+          "method": "exact-literal-contract",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "04e123793780c88400dd4a369ca47e8f8e7205ebbe55d17acf10c0e63610b381",
+            "f767841bf8326d5c6fc8f1f9f2753ea750672ffbae15f68befd47346efb71d84"
+          ],
+          "repository": "bfd0a91b4e7cf92f2e23f785de1e57394169201187a6ae4c7bc46681a7ec4abe",
+          "project_id": "changebench/07-frontend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "b762fbd4a816330feff6709fb9b7ecd85f5635cef3dd54fb0b25aa125efb33e1",
+          "source_artifact": "cabe5de40c4d4304a6eaa59b1235c2bad1bf77ab616335098b2c045df928be21",
+          "target_artifact": "c0c273c7834c04b2a95068228e080f4aa824794a3248be302d5a1fc6bb82b515",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "cabe5de40c4d4304a6eaa59b1235c2bad1bf77ab616335098b2c045df928be21",
+            "c0c273c7834c04b2a95068228e080f4aa824794a3248be302d5a1fc6bb82b515"
+          ],
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "108ed5ac2eba2e3b10a67d3f5fdecb9c202985bb094a4293e20309d04f2d00cd",
+          "source_artifact": "5cfa3a5703d16b777db05b6a1d3acc95d9ca3db73b1acc996e62057b5b6861a5",
+          "target_artifact": "c0c273c7834c04b2a95068228e080f4aa824794a3248be302d5a1fc6bb82b515",
+          "relation_type": "CONSUMES_API",
+          "method": "exact-literal-contract",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "5cfa3a5703d16b777db05b6a1d3acc95d9ca3db73b1acc996e62057b5b6861a5",
+            "c0c273c7834c04b2a95068228e080f4aa824794a3248be302d5a1fc6bb82b515"
+          ],
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "98ebfc9d8223dbcf44ba80e53bd4549512a2925c78a7f2a3c936309cfec47a65",
+          "source_artifact": "5250dcfeacc0cee0902e1cf3b143554ec584b64577bb08d45ff662ac83518f6f",
+          "target_artifact": "c95f84615b507af2ef5fc8e3d249216997e5e3d43f1767dbd6419be9191a3702",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "5250dcfeacc0cee0902e1cf3b143554ec584b64577bb08d45ff662ac83518f6f",
+            "c95f84615b507af2ef5fc8e3d249216997e5e3d43f1767dbd6419be9191a3702"
+          ],
+          "repository": "31a8e54879a95971b726e4ba056b040173396a754537c3e44bd4b32445075ead",
+          "project_id": "changebench/09-backend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "9b51989e4baa2496c9980b660bf5e516ee4db8d18b55d6c2d1ba07bc68538d81",
+          "source_artifact": "a4c7762aaed3bdf7a246104c4aa4d3bfff7fcd2353b48859d06e3e64f08e2d6c",
+          "target_artifact": "c95f84615b507af2ef5fc8e3d249216997e5e3d43f1767dbd6419be9191a3702",
+          "relation_type": "CONSUMES_API",
+          "method": "exact-literal-contract",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "a4c7762aaed3bdf7a246104c4aa4d3bfff7fcd2353b48859d06e3e64f08e2d6c",
+            "c95f84615b507af2ef5fc8e3d249216997e5e3d43f1767dbd6419be9191a3702"
+          ],
+          "repository": "31a8e54879a95971b726e4ba056b040173396a754537c3e44bd4b32445075ead",
+          "project_id": "changebench/09-backend-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "50e67450b88da79c28677e5ea37b8585f859532cd06285c833738b196e5a3d79",
+          "source_artifact": "3cd1175393ca849b72563d8dd51160618c077c63144e17506f95a4a28f564e50",
+          "target_artifact": "6047e172650f68bf8d13bf428e1642dedad24189c030bcc667a2fb6c1b32bc4d",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "3cd1175393ca849b72563d8dd51160618c077c63144e17506f95a4a28f564e50",
+            "6047e172650f68bf8d13bf428e1642dedad24189c030bcc667a2fb6c1b32bc4d"
+          ],
+          "repository": "3331a87aca1ff62b448ec3140f45833ff60d1df3bcf472a77484ff4da13bb7ee",
+          "project_id": "changebench/10-consumer-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        },
+        {
+          "id": "c895d8af6386bab9e04acdf58eca1f456a8dc83231672ca049c50fe9ca80f996",
+          "source_artifact": "de0eda3243cfc5a32a8130e137efd8767e2ceb20aabc2db8b1190cea8cd1728f",
+          "target_artifact": "6047e172650f68bf8d13bf428e1642dedad24189c030bcc667a2fb6c1b32bc4d",
+          "relation_type": "CONSUMES_API",
+          "method": "exact-literal-contract",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "de0eda3243cfc5a32a8130e137efd8767e2ceb20aabc2db8b1190cea8cd1728f",
+            "6047e172650f68bf8d13bf428e1642dedad24189c030bcc667a2fb6c1b32bc4d"
+          ],
+          "repository": "3331a87aca1ff62b448ec3140f45833ff60d1df3bcf472a77484ff4da13bb7ee",
+          "project_id": "changebench/10-consumer-changed",
+          "commit_id": "1762adac607a1b29cfc4da129557780beea71616"
+        }
+      ]
+    },
+    "head": {
+      "nodes": [
+        {
+          "artifact_id": "03dfc96a32a2e16200669178dc772a8759ffaa39d51b4611cc35da89458883be",
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /catalog/{id}::read_item",
+          "id": "3ed0a65787c74ec911c4e49e03800024155b4814d31e0c4fcb60ec648f52d058"
+        },
+        {
+          "artifact_id": "512ce4db5d967733c7b5ed3f84793e034d7ebd949ab2f0b992519621eccfcf20",
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+          "artifact_type": "api",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "GET /catalog/{id}::read_item",
+          "id": "0c534aae45c234a31311792e44dc6195bd6bc61a480132f9ec5636d8b69eba6e"
+        },
+        {
+          "artifact_id": "c3a0ef321140ea6457778b75292b300d0668ef45135b080bf739a2863348cb62",
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "1e935f8c8e6e5dbe23988c797ee83f8013f842e1f6e0af0c7bb508a949be5428"
+        },
+        {
+          "artifact_id": "cabe5de40c4d4304a6eaa59b1235c2bad1bf77ab616335098b2c045df928be21",
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+          "artifact_type": "function",
+          "file": "backend/app/api/routes/items.py",
+          "symbol": "read_item",
+          "id": "dd1e82b960b1df09ab832c5f073711108f63f02c80a609b7e7c183ca4d6edcb1"
+        }
+      ],
+      "edges": [
+        {
+          "id": "37c7899c796612d89859931ef339fa5d5823aed087f034cb7c15723e0f434eac",
+          "source_artifact": "cabe5de40c4d4304a6eaa59b1235c2bad1bf77ab616335098b2c045df928be21",
+          "target_artifact": "03dfc96a32a2e16200669178dc772a8759ffaa39d51b4611cc35da89458883be",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "cabe5de40c4d4304a6eaa59b1235c2bad1bf77ab616335098b2c045df928be21",
+            "03dfc96a32a2e16200669178dc772a8759ffaa39d51b4611cc35da89458883be"
+          ],
+          "repository": "ef08f7802f2697133e5f1b37753d9d06e0e03f08b6cf98b01fbe9f631446cc57",
+          "project_id": "changebench/08-api-changed",
+          "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132"
+        },
+        {
+          "id": "67a84fdba845389495b829500c3e90930cfd6093cd434f95783bc82d17cee381",
+          "source_artifact": "c3a0ef321140ea6457778b75292b300d0668ef45135b080bf739a2863348cb62",
+          "target_artifact": "512ce4db5d967733c7b5ed3f84793e034d7ebd949ab2f0b992519621eccfcf20",
+          "relation_type": "EXPOSES_API",
+          "method": "static",
+          "confidence": 1.0,
+          "score": 1.0,
+          "evidence": [
+            "c3a0ef321140ea6457778b75292b300d0668ef45135b080bf739a2863348cb62",
+            "512ce4db5d967733c7b5ed3f84793e034d7ebd949ab2f0b992519621eccfcf20"
+          ],
+          "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+          "project_id": "vigilant",
+          "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132"
+        }
+      ]
+    }
+  }
+}

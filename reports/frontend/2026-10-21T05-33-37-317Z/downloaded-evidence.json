@@ -1,0 +1,17 @@
+{
+  "evidence_id": "41a15f4d521cebdbac2a7cbb8cad870a53288742fccc9cdb0b1183a335c3bf7a",
+  "artifact_id": "0c20e55caf91183acbcfc72deb81bc85faa3de8fe2b52a898c063c5376fff8ec",
+  "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+  "project_id": "vigilant",
+  "file": "frontend/src/client/sdk.gen.ts",
+  "start_line": 340,
+  "end_line": 343,
+  "commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "commit_id": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "content_hash": "72bfe0e722790647ee955c80c3dfdc243131a93bca14249ccb8b40d080ebf36c",
+  "quote": "        return (options.client ?? client).get<itemsReadItemResponses, itemsReadItemErrors, ThrowOnError>({\n            responseType: 'json',\n            security: [{ scheme: 'bearer', type: 'http' }],\n            url: '/api/v1/items/{id}',",
+  "score": 1,
+  "retrieval_method": "rule-endpoint",
+  "run_id": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "id": "199fca6c3ee390f6b8d3c761155fc03265e272dc76731c5b3a6dd02e9ad2c20b"
+}

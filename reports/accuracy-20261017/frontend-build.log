@@ -1,0 +1,13 @@
+
+> vigilant-dashboard@0.1.0 build
+> vite build
+
+vite v6.3.5 building for production...
+transforming...
+✓ 22 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.38 kB │ gzip:  0.28 kB
+dist/assets/index-Cy51zJ-W.css    7.81 kB │ gzip:  2.38 kB
+dist/assets/index-CAFbBzNN.js   160.46 kB │ gzip: 51.75 kB
+✓ built in 13.46s

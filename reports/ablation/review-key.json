@@ -1,0 +1,362 @@
+[
+  {
+    "review_id": "75b6d34bffaffaee",
+    "case_id": "01-requirement-changed",
+    "variant": "E",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "91acd9b08af74e73",
+    "case_id": "01-requirement-changed",
+    "variant": "F",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "12075ab9c9505faa",
+    "case_id": "01-requirement-changed",
+    "variant": "G",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "9e738a76a999848f",
+    "case_id": "01-requirement-changed",
+    "variant": "H",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "4258ac5b3da357c0",
+    "case_id": "01-requirement-changed",
+    "variant": "I",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "b74c62cfa278f32b",
+    "case_id": "02-requirement-added",
+    "variant": "E",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "34db8c5efd5a3a1b",
+    "case_id": "02-requirement-added",
+    "variant": "F",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "a4fa55215afdc707",
+    "case_id": "02-requirement-added",
+    "variant": "G",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "39983fd8d54289c7",
+    "case_id": "02-requirement-added",
+    "variant": "H",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "2201c6bec3f32404",
+    "case_id": "02-requirement-added",
+    "variant": "I",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "8f9a3c8ffb72724b",
+    "case_id": "03-code-changed",
+    "variant": "E",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "0efad23abab23c37",
+    "case_id": "03-code-changed",
+    "variant": "F",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "0d1804cdec6e6d0a",
+    "case_id": "03-code-changed",
+    "variant": "G",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "85c5451c30a81142",
+    "case_id": "03-code-changed",
+    "variant": "H",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "dfe826e73fa318ae",
+    "case_id": "03-code-changed",
+    "variant": "I",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "bb62d6f6cd4d3daf",
+    "case_id": "04-code-deleted",
+    "variant": "E",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "3b6fe71fa3f39dc7",
+    "case_id": "04-code-deleted",
+    "variant": "F",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "9fa5436248a5cac4",
+    "case_id": "04-code-deleted",
+    "variant": "G",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "765a36ce78c3d373",
+    "case_id": "04-code-deleted",
+    "variant": "H",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "054052a11256dd73",
+    "case_id": "04-code-deleted",
+    "variant": "I",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "6076442cf0bc327b",
+    "case_id": "05-test-changed",
+    "variant": "E",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "9faee7b9961b4228",
+    "case_id": "05-test-changed",
+    "variant": "F",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "52be6238e4af3496",
+    "case_id": "05-test-changed",
+    "variant": "G",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "230849f6e5d58d2b",
+    "case_id": "05-test-changed",
+    "variant": "H",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "b261f2c297d34e1d",
+    "case_id": "05-test-changed",
+    "variant": "I",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "193e037af2fad8e8",
+    "case_id": "06-test-deleted",
+    "variant": "E",
+    "authored_expected_status": "MISSING_TEST"
+  },
+  {
+    "review_id": "825d8779b0bbf008",
+    "case_id": "06-test-deleted",
+    "variant": "F",
+    "authored_expected_status": "MISSING_TEST"
+  },
+  {
+    "review_id": "e4512743e42653d0",
+    "case_id": "06-test-deleted",
+    "variant": "G",
+    "authored_expected_status": "MISSING_TEST"
+  },
+  {
+    "review_id": "9a96262bbbe2f3c2",
+    "case_id": "06-test-deleted",
+    "variant": "H",
+    "authored_expected_status": "MISSING_TEST"
+  },
+  {
+    "review_id": "c6d60fcc23dbe6ec",
+    "case_id": "06-test-deleted",
+    "variant": "I",
+    "authored_expected_status": "MISSING_TEST"
+  },
+  {
+    "review_id": "91155ca85be74c1a",
+    "case_id": "07-frontend-changed",
+    "variant": "E",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "8a21857b74ad8f43",
+    "case_id": "07-frontend-changed",
+    "variant": "F",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "bb3e13ad4087164c",
+    "case_id": "07-frontend-changed",
+    "variant": "G",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "cab2f38676d5c797",
+    "case_id": "07-frontend-changed",
+    "variant": "H",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "d76adb09ad74ffb9",
+    "case_id": "07-frontend-changed",
+    "variant": "I",
+    "authored_expected_status": "UNCERTAIN"
+  },
+  {
+    "review_id": "db5a749d27ebdb7d",
+    "case_id": "08-api-changed",
+    "variant": "E",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "cb5dc427824a1241",
+    "case_id": "08-api-changed",
+    "variant": "F",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "1c92572970706109",
+    "case_id": "08-api-changed",
+    "variant": "G",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "851b534f93850fa9",
+    "case_id": "08-api-changed",
+    "variant": "H",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "570259a9d1276ff3",
+    "case_id": "08-api-changed",
+    "variant": "I",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "ba923b483fe14748",
+    "case_id": "09-backend-changed",
+    "variant": "E",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "cbb913a37349fc8c",
+    "case_id": "09-backend-changed",
+    "variant": "F",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "f42a50e00190a2e9",
+    "case_id": "09-backend-changed",
+    "variant": "G",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "8d0ac65cc889de64",
+    "case_id": "09-backend-changed",
+    "variant": "H",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "9cabe0c523626c6f",
+    "case_id": "09-backend-changed",
+    "variant": "I",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "23796bd47375b891",
+    "case_id": "10-consumer-changed",
+    "variant": "E",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "03e533eb283a631d",
+    "case_id": "10-consumer-changed",
+    "variant": "F",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "2663badc286295f6",
+    "case_id": "10-consumer-changed",
+    "variant": "G",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "dde99681293b6661",
+    "case_id": "10-consumer-changed",
+    "variant": "H",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "48550d32d324841b",
+    "case_id": "10-consumer-changed",
+    "variant": "I",
+    "authored_expected_status": "BROKEN_TRACE"
+  },
+  {
+    "review_id": "4e4074bbbb190606",
+    "case_id": "11-implementation-test-drift",
+    "variant": "E",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "fbb7d61f6ba11afe",
+    "case_id": "11-implementation-test-drift",
+    "variant": "F",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "db246610f39680d0",
+    "case_id": "11-implementation-test-drift",
+    "variant": "G",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "a17ea2ea8bec5da9",
+    "case_id": "11-implementation-test-drift",
+    "variant": "H",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "9609ff6697532d15",
+    "case_id": "11-implementation-test-drift",
+    "variant": "I",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "f18db528177235de",
+    "case_id": "12-requirement-test-drift",
+    "variant": "E",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "7aad896fe90781e5",
+    "case_id": "12-requirement-test-drift",
+    "variant": "F",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "0a26b5168df190c3",
+    "case_id": "12-requirement-test-drift",
+    "variant": "G",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "03f26245bab5008d",
+    "case_id": "12-requirement-test-drift",
+    "variant": "H",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  },
+  {
+    "review_id": "afe13ddd37f61924",
+    "case_id": "12-requirement-test-drift",
+    "variant": "I",
+    "authored_expected_status": "POTENTIAL_INCONSISTENCY"
+  }
+]

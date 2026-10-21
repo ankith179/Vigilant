@@ -1,0 +1,27 @@
+{
+  "id": "09-backend-changed",
+  "repo": "fullstack",
+  "file": "backend/app/api/routes/items.py",
+  "mode": "replace",
+  "old": "limit: int = 100",
+  "new": "limit: int = 50",
+  "status": "POTENTIAL_INCONSISTENCY",
+  "target": "backend/tests/api/routes/test_items.py",
+  "target_symbol": "test_read_items",
+  "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+  "change_commit": "ca5a3a1be958c9aecba4687d088a5e66020f4abd",
+  "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+  "expected_affected_artifacts": [
+    "50671695785cbd9ed565536633de113f1d4fec3b3b2993940e672681847d8878"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "50671695785cbd9ed565536633de113f1d4fec3b3b2993940e672681847d8878",
+      "target_artifact": "5c892119d754b4d8f2dcae5cbe16ba5205b5da5ff71cbd988426913c1a046cca",
+      "relation_type": "TESTS",
+      "method": "reviewed-api-test-trace"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

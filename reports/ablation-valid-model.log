@@ -1,0 +1,35 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+01-requirement-changed E UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+01-requirement-changed F UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+01-requirement-changed G UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+01-requirement-changed H UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+01-requirement-changed I UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+02-requirement-added E UNCERTAIN expected UNCERTAIN valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+02-requirement-added F UNCERTAIN expected UNCERTAIN valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+02-requirement-added G UNCERTAIN expected UNCERTAIN valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+02-requirement-added H UNCERTAIN expected UNCERTAIN valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+02-requirement-added I UNCERTAIN expected UNCERTAIN valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+03-code-changed E UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+03-code-changed F UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+03-code-changed G UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+03-code-changed H UNCERTAIN expected POTENTIAL_INCONSISTENCY valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+03-code-changed I UNCERTAIN expected POTENTIAL_INCONSISTENCY valid False
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+04-code-deleted E UNCERTAIN expected BROKEN_TRACE valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+04-code-deleted F UNCERTAIN expected BROKEN_TRACE valid True
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.

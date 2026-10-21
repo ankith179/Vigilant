@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+date: Thu, 08 Oct 2026 01:59:21 GMT
+
+HTTP/2 200 
+server: openresty/1.27.1.1
+date: Thu, 08 Oct 2026 01:59:21 GMT
+content-type: text/html
+content-length: 195
+last-modified: Tue, 22 Sep 2026 05:04:56 GMT
+etag: "6ab20c78-c3"
+accept-ranges: bytes
+

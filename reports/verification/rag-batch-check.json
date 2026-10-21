@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "exit_code": 75,
+  "completed_SMOS_skipped": true,
+  "incomplete_iTrust_not_marked_complete": true,
+  "observations_unchanged": true,
+  "immutable_runs_unchanged": true,
+  "scope": "Zero-call budget and existing completion pointer; the real seven-call batch also completed SMOS with exit 0."
+}

@@ -1,0 +1,21 @@
+{
+  "factor": "Citation contract only: selected-alias schema enums and derived cited artifact references; strict validator unchanged.",
+  "cases": 12,
+  "models": 3,
+  "expected_new_calls": 36,
+  "dataset_sha256": "5fc3f788ddf7f914977a5f2f70e9fe47d373966433735602fe1c9cf86cbc813b",
+  "messages_identical_for_all_cases": true,
+  "changed_inference_sources": [
+    "llm/ollama.py"
+  ],
+  "num_predict": 512,
+  "num_ctx": 8192,
+  "temperature": 0,
+  "seed": 42,
+  "thinking": false,
+  "baseline": "experiments/local-model-comparison/windows-20261021",
+  "new_output": "experiments/local-model-comparison/citation-fix-20261021",
+  "label_policy_change_applied": false,
+  "evidence_change_applied": false,
+  "selection_or_heldout_claim": false
+}

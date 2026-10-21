@@ -1,0 +1,27 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1101"[
+label = "Hazard\nUAV-1101\nUAV flies above the altitude \n permitted by FAA regulations. "
+shape = "record"
+color = "black"
+];
+"UAV-1102"[
+label = "SafetyRequirement\nUAV-1102\nPrior to flying in a \n controlled airspace, the maximum altitude \n of each UAV is set \n through its internal geofence. "
+shape = "record"
+color = "black"
+];
+"UAV-1103"[
+label = "Context\nUAV-1103\nUAVs fly in uncontrolled airspace \n where the maximum altitude is \n 400 feet AGL "
+shape = "record"
+color = "black"
+];
+"UAV-1124"[
+label = "ProcessRequirement\nUAV-1124\nRPIC checks the geofence to \n ensure that the maximum altitude \n is 400 feet above ground \n level as allowed by FAA \n regulations. "
+shape = "record"
+color = "black"
+];
+"UAV-1101" -> "UAV-1102";
+"UAV-1102" -> "UAV-1103";
+"UAV-1102" -> "UAV-1124";
+}

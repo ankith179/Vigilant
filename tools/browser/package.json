@@ -1,0 +1,8 @@
+{
+  "name": "vigilant-browser-validation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Optional portable browser validation; separate from research inference dependencies",
+  "scripts": {"install-browser": "playwright install chromium", "test": "node ../../scripts/test_frontend.cjs"},
+  "devDependencies": {"playwright": "1.64.0"}
+}

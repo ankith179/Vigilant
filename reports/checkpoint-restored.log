@@ -1,0 +1,17 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'VIGILANT/ARCHIVE-MANIFEST-VIGILANT-source.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+{
+  "source": {
+    "path": "/workspace/scratch/e4ff17049f79/VIGILANT-source.zip",
+    "files": 135,
+    "bytes": 1246977,
+    "sha256": "6d6f414805ffc69056378dc4150d82bf316065c06ee887ae180cdaf344ec1fcc"
+  },
+  "data": {
+    "path": "/workspace/scratch/e4ff17049f79/VIGILANT-data.zip",
+    "files": 2900,
+    "bytes": 121416345,
+    "sha256": "d5549bb3fb3bfaa46a7be9530b6145d525c8ed22b1844a2f263fbd866d3ab2cd"
+  },
+  "backup_failures": []
+}

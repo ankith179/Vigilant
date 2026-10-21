@@ -1,0 +1,10 @@
+{
+  "dataset": "SMOS",
+  "dataset_fingerprint": "12afce130591dd711fffe8f68a227f3a8c79ed92d259b2c6c5b17ddf857f6eba",
+  "completed_queries": 67,
+  "expected_queries": 67,
+  "actual_inference_observations": 67,
+  "reused_calls": 60,
+  "new_calls": 7,
+  "last_query_id": "SMOS9"
+}

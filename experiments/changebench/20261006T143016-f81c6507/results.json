@@ -1,0 +1,523 @@
+{
+  "run_id": "20261006T143016-f81c6507",
+  "kind": "changebench",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "rss_mib_at_save": 2.0234375,
+  "status": "COMPLETED",
+  "cases": [
+    {
+      "case": {
+        "id": "01-requirement-changed",
+        "repo": "rtmx",
+        "file": ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+        "mode": "append",
+        "new": "Controlled benchmark change: include failed sessions in completed-run accounting.",
+        "status": "POTENTIAL_INCONSISTENCY",
+        "target": "tests/test_harness.sh",
+        "base_commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+        "change_commit": "1afdc595d1090a56f3f6d094fdc42ead8facf034",
+        "origin": "https://github.com/rtmx-ai/rtmx-bench.git",
+        "expected_affected_artifacts": [
+          "2574dd72dfa773955d55993fea99fcf44601a51a0eec78e29dcbe01153363ad8"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "8734d2014165680db5180222f161680fb626acf9f156f3bca13fe60b4c034e16",
+            "target_artifact": "2574dd72dfa773955d55993fea99fcf44601a51a0eec78e29dcbe01153363ad8",
+            "relation_type": "VALIDATES",
+            "method": "upstream-rtmx-module-declaration"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "64a56bafe8f542f0b54a80416c8908ca",
+      "status_match": true,
+      "predicted_statuses": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 1.312508639999919
+    },
+    {
+      "case": {
+        "id": "02-requirement-added",
+        "repo": "rtmx",
+        "file": ".rtmx/requirements/REQ-VIGILANT-ADDED.md",
+        "mode": "add",
+        "new": "# Controlled benchmark requirement\nThe runner shall record a machine-readable timeout reason.",
+        "status": "UNCERTAIN",
+        "base_commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+        "change_commit": "307504e249b663812c9d5224e7d35cafd3fe782e",
+        "origin": "https://github.com/rtmx-ai/rtmx-bench.git",
+        "expected_affected_artifacts": [],
+        "expected_traceability": [],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "31e902f82c43466094f5dd30d7857c76",
+      "status_match": true,
+      "predicted_statuses": [
+        "UNCERTAIN"
+      ],
+      "affected_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "uncertain": true,
+      "model_error": null,
+      "seconds": 1.2084597570000142
+    },
+    {
+      "case": {
+        "id": "03-code-changed",
+        "repo": "flask",
+        "file": "src/flask/helpers.py",
+        "mode": "replace",
+        "old": "code: int = 303",
+        "new": "code: int = 307",
+        "status": "POTENTIAL_INCONSISTENCY",
+        "target": "tests/test_helpers.py",
+        "target_symbol": "test_redirect_no_app",
+        "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+        "change_commit": "c3fdd40e99016aeea666351bee7ba379e583cb95",
+        "origin": "https://github.com/pallets/flask.git",
+        "expected_affected_artifacts": [
+          "f9410e64687e1a0c9274f8ef4a38eb1d71f641cb683a7324af0bab1ac8ddfa1a"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "f9410e64687e1a0c9274f8ef4a38eb1d71f641cb683a7324af0bab1ac8ddfa1a",
+            "target_artifact": "48b5d8c9e8a94902ee16b12385d6d0e52761faec5920b9e26f9c7cae448f86c9",
+            "relation_type": "TESTS",
+            "method": "reviewed-baseline-call-trace"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "86f0de6820ef4923b3880a41c30f473b",
+      "status_match": true,
+      "predicted_statuses": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 0.03333333333333333,
+        "recall": 1.0,
+        "f1": 0.06451612903225806,
+        "tp": 1,
+        "fp": 29,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 15.230196675000002
+    },
+    {
+      "case": {
+        "id": "04-code-deleted",
+        "repo": "flask",
+        "file": "src/flask/helpers.py",
+        "mode": "remove_function",
+        "old": "redirect",
+        "status": "BROKEN_TRACE",
+        "target": "tests/test_helpers.py",
+        "target_symbol": "test_redirect_no_app",
+        "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+        "change_commit": "27050d5ba0f60996acf4faf40a41d66b78b8d040",
+        "origin": "https://github.com/pallets/flask.git",
+        "expected_affected_artifacts": [
+          "fc68abe098b6d95f3e02546f1b0fb652143ae6fe8017e42e0569c83589793d8f"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "fc68abe098b6d95f3e02546f1b0fb652143ae6fe8017e42e0569c83589793d8f",
+            "target_artifact": "ff7009a1aab60dd3df956c3bc26a1c24c43e47320e29627bdddf93737419b7d8",
+            "relation_type": "TESTS",
+            "method": "reviewed-baseline-call-trace"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "525e7c85c24b4d71bc92675b744d6a3c",
+      "status_match": true,
+      "predicted_statuses": [
+        "BROKEN_TRACE",
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 0.03333333333333333,
+        "recall": 1.0,
+        "f1": 0.06451612903225806,
+        "tp": 1,
+        "fp": 29,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 15.932351146999963
+    },
+    {
+      "case": {
+        "id": "05-test-changed",
+        "repo": "flask",
+        "file": "tests/test_helpers.py",
+        "mode": "replace",
+        "old": "def test_redirect_no_app():",
+        "new": "def test_redirect_no_app():\n    # Controlled benchmark: comment-only review",
+        "status": "UNCERTAIN",
+        "target": "src/flask/helpers.py",
+        "target_symbol": "redirect",
+        "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+        "change_commit": "fa37e3665c098ff6b859a9a0885599d08ef7726e",
+        "origin": "https://github.com/pallets/flask.git",
+        "expected_affected_artifacts": [
+          "5bbf19acf1e09e9532c0ff8879de88caa52b18b4d033e5023099358c74c2d923"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "ac1f4590af33eb4d4647e22d27c65a6849ae3372cfb2b95bfea3c15429ac9ed7",
+            "target_artifact": "5bbf19acf1e09e9532c0ff8879de88caa52b18b4d033e5023099358c74c2d923",
+            "relation_type": "TESTS",
+            "method": "reviewed-baseline-call-trace"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "c24b4bd2b82040d584d675f80c8e261c",
+      "status_match": true,
+      "predicted_statuses": [
+        "UNCERTAIN"
+      ],
+      "affected_metrics": {
+        "precision": 0.09090909090909091,
+        "recall": 1.0,
+        "f1": 0.16666666666666669,
+        "tp": 1,
+        "fp": 10,
+        "fn": 0
+      },
+      "uncertain": true,
+      "model_error": null,
+      "seconds": 14.11995097700003
+    },
+    {
+      "case": {
+        "id": "06-test-deleted",
+        "repo": "flask",
+        "file": "tests/test_helpers.py",
+        "mode": "remove_function",
+        "old": "test_redirect_no_app",
+        "status": "MISSING_TEST",
+        "target": "src/flask/helpers.py",
+        "target_symbol": "redirect",
+        "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+        "change_commit": "00c9ad7bceacada698041d64facf3d96189e46cd",
+        "origin": "https://github.com/pallets/flask.git",
+        "expected_affected_artifacts": [
+          "5cc0ef4207539c8525d3c812bcb141f3b04893fe06f3727be23514f283f3d41c"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "c4a32294b188d7b9fd3722887c97a81fad85b6250af5083dbccdcb8a55d25d04",
+            "target_artifact": "5cc0ef4207539c8525d3c812bcb141f3b04893fe06f3727be23514f283f3d41c",
+            "relation_type": "TESTS",
+            "method": "reviewed-baseline-call-trace"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "2d5d61d0db78440a9d288d7744ec36e7",
+      "status_match": true,
+      "predicted_statuses": [
+        "BROKEN_TRACE",
+        "MISSING_TEST"
+      ],
+      "affected_metrics": {
+        "precision": 0.09090909090909091,
+        "recall": 1.0,
+        "f1": 0.16666666666666669,
+        "tp": 1,
+        "fp": 10,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 14.209916550000003
+    },
+    {
+      "case": {
+        "id": "07-frontend-changed",
+        "repo": "fullstack",
+        "file": "frontend/src/routes/_layout/items.tsx",
+        "mode": "append",
+        "new": "// Controlled benchmark: display-only wording review.",
+        "status": "UNCERTAIN",
+        "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+        "change_commit": "76efb979b4f357c88350061ec525336f9df3e955",
+        "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+        "expected_affected_artifacts": [],
+        "expected_traceability": [],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "a39630a9b85d4a46b5f0204203ddfd0c",
+      "status_match": true,
+      "predicted_statuses": [
+        "UNCERTAIN"
+      ],
+      "affected_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "uncertain": true,
+      "model_error": null,
+      "seconds": 5.200532760999863
+    },
+    {
+      "case": {
+        "id": "08-api-changed",
+        "repo": "fullstack",
+        "file": "backend/app/api/routes/items.py",
+        "mode": "replace",
+        "old": "prefix=\"/items\"",
+        "new": "prefix=\"/catalog\"",
+        "status": "POTENTIAL_INCONSISTENCY",
+        "target": "frontend/src/client/sdk.gen.ts",
+        "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+        "change_commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+        "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+        "expected_affected_artifacts": [
+          "a792528e88d0f1202a9916d50aeab62a1dcd322584a0c886fb88bd9b329b892f",
+          "8b7bdf1338ca77cecd07e2707b86aca527e5fd1cfbe5e84d486ea2a21e19e151",
+          "a25ecba8fe671a7ff755ce0c24bcc2c14deea510dc3dc983171f44ba6afe8522",
+          "f2d12b8a2b3290df53b2259d9219b5fb19520f6df097c208bf513f86575bb528",
+          "5cfa3a5703d16b777db05b6a1d3acc95d9ca3db73b1acc996e62057b5b6861a5"
+        ],
+        "expected_traceability": [],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "66c22ebf69f44a31b0d14f8f95cd7541",
+      "status_match": true,
+      "predicted_statuses": [
+        "BROKEN_TRACE",
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 0.15151515151515152,
+        "recall": 1.0,
+        "f1": 0.2631578947368421,
+        "tp": 5,
+        "fp": 28,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 4.901346346999844
+    },
+    {
+      "case": {
+        "id": "09-backend-changed",
+        "repo": "fullstack",
+        "file": "backend/app/api/routes/items.py",
+        "mode": "replace",
+        "old": "limit: int = 100",
+        "new": "limit: int = 50",
+        "status": "POTENTIAL_INCONSISTENCY",
+        "target": "backend/tests/api/routes/test_items.py",
+        "target_symbol": "test_read_items",
+        "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+        "change_commit": "ca5a3a1be958c9aecba4687d088a5e66020f4abd",
+        "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+        "expected_affected_artifacts": [
+          "50671695785cbd9ed565536633de113f1d4fec3b3b2993940e672681847d8878"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "50671695785cbd9ed565536633de113f1d4fec3b3b2993940e672681847d8878",
+            "target_artifact": "5c892119d754b4d8f2dcae5cbe16ba5205b5da5ff71cbd988426913c1a046cca",
+            "relation_type": "TESTS",
+            "method": "reviewed-api-test-trace"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "5acf8c8d9f0c4d449e4e926e9e082d9e",
+      "status_match": true,
+      "predicted_statuses": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 0.047619047619047616,
+        "recall": 1.0,
+        "f1": 0.0909090909090909,
+        "tp": 1,
+        "fp": 20,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 5.247702680999964
+    },
+    {
+      "case": {
+        "id": "10-consumer-changed",
+        "repo": "fullstack",
+        "file": "frontend/src/client/sdk.gen.ts",
+        "mode": "replace",
+        "old": "url: '/api/v1/items/'",
+        "new": "url: '/api/v1/obsolete-items/'",
+        "status": "BROKEN_TRACE",
+        "target": "backend/app/api/routes/items.py",
+        "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+        "change_commit": "66b4f2809d935224fa5ecca0989421968e63f7b4",
+        "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+        "expected_affected_artifacts": [
+          "30b4d2c4d66e32cbbdf97f63b9db27582957aa94d5f768d8c7b80ef7cb59beb5",
+          "058187dfb3192e08fb42ea55e29133a2b16b77094605122b75d65987280c82ee",
+          "6047e172650f68bf8d13bf428e1642dedad24189c030bcc667a2fb6c1b32bc4d",
+          "e49d3e00a084056b93f567a3f517d60c7b006d1e1c1f3ad860391c8bdfc956e4",
+          "93d5bb4cb622085ca1e41928b24b095611aa0fbb76cb2e5c9e6176ed333882a7"
+        ],
+        "expected_traceability": [],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "981c18c63eec4d2ba7cba1d2c85ee213",
+      "status_match": true,
+      "predicted_statuses": [
+        "BROKEN_TRACE"
+      ],
+      "affected_metrics": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1": 0.22222222222222224,
+        "tp": 1,
+        "fp": 3,
+        "fn": 4
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 5.130729112999916
+    },
+    {
+      "case": {
+        "id": "11-implementation-test-drift",
+        "repo": "flask",
+        "file": "src/flask/helpers.py",
+        "mode": "replace",
+        "old": "code: int = 303",
+        "new": "code: int = 308",
+        "status": "POTENTIAL_INCONSISTENCY",
+        "target": "tests/test_helpers.py",
+        "target_symbol": "test_redirect_no_app",
+        "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+        "change_commit": "79db0725d25f4d9cd1ae20f38f26350807696ef7",
+        "origin": "https://github.com/pallets/flask.git",
+        "expected_affected_artifacts": [
+          "ecb9b84ee35fafaedf94e3b405ad6cea780978975bce6cf9379051ce32055c13"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "ecb9b84ee35fafaedf94e3b405ad6cea780978975bce6cf9379051ce32055c13",
+            "target_artifact": "e17b583039b49326ddf6c05d8131da1c6ba4c1f873fb9734c7d4abcde684eee6",
+            "relation_type": "TESTS",
+            "method": "reviewed-baseline-call-trace"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "3f4e0024cb394761952ff145527e2187",
+      "status_match": true,
+      "predicted_statuses": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 0.03333333333333333,
+        "recall": 1.0,
+        "f1": 0.06451612903225806,
+        "tp": 1,
+        "fp": 29,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 15.453041377999853
+    },
+    {
+      "case": {
+        "id": "12-requirement-test-drift",
+        "repo": "rtmx",
+        "file": ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+        "mode": "append",
+        "new": "Controlled benchmark change: verify zero shared process state across consecutive runs.",
+        "status": "POTENTIAL_INCONSISTENCY",
+        "target": "tests/test_harness.sh",
+        "base_commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+        "change_commit": "fcdee3d2618be769f96d744cddbf5902557d9032",
+        "origin": "https://github.com/rtmx-ai/rtmx-bench.git",
+        "expected_affected_artifacts": [
+          "6ee83fbbd87f15c736995d9bd39c5483147f8fb540d4e5a4d4f8994a75376a93"
+        ],
+        "expected_traceability": [
+          {
+            "source_artifact": "c6a26f2135a19616ec909972937eeed07bcb3eda03c4356f6c70a0348be32a8f",
+            "target_artifact": "6ee83fbbd87f15c736995d9bd39c5483147f8fb540d4e5a4d4f8994a75376a93",
+            "relation_type": "VALIDATES",
+            "method": "upstream-rtmx-module-declaration"
+          }
+        ],
+        "oracle": "Authored expectations; partial affected set; not independently reviewed",
+        "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+      },
+      "run_id": "fbbaae33d27a4b8f8111e456e1b56db8",
+      "status_match": true,
+      "predicted_statuses": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "affected_metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "uncertain": false,
+      "model_error": null,
+      "seconds": 1.3133825699999306
+    }
+  ],
+  "status_accuracy": 1.0,
+  "uncertain_rate": 0.25,
+  "seconds": 115.89103756999998,
+  "limitations": [
+    "Partial affected oracles: apparent false positives require human review.",
+    "Seeded relations test trace maintenance, not link recovery.",
+    "Repeated artifacts/cases are not independent statistical samples."
+  ]
+}

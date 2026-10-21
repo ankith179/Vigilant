@@ -1,0 +1,111 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-947"[
+label = "Hazard\nUAV-947\nBattery fails during flight "
+shape = "record"
+color = "black"
+];
+"UAV-698"[
+label = "SafetyRequirement\nUAV-698\nEmergency Notification "
+shape = "record"
+color = "black"
+];
+"UAV-699"[
+label = "DesignDefinition\nUAV-699\nEmergency Battery Notification when threshold \n is reached "
+shape = "record"
+color = "black"
+];
+"UAV-699\ngstation.connector.messages"[
+label = "Package\nUAV-699\ngstation.connector.messages"
+shape = "record"
+color = "black"
+];
+"UAV-699edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/StateMessageTypeAdapter.java"[
+label = "Code with \n passed Tests \nStateMessageTypeAdapter.java"
+shape = "record"
+color = "black"
+];
+"edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java"[
+label = "Code with \n passed Tests \nUAVStateMessage.java"
+shape = "record"
+color = "black"
+];
+"UAV-950"[
+label = "SafetyRequirement\nUAV-950\nSufficient battery voltage needed for \n all issued waypoints "
+shape = "record"
+color = "black"
+];
+"UAV-952"[
+label = "ProcessRequirement\nUAV-952\nBattery voltage checked manually prior \n to takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-953"[
+label = "ProcessRequirement\nUAV-953\nCheck UAV battery prior to \n takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-954"[
+label = "ProcessRequirement\nUAV-954\nCheck hand-held controller battery prior \n to takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-955"[
+label = "EnvironmentalAssumption\nUAV-955\nDefault behavior for depleted voltage \n is land-in-place "
+shape = "record"
+color = "black"
+];
+"UAV-956"[
+label = "Context\nUAV-956\nDronology applications include flights over \n water "
+shape = "record"
+color = "black"
+];
+"UAV-984"[
+label = "SafetyRequirement\nUAV-984\nBattery voltage must be displayed \n on UI "
+shape = "record"
+color = "black"
+];
+"UAV-1111"[
+label = "DesignDefinition\nUAV-1111\nThe current battery capacity display \n shall be refreshed at least \n every 2 seconds. "
+shape = "record"
+color = "black"
+];
+"UAV-237"[
+label = "DesignDefinition\nUAV-237\nDisplay battery life unit as \n a percentage "
+shape = "record"
+color = "black"
+];
+"UAV-237\nui.vaadin.activeflights"[
+label = "Package\nUAV-237\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-237edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+];
+"UAV-987"[
+label = "Acceptance test passed \nUAV-987\nVoltmeter tests battery level "
+shape = "record"
+color = "black"
+];
+"UAV-947" -> "UAV-698";
+"UAV-698" -> "UAV-699";
+"UAV-699" -> "UAV-699\ngstation.connector.messages";
+"UAV-699\ngstation.connector.messages" -> "UAV-699edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/StateMessageTypeAdapter.java";
+"UAV-699\ngstation.connector.messages" -> "edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java";
+"UAV-947" -> "UAV-950";
+"UAV-950" -> "UAV-952";
+"UAV-952" -> "UAV-953";
+"UAV-952" -> "UAV-954";
+"UAV-947" -> "UAV-955";
+"UAV-947" -> "UAV-956";
+"UAV-947" -> "UAV-984";
+"UAV-984" -> "UAV-1111";
+"UAV-984" -> "UAV-237";
+"UAV-237" -> "UAV-237\nui.vaadin.activeflights";
+"UAV-237\nui.vaadin.activeflights" -> "UAV-237edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java";
+"UAV-984" -> "UAV-987";
+}

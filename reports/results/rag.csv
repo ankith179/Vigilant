@@ -1,0 +1,5 @@
+dataset,queries,schema_valid_rate,strict_schema_valid_rate,changed_rankings,supported,unsupported,uncertain,mean_generation_seconds,semantic_grounding,hallucination_rate,source_run
+SMOS,67,1.0,1.0,17,42,76,217,70.8195156178955,,,experiments/retrieval/20261007T104905-4064b602/results.json
+iTrust,105,1.0,1.0,60,228,95,202,42.23103573408572,,,experiments/retrieval/20261007T163255-0dfbb833/results.json
+eTour_en,57,1.0,1.0,33,110,54,121,37.93358614424557,,,experiments/retrieval/20261007T171402-64fa98d8/results.json
+RTMX-module-valid,22,1.0,1.0,19,70,3,37,67.27579421840912,,,experiments/retrieval/20261007T210208-3f0803cc/results.json

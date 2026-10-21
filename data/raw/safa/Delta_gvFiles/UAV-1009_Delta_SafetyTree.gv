@@ -1,0 +1,300 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1009Delta"[
+label = "Hazard\nUAV-1009 \nMidair collision during flight execution "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--1009Delta"[
+label = "<Strategy>\nSTRAT--1009 \n Argue that hazard \n  UAV-1009  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1076Delta"[
+label = "SafetyRequirement\nUAV-1076 \nWhen two UAVs violate the \n _MINIMUM_SEPARATION_DISTANCE_ they will both stop \n and hover in place. "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--1076Delta"[
+label = "<Strategy>\nSTRAT-A--1076 \n Safety Requirement \n  UAV-1076  has been sufficiently covered by \n tests and inspections."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1071Delta"[
+label = "Acceptance test passed \nUAV-1071 \nField Test: Two physical UAVs \n avoid head on collision "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1081Delta"[
+label = "Simulation successful \nUAV-1081 \nSimulate River Rescue Scenario "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1076Delta"[
+label = "<Strategy>\nSTRAT-D--1076 \n Argue that safety requirement \n  UAV-1076  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1078Delta"[
+label = "DesignDefinition\nUAV-1078 \nDronology monitors the distance between \n all active pairs of UAVs \n and checks for proximity violations "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--1078Delta"[
+label = "<Strategy>\nSTRAT-C--1078 \n Argue that design definition \n  UAV-1078  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-1078\ncore.collisionavoidance"[
+label = "Package\nUAV-1078\ncore.collisionavoidance"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1078edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/CollisionAvoidanceBackend.java"[
+label = "Code with \n passed Tests \nCollisionAvoidanceBackend.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1078edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/CollisionAvoidanceMessenger.java"[
+label = "Code with \n passed Tests \nCollisionAvoidanceMessenger.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079Delta"[
+label = "DesignDefinition\nUAV-1079 \nWhen a _MINIMUM_SEPARATION_DISTANCE_ violation occurs, \n Dronology will issue a zero \n NED directive causing UAVs to \n hover in place.. "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--1079Delta"[
+label = "<Strategy>\nSTRAT-C--1079 \n Argue that design definition \n  UAV-1079  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-1079\ncore.collisionavoidance"[
+label = "Package\nUAV-1079\ncore.collisionavoidance"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/CollisionAvoider.java"[
+label = "Code with \n passed Tests \nCollisionAvoider.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079\ncore.collisionavoidance.guidancecommands"[
+label = "Package\nUAV-1079\ncore.collisionavoidance.guidancecommands"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/guidancecommands/StopCommand.java"[
+label = "Code with \n passed Tests \nStopCommand.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/guidancecommands/NedCommand.java"[
+label = "Code with \n passed Tests \nNedCommand.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079\ncore.collisionavoidance.strategy"[
+label = "Package\nUAV-1079\ncore.collisionavoidance.strategy"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/strategy/StopEveryone.java"[
+label = "Code with \n passed Tests \nStopEveryone.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1077Delta"[
+label = "Context\nUAV-1077 \nExternal 3DR simulator does not \n accurately model NED commands and \n is not reliable for testing \n collision avoidance. "
+shape = "Mrecord"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1122Delta"[
+label = "ProcessRequirement\nUAV-1122 \nAll routes are planned to \n ensure minimum separation of UAVs \n in flight at all times. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1038Delta"[
+label = "EnvironmentalAssumption\nUAV-1038 \nRoutes that are free of \n collisions with simulated UAVs will \n also be free of collisions \n with physical UAVs. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1121Delta"[
+label = "Acceptance test passed \nUAV-1121 \nFlights that are tested in \n the simulator without collision are \n safe with Physical Drones "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1037Delta"[
+label = " Delegated \n to Adacent System\nUAV-1037 \nAll routes are carefully planned \n and tested in the simulator \n prior to flights to check \n for violations of minimum separation \n distance. "
+shape = "component"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1123Delta"[
+label = " Delegated \n to Adacent System\nUAV-1123 \nWhen a route is run \n in the simulator and MINIMUM_SEPARATION_DISTANCE \n is violated an error shall \n be reported in the simulator \n log. "
+shape = "component"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1009Delta" -> "STRAT--1009Delta"[style = "solid" color = black];
+"STRAT--1009Delta" -> "UAV-1076Delta"[style = "dotted" color = darkgreen];
+"UAV-1076Delta" -> "STRAT-A--1076Delta"[style = "solid" color = black];
+"STRAT-A--1076Delta" -> "UAV-1071Delta"[style = "dotted" color = darkgreen];
+"STRAT-A--1076Delta" -> "UAV-1081Delta"[style = "dotted" color = darkgreen];
+"UAV-1076Delta" -> "STRAT-D--1076Delta"[style = "solid" color = black];
+"STRAT-D--1076Delta" -> "UAV-1078Delta"[style = "dotted" color = darkgreen];
+"UAV-1078Delta" -> "STRAT-C--1078Delta"[style = "solid" color = black];
+"STRAT-C--1078Delta" -> "UAV-1078\ncore.collisionavoidance"[style = "dotted" color = darkgreen];
+"UAV-1078\ncore.collisionavoidance" -> "UAV-1078edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/CollisionAvoidanceBackend.java"[style = "dotted" color = darkgreen];
+"UAV-1078\ncore.collisionavoidance" -> "UAV-1078edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/CollisionAvoidanceMessenger.java"[style = "dotted" color = darkgreen];
+"STRAT-D--1076Delta" -> "UAV-1079Delta"[style = "dotted" color = darkgreen];
+"UAV-1079Delta" -> "STRAT-C--1079Delta"[style = "solid" color = black];
+"STRAT-C--1079Delta" -> "UAV-1079\ncore.collisionavoidance"[style = "dotted" color = darkgreen];
+"UAV-1079\ncore.collisionavoidance" -> "UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/CollisionAvoider.java"[style = "dotted" color = darkgreen];
+"STRAT-C--1079Delta" -> "UAV-1079\ncore.collisionavoidance.guidancecommands"[style = "dotted" color = darkgreen];
+"UAV-1079\ncore.collisionavoidance.guidancecommands" -> "UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/guidancecommands/StopCommand.java"[style = "dotted" color = darkgreen];
+"UAV-1079\ncore.collisionavoidance.guidancecommands" -> "UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/guidancecommands/NedCommand.java"[style = "dotted" color = darkgreen];
+"STRAT-C--1079Delta" -> "UAV-1079\ncore.collisionavoidance.strategy"[style = "dotted" color = darkgreen];
+"UAV-1079\ncore.collisionavoidance.strategy" -> "UAV-1079edu.nd.dronology.core/src/edu/nd/dronology/core/collisionavoidance/strategy/StopEveryone.java"[style = "dotted" color = darkgreen];
+"UAV-1076Delta" -> "UAV-1077Delta"[style = "dotted" color = darkgreen];
+"STRAT--1009Delta" -> "UAV-1122Delta"[style = "solid" color = black];
+"UAV-1122Delta" -> "UAV-1038Delta"[style = "solid" color = black];
+"UAV-1122Delta" -> "UAV-1121Delta"[style = "solid" color = black];
+"UAV-1009Delta" -> "UAV-1037Delta"[style = "dotted" color = red];
+"UAV-1009Delta" -> "UAV-1123Delta"[style = "solid" color = black];
+}

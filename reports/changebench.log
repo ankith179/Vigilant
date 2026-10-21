@@ -1,0 +1,12 @@
+01-requirement-changed True {'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'tp': 1, 'fp': 0, 'fn': 0}
+02-requirement-added True {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'tp': 0, 'fp': 0, 'fn': 0}
+Traceback (most recent call last):
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/run_change_scenarios.py", line 67, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/run_change_scenarios.py", line 46, in main
+    if not dest.exists():subprocess.run(['git','clone','--no-hardlinks',str(source),str(dest)],check=True,capture_output=True);git(dest,'remote','set-url','origin',origin)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'clone', '--no-hardlinks', '/workspace/scratch/e4ff17049f79/VIGILANT/data/repos/flask', '/workspace/scratch/e4ff17049f79/VIGILANT/data/changebench/03-code-changed']' returned non-zero exit status 128.

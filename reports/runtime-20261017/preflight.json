@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-17T07:23:05.270378+00:00",
+  "memory_limit_bytes": 8589934592,
+  "gpu_available": false,
+  "local_endpoint": "connection_refused",
+  "ollama_installed": false,
+  "installer_script_http_status": 200,
+  "binary_download": {
+    "status": 200,
+    "bytes": "1438684604"
+  }
+}

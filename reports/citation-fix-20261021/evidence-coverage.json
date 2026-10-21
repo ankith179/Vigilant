@@ -1,0 +1,561 @@
+[
+  {
+    "case_id": "01-requirement-changed",
+    "baseline_supplied": 13,
+    "baseline_selected": 13,
+    "baseline_files": [
+      ".rtmx/requirements/DATA/REQ-DATA-002.md",
+      ".rtmx/requirements/EXP/REQ-EXP-001.md",
+      ".rtmx/requirements/EXP/REQ-EXP-002.md",
+      ".rtmx/requirements/EXP/REQ-EXP-005.md",
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-003.md",
+      "CLAUDE.md",
+      "README.md",
+      "prompts/rtmx-self.md",
+      "tests/test_harness.sh"
+    ],
+    "candidate_supplied": 9,
+    "candidate_selected": 9,
+    "candidate_files": [
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+      "analysis/compare.py",
+      "bench.sh",
+      "tests/test_harness.sh"
+    ],
+    "selected_role_counts": {
+      "requirement": 3,
+      "implementation": 2,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [],
+    "prompt_sha256": "452f551b74f646ad80540e5285ea6abda244f0d4928772daf13442ee35305638",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 3,
+      "implementation": 2,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "02-requirement-added",
+    "baseline_supplied": 9,
+    "baseline_selected": 9,
+    "baseline_files": [
+      ".rtmx/requirements/EXP/REQ-EXP-001.md",
+      ".rtmx/requirements/EXP/REQ-EXP-002.md",
+      ".rtmx/requirements/EXP/REQ-EXP-005.md",
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-003.md",
+      ".rtmx/requirements/REQ-VIGILANT-ADDED.md",
+      "README.md",
+      "prompts/rtmx-self.md",
+      "tests/collect_results.sh",
+      "tests/test_treatment.sh"
+    ],
+    "candidate_supplied": 7,
+    "candidate_selected": 7,
+    "candidate_files": [
+      ".rtmx/requirements/REQ-VIGILANT-ADDED.md",
+      "analysis/compare.py",
+      "lib/csv.sh",
+      "tests/test_harness.sh"
+    ],
+    "selected_role_counts": {
+      "requirement": 1,
+      "implementation": 2,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [],
+    "prompt_sha256": "0a4be6aa8c0cee12e612879268d1f716bf8badce76e32355f9e882cfc55bc41c",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 1,
+      "implementation": 2,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "03-code-changed",
+    "baseline_supplied": 15,
+    "baseline_selected": 15,
+    "baseline_files": [
+      "docs/deploying/gunicorn.rst",
+      "docs/deploying/uwsgi.rst",
+      "docs/gevent.rst",
+      "docs/patterns/favicon.rst",
+      "docs/patterns/packages.rst",
+      "src/flask/__init__.py",
+      "src/flask/debughelpers.py",
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "src/flask/helpers.py",
+      "src/flask/sansio/app.py",
+      "tests/test_helpers.py"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "f449879b72cff3e36ced9d22e28ba71773ec66a0e32d542a7c933af58c85b991",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "04-code-deleted",
+    "baseline_supplied": 14,
+    "baseline_selected": 14,
+    "baseline_files": [
+      "docs/deploying/gunicorn.rst",
+      "docs/deploying/uwsgi.rst",
+      "docs/gevent.rst",
+      "docs/patterns/favicon.rst",
+      "docs/patterns/packages.rst",
+      "src/flask/debughelpers.py",
+      "src/flask/globals.py",
+      "src/flask/helpers.py",
+      "src/flask/typing.py",
+      "src/flask/wrappers.py",
+      "tests/test_helpers.py"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "src/flask/helpers.py",
+      "src/flask/sansio/app.py",
+      "tests/test_helpers.py"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "cafb7953c1563a90d0830cc1c164001aefb89a51255ea954573fdb91cf4e2c5e",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "05-test-changed",
+    "baseline_supplied": 17,
+    "baseline_selected": 17,
+    "baseline_files": [
+      "docs/testing.rst",
+      "docs/tutorial/tests.rst",
+      "src/flask/globals.py",
+      "src/flask/helpers.py",
+      "src/flask/typing.py",
+      "src/flask/views.py",
+      "tests/test_blueprints.py",
+      "tests/test_helpers.py"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "src/flask/helpers.py",
+      "src/flask/json/tag.py",
+      "tests/test_helpers.py"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 2,
+      "caller": 2,
+      "test": 4
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "9653079fff32b626253510d1f5ddf28a8302fbdd86a789f9e957665372ab1a4f",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 2,
+      "caller": 2,
+      "test": 4
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "06-test-deleted",
+    "baseline_supplied": 18,
+    "baseline_selected": 18,
+    "baseline_files": [
+      "docs/testing.rst",
+      "docs/tutorial/layout.rst",
+      "docs/tutorial/tests.rst",
+      "src/flask/globals.py",
+      "src/flask/helpers.py",
+      "src/flask/views.py",
+      "tests/test_blueprints.py",
+      "tests/test_helpers.py",
+      "tests/type_check/typing_route.py"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "examples/tutorial/flaskr/auth.py",
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 2,
+      "caller": 2,
+      "test": 4
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "de39acb49a6ba7a3969aeaa8613d15f418ab053adbfcdb6802a2a5724149bc52",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 2,
+      "caller": 2,
+      "test": 4
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "07-frontend-changed",
+    "baseline_supplied": 11,
+    "baseline_selected": 11,
+    "baseline_files": [
+      "CONTRIBUTING.md",
+      "frontend/README.md",
+      "frontend/src/routeTree.gen.ts",
+      "frontend/src/routes/_layout/items.tsx"
+    ],
+    "candidate_supplied": 7,
+    "candidate_selected": 7,
+    "candidate_files": [
+      "frontend/src/components/UserSettings/UserInformation.tsx",
+      "frontend/src/routes/_layout/items.tsx",
+      "packages/react-email/emails/test_email.tsx"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 3,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "01360200405956d419aaa7e113b6740d2691bcbe392dd79a9e7f7bd05caf95af",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 3,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "08-api-changed",
+    "baseline_supplied": 28,
+    "baseline_selected": 19,
+    "baseline_files": [
+      "backend/app/api/routes/items.py"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "backend/app/api/routes/items.py",
+      "backend/tests/api/routes/test_items.py",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "794078bd190a235ffeead90fa0551a66fc16053eba8dcbe3a3211cc989dfa759",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "09-backend-changed",
+    "baseline_supplied": 18,
+    "baseline_selected": 14,
+    "baseline_files": [
+      "backend/app/api/routes/items.py",
+      "backend/tests/api/routes/test_items.py",
+      "frontend/README.md",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "backend/app/api/routes/items.py",
+      "backend/tests/api/routes/test_items.py",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "2f87851dabc99838f93acbe4ffd08332e85f94b4ed807e1084633d0b1d82a19b",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "10-consumer-changed",
+    "baseline_supplied": 13,
+    "baseline_selected": 12,
+    "baseline_files": [
+      "backend/app/api/routes/items.py",
+      "frontend/src/client/index.ts",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "backend/app/api/routes/items.py",
+      "backend/tests/api/routes/test_items.py",
+      "frontend/src/client/sdk.gen.ts",
+      "frontend/src/routes/_layout/items.tsx"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "e0168b89e5e684d2d11caeca0d8bdf01d395e9ff5a670905028d72fea04074c4",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "11-implementation-test-drift",
+    "baseline_supplied": 15,
+    "baseline_selected": 15,
+    "baseline_files": [
+      "docs/deploying/gunicorn.rst",
+      "docs/deploying/uwsgi.rst",
+      "docs/gevent.rst",
+      "docs/patterns/favicon.rst",
+      "docs/patterns/packages.rst",
+      "src/flask/debughelpers.py",
+      "src/flask/helpers.py",
+      "src/flask/wrappers.py",
+      "tests/test_helpers.py"
+    ],
+    "candidate_supplied": 8,
+    "candidate_selected": 8,
+    "candidate_files": [
+      "src/flask/helpers.py",
+      "src/flask/sansio/app.py",
+      "tests/test_helpers.py"
+    ],
+    "selected_role_counts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [
+      "requirement"
+    ],
+    "prompt_sha256": "de42ea3c5351b29a22eec7ffa1d8c6c8a1d27f79ec88b5f93436dc6dbe332ddc",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 0,
+      "implementation": 4,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [
+      "requirement"
+    ],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  },
+  {
+    "case_id": "12-requirement-test-drift",
+    "baseline_supplied": 13,
+    "baseline_selected": 13,
+    "baseline_files": [
+      ".rtmx/requirements/DATA/REQ-DATA-002.md",
+      ".rtmx/requirements/EXP/REQ-EXP-001.md",
+      ".rtmx/requirements/EXP/REQ-EXP-002.md",
+      ".rtmx/requirements/EXP/REQ-EXP-005.md",
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-003.md",
+      "CLAUDE.md",
+      "README.md",
+      "prompts/rtmx-self.md",
+      "tests/test_harness.sh"
+    ],
+    "candidate_supplied": 9,
+    "candidate_selected": 9,
+    "candidate_files": [
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+      "analysis/compare.py",
+      "bench.sh",
+      "tests/test_harness.sh"
+    ],
+    "selected_role_counts": {
+      "requirement": 3,
+      "implementation": 2,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_selected_roles": [],
+    "prompt_sha256": "0fc325f4ecc58d77340d008e7f5878e27fc4bc4f4e0f67121a9c39c110409a00",
+    "policy": "balanced-change-context-v1",
+    "candidate_role_excerpts": {
+      "requirement": 3,
+      "implementation": 2,
+      "caller": 2,
+      "test": 2
+    },
+    "missing_roles": [],
+    "changed_hunks_considered": 1,
+    "semantic_sufficiency": "UNREVIEWED",
+    "limitations": [
+      "At most four changed hunks and one additional candidate per role.",
+      "Structural/lexical matches are candidates, not proven relevance or completeness."
+    ]
+  }
+]

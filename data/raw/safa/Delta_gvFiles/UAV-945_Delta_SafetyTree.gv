@@ -1,0 +1,2093 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-945Delta"[
+label = "Hazard\nUAV-945 \nArea mapping provides insufficient coverage \n during search and rescue "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--945Delta"[
+label = "<Strategy>\nSTRAT--945 \n Argue that hazard \n  UAV-945  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1044Delta"[
+label = "SafetyRequirement\nUAV-1044 \nAutomate the process of generating \n routes for river search "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1044Delta"[
+label = "<Strategy>\nSTRAT-D--1044 \n Argue that safety requirement \n  UAV-1044  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1047Delta"[
+label = "Requirement\nUAV-1047 \nRoutes are automatically generated, allocated \n to UAVs, and executed during \n  search and rescue "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1048Delta"[
+label = "SafetyRequirement\nUAV-1048 \nGiven a demarcated region of \n the river,  generate a \n set of candidate flight routes "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-D--1048Delta"[
+label = "!!WARNING!!\nWARN-D--1048 \n!!WARNING!! \n  UAV-1048  has no design elements!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1054Delta"[
+label = "SafetyRequirement\nUAV-1054 \nOptimize chance of successful search \n through allocation of routes to \n available UAVs "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1054Delta"[
+label = "<Strategy>\nSTRAT-D--1054 \n Argue that safety requirement \n  UAV-1054  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1056Delta"[
+label = "DesignDefinition\nUAV-1056 \nEstimate the quality of a \n route allocation by computing a \n fitness function based on diverse \n coverage metrics. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830Delta"[
+label = "DesignDefinition\nUAV-830 \nCompute area coverage of a \n set of routes "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--830Delta"[
+label = "<Strategy>\nSTRAT-C--830 \n Argue that design definition \n  UAV-830  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-830\nservices.areamapping.output"[
+label = "Package\nUAV-830\nservices.areamapping.output"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoint.java"[
+label = "Code with \n passed Tests \nImageWaypoint.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoints.java"[
+label = "Code with \n passed Tests \nImageWaypoints.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java"[
+label = "Code with \n passed Tests \nAdaptedCreepingLinePrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--830Delta"[
+label = "!!WARNING!!\nWARN-C--830 \n!!WARNING!! \n  UAV-830  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842Delta"[
+label = "DesignDefinition\nUAV-842 \nEstimate prevalence of downstream versus \n upstream search direction "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--842Delta"[
+label = "<Assumption>\nSTRAT-A--842 \n Assume that all environmental assumptions for \n  UAV-842  have been identified."
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1059Delta"[
+label = "EnvironmentalAssumption\nUAV-1059 \nRiver searches are more effective \n in a downstream direction. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--842Delta"[
+label = "<Strategy>\nSTRAT-C--842 \n Argue that design definition \n  UAV-842  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-842\nservices.areamapping.output"[
+label = "Package\nUAV-842\nservices.areamapping.output"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java"[
+label = "Code with \n passed Tests \nAdaptedCreepingLinePrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/RoutePrimitive.java"[
+label = "Code with \n passed Tests \nRoutePrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--842Delta"[
+label = "!!WARNING!!\nWARN-C--842 \n!!WARNING!! \n  UAV-842  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843Delta"[
+label = "DesignDefinition\nUAV-843 \nEstimate the equality of tasks \n assigned to UAVs. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--843Delta"[
+label = "<Strategy>\nSTRAT-C--843 \n Argue that design definition \n  UAV-843  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-843\nservices.areamapping.output"[
+label = "Package\nUAV-843\nservices.areamapping.output"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java"[
+label = "Code with \n passed Tests \nDrone.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignments.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignment.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java"[
+label = "Code with \n passed Tests \nExecuteableSearchPattern.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--843Delta"[
+label = "!!WARNING!!\nWARN-C--843 \n!!WARNING!! \n  UAV-843  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-845Delta"[
+label = "DesignDefinition\nUAV-845 \nCompute overall fitness function for \n the mission "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--845Delta"[
+label = "<Strategy>\nSTRAT-C--845 \n Argue that design definition \n  UAV-845  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-845\nservices.core.areamapping"[
+label = "Package\nUAV-845\nservices.core.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-845edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[
+label = "Code with \n passed Tests \nMetricsStatistics.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--845Delta"[
+label = "!!WARNING!!\nWARN-C--845 \n!!WARNING!! \n  UAV-845  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846Delta"[
+label = "DesignDefinition\nUAV-846 \nCompute prioritized coverage "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--846Delta"[
+label = "<Strategy>\nSTRAT-C--846 \n Argue that design definition \n  UAV-846  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-846\nservices.core.areamapping"[
+label = "Package\nUAV-846\nservices.core.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[
+label = "Code with \n passed Tests \nMetricsStatistics.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846\nservices.extensions.areamapping.creation"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.creation"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/creation/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846\nservices.extensions.areamapping.internal"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.internal"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/SourcePoints.java"[
+label = "Code with \n passed Tests \nSourcePoints.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/AdaptedCreepingLinePrimitive.java"[
+label = "Code with \n passed Tests \nAdaptedCreepingLinePrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/PriorityPolygonPrimitive.java"[
+label = "Code with \n passed Tests \nPriorityPolygonPrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/RiverBankPrimitive.java"[
+label = "Code with \n passed Tests \nRiverBankPrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846\nservices.extensions.areamapping.metrics"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.metrics"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846\nservices.extensions.areamapping.model"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.model"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/model/RoutePrimitive.java"[
+label = "Code with \n passed Tests \nRoutePrimitive.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846\nservices.extensions.areamapping.selection.random"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.selection.random"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/selection/random/RandomRouteSelector.java"[
+label = "Code with \n passed Tests \nRandomRouteSelector.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846\nservices.extensions.areamapping.util"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.util"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/util/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--846Delta"[
+label = "!!WARNING!!\nWARN-C--846 \n!!WARNING!! \n  UAV-846  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-994Delta"[
+label = "DesignDefinition\nUAV-994 \nCompute the total distance flown \n by all UAVs "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--994Delta"[
+label = "<Strategy>\nSTRAT-C--994 \n Argue that design definition \n  UAV-994  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-994\nservices.core.areamapping"[
+label = "Package\nUAV-994\nservices.core.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-994edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[
+label = "Code with \n passed Tests \nMetricsStatistics.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-994\nservices.extensions.areamapping.metrics"[
+label = "Package\nUAV-994\nservices.extensions.areamapping.metrics"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841Delta"[
+label = "DesignDefinition\nUAV-841 \nCompute distance traveled per UAV "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--841Delta"[
+label = "<Strategy>\nSTRAT-C--841 \n Argue that design definition \n  UAV-841  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-841\nservices.areamapping.output"[
+label = "Package\nUAV-841\nservices.areamapping.output"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignment.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java"[
+label = "Code with \n passed Tests \nExecuteableSearchPattern.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignments.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java"[
+label = "Code with \n passed Tests \nDrone.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--841Delta"[
+label = "!!WARNING!!\nWARN-C--841 \n!!WARNING!! \n  UAV-841  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--994Delta"[
+label = "!!WARNING!!\nWARN-C--994 \n!!WARNING!! \n  UAV-994  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--1056Delta"[
+label = "!!WARNING!!\nWARN-C--1056 \n!!WARNING!! \n  UAV-1056  has no links to code!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1057Delta"[
+label = "DesignDefinition\nUAV-1057 \nEvaluate route allocations for safety \n violations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-844Delta"[
+label = "DesignDefinition\nUAV-844 \nCheck that all UAVs have \n sufficient battery voltage to complete \n their allocated routes. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--844Delta"[
+label = "<Assumption>\nSTRAT-A--844 \n Assume that all environmental assumptions for \n  UAV-844  have been identified."
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1058Delta"[
+label = "EnvironmentalAssumption\nUAV-1058 \nUAVs used for search and \n rescue can fly 10km on \n a full battery. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--844Delta"[
+label = "<Strategy>\nSTRAT-C--844 \n Argue that design definition \n  UAV-844  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-844\nservices.areamapping.output"[
+label = "Package\nUAV-844\nservices.areamapping.output"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--844Delta"[
+label = "!!WARNING!!\nWARN-C--844 \n!!WARNING!! \n  UAV-844  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--1057Delta"[
+label = "!!WARNING!!\nWARN-C--1057 \n!!WARNING!! \n  UAV-1057  has no links to code!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1055Delta"[
+label = "Context\nUAV-1055 \nA successful search finds a \n live victim as quickly as \n possible while minimizing risk to \n the rescuers. "
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--1047Delta"[
+label = "!!WARNING!!\nWARN-C--1047 \n!!WARNING!! \n  UAV-1047  has no links to Design \n Definitions or Process Requirements!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-937Delta"[
+label = "Requirement\nUAV-937 \nThe user shall assign a \n set of UAVs to search \n a mapped region of the \n river and request routes to \n be generated for them. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--937Delta"[
+label = "!!WARNING!!\nWARN-C--937 \n!!WARNING!! \n  UAV-937  has no links to Design \n Definitions or Process Requirements!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1043Delta"[
+label = "SafetyRequirement\nUAV-1043 \nUI enables the user to \n map river region over which \n the search will be conducted "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1043Delta"[
+label = "<Strategy>\nSTRAT-D--1043 \n Argue that safety requirement \n  UAV-1043  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-784Delta"[
+label = "DesignDefinition\nUAV-784 \nThe UI provides features for \n mapping the right and left \n hand side of the river \n banks. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--784Delta"[
+label = "!!WARNING!!\nWARN-C--784 \n!!WARNING!! \n  UAV-784  has no links to code!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-852Delta"[
+label = "DesignDefinition\nUAV-852 \nIcons used to map riverbanks \n shall be different from those \n used to map flight routes. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--852Delta"[
+label = "<Strategy>\nSTRAT-C--852 \n Argue that design definition \n  UAV-852  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-852\nui.vaadin.areamapping"[
+label = "Package\nUAV-852\nui.vaadin.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-852\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-852\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMarkerMouseOverListener.java"[
+label = "Code with \n passed Tests \nAMMarkerMouseOverListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--852Delta"[
+label = "!!WARNING!!\nWARN-C--852 \n!!WARNING!! \n  UAV-852  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-855Delta"[
+label = "DesignDefinition\nUAV-855 \nThe user shall mark high \n priority search areas on the \n map. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898Delta"[
+label = "DesignDefinition\nUAV-898 \nWhen the user mouseovers a \n high priority area, a description \n and other data about the \n area shall be displayed. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--898Delta"[
+label = "<Strategy>\nSTRAT-C--898 \n Argue that design definition \n  UAV-898  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-898\nservices.core.items"[
+label = "Package\nUAV-898\nservices.core.items"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java"[
+label = "Code with \n passed Tests \nMappedItem.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java"[
+label = "Code with \n passed Tests \nIMappedItem.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898\nui.vaadin.areamapping"[
+label = "Package\nUAV-898\nui.vaadin.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java"[
+label = "Code with \n passed Tests \nAMMapComponent.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMPriorityArea.java"[
+label = "Code with \n passed Tests \nAMPriorityArea.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-898\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOverListener.java"[
+label = "Code with \n passed Tests \nAMPriorityMouseOverListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOutListener.java"[
+label = "Code with \n passed Tests \nAMPriorityMouseOutListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMRightClickListener.java"[
+label = "Code with \n passed Tests \nAMRightClickListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-898\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMWayPointPopupView.java"[
+label = "Code with \n passed Tests \nAMWayPointPopupView.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityCreationWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityInfoWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityInfoWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--898Delta"[
+label = "!!WARNING!!\nWARN-C--898 \n!!WARNING!! \n  UAV-898  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901Delta"[
+label = "DesignDefinition\nUAV-901 \nHigh priority areas shall be \n moved and reshaped "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--901Delta"[
+label = "<Strategy>\nSTRAT-C--901 \n Argue that design definition \n  UAV-901  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-901\nservices.core.items"[
+label = "Package\nUAV-901\nservices.core.items"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java"[
+label = "Code with \n passed Tests \nMappedItem.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java"[
+label = "Code with \n passed Tests \nIMappedItem.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901\nservices.instances.areamapping"[
+label = "Package\nUAV-901\nservices.instances.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.services/src/edu/nd/dronology/services/instances/areamapping/AreaMappingServiceInstance.java"[
+label = "Code with \n passed Tests \nAreaMappingServiceInstance.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901\nui.vaadin.areamapping"[
+label = "Package\nUAV-901\nui.vaadin.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java"[
+label = "Code with \n passed Tests \nAMEditPrioritiesController.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-901\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMapAddMarkerListener.java"[
+label = "Code with \n passed Tests \nAMMapAddMarkerListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityDragEndListener.java"[
+label = "Code with \n passed Tests \nAMPriorityDragEndListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-901\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityCreationWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--901Delta"[
+label = "!!WARNING!!\nWARN-C--901 \n!!WARNING!! \n  UAV-901  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913Delta"[
+label = "DesignDefinition\nUAV-913 \nThe user shall mark critical \n regions of the demarcated riverbank \n as high priority "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--913Delta"[
+label = "<Strategy>\nSTRAT-C--913 \n Argue that design definition \n  UAV-913  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-913\nui.vaadin.areamapping"[
+label = "Package\nUAV-913\nui.vaadin.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditSidesController.java"[
+label = "Code with \n passed Tests \nAMEditSidesController.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java"[
+label = "Code with \n passed Tests \nAMEditPrioritiesController.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoBox.java"[
+label = "Code with \n passed Tests \nAMInfoBox.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java"[
+label = "Code with \n passed Tests \nAMMapComponent.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-913\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPrioritySideMouseOverListener.java"[
+label = "Code with \n passed Tests \nAMPrioritySideMouseOverListener.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-913\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMUnsavedChangesConfirmation.java"[
+label = "Code with \n passed Tests \nAMUnsavedChangesConfirmation.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveAreaWithoutFinishWindow.java"[
+label = "Code with \n passed Tests \nAMSaveAreaWithoutFinishWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMEditChoicesWindow.java"[
+label = "Code with \n passed Tests \nAMEditChoicesWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveSideWithoutFinishWindow.java"[
+label = "Code with \n passed Tests \nAMSaveSideWithoutFinishWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPrioritySideCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPrioritySideCreationWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java"[
+label = "Code with \n passed Tests \nAMNewMappingWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityAreaCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityAreaCreationWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--913Delta"[
+label = "!!WARNING!!\nWARN-C--913 \n!!WARNING!! \n  UAV-913  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--855Delta"[
+label = "!!WARNING!!\nWARN-C--855 \n!!WARNING!! \n  UAV-855  has no links to code!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1046Delta"[
+label = "SafetyRequirement\nUAV-1046 \nUser Interface must be intuitive \n for user under time pressure \n and use outside in the \n search area. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1046Delta"[
+label = "<Strategy>\nSTRAT-D--1046 \n Argue that safety requirement \n  UAV-1046  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-783Delta"[
+label = "DesignDefinition\nUAV-783 \nThe area mapping system will \n provide search features for locating \n and retrieving existing mappings "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--783Delta"[
+label = "<Strategy>\nSTRAT-C--783 \n Argue that design definition \n  UAV-783  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-783\nui.vaadin.areamapping"[
+label = "Package\nUAV-783\nui.vaadin.areamapping"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditModeController.java"[
+label = "Code with \n passed Tests \nAMEditModeController.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMainLayout.java"[
+label = "Code with \n passed Tests \nAMMainLayout.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoPanel.java"[
+label = "Code with \n passed Tests \nAMInfoPanel.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-783\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-783\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMDeleteMappingConfirmation.java"[
+label = "Code with \n passed Tests \nAMDeleteMappingConfirmation.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java"[
+label = "Code with \n passed Tests \nAMNewMappingWindow.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--783Delta"[
+label = "!!WARNING!!\nWARN-C--783 \n!!WARNING!! \n  UAV-783  has no links to code!"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-847Delta"[
+label = "DesignDefinition\nUAV-847 \nProvide a flight routes tab \n that is intuitive for the \n user. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--847Delta"[
+label = "!!WARNING!!\nWARN-C--847 \n!!WARNING!! \n  UAV-847  has no links to code!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-977Delta"[
+label = "ProcessRequirement\nUAV-977 \nRoutes assigned manually "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-945Delta" -> "STRAT--945Delta"[style = "solid" color = black];
+"STRAT--945Delta" -> "UAV-1044Delta"[style = "solid" color = black];
+"UAV-1044Delta" -> "STRAT-D--1044Delta"[style = "solid" color = black];
+"STRAT-D--1044Delta" -> "UAV-1047Delta"[style = "solid" color = black];
+"UAV-1047Delta" -> "UAV-1048Delta"[style = "solid" color = black];
+"UAV-1048Delta" -> "WARN-D--1048Delta"[style = "solid" color = black];
+"UAV-1047Delta" -> "UAV-1054Delta"[style = "solid" color = black];
+"UAV-1054Delta" -> "STRAT-D--1054Delta"[style = "solid" color = black];
+"STRAT-D--1054Delta" -> "UAV-1056Delta"[style = "solid" color = black];
+"UAV-1056Delta" -> "UAV-830Delta"[style = "solid" color = black];
+"UAV-830Delta" -> "STRAT-C--830Delta"[style = "solid" color = black];
+"STRAT-C--830Delta" -> "UAV-830\nservices.areamapping.output"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoint.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoints.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[style = "dotted" color = darkgreen];
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java"[style = "dotted" color = darkgreen];
+"UAV-830Delta" -> "WARN-C--830Delta"[style = "dotted" color = red];
+"UAV-1056Delta" -> "UAV-842Delta"[style = "solid" color = black];
+"UAV-842Delta" -> "STRAT-A--842Delta"[style = "solid" color = black];
+"STRAT-A--842Delta" -> "UAV-1059Delta"[style = "solid" color = black];
+"UAV-842Delta" -> "STRAT-C--842Delta"[style = "solid" color = black];
+"STRAT-C--842Delta" -> "UAV-842\nservices.areamapping.output"[style = "dotted" color = darkgreen];
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java"[style = "dotted" color = darkgreen];
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[style = "dotted" color = darkgreen];
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/RoutePrimitive.java"[style = "dotted" color = darkgreen];
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[style = "dotted" color = darkgreen];
+"UAV-842Delta" -> "WARN-C--842Delta"[style = "dotted" color = red];
+"UAV-1056Delta" -> "UAV-843Delta"[style = "solid" color = black];
+"UAV-843Delta" -> "STRAT-C--843Delta"[style = "solid" color = black];
+"STRAT-C--843Delta" -> "UAV-843\nservices.areamapping.output"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[style = "dotted" color = darkgreen];
+"UAV-843Delta" -> "WARN-C--843Delta"[style = "dotted" color = red];
+"UAV-1056Delta" -> "UAV-845Delta"[style = "solid" color = black];
+"UAV-845Delta" -> "STRAT-C--845Delta"[style = "solid" color = black];
+"STRAT-C--845Delta" -> "UAV-845\nservices.core.areamapping"[style = "dotted" color = darkgreen];
+"UAV-845\nservices.core.areamapping" -> "UAV-845edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[style = "dotted" color = darkgreen];
+"UAV-845Delta" -> "WARN-C--845Delta"[style = "dotted" color = red];
+"UAV-1056Delta" -> "UAV-846Delta"[style = "solid" color = black];
+"UAV-846Delta" -> "STRAT-C--846Delta"[style = "solid" color = black];
+"STRAT-C--846Delta" -> "UAV-846\nservices.core.areamapping"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.core.areamapping" -> "UAV-846edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[style = "dotted" color = darkgreen];
+"STRAT-C--846Delta" -> "UAV-846\nservices.extensions.areamapping.creation"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.creation" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/creation/MapRiver.java"[style = "dotted" color = darkgreen];
+"STRAT-C--846Delta" -> "UAV-846\nservices.extensions.areamapping.internal"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/SourcePoints.java"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/AdaptedCreepingLinePrimitive.java"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/PriorityPolygonPrimitive.java"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/RiverBankPrimitive.java"[style = "dotted" color = darkgreen];
+"STRAT-C--846Delta" -> "UAV-846\nservices.extensions.areamapping.metrics"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.metrics" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.metrics" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"STRAT-C--846Delta" -> "UAV-846\nservices.extensions.areamapping.model"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.model" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/model/RoutePrimitive.java"[style = "dotted" color = darkgreen];
+"STRAT-C--846Delta" -> "UAV-846\nservices.extensions.areamapping.selection.random"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.selection.random" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/selection/random/RandomRouteSelector.java"[style = "dotted" color = darkgreen];
+"STRAT-C--846Delta" -> "UAV-846\nservices.extensions.areamapping.util"[style = "dotted" color = darkgreen];
+"UAV-846\nservices.extensions.areamapping.util" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/util/Utilities.java"[style = "dotted" color = darkgreen];
+"UAV-846Delta" -> "WARN-C--846Delta"[style = "dotted" color = red];
+"UAV-1056Delta" -> "UAV-994Delta"[style = "solid" color = black];
+"UAV-994Delta" -> "STRAT-C--994Delta"[style = "solid" color = black];
+"STRAT-C--994Delta" -> "UAV-994\nservices.core.areamapping"[style = "dotted" color = darkgreen];
+"UAV-994\nservices.core.areamapping" -> "UAV-994edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[style = "dotted" color = darkgreen];
+"STRAT-C--994Delta" -> "UAV-994\nservices.extensions.areamapping.metrics"[style = "dotted" color = darkgreen];
+"UAV-994\nservices.extensions.areamapping.metrics" -> "UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-994\nservices.extensions.areamapping.metrics" -> "UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-994Delta" -> "UAV-841Delta"[style = "solid" color = black];
+"UAV-841Delta" -> "STRAT-C--841Delta"[style = "solid" color = black];
+"STRAT-C--841Delta" -> "UAV-841\nservices.areamapping.output"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[style = "dotted" color = darkgreen];
+"UAV-841Delta" -> "WARN-C--841Delta"[style = "dotted" color = red];
+"UAV-994Delta" -> "WARN-C--994Delta"[style = "dotted" color = red];
+"UAV-1056Delta" -> "WARN-C--1056Delta"[style = "solid" color = black];
+"STRAT-D--1054Delta" -> "UAV-1057Delta"[style = "solid" color = black];
+"UAV-1057Delta" -> "UAV-844Delta"[style = "solid" color = black];
+"UAV-844Delta" -> "STRAT-A--844Delta"[style = "solid" color = black];
+"STRAT-A--844Delta" -> "UAV-1058Delta"[style = "solid" color = black];
+"UAV-844Delta" -> "STRAT-C--844Delta"[style = "solid" color = black];
+"STRAT-C--844Delta" -> "UAV-844\nservices.areamapping.output"[style = "dotted" color = darkgreen];
+"UAV-844\nservices.areamapping.output" -> "UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[style = "dotted" color = darkgreen];
+"UAV-844\nservices.areamapping.output" -> "UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-844Delta" -> "WARN-C--844Delta"[style = "dotted" color = red];
+"UAV-1057Delta" -> "WARN-C--1057Delta"[style = "solid" color = black];
+"UAV-1054Delta" -> "UAV-1055Delta"[style = "solid" color = black];
+"UAV-1047Delta" -> "WARN-C--1047Delta"[style = "solid" color = black];
+"STRAT-D--1044Delta" -> "UAV-937Delta"[style = "solid" color = black];
+"UAV-937Delta" -> "WARN-C--937Delta"[style = "solid" color = black];
+"UAV-1044Delta" -> "UAV-1043Delta"[style = "solid" color = black];
+"UAV-1043Delta" -> "STRAT-D--1043Delta"[style = "solid" color = black];
+"STRAT-D--1043Delta" -> "UAV-784Delta"[style = "solid" color = black];
+"UAV-784Delta" -> "WARN-C--784Delta"[style = "solid" color = black];
+"STRAT-D--1043Delta" -> "UAV-852Delta"[style = "solid" color = black];
+"UAV-852Delta" -> "STRAT-C--852Delta"[style = "solid" color = black];
+"STRAT-C--852Delta" -> "UAV-852\nui.vaadin.areamapping"[style = "dotted" color = darkgreen];
+"UAV-852\nui.vaadin.areamapping" -> "UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[style = "dotted" color = darkgreen];
+"STRAT-C--852Delta" -> "UAV-852\nui.vaadin.areamapping.mapoperations"[style = "dotted" color = darkgreen];
+"UAV-852\nui.vaadin.areamapping.mapoperations" -> "UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMarkerMouseOverListener.java"[style = "dotted" color = darkgreen];
+"UAV-852Delta" -> "WARN-C--852Delta"[style = "dotted" color = red];
+"STRAT-D--1043Delta" -> "UAV-855Delta"[style = "solid" color = black];
+"UAV-855Delta" -> "UAV-898Delta"[style = "solid" color = black];
+"UAV-898Delta" -> "STRAT-C--898Delta"[style = "solid" color = black];
+"STRAT-C--898Delta" -> "UAV-898\nservices.core.items"[style = "dotted" color = darkgreen];
+"UAV-898\nservices.core.items" -> "UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java"[style = "dotted" color = darkgreen];
+"UAV-898\nservices.core.items" -> "UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java"[style = "dotted" color = darkgreen];
+"STRAT-C--898Delta" -> "UAV-898\nui.vaadin.areamapping"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMPriorityArea.java"[style = "dotted" color = darkgreen];
+"STRAT-C--898Delta" -> "UAV-898\nui.vaadin.areamapping.mapoperations"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping.mapoperations" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOverListener.java"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping.mapoperations" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOutListener.java"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping.mapoperations" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMRightClickListener.java"[style = "dotted" color = darkgreen];
+"STRAT-C--898Delta" -> "UAV-898\nui.vaadin.areamapping.windows"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping.windows" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMWayPointPopupView.java"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping.windows" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java"[style = "dotted" color = darkgreen];
+"UAV-898\nui.vaadin.areamapping.windows" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityInfoWindow.java"[style = "dotted" color = darkgreen];
+"UAV-898Delta" -> "WARN-C--898Delta"[style = "dotted" color = red];
+"UAV-855Delta" -> "UAV-901Delta"[style = "solid" color = black];
+"UAV-901Delta" -> "STRAT-C--901Delta"[style = "solid" color = black];
+"STRAT-C--901Delta" -> "UAV-901\nservices.core.items"[style = "dotted" color = darkgreen];
+"UAV-901\nservices.core.items" -> "UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java"[style = "dotted" color = darkgreen];
+"UAV-901\nservices.core.items" -> "UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java"[style = "dotted" color = darkgreen];
+"STRAT-C--901Delta" -> "UAV-901\nservices.instances.areamapping"[style = "dotted" color = darkgreen];
+"UAV-901\nservices.instances.areamapping" -> "UAV-901edu.nd.dronology.services/src/edu/nd/dronology/services/instances/areamapping/AreaMappingServiceInstance.java"[style = "dotted" color = darkgreen];
+"STRAT-C--901Delta" -> "UAV-901\nui.vaadin.areamapping"[style = "dotted" color = darkgreen];
+"UAV-901\nui.vaadin.areamapping" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-901\nui.vaadin.areamapping" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java"[style = "dotted" color = darkgreen];
+"STRAT-C--901Delta" -> "UAV-901\nui.vaadin.areamapping.mapoperations"[style = "dotted" color = darkgreen];
+"UAV-901\nui.vaadin.areamapping.mapoperations" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMapAddMarkerListener.java"[style = "dotted" color = darkgreen];
+"UAV-901\nui.vaadin.areamapping.mapoperations" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityDragEndListener.java"[style = "dotted" color = darkgreen];
+"STRAT-C--901Delta" -> "UAV-901\nui.vaadin.areamapping.windows"[style = "dotted" color = darkgreen];
+"UAV-901\nui.vaadin.areamapping.windows" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java"[style = "dotted" color = darkgreen];
+"UAV-901Delta" -> "WARN-C--901Delta"[style = "dotted" color = red];
+"UAV-855Delta" -> "UAV-913Delta"[style = "solid" color = black];
+"UAV-913Delta" -> "STRAT-C--913Delta"[style = "solid" color = black];
+"STRAT-C--913Delta" -> "UAV-913\nui.vaadin.areamapping"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditSidesController.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoBox.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java"[style = "dotted" color = darkgreen];
+"STRAT-C--913Delta" -> "UAV-913\nui.vaadin.areamapping.mapoperations"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.mapoperations" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPrioritySideMouseOverListener.java"[style = "dotted" color = darkgreen];
+"STRAT-C--913Delta" -> "UAV-913\nui.vaadin.areamapping.windows"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMUnsavedChangesConfirmation.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveAreaWithoutFinishWindow.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMEditChoicesWindow.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveSideWithoutFinishWindow.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPrioritySideCreationWindow.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java"[style = "dotted" color = darkgreen];
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityAreaCreationWindow.java"[style = "dotted" color = darkgreen];
+"UAV-913Delta" -> "WARN-C--913Delta"[style = "dotted" color = red];
+"UAV-855Delta" -> "WARN-C--855Delta"[style = "solid" color = black];
+"UAV-1043Delta" -> "UAV-1046Delta"[style = "solid" color = black];
+"UAV-1046Delta" -> "STRAT-D--1046Delta"[style = "solid" color = black];
+"STRAT-D--1046Delta" -> "UAV-783Delta"[style = "solid" color = black];
+"UAV-783Delta" -> "STRAT-C--783Delta"[style = "solid" color = black];
+"STRAT-C--783Delta" -> "UAV-783\nui.vaadin.areamapping"[style = "dotted" color = darkgreen];
+"UAV-783\nui.vaadin.areamapping" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditModeController.java"[style = "dotted" color = darkgreen];
+"UAV-783\nui.vaadin.areamapping" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMainLayout.java"[style = "dotted" color = darkgreen];
+"UAV-783\nui.vaadin.areamapping" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoPanel.java"[style = "dotted" color = darkgreen];
+"STRAT-C--783Delta" -> "UAV-783\nui.vaadin.areamapping.windows"[style = "dotted" color = darkgreen];
+"UAV-783\nui.vaadin.areamapping.windows" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMDeleteMappingConfirmation.java"[style = "dotted" color = darkgreen];
+"UAV-783\nui.vaadin.areamapping.windows" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java"[style = "dotted" color = darkgreen];
+"UAV-783Delta" -> "WARN-C--783Delta"[style = "dotted" color = red];
+"STRAT-D--1046Delta" -> "UAV-847Delta"[style = "solid" color = black];
+"UAV-847Delta" -> "WARN-C--847Delta"[style = "solid" color = black];
+"STRAT--945Delta" -> "UAV-977Delta"[style = "solid" color = black];
+}

@@ -1,0 +1,1760 @@
+[
+  {
+    "dataset": "SMOS",
+    "queries": 67,
+    "source_run": "experiments/retrieval/20261007T104905-4064b602/results.json",
+    "source_sha256": "38d035786a3ce4d8a1d07a0750959cb2bfbf28f7b36f25c5d6237baab748ec97",
+    "baseline_metrics": {
+      "precision": 0.28059701492537314,
+      "recall": 0.18007662835249041,
+      "f1": 0.2193698949824971,
+      "tp": 188,
+      "fp": 482,
+      "fn": 856,
+      "mrr": 0.5675704745941795,
+      "map": 0.3025565166895097,
+      "ndcg_at_10": 0.30923887081129287,
+      "recall_at_1": 0.02834104576630338,
+      "recall_at_5": 0.11416406835056621,
+      "recall_at_10": 0.19162594076646108,
+      "queries": 67,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "rag_metrics": {
+      "precision": 0.28059701492537314,
+      "recall": 0.18007662835249041,
+      "f1": 0.2193698949824971,
+      "tp": 188,
+      "fp": 482,
+      "fn": 856,
+      "mrr": 0.5874709721066174,
+      "map": 0.3060623895806929,
+      "ndcg_at_10": 0.31453452057196357,
+      "recall_at_1": 0.03065840633189647,
+      "recall_at_5": 0.11416406835056621,
+      "recall_at_10": 0.19162594076646108,
+      "queries": 67,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "metric_deltas": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "mrr": 0.01990049751243783,
+      "map": 0.0035058728911831483,
+      "ndcg_at_10": 0.0052956497606707065,
+      "recall_at_1": 0.0023173605655930907,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0
+    },
+    "changed_rankings": 17,
+    "candidate_status_counts": {
+      "UNCERTAIN": 217,
+      "UNSUPPORTED": 76,
+      "SUPPORTED": 42
+    },
+    "mean_generation_seconds": 70.8195156178955,
+    "strict_schema_valid_rate": 1.0,
+    "per_query_deltas": [
+      {
+        "query": "SMOS1",
+        "map": 0.0714285714285714,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.05504486403287656
+      },
+      {
+        "query": "SMOS10",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS11",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS12",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS13",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS14",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS15",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS16",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS17",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS18",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS19",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS2",
+        "map": -0.038095238095238126,
+        "mrr": -0.16666666666666669,
+        "ndcg_at_10": -0.048035602456227094
+      },
+      {
+        "query": "SMOS20",
+        "map": 0.025000000000000022,
+        "mrr": 0.5,
+        "ndcg_at_10": 0.08122932242452563
+      },
+      {
+        "query": "SMOS21",
+        "map": 0.02416666666666667,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.03846180745244426
+      },
+      {
+        "query": "SMOS22",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS23",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS24",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS25",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS26",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS27",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS28",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS29",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS3",
+        "map": 0.038095238095238126,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.031101485426915598
+      },
+      {
+        "query": "SMOS30",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS31",
+        "map": 0.04607843137254902,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.05371932623193343
+      },
+      {
+        "query": "SMOS32",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS33",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS34",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS35",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS36",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS37",
+        "map": -0.02941176470588236,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.04407407950400377
+      },
+      {
+        "query": "SMOS38",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS39",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS4",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS40",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS41",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS42",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS43",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS44",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS45",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS46",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS47",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS48",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS49",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS5",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS50",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS51",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS52",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS53",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS54",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS55",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS56",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS57",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS58",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS59",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS6",
+        "map": 0.026315789473684237,
+        "mrr": 0.5,
+        "ndcg_at_10": 0.08122932242452563
+      },
+      {
+        "query": "SMOS60",
+        "map": 0.04500000000000004,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0249027655074191
+      },
+      {
+        "query": "SMOS61",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS62",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS63",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS64",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS65",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS66",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS67",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS7",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS8",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "SMOS9",
+        "map": 0.026315789473684237,
+        "mrr": 0.5,
+        "ndcg_at_10": 0.08122932242452569
+      }
+    ],
+    "semantic_grounding": null,
+    "hallucination_rate": null
+  },
+  {
+    "dataset": "iTrust",
+    "queries": 105,
+    "source_run": "experiments/retrieval/20261007T163255-0dfbb833/results.json",
+    "source_sha256": "382bc8e5518a8b7c2f83afed803f8b7de0cee05fb305df98de0759969ea670a4",
+    "baseline_metrics": {
+      "precision": 0.1180952380952381,
+      "recall": 0.43356643356643354,
+      "f1": 0.18562874251497005,
+      "tp": 124,
+      "fp": 926,
+      "fn": 162,
+      "mrr": 0.47269440915844385,
+      "map": 0.3068281472116405,
+      "ndcg_at_10": 0.37225225468952194,
+      "recall_at_1": 0.1262962962962963,
+      "recall_at_5": 0.38845049130763415,
+      "recall_at_10": 0.4700226757369615,
+      "queries": 105,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "rag_metrics": {
+      "precision": 0.1180952380952381,
+      "recall": 0.43356643356643354,
+      "f1": 0.18562874251497005,
+      "tp": 124,
+      "fp": 926,
+      "fn": 162,
+      "mrr": 0.464757901221936,
+      "map": 0.3043088728352233,
+      "ndcg_at_10": 0.3691174573860994,
+      "recall_at_1": 0.11677248677248678,
+      "recall_at_5": 0.38845049130763415,
+      "recall_at_10": 0.4700226757369615,
+      "queries": 105,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "metric_deltas": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "mrr": -0.007936507936507853,
+      "map": -0.002519274376417191,
+      "ndcg_at_10": -0.003134797303422532,
+      "recall_at_1": -0.009523809523809518,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0
+    },
+    "changed_rankings": 60,
+    "candidate_status_counts": {
+      "UNCERTAIN": 202,
+      "UNSUPPORTED": 95,
+      "SUPPORTED": 228
+    },
+    "mean_generation_seconds": 42.23103573408572,
+    "strict_schema_valid_rate": 1.0,
+    "per_query_deltas": [
+      {
+        "query": "UC10E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC10E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC10S1",
+        "map": 0.023809523809523808,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.03598949053109404
+      },
+      {
+        "query": "UC10S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC11E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC11E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC11S1",
+        "map": 0.016666666666666635,
+        "mrr": 0.04999999999999999,
+        "ndcg_at_10": 0.0205655539631949
+      },
+      {
+        "query": "UC11S2",
+        "map": 0.027777777777777762,
+        "mrr": 0.08333333333333331,
+        "ndcg_at_10": 0.03253201651083071
+      },
+      {
+        "query": "UC12",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC13",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC13E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC15E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC15S1",
+        "map": 0.46666666666666656,
+        "mrr": 0.6666666666666667,
+        "ndcg_at_10": 0.37594947999616213
+      },
+      {
+        "query": "UC15S2",
+        "map": 0.16666666666666674,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.08027921085181244
+      },
+      {
+        "query": "UC15S3",
+        "map": -0.30000000000000004,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.1496550944652454
+      },
+      {
+        "query": "UC15S4",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC16",
+        "map": 0.13055555555555554,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.07385827304097115
+      },
+      {
+        "query": "UC17S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC17S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC17S3",
+        "map": 0.16666666666666674,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.08027921085181244
+      },
+      {
+        "query": "UC18E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC18E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC18S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC18S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC19E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC19E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC19S1",
+        "map": 0.05555555555555558,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.061442547954487
+      },
+      {
+        "query": "UC19S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC1E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC1S1",
+        "map": 0.012500000000000011,
+        "mrr": 0.04999999999999999,
+        "ndcg_at_10": 0.017107918043312242
+      },
+      {
+        "query": "UC21E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC21E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC21S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC23E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC23E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC23S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC23S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC23S4",
+        "map": 0.16666666666666674,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.08027921085181244
+      },
+      {
+        "query": "UC24",
+        "map": 0.041666666666666685,
+        "mrr": 0.08333333333333331,
+        "ndcg_at_10": 0.04250547381013836
+      },
+      {
+        "query": "UC25",
+        "map": -0.08333333333333334,
+        "mrr": -0.25,
+        "ndcg_at_10": -0.09397456446531766
+      },
+      {
+        "query": "UC26E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC26E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC26S1",
+        "map": -0.14999999999999997,
+        "mrr": -0.3,
+        "ndcg_at_10": -0.14965509446524541
+      },
+      {
+        "query": "UC26S2",
+        "map": 0.05555555555555558,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.06059710026856402
+      },
+      {
+        "query": "UC26S3",
+        "map": -0.06666666666666665,
+        "mrr": -0.16666666666666669,
+        "ndcg_at_10": -0.06822028178799144
+      },
+      {
+        "query": "UC26S4",
+        "map": 0.16666666666666669,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.13092975357145753
+      },
+      {
+        "query": "UC27S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC27S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC28",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC29",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC2E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC2S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC2S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30S4",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30S5",
+        "map": -0.24999999999999994,
+        "mrr": -0.5,
+        "ndcg_at_10": -0.22629438553091674
+      },
+      {
+        "query": "UC31S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC32S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC33S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC33S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34E3",
+        "map": -0.3,
+        "mrr": -0.3,
+        "ndcg_at_10": -0.2440769463369159
+      },
+      {
+        "query": "UC34E4",
+        "map": -0.6666666666666667,
+        "mrr": -0.6666666666666667,
+        "ndcg_at_10": -0.5
+      },
+      {
+        "query": "UC34S1",
+        "map": 0.04166666666666663,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.02706248872493333
+      },
+      {
+        "query": "UC34S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34S4",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34S5",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34S6",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC35S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC35S2",
+        "map": -0.059999999999999984,
+        "mrr": -0.3,
+        "ndcg_at_10": -0.08278118722218578
+      },
+      {
+        "query": "UC36S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC36S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC36S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC37S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC37S2",
+        "map": 0.0888888888888889,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.053097570474025524
+      },
+      {
+        "query": "UC37S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC38S1",
+        "map": 0.16666666666666674,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.08027921085181244
+      },
+      {
+        "query": "UC38S2",
+        "map": -0.16666666666666674,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.08027921085181244
+      },
+      {
+        "query": "UC3E1",
+        "map": -0.16666666666666663,
+        "mrr": -0.16666666666666669,
+        "ndcg_at_10": -0.1227846846619507
+      },
+      {
+        "query": "UC3E2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC3S1",
+        "map": 0.16666666666666669,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.13092975357145753
+      },
+      {
+        "query": "UC3S2",
+        "map": -0.11111111111111105,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.061442547954487114
+      },
+      {
+        "query": "UC3S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC3S4",
+        "map": -0.06666666666666665,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.04417040676824563
+      },
+      {
+        "query": "UC3S5",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC4E1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC4S1",
+        "map": -0.05333333333333329,
+        "mrr": -0.16666666666666669,
+        "ndcg_at_10": -0.05926943442808419
+      },
+      {
+        "query": "UC4S2",
+        "map": 0.012499999999999983,
+        "mrr": 0.04999999999999999,
+        "ndcg_at_10": 0.017107918043312242
+      },
+      {
+        "query": "UC4S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC4S4",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC5S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC5S2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC6S1",
+        "map": 0.027777777777777735,
+        "mrr": 0.08333333333333331,
+        "ndcg_at_10": 0.03253201651083065
+      },
+      {
+        "query": "UC6S2",
+        "map": -0.09999999999999998,
+        "mrr": -0.3,
+        "ndcg_at_10": -0.11454011842851258
+      },
+      {
+        "query": "UC6S3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC8S1",
+        "map": 0.16666666666666663,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.1227846846619507
+      },
+      {
+        "query": "UC8S2",
+        "map": 0.04166666666666666,
+        "mrr": 0.08333333333333331,
+        "ndcg_at_10": 0.042505473810138306
+      },
+      {
+        "query": "UC9S1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC9S2",
+        "map": 0.06666666666666665,
+        "mrr": 0.1333333333333333,
+        "ndcg_at_10": 0.06937588361343297
+      }
+    ],
+    "semantic_grounding": null,
+    "hallucination_rate": null
+  },
+  {
+    "dataset": "eTour_en",
+    "queries": 57,
+    "source_run": "experiments/retrieval/20261007T171402-64fa98d8/results.json",
+    "source_sha256": "dea7ac2c29a300ef443a3d3d84e30d8359bb44e391e87d8c04a13b6f942aaf0b",
+    "baseline_metrics": {
+      "precision": 0.2929824561403509,
+      "recall": 0.5422077922077922,
+      "f1": 0.3804100227790433,
+      "tp": 167,
+      "fp": 403,
+      "fn": 141,
+      "mrr": 0.7255758001278718,
+      "map": 0.44055321999111907,
+      "ndcg_at_10": 0.5280000813341786,
+      "recall_at_1": 0.1387287663603453,
+      "recall_at_5": 0.388401559454191,
+      "recall_at_10": 0.5587162350320245,
+      "queries": 57,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "rag_metrics": {
+      "precision": 0.2929824561403509,
+      "recall": 0.5422077922077922,
+      "f1": 0.3804100227790433,
+      "tp": 167,
+      "fp": 403,
+      "fn": 141,
+      "mrr": 0.7232366188413222,
+      "map": 0.44268377786729085,
+      "ndcg_at_10": 0.5293393142209577,
+      "recall_at_1": 0.13772626009468114,
+      "recall_at_5": 0.388401559454191,
+      "recall_at_10": 0.5587162350320245,
+      "queries": 57,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "metric_deltas": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "mrr": -0.002339181286549641,
+      "map": 0.002130557876171779,
+      "ndcg_at_10": 0.0013392328867790626,
+      "recall_at_1": -0.0010025062656641714,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0
+    },
+    "changed_rankings": 33,
+    "candidate_status_counts": {
+      "UNCERTAIN": 121,
+      "UNSUPPORTED": 54,
+      "SUPPORTED": 110
+    },
+    "mean_generation_seconds": 37.93358614424557,
+    "strict_schema_valid_rate": 1.0,
+    "per_query_deltas": [
+      {
+        "query": "UC1",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC10",
+        "map": -0.0357142857142857,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.019055373501782658
+      },
+      {
+        "query": "UC11",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC12",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC13",
+        "map": -0.053333333333333344,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.03837502512446628
+      },
+      {
+        "query": "UC14",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC15",
+        "map": 0.055555555555555525,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.03961965942952794
+      },
+      {
+        "query": "UC16",
+        "map": -0.125,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.07817485246961264
+      },
+      {
+        "query": "UC17",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC18",
+        "map": 0.03666666666666668,
+        "mrr": 0.08333333333333331,
+        "ndcg_at_10": 0.03837502512446628
+      },
+      {
+        "query": "UC19",
+        "map": -0.04444444444444451,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.0265947440882639
+      },
+      {
+        "query": "UC2",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC20",
+        "map": -0.016666666666666607,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.009645246727929768
+      },
+      {
+        "query": "UC21",
+        "map": 0.021428571428571463,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.012046111925133163
+      },
+      {
+        "query": "UC22",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC23",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC24",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC25",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC26",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC27",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC28",
+        "map": 0.05333333333333329,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.03837502512446633
+      },
+      {
+        "query": "UC29",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC3",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC30",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC31",
+        "map": 0.2555555555555555,
+        "mrr": 0.5,
+        "ndcg_at_10": 0.22629438553091674
+      },
+      {
+        "query": "UC32",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC33",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC34",
+        "map": -0.09999999999999998,
+        "mrr": -0.5,
+        "ndcg_at_10": -0.12517394053908854
+      },
+      {
+        "query": "UC35",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC36",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC38",
+        "map": 0.05833333333333346,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.04407407950400377
+      },
+      {
+        "query": "UC39",
+        "map": 0.04499999999999993,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.02490276550741899
+      },
+      {
+        "query": "UC4",
+        "map": -0.029629629629629617,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.026594744088263844
+      },
+      {
+        "query": "UC40",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC41",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC42",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC43",
+        "map": 0.04761904761904759,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.05504486403287656
+      },
+      {
+        "query": "UC44",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC45",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC46",
+        "map": 0.027777777777777735,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.020977440839036188
+      },
+      {
+        "query": "UC47",
+        "map": 0.0714285714285714,
+        "mrr": 0.5,
+        "ndcg_at_10": 0.10144867592605145
+      },
+      {
+        "query": "UC48",
+        "map": -0.08000000000000007,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.03837502512446633
+      },
+      {
+        "query": "UC49",
+        "map": -0.04444444444444445,
+        "mrr": 0.0,
+        "ndcg_at_10": -0.0342386136114432
+      },
+      {
+        "query": "UC5",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC50",
+        "map": -0.04285714285714287,
+        "mrr": -0.3,
+        "ndcg_at_10": -0.06709097595800961
+      },
+      {
+        "query": "UC51",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC52",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC53",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC54",
+        "map": -0.010416666666666657,
+        "mrr": -0.08333333333333331,
+        "ndcg_at_10": -0.017534858766072636
+      },
+      {
+        "query": "UC55",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC56",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC57",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC58",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "UC6",
+        "map": -0.16666666666666669,
+        "mrr": -0.5,
+        "ndcg_at_10": -0.17319681505689122
+      },
+      {
+        "query": "UC7",
+        "map": 0.03749999999999998,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.01710791804331213
+      },
+      {
+        "query": "UC8",
+        "map": 0.09999999999999998,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.06791791489182109
+      },
+      {
+        "query": "UC9",
+        "map": 0.060416666666666674,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.04420262372366324
+      }
+    ],
+    "semantic_grounding": null,
+    "hallucination_rate": null
+  },
+  {
+    "dataset": "RTMX-module-valid",
+    "queries": 22,
+    "source_run": "experiments/retrieval/20261007T210208-3f0803cc/results.json",
+    "source_sha256": "bd66f7fcedcca826d17f2e7d234e60a31607f065e5f3d84e6883ed457f842af1",
+    "baseline_metrics": {
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "f1": 0.25,
+      "tp": 22,
+      "fp": 132,
+      "fn": 0,
+      "mrr": 0.7515151515151515,
+      "map": 0.7515151515151515,
+      "ndcg_at_10": 0.813766122329028,
+      "recall_at_1": 0.5909090909090909,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "queries": 22,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "rag_metrics": {
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "f1": 0.25,
+      "tp": 22,
+      "fp": 132,
+      "fn": 0,
+      "mrr": 0.6984848484848485,
+      "map": 0.6984848484848485,
+      "ndcg_at_10": 0.7728340136473858,
+      "recall_at_1": 0.5454545454545454,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "queries": 22,
+      "decision_cutoff": 10,
+      "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"
+    },
+    "metric_deltas": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "mrr": -0.05303030303030298,
+      "map": -0.05303030303030298,
+      "ndcg_at_10": -0.04093210868164221,
+      "recall_at_1": -0.045454545454545525,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0
+    },
+    "changed_rankings": 19,
+    "candidate_status_counts": {
+      "SUPPORTED": 70,
+      "UNCERTAIN": 37,
+      "UNSUPPORTED": 3
+    },
+    "mean_generation_seconds": 67.27579421840912,
+    "strict_schema_valid_rate": 1.0,
+    "per_query_deltas": [
+      {
+        "query": "REQ-DATA-001",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-DATA-002",
+        "map": 0.16666666666666669,
+        "mrr": 0.16666666666666669,
+        "ndcg_at_10": 0.13092975357145753
+      },
+      {
+        "query": "REQ-DATA-003",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-DATA-004",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-ENTROPY-001",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-ENTROPY-002",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-ENTROPY-003",
+        "map": -0.25,
+        "mrr": -0.25,
+        "ndcg_at_10": -0.20025319549806447
+      },
+      {
+        "query": "REQ-ENTROPY-004",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-ENTROPY-005",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-ENTROPY-006",
+        "map": 0.1333333333333333,
+        "mrr": 0.1333333333333333,
+        "ndcg_at_10": 0.11314719276545837
+      },
+      {
+        "query": "REQ-ENTROPY-007",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-EXP-001",
+        "map": -0.8,
+        "mrr": -0.8,
+        "ndcg_at_10": -0.6131471927654584
+      },
+      {
+        "query": "REQ-EXP-004",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-EXP-005",
+        "map": -0.25,
+        "mrr": -0.25,
+        "ndcg_at_10": -0.20025319549806447
+      },
+      {
+        "query": "REQ-HARNESS-001",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-HARNESS-002",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-HARNESS-003",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-HARNESS-004",
+        "map": -0.16666666666666669,
+        "mrr": -0.16666666666666669,
+        "ndcg_at_10": -0.13092975357145753
+      },
+      {
+        "query": "REQ-HARNESS-005",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-HARNESS-006",
+        "map": 0.25,
+        "mrr": 0.25,
+        "ndcg_at_10": 0.20025319549806447
+      },
+      {
+        "query": "REQ-HARNESS-007",
+        "map": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      {
+        "query": "REQ-HARNESS-008",
+        "map": -0.25,
+        "mrr": -0.25,
+        "ndcg_at_10": -0.20025319549806447
+      }
+    ],
+    "semantic_grounding": null,
+    "hallucination_rate": null
+  }
+]

@@ -1,0 +1,16 @@
+
+The following artifacts are part of the provided artifact package:
+
+1. Data collected from our GitHub code repository and JIRA (Software management tool) in JSON format for two different versions of the Dronology system.
+2. This data is then used to generate the Artifact Trees for each version of Dronology which are provided as both Image files (.png) and Graphviz (.gv) files.
+3. Based on these Artifact Trees, change analysis from version 0 to version 1 is performed and a set of Delta Trees is generated. 
+   Again, this set of delta trees is shared as Image Files and Graphviz files.
+   
+We provide further instructions and details in the readme.md file.
+
+
+The artifacts we provide are publicly available (via github) and are carefully documented.
+We provide image files for quickly reviewing the artifacts, and we further provide Graphviz files and 
+JSON files that can be reused, easliy parsed, and analyzed.
+
+We therefore aim for the Reusable and Available badge.

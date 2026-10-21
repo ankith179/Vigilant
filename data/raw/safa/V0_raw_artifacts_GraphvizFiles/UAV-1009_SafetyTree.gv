@@ -1,0 +1,39 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1009"[
+label = "Hazard\nUAV-1009\nMidair collision during flight execution "
+shape = "record"
+color = "black"
+];
+"UAV-1037"[
+label = " Delegated \n to Adacent System\nUAV-1037\nAll routes are carefully planned \n and tested in the simulator \n prior to flights to check \n for violations of minimum separation \n distance. "
+shape = "record"
+color = "black"
+];
+"UAV-1122"[
+label = "ProcessRequirement\nUAV-1122\nAll routes are planned to \n ensure minimum separation of UAVs \n in flight at all times. "
+shape = "record"
+color = "black"
+];
+"UAV-1038"[
+label = "EnvironmentalAssumption\nUAV-1038\nRoutes that are free of \n collisions with simulated UAVs will \n also be free of collisions \n with physical UAVs. "
+shape = "record"
+color = "black"
+];
+"UAV-1121"[
+label = "Acceptance test passed \nUAV-1121\nFlights that are tested in \n the simulator without collision are \n safe with Physical Drones "
+shape = "record"
+color = "black"
+];
+"UAV-1123"[
+label = " Delegated \n to Adacent System\nUAV-1123\nWhen a route is run \n in the simulator and MINIMUM_SEPARATION_DISTANCE \n is violated an error shall \n be reported in the simulator \n log. "
+shape = "record"
+color = "black"
+];
+"UAV-1009" -> "UAV-1037";
+"UAV-1009" -> "UAV-1122";
+"UAV-1122" -> "UAV-1038";
+"UAV-1122" -> "UAV-1121";
+"UAV-1009" -> "UAV-1123";
+}

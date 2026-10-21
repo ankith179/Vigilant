@@ -1,0 +1,105 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-930"[
+label = "Hazard\nUAV-930\nUAV collides with another UAV \n when Dronology issues RTL commands \n to multiple UAVs. "
+shape = "record"
+color = "black"
+];
+"UAV-424"[
+label = "SafetyRequirement\nUAV-424\nReturn home along a unique \n path when issued RTL command "
+shape = "record"
+color = "black"
+];
+"UAV-1129"[
+label = "Acceptance test passed \nUAV-1129\nReturn to Launch during River \n Rescue uses Flight Path confined \n within river banks "
+shape = "record"
+color = "black"
+];
+"UAV-1134"[
+label = "Requirement\nUAV-1134\nUser issues RTL command using \n Dronology UI "
+shape = "record"
+color = "black"
+];
+"UAV-1133"[
+label = "DesignDefinition\nUAV-1133\nDronology sends UAV to home \n coordinates using its uniques RTL \n altitude. "
+shape = "record"
+color = "black"
+];
+"UAV-1133\ngstation.connector.messages"[
+label = "Package\nUAV-1133\ngstation.connector.messages"
+shape = "record"
+color = "black"
+];
+"edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java"[
+label = "Code with \n passed Tests \nUAVStateMessage.java"
+shape = "record"
+color = "black"
+];
+"UAV-1133\nui.vaadin.activeflights"[
+label = "Package\nUAV-1133\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-1133edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+];
+"UAV-520"[
+label = "DesignDefinition\nUAV-520\nIn normal operating environment, without \n no-fly restrictions, RTL is issued \n as single waypoint "
+shape = "record"
+color = "black"
+];
+"UAV-520\ncore.flightzone"[
+label = "Package\nUAV-520\ncore.flightzone"
+shape = "record"
+color = "black"
+];
+"UAV-520edu.nd.dronology.core/src/edu/nd/dronology/core/flightzone/FlightZoneManager2.java"[
+label = "Code with \n passed Tests \nFlightZoneManager2.java"
+shape = "record"
+color = "black"
+];
+"UAV-976"[
+label = "Acceptance test passed \nUAV-976\nReturn to Launch Acceptance Test "
+shape = "record"
+color = "black"
+];
+"UAV-970"[
+label = "SafetyAnalysis\nUAV-970\nFault analysis for RTL "
+shape = "record"
+color = "black"
+];
+"UAV-975"[
+label = "Requirement\nUAV-975\nUser issues RTL command using \n GCS. "
+shape = "record"
+color = "black"
+];
+"UAV-457"[
+label = " Delegated \n to Adacent System\nUAV-457\nUAV default RTL uses predefined \n altitude "
+shape = "record"
+color = "black"
+];
+"UAV-974"[
+label = "EnvironmentalAssumption\nUAV-974\nAll UAVs support user defined \n RTL altitudes "
+shape = "record"
+color = "black"
+];
+"UAV-930" -> "UAV-424";
+"UAV-424" -> "UAV-1129";
+"UAV-424" -> "UAV-1134";
+"UAV-1134" -> "UAV-1133";
+"UAV-1133" -> "UAV-1133\ngstation.connector.messages";
+"UAV-1133\ngstation.connector.messages" -> "edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java";
+"UAV-1133" -> "UAV-1133\nui.vaadin.activeflights";
+"UAV-1133\nui.vaadin.activeflights" -> "UAV-1133edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java";
+"UAV-424" -> "UAV-520";
+"UAV-520" -> "UAV-520\ncore.flightzone";
+"UAV-520\ncore.flightzone" -> "UAV-520edu.nd.dronology.core/src/edu/nd/dronology/core/flightzone/FlightZoneManager2.java";
+"UAV-424" -> "UAV-976";
+"UAV-930" -> "UAV-970";
+"UAV-975" -> "UAV-457";
+"UAV-457" -> "UAV-974";
+"UAV-930"->"UAV-975"
+}

@@ -1,0 +1,551 @@
+{
+  "protocol": "Post-hoc descriptive paired-query bootstrap; percentile intervals conditional on dataset and frozen model/prompt. Correlated queries may violate iid assumption. Not seed variability, project-generalization intervals, or multiplicity-adjusted significance tests.",
+  "seed": 20261015,
+  "resamples": 20000,
+  "paired": [
+    {
+      "dataset": "SMOS",
+      "queries": 67,
+      "delta_map": 0.003505872891183183,
+      "ci95_low": 0.00018827523153802073,
+      "ci95_high": 0.00725144883169293,
+      "improved": 8,
+      "worsened": 2,
+      "unchanged": 57
+    },
+    {
+      "dataset": "iTrust",
+      "queries": 105,
+      "delta_map": -0.0025192743764172313,
+      "ci95_low": -0.024395512093726382,
+      "ci95_high": 0.017745342025699166,
+      "improved": 22,
+      "worsened": 14,
+      "unchanged": 69
+    },
+    {
+      "dataset": "eTour_en",
+      "queries": 57,
+      "delta_map": 0.002130557876171907,
+      "ci95_low": -0.011850268031189092,
+      "ci95_high": 0.01694511162164669,
+      "improved": 13,
+      "worsened": 12,
+      "unchanged": 32
+    },
+    {
+      "dataset": "RTMX-module-valid",
+      "queries": 22,
+      "delta_map": -0.05303030303030303,
+      "ci95_low": -0.14848484848484847,
+      "ci95_high": 0.02121212121212121,
+      "improved": 3,
+      "worsened": 5,
+      "unchanged": 14
+    }
+  ],
+  "label_order": [
+    "POTENTIAL_INCONSISTENCY",
+    "BROKEN_TRACE",
+    "MISSING_TEST",
+    "UNCERTAIN"
+  ],
+  "consistency": [
+    {
+      "variant": "E",
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "class_metrics": [
+        {
+          "label": "POTENTIAL_INCONSISTENCY",
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "BROKEN_TRACE",
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "MISSING_TEST",
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "UNCERTAIN",
+          "support": 3,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "precision_undefined_no_predictions": false
+        }
+      ],
+      "agreement": 0.25,
+      "macro_f1": 0.1,
+      "non_uncertain_coverage": 0.0,
+      "citation_failures": 0
+    },
+    {
+      "variant": "F",
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "class_metrics": [
+        {
+          "label": "POTENTIAL_INCONSISTENCY",
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "BROKEN_TRACE",
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "MISSING_TEST",
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "UNCERTAIN",
+          "support": 3,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "precision_undefined_no_predictions": false
+        }
+      ],
+      "agreement": 0.25,
+      "macro_f1": 0.1,
+      "non_uncertain_coverage": 0.0,
+      "citation_failures": 1
+    },
+    {
+      "variant": "G",
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "class_metrics": [
+        {
+          "label": "POTENTIAL_INCONSISTENCY",
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "BROKEN_TRACE",
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "MISSING_TEST",
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "UNCERTAIN",
+          "support": 3,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "precision_undefined_no_predictions": false
+        }
+      ],
+      "agreement": 0.25,
+      "macro_f1": 0.1,
+      "non_uncertain_coverage": 0.0,
+      "citation_failures": 1
+    },
+    {
+      "variant": "H",
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "class_metrics": [
+        {
+          "label": "POTENTIAL_INCONSISTENCY",
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "BROKEN_TRACE",
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "MISSING_TEST",
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "UNCERTAIN",
+          "support": 3,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "precision_undefined_no_predictions": false
+        }
+      ],
+      "agreement": 0.25,
+      "macro_f1": 0.1,
+      "non_uncertain_coverage": 0.0,
+      "citation_failures": 1
+    },
+    {
+      "variant": "I",
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "class_metrics": [
+        {
+          "label": "POTENTIAL_INCONSISTENCY",
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "BROKEN_TRACE",
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "MISSING_TEST",
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "precision_undefined_no_predictions": true
+        },
+        {
+          "label": "UNCERTAIN",
+          "support": 3,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "precision_undefined_no_predictions": false
+        }
+      ],
+      "agreement": 0.25,
+      "macro_f1": 0.1,
+      "non_uncertain_coverage": 0.0,
+      "citation_failures": 2
+    }
+  ],
+  "raw_decisions": [
+    {
+      "decision": "UNCERTAIN",
+      "confidence": 0,
+      "calls": 60
+    }
+  ],
+  "raw_reasons": {
+    "Evidence is incomplete": 46,
+    "Evidence is incomplete.\n": 1,
+    "Evidence is incomplete. Not enough context provided about specific callers or tests that would help determine support or": 1,
+    "Evidence is incomplete. Not enough information provided about the specific usage patterns or expected behavior of these ": 1,
+    "Evidence is incomplete. Some tests show the implementation change but others do not. Further testing is required to make": 1,
+    "Evidence is incomplete. Not enough information provided about callers or tests affecting this file.": 1,
+    "Evidence is incomplete. The excerpt suggests this method could be used as a potential caller, but no actual callers are ": 1,
+    "Evidence is incomplete. Some excerpts are missing or inconsistent across different commits and artifacts. Further review": 1,
+    "Evidence is incomplete. The provided excerpts are too limited to determine the overall consistency of the codebase with ": 1,
+    "Evidence is incomplete. The provided evidence does not provide enough information about the specific behavior of the 'is": 1,
+    "Insufficient evidence to determine the consistency of the backend/app/api/routes/items.py file. The excerpts provided do": 1,
+    "Evidence is incomplete due to inconsistent implementation changes between commits 1762adac607a1b29cfc4da129557780beea716": 1,
+    "Evidence is incomplete. Some commits have different endpoints but no clear indication of the correct one has been found.": 1,
+    "Evidence is incomplete. Not enough information provided about specific callers or tests affecting this file.": 1,
+    "Evidence is incomplete. Some excerpts show changes that could affect the implementation of the `redirect` function, buts": 1
+  },
+  "rules_only_saved_findings": [
+    {
+      "case": "01-requirement-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "rule_status_set": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "02-requirement-added",
+      "authored_label": "UNCERTAIN",
+      "rule_status_set": [
+        "UNCERTAIN"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "03-code-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "rule_status_set": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "04-code-deleted",
+      "authored_label": "BROKEN_TRACE",
+      "rule_status_set": [
+        "BROKEN_TRACE",
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 2
+    },
+    {
+      "case": "05-test-changed",
+      "authored_label": "UNCERTAIN",
+      "rule_status_set": [
+        "UNCERTAIN"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "06-test-deleted",
+      "authored_label": "MISSING_TEST",
+      "rule_status_set": [
+        "BROKEN_TRACE",
+        "MISSING_TEST"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 3
+    },
+    {
+      "case": "07-frontend-changed",
+      "authored_label": "UNCERTAIN",
+      "rule_status_set": [
+        "UNCERTAIN"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "08-api-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "rule_status_set": [
+        "BROKEN_TRACE",
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 15
+    },
+    {
+      "case": "09-backend-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "rule_status_set": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "10-consumer-changed",
+      "authored_label": "BROKEN_TRACE",
+      "rule_status_set": [
+        "BROKEN_TRACE"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "11-implementation-test-drift",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "rule_status_set": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    },
+    {
+      "case": "12-requirement-test-drift",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "rule_status_set": [
+        "POTENTIAL_INCONSISTENCY"
+      ],
+      "contains_authored_label": true,
+      "finding_count": 1
+    }
+  ],
+  "rules_evaluation_note": "Set containment only; multi-label rule findings are not comparable to a single model label. Authored labels are rule-aligned; no independent precision or accuracy claim.",
+  "source_records": [
+    {
+      "path": "experiments/retrieval/20261007T104905-4064b602/results.json",
+      "sha256": "38d035786a3ce4d8a1d07a0750959cb2bfbf28f7b36f25c5d6237baab748ec97"
+    },
+    {
+      "path": "experiments/retrieval/20261007T163255-0dfbb833/results.json",
+      "sha256": "382bc8e5518a8b7c2f83afed803f8b7de0cee05fb305df98de0759969ea670a4"
+    },
+    {
+      "path": "experiments/retrieval/20261007T171402-64fa98d8/results.json",
+      "sha256": "dea7ac2c29a300ef443a3d3d84e30d8359bb44e391e87d8c04a13b6f942aaf0b"
+    },
+    {
+      "path": "experiments/retrieval/20261007T210208-3f0803cc/results.json",
+      "sha256": "bd66f7fcedcca826d17f2e7d234e60a31607f065e5f3d84e6883ed457f842af1"
+    },
+    {
+      "path": "experiments/ablation/20261006T194639-30694b4d/results.json",
+      "sha256": "00a7c63e1fbc24db96e30de7c765a3473a86a2602de30bae3193abe95f7b9363"
+    }
+  ],
+  "new_inference_calls": 0
+}

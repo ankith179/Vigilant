@@ -1,0 +1,13 @@
+{
+  "original_archive_sha256": "8b7c46571b81c566a61bbd1a2a508abbeabd1409fff3367c29700d68102b7f0d",
+  "unchanged_original_files": 6461,
+  "changed_original_files": [
+    "VIGILANT/CHECKPOINT.json",
+    "VIGILANT/PROJECT_STATE.json",
+    "VIGILANT/RESUME.md",
+    "VIGILANT/docs/FINAL_STATUS.md"
+  ],
+  "historical_experiment_files_unchanged": 420,
+  "new_model_calls": 0,
+  "accuracy_status": "NOT_ESTABLISHED"
+}

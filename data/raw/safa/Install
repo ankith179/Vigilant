@@ -1,0 +1,19 @@
+Tool: Graphviz - It is an open source graph visualization software.
+Purpose: To graphically render the provided graphviz files and verify the artifact.
+
+Executable Download link: https://graphviz.gitlab.io/_pages/Download/Download_windows.html
+
+Installation Environemnt:
+Recommended Operating System: Windows 7 and above
+RAM: 2 GB and Above
+
+Install Instructions:
+1. Download the installer (graphviz-2.38.msi) from link provided above.
+2. Install the tool with default configuration.
+3. Go to Graphviz Install directory (C:/Program Files(x86)/Graphviz2.38/bin) and run gvedit.exe
+4. Select File menu from the viewer's tool bar
+5. click open to select any provided graphviz file to verify the result.
+
+
+
+

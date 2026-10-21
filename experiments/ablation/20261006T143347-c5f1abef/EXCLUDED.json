@@ -1,0 +1,4 @@
+{
+  "excluded_from_accuracy_comparison": true,
+  "failure_reason": "No model inference executed: truncated workspace weight copy."
+}

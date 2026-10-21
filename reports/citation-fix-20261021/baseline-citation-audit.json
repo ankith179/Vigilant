@@ -1,0 +1,376 @@
+[
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "07-frontend-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 184
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "04-code-deleted",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 180
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "05-test-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 133
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "03-code-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 176
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "10-consumer-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "truncated": false,
+    "output_tokens": 129
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "06-test-deleted",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 247
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "12-requirement-test-drift",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 181
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "02-requirement-added",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 125
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "01-requirement-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 185
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "08-api-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py"
+    ],
+    "truncated": false,
+    "output_tokens": 113
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "09-backend-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 167
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "case_id": "11-implementation-test-drift",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [],
+    "truncated": false,
+    "output_tokens": 199
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "08-api-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py"
+    ],
+    "truncated": false,
+    "output_tokens": 215
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "03-code-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/__init__.py",
+      "src/flask/helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 205
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "07-frontend-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "frontend/src/routes/_layout/items.tsx"
+    ],
+    "truncated": false,
+    "output_tokens": 188
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "04-code-deleted",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 174
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "01-requirement-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "bench.sh",
+      "lib/capture.sh",
+      "lib/csv.sh",
+      "lib/setup.sh",
+      "tests/test_harness.sh"
+    ],
+    "truncated": false,
+    "output_tokens": 243
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "10-consumer-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "truncated": false,
+    "output_tokens": 227
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "12-requirement-test-drift",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "bench.sh",
+      "lib/capture.sh",
+      "lib/csv.sh",
+      "lib/setup.sh"
+    ],
+    "truncated": false,
+    "output_tokens": 199
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "06-test-deleted",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 223
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "09-backend-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "truncated": false,
+    "output_tokens": 201
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "11-implementation-test-drift",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 165
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "05-test-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 151
+  },
+  {
+    "model": "qwen3:8b",
+    "case_id": "02-requirement-added",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-003.md",
+      ".rtmx/requirements/REQ-VIGILANT-ADDED.md",
+      "prompts/rtmx-self.md",
+      "tests/collect_results.sh",
+      "tests/test_treatment.sh"
+    ],
+    "truncated": false,
+    "output_tokens": 229
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "08-api-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py"
+    ],
+    "truncated": false,
+    "output_tokens": 265
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "05-test-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "tests/test_helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 145
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "07-frontend-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "frontend/src/routes/_layout/items.tsx"
+    ],
+    "truncated": false,
+    "output_tokens": 189
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "11-implementation-test-drift",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 148
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "03-code-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 184
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "04-code-deleted",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 159
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "09-backend-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py",
+      "backend/tests/api/routes/test_items.py",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "truncated": false,
+    "output_tokens": 226
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "01-requirement-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md"
+    ],
+    "truncated": false,
+    "output_tokens": 171
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "12-requirement-test-drift",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "bench.sh",
+      "lib/capture.sh",
+      "lib/csv.sh",
+      "lib/setup.sh",
+      "tests/test_harness.sh"
+    ],
+    "truncated": false,
+    "output_tokens": 213
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "06-test-deleted",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "src/flask/helpers.py",
+      "tests/test_helpers.py"
+    ],
+    "truncated": false,
+    "output_tokens": 165
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "02-requirement-added",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      ".rtmx/requirements/EXP/REQ-EXP-001.md",
+      ".rtmx/requirements/EXP/REQ-EXP-002.md",
+      ".rtmx/requirements/EXP/REQ-EXP-005.md",
+      ".rtmx/requirements/HARNESS/REQ-HARNESS-003.md",
+      ".rtmx/requirements/REQ-VIGILANT-ADDED.md",
+      "README.md",
+      "prompts/rtmx-self.md",
+      "tests/collect_results.sh",
+      "tests/test_treatment.sh"
+    ],
+    "truncated": false,
+    "output_tokens": 278
+  },
+  {
+    "model": "qwen3:14b",
+    "case_id": "10-consumer-changed",
+    "invalid_evidence_aliases": [],
+    "invalid_artifact_aliases": [
+      "backend/app/api/routes/items.py",
+      "frontend/src/client/sdk.gen.ts"
+    ],
+    "truncated": false,
+    "output_tokens": 201
+  }
+]

@@ -1,0 +1,289 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-947Delta"[
+label = "Hazard\nUAV-947 \nBattery fails during flight "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--947Delta"[
+label = "<Strategy>\nSTRAT--947 \n Argue that hazard \n  UAV-947  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-698Delta"[
+label = "SafetyRequirement\nUAV-698 \nEmergency Notification "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--698Delta"[
+label = "<Strategy>\nSTRAT-D--698 \n Argue that safety requirement \n  UAV-698  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-699Delta"[
+label = "DesignDefinition\nUAV-699 \nEmergency Battery Notification when threshold \n is reached "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--699Delta"[
+label = "<Strategy>\nSTRAT-C--699 \n Argue that design definition \n  UAV-699  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-699\ngstation.connector.messages"[
+label = "Package\nUAV-699\ngstation.connector.messages"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-699edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/StateMessageTypeAdapter.java"[
+label = "Code with \n passed Tests \nStateMessageTypeAdapter.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java"[
+label = "Code with \n passed Tests \nUAVStateMessage.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-950Delta"[
+label = "SafetyRequirement\nUAV-950 \nSufficient battery voltage needed for \n all issued waypoints "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--950Delta"[
+label = "<Strategy>\nSTRAT-D--950 \n Argue that safety requirement \n  UAV-950  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-952Delta"[
+label = "ProcessRequirement\nUAV-952 \nBattery voltage checked manually prior \n to takeoff "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-953Delta"[
+label = "ProcessRequirement\nUAV-953 \nCheck UAV battery prior to \n takeoff "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-954Delta"[
+label = "ProcessRequirement\nUAV-954 \nCheck hand-held controller battery prior \n to takeoff "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-984Delta"[
+label = "SafetyRequirement\nUAV-984 \nBattery voltage must be displayed \n on UI "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--984Delta"[
+label = "<Strategy>\nSTRAT-A--984 \n Safety Requirement \n  UAV-984  has been sufficiently covered by \n tests and inspections."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-987Delta"[
+label = "Acceptance test passed \nUAV-987 \nVoltmeter tests battery level "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--984Delta"[
+label = "<Strategy>\nSTRAT-D--984 \n Argue that safety requirement \n  UAV-984  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1111Delta"[
+label = "DesignDefinition\nUAV-1111 \nThe current battery capacity display \n shall be refreshed at least \n every 2 seconds. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"WARN-C--1111Delta"[
+label = "!!WARNING!!\nWARN-C--1111 \n!!WARNING!! \n  UAV-1111  has no links to code!"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "darkorange"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-237Delta"[
+label = "DesignDefinition\nUAV-237 \nDisplay battery life unit as \n a percentage "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--237Delta"[
+label = "<Strategy>\nSTRAT-C--237 \n Argue that design definition \n  UAV-237  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-237\nui.vaadin.activeflights"[
+label = "Package\nUAV-237\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-237edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-955Delta"[
+label = "EnvironmentalAssumption\nUAV-955 \nDefault behavior for depleted voltage \n is land-in-place "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-956Delta"[
+label = "Context\nUAV-956 \nDronology applications include flights over \n water "
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-947Delta" -> "STRAT--947Delta"[style = "solid" color = black];
+"STRAT--947Delta" -> "UAV-698Delta"[style = "solid" color = black];
+"UAV-698Delta" -> "STRAT-D--698Delta"[style = "solid" color = black];
+"STRAT-D--698Delta" -> "UAV-699Delta"[style = "solid" color = black];
+"UAV-699Delta" -> "STRAT-C--699Delta"[style = "solid" color = black];
+"STRAT-C--699Delta" -> "UAV-699\ngstation.connector.messages"[style = "solid" color = black];
+"UAV-699\ngstation.connector.messages" -> "UAV-699edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/StateMessageTypeAdapter.java"[style = "dotted" color = blue];
+"UAV-699\ngstation.connector.messages" -> "edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java"[style = "solid" color = black];
+"STRAT--947Delta" -> "UAV-950Delta"[style = "solid" color = black];
+"UAV-950Delta" -> "STRAT-D--950Delta"[style = "solid" color = black];
+"STRAT-D--950Delta" -> "UAV-952Delta"[style = "solid" color = black];
+"UAV-952Delta" -> "UAV-953Delta"[style = "solid" color = black];
+"UAV-952Delta" -> "UAV-954Delta"[style = "solid" color = black];
+"STRAT--947Delta" -> "UAV-984Delta"[style = "solid" color = black];
+"UAV-984Delta" -> "STRAT-A--984Delta"[style = "solid" color = black];
+"STRAT-A--984Delta" -> "UAV-987Delta"[style = "solid" color = black];
+"UAV-984Delta" -> "STRAT-D--984Delta"[style = "solid" color = black];
+"STRAT-D--984Delta" -> "UAV-1111Delta"[style = "solid" color = black];
+"UAV-1111Delta" -> "WARN-C--1111Delta"[style = "solid" color = black];
+"STRAT-D--984Delta" -> "UAV-237Delta"[style = "solid" color = black];
+"UAV-237Delta" -> "STRAT-C--237Delta"[style = "solid" color = black];
+"STRAT-C--237Delta" -> "UAV-237\nui.vaadin.activeflights"[style = "solid" color = black];
+"UAV-237\nui.vaadin.activeflights" -> "UAV-237edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[style = "solid" color = black];
+"UAV-947Delta" -> "UAV-955Delta"[style = "solid" color = black];
+"UAV-947Delta" -> "UAV-956Delta"[style = "solid" color = black];
+}

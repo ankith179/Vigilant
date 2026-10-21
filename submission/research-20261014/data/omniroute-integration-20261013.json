@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-10-13T02:46:07.109838+00:00",
+  "integration_tests_passed": 53,
+  "frontend_build": "PASSED",
+  "live_inference": "NOT_RUN",
+  "accuracy": "NOT_RUN",
+  "reason": "No running OmniRoute gateway or connected free-provider account",
+  "gateway_npm_version_verified": "3.8.51",
+  "gateway_source": "https://github.com/diegosouzapw/OmniRoute",
+  "free_candidate": "Groq openai/gpt-oss-120b, subject to account eligibility",
+  "client_paid_fallback": false,
+  "billing_verification": "Operator must verify free-only upstream configuration",
+  "historical_results": "UNCHANGED"
+}

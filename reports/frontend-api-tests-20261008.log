@@ -1,0 +1,98 @@
+Fatal Python error: Bus error
+
+Current thread 0x00007fad9ce98740 (most recent call first):
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 1293 in create_module
+  File "<frozen importlib._bootstrap>", line 813 in module_from_spec
+  File "<frozen importlib._bootstrap>", line 921 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1415 in _handle_fromlist
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/numpy/_core/multiarray.py", line 11 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1415 in _handle_fromlist
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/numpy/_core/__init__.py", line 22 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1310 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/numpy/__config__.py", line 4 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/numpy/__init__.py", line 112 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/retrieval/index.py", line 5 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/traceability/recovery.py", line 2 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/backend/app.py", line 13 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/tests/test_frontend_api.py", line 3 in <module>
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1387 in _gcd_import
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py", line 90 in import_module
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/pathlib.py", line 587 in import_path
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/python.py", line 498 in importtestmodule
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/python.py", line 551 in _getobj
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/python.py", line 280 in obj
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/python.py", line 567 in _register_setup_module_fixture
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/python.py", line 554 in collect
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 389 in collect
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 344 in from_call
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 391 in pytest_make_collect_report
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 567 in collect_one_node
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 839 in _collect_one_node
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 974 in genitems
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 813 in perform_collect
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 353 in pytest_collection
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 342 in _main
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 289 in wrap_session
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/main.py", line 336 in pytest_cmdline_main
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 175 in main
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 201 in console_main
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/pytest/__main__.py", line 9 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+
+Extension modules: zstandard.backend_c, sqlalchemy.cyextension.collections, sqlalchemy.cyextension.immutabledict, sqlalchemy.cyextension.processors, sqlalchemy.cyextension.resultproxy, sqlalchemy.cyextension.util, greenlet._greenlet (total: 7)

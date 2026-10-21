@@ -1,0 +1,38 @@
+file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:41
+  throw new Error(
+        ^
+
+Error: Cannot discover presentation fonts from the supplied runtime. Preserve the source/user font with sourceFont or fontFamily, or supply actual availableFonts.
+    at runtimePresentationFonts (file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:41:9)
+    at resolvePresentationFont (file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:50:48)
+    at file:///tmp/vigilant-deck-build/build.mjs:12:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  [cause]: AggregateError: Runtime font inventory unavailable
+      at runtimePresentationFonts (file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:43:14)
+      at resolvePresentationFont (file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:50:48)
+      at file:///tmp/vigilant-deck-build/build.mjs:12:14
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    [errors]: [
+      Error: RUNTIME_NODE_MODULES is required.
+          at runtimeNodeModules (file:///root/.codex/skills/builtins/presentations/container_tools/runtime_helpers.mjs:8:27)
+          at runtimeRequire (file:///root/.codex/skills/builtins/presentations/container_tools/runtime_helpers.mjs:20:29)
+          at requireRuntimeModule (file:///root/.codex/skills/builtins/presentations/container_tools/runtime_helpers.mjs:28:53)
+          at file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:17:3
+          at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+          at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+          at async node:internal/modules/esm/loader:643:26
+          at async file:///tmp/vigilant-deck-build/build.mjs:11:81,
+      Error: RUNTIME_NODE_MODULES is required.
+          at runtimeNodeModules (file:///root/.codex/skills/builtins/presentations/container_tools/runtime_helpers.mjs:8:27)
+          at runtimeRequire (file:///root/.codex/skills/builtins/presentations/container_tools/runtime_helpers.mjs:20:29)
+          at requireRuntimeModule (file:///root/.codex/skills/builtins/presentations/container_tools/runtime_helpers.mjs:28:53)
+          at file:///root/.codex/skills/builtins/presentations/container_tools/artifact_tool_utils.mjs:20:3
+          at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+          at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+          at async node:internal/modules/esm/loader:643:26
+          at async file:///tmp/vigilant-deck-build/build.mjs:11:81
+    ]
+  }
+}
+
+Node.js v24.19.0

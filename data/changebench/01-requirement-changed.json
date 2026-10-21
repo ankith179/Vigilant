@@ -1,0 +1,25 @@
+{
+  "id": "01-requirement-changed",
+  "repo": "rtmx",
+  "file": ".rtmx/requirements/HARNESS/REQ-HARNESS-001.md",
+  "mode": "append",
+  "new": "Controlled benchmark change: include failed sessions in completed-run accounting.",
+  "status": "POTENTIAL_INCONSISTENCY",
+  "target": "tests/test_harness.sh",
+  "base_commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+  "change_commit": "1afdc595d1090a56f3f6d094fdc42ead8facf034",
+  "origin": "https://github.com/rtmx-ai/rtmx-bench.git",
+  "expected_affected_artifacts": [
+    "2574dd72dfa773955d55993fea99fcf44601a51a0eec78e29dcbe01153363ad8"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "8734d2014165680db5180222f161680fb626acf9f156f3bca13fe60b4c034e16",
+      "target_artifact": "2574dd72dfa773955d55993fea99fcf44601a51a0eec78e29dcbe01153363ad8",
+      "relation_type": "VALIDATES",
+      "method": "upstream-rtmx-module-declaration"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

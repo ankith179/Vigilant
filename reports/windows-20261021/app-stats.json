@@ -1,0 +1,17 @@
+{
+    "projects":  14,
+    "repositories":  16,
+    "commits":  29,
+    "artifacts":  32706,
+    "trace_links":  57169,
+    "graph_nodes":  32719,
+    "graph_edges":  56879,
+    "embeddings":  0,
+    "changes":  44,
+    "evidence":  175,
+    "analysis_runs":  16,
+    "findings":  44,
+    "agent_runs":  14,
+    "experiments":  14,
+    "metrics":  0
+}

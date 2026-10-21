@@ -1,0 +1,16 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{
+  "report": "/workspace/scratch/e4ff17049f79/VIGILANT/experiments/pipeline/20261006T195007-e56e6b8d",
+  "changes": 11,
+  "affected": 33,
+  "findings": 15,
+  "evidence": 24,
+  "model_error": null,
+  "metrics": {
+    "tool_execution_success": 1.0,
+    "quote_verification_rate": 1.0,
+    "model_schema_valid": true,
+    "semantic_grounding_rate": null,
+    "seconds": 33.64662969999995
+  }
+}

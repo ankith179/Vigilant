@@ -1,0 +1,47 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1007Delta"[
+label = "Hazard\nUAV-1007 \nUAV flies into a fixed \n stationary object such as a \n building or tree "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--1007Delta"[
+label = "<Strategy>\nSTRAT--1007 \n Argue that hazard \n  UAV-1007  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-966Delta"[
+label = "ProcessRequirement\nUAV-966 \nCarefully plan routes to avoid \n known obstacles "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-912Delta"[
+label = "EnvironmentalAssumption\nUAV-912 \nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1007Delta" -> "STRAT--1007Delta"[style = "solid" color = black];
+"STRAT--1007Delta" -> "UAV-966Delta"[style = "solid" color = black];
+"UAV-1007Delta" -> "UAV-912Delta"[style = "solid" color = black];
+}

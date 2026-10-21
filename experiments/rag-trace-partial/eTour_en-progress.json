@@ -1,0 +1,10 @@
+{
+  "dataset": "eTour_en",
+  "dataset_fingerprint": "a3fd2259389c0112d94d08ecb0fff13d3673d2fdef2918a26294409d649c38b1",
+  "completed_queries": 57,
+  "expected_queries": 57,
+  "actual_inference_observations": 57,
+  "reused_calls": 30,
+  "new_calls": 27,
+  "last_query_id": "UC9"
+}

@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-21T06:15:57.282880+00:00",
+  "snapshots": [],
+  "backup_failures": [],
+  "excluded_reproducible_dependencies": [
+    ".venv",
+    "node_modules",
+    "model weights",
+    "package caches"
+  ],
+  "recovery": "Read RESUME.md. Source + data archives share a VIGILANT root."
+}

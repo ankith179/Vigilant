@@ -1,0 +1,21 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-999"[
+label = "Hazard\nUAV-999\nUAV receives waypoint commands but \n does not obey them "
+shape = "record"
+color = "black"
+];
+"UAV-912"[
+label = "EnvironmentalAssumption\nUAV-912\nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+];
+"UAV-982"[
+label = "ProcessRequirement\nUAV-982\nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+];
+"UAV-999" -> "UAV-912";
+"UAV-999" -> "UAV-982";
+}

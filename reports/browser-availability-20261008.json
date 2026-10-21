@@ -1,0 +1,6 @@
+{
+  "checked_at": "2026-10-08T08:15:23.624Z",
+  "expected_executable": "/root/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+  "available": false,
+  "system_paths": []
+}

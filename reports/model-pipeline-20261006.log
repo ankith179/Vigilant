@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/run_pipeline.py", line 10, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/run_pipeline.py", line 9, in main
+    r=analyze(Store(),a.repo,a.base,a.head,model=a.model,semantic=a.semantic);path,_=save_run('pipeline',r);print(json.dumps({'report':str(path),'changes':len(r['changes']['artifacts']),'affected':len(r['affected_artifacts']),'findings':len(r['findings']),'evidence':len(r['evidence']),'model_error':r['model']['validation_error'],'metrics':r['metrics']},indent=2))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/agents/workflow.py", line 21, in analyze
+    plan=stage('Planner','resolve-commits',lambda:{'base':revision(repo,base),'head':revision(repo,head)})
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/agents/workflow.py", line 18, in stage
+    try:value=fn();trajectory.append({'role':role,'tool':tool,'status':'SUCCESS','seconds':time.perf_counter()-t});return value
+              ^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/agents/workflow.py", line 21, in <lambda>
+    plan=stage('Planner','resolve-commits',lambda:{'base':revision(repo,base),'head':revision(repo,head)})
+                                                          ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/ingestion/git.py", line 10, in revision
+    return git(repo,'rev-parse','--verify','--end-of-options',rev+'^{commit}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/ingestion/git.py", line 6, in git
+    r=subprocess.run(['git','-c','core.hooksPath=/dev/null','-C',str(repo),*args],check=True,capture_output=True,timeout=180)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-c', 'core.hooksPath=/dev/null', '-C', 'data/changebench/08-api-changed', 'rev-parse', '--verify', '--end-of-options', '1762adac607a1b29cfc4da129557780beea71616^{commit}']' returned non-zero exit status 128.
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/scratch/e4ff17049f79/VIGILANT/.venv/bin/python', 'scripts/run_pipeline.py', '--repo', 'data/changebench/08-api-changed', '--base', '1762adac607a1b29cfc4da129557780beea71616', '--head', '892a3d5213e950be40467f4a0c8cfb33d12e8132', '--model', 'local', '--semantic']' returned non-zero exit status 1.

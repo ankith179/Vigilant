@@ -1,0 +1,6 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm error code ETARGET
+npm error notarget No matching version found for @sparticuz/chromium@151.0.0.
+npm error notarget In most cases you or one of your dependencies are requesting
+npm error notarget a package version that doesn't exist.
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-10-08T09_21_13_015Z-debug-0.log

@@ -1,0 +1,340 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-930Delta"[
+label = "Hazard\nUAV-930 \nUAV collides with another UAV \n when Dronology issues RTL commands \n to multiple UAVs. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--930Delta"[
+label = "<Strategy>\nSTRAT--930 \n Argue that hazard \n  UAV-930  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-424Delta"[
+label = "SafetyRequirement\nUAV-424 \nReturn home along a unique \n path when issued RTL command "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--424Delta"[
+label = "<Strategy>\nSTRAT-A--424 \n Safety Requirement \n  UAV-424  has been sufficiently covered by \n tests and inspections."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1129Delta"[
+label = "Acceptance test passed \nUAV-1129 \nReturn to Launch during River \n Rescue uses Flight Path confined \n within river banks "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-976Delta"[
+label = "Test RTL"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--424Delta"[
+label = "<Strategy>\nSTRAT-D--424 \n Argue that safety requirement \n  UAV-424  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1134Delta"[
+label = "Requirement\nUAV-1134 \nUser issues RTL command using \n Dronology UI "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1134Delta"[
+label = "<Strategy>\nSTRAT-D--1134 \n Argue that requirement \n  UAV-1134  is fully addressed \n by design decisions and/or processes."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1133Delta"[
+label = "DesignDefinition\nUAV-1133 \nDronology sends UAV to home \n coordinates using its uniques RTL \n altitude. "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--1133Delta"[
+label = "<Strategy>\nSTRAT-C--1133 \n Argue that design definition \n  UAV-1133  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-1133\ngstation.connector.messages"[
+label = "Package\nUAV-1133\ngstation.connector.messages"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java"[
+label = "Code with \n passed Tests \nUAVStateMessage.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1133\nui.vaadin.activeflights"[
+label = "Package\nUAV-1133\nui.vaadin.activeflights"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1133edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-520Delta"[
+label = "DesignDefinition\nUAV-520 \nRTL issued as single waypoint "
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--520Delta"[
+label = "<Strategy>\nSTRAT-C--520 \n Argue that design definition \n  UAV-520  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-520\ncore.flightzone"[
+label = "Package\nUAV-520\ncore.flightzone"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-520edu.nd.dronology.core/src/edu/nd/dronology/core/flightzone/FlightZoneManager2.java"[
+label = "Code with \n passed Tests \nFlightZoneManager2.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-975Delta"[
+label = "Requirement\nUAV-975 \nUser issues RTL command using \n GCS. "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--975Delta"[
+label = "<Strategy>\nSTRAT-D--975 \n Argue that requirement \n  UAV-975  is fully addressed \n by design decisions and/or processes."
+shape = "parallelogram"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-457Delta"[
+label = " Delegated \n to Adacent System\nUAV-457 \nUAV default RTL uses predefined \n altitude "
+shape = "component"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--457Delta"[
+label = "<Assumption>\nSTRAT-A--457 \n Assume that all environmental assumptions for \n  UAV-457  have been identified."
+shape = "Mrecord"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-974Delta"[
+label = "EnvironmentalAssumption\nUAV-974 \nAll UAVs support user defined \n RTL altitudes "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-978Delta"[
+label = "ProcessRequirement\nUAV-978 \nRTL for multiple UAVs executed \n one at a time "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-970Delta"[
+label = "SafetyAnalysis\nUAV-970 \nFault analysis for RTL "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-975Delta"[
+label = "Requirement\nUAV-975 \nUser issues RTL command using \n GCS. "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--975Delta"[
+label = "<Strategy>\nSTRAT-D--975 \n Argue that requirement \n  UAV-975  is fully addressed \n by design decisions and/or processes."
+shape = "parallelogram"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-457Delta"[
+label = " Delegated \n to Adacent System\nUAV-457 \nUAV default RTL uses predefined \n altitude "
+shape = "component"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--457Delta"[
+label = "<Assumption>\nSTRAT-A--457 \n Assume that all environmental assumptions for \n  UAV-457  have been identified."
+shape = "Mrecord"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-974Delta"[
+label = "EnvironmentalAssumption\nUAV-974 \nAll UAVs support user defined \n RTL altitudes "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-930Delta" -> "STRAT--930Delta"[style = "solid" color = black];
+"STRAT--930Delta" -> "UAV-424Delta"[style = "solid" color = black];
+"UAV-424Delta" -> "STRAT-A--424Delta"[style = "solid" color = black];
+"STRAT-A--424Delta" -> "UAV-1129Delta"[style = "dotted" color = darkgreen];
+"STRAT-A--424Delta" -> "UAV-976Delta"[style = "dotted" color = blue];
+"UAV-424Delta" -> "STRAT-D--424Delta"[style = "solid" color = black];
+"STRAT-D--424Delta" -> "UAV-1134Delta"[style = "dotted" color = darkgreen];
+"UAV-1134Delta" -> "STRAT-D--1134Delta"[style = "solid" color = black];
+"STRAT-D--1134Delta" -> "UAV-1133Delta"[style = "dotted" color = darkgreen];
+"UAV-1133Delta" -> "STRAT-C--1133Delta"[style = "solid" color = black];
+"STRAT-C--1133Delta" -> "UAV-1133\ngstation.connector.messages"[style = "dotted" color = darkgreen];
+"UAV-1133\ngstation.connector.messages" -> "edu.nd.dronology.gstation.python.connector/src/edu/nd/dronology/gstation/connector/messages/UAVStateMessage.java"[style = "dotted" color = darkgreen];
+"STRAT-C--1133Delta" -> "UAV-1133\nui.vaadin.activeflights"[style = "dotted" color = darkgreen];
+"UAV-1133\nui.vaadin.activeflights" -> "UAV-1133edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[style = "dotted" color = darkgreen];
+"STRAT-D--424Delta" -> "UAV-520Delta"[style = "dotted" color = blue];
+"UAV-520Delta" -> "STRAT-C--520Delta"[style = "solid" color = black];
+"STRAT-C--520Delta" -> "UAV-520\ncore.flightzone"[style = "solid" color = black];
+"UAV-520\ncore.flightzone" -> "UAV-520edu.nd.dronology.core/src/edu/nd/dronology/core/flightzone/FlightZoneManager2.java"[style = "dotted" color = blue];
+"STRAT-D--424Delta" -> "UAV-975Delta"[style = "dotted" color = red];
+"UAV-975Delta" -> "STRAT-D--975Delta"[style = "dotted" color = red];
+"STRAT-D--975Delta" -> "UAV-457Delta"[style = "dotted" color = red];
+"UAV-457Delta" -> "STRAT-A--457Delta"[style = "dotted" color = red];
+"STRAT-A--457Delta" -> "UAV-974Delta"[style = "dotted" color = red];
+"STRAT-D--424Delta" -> "UAV-978Delta"[style = "dotted" color = red];
+"UAV-930Delta" -> "UAV-970Delta"[style = "solid" color = black];
+"UAV-930Delta" -> "UAV-975Delta"[style = "dotted" color = darkgreen];
+}

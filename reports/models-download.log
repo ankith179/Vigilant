@@ -1,0 +1,81 @@
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:06<00:16,  2.11s/it]Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Fetching 11 files:  55%|█████▍    | 6/11 [00:07<00:06,  1.29s/it]Fetching 11 files:  82%|████████▏ | 9/11 [00:08<00:01,  1.03it/s]Fetching 11 files:  91%|█████████ | 10/11 [00:20<00:02,  2.00s/it]Fetching 11 files: 100%|██████████| 11/11 [00:29<00:00,  2.69s/it]Fetching 11 files: 100%|██████████| 11/11 [00:29<00:00,  2.69s/it]
+embedding 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  43%|████▎     | 3/7 [00:00<00:01,  3.89it/s]Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Fetching 7 files:  86%|████████▌ | 6/7 [00:02<00:00,  2.88it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:13<00:02,  2.18s/it]Could not set the permissions on the file '/workspace/scratch/e4ff17049f79/VIGILANT/data/models/llm/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee.incomplete'. Error: [Errno 2] No such file or directory: '/workspace/scratch/e4ff17049f79/VIGILANT/data/models/llm/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee.incomplete'.
+Continuing without setting permissions.
+Fetching 7 files: 100%|██████████| 7/7 [08:52<00:00, 76.07s/it]Fetching 7 files: 100%|██████████| 7/7 [08:52<00:00, 76.07s/it]
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 847, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/e4ff17049f79/VIGILANT/data/models/llm/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee.incomplete' -> '/workspace/scratch/e4ff17049f79/VIGILANT/data/models/llm/model.safetensors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1787, in _copy_no_matter_what
+    shutil.copy2(src, dst)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 475, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/e4ff17049f79/VIGILANT/data/models/llm/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee.incomplete'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/download_models.py", line 15, in <module>
+    path=snapshot_download(model,revision=rev,allow_patterns=['*.json','*.txt','*.safetensors','*.model','1_Pooling/*'],local_dir=staging,max_workers=3)
+                          ^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/download_models.py", line 13, in main
+    destination=ROOT/'data/models'/name
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 327, in snapshot_download
+    thread_map(
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 191, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 163, in _executor_map
+    return list(ex.map(
+           ^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 301, in _inner_hf_hub_download
+    return hf_hub_download(
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 988, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1290, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1735, in _download_to_tmp_and_move
+    _chmod_and_move(incomplete_path, destination_path)
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1776, in _chmod_and_move
+    shutil.move(str(src), str(dst), copy_function=_copy_no_matter_what)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 867, in move
+    copy_function(src, real_dst)
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1790, in _copy_no_matter_what
+    shutil.copyfile(src, dst)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/e4ff17049f79/VIGILANT/data/models/llm/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee.incomplete'

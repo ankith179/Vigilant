@@ -1,0 +1,86 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 1/67 SMOS1 supported 1 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 2/67 SMOS10 supported 4 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 3/67 SMOS11 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 4/67 SMOS12 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 5/67 SMOS13 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 6/67 SMOS14 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 7/67 SMOS15 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 8/67 SMOS16 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 9/67 SMOS17 supported 2 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 10/67 SMOS18 supported 1 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 11/67 SMOS19 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 12/67 SMOS2 supported 2 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 13/67 SMOS20 supported 1 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 14/67 SMOS21 supported 4 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 15/67 SMOS22 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 16/67 SMOS23 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 17/67 SMOS24 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 18/67 SMOS25 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 19/67 SMOS26 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 20/67 SMOS27 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 21/67 SMOS28 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 22/67 SMOS29 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 23/67 SMOS3 supported 3 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 24/67 SMOS30 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 1/67 SMOS1 supported 1 valid True REUSED
+SMOS 2/67 SMOS10 supported 4 valid True REUSED
+SMOS 3/67 SMOS11 supported 0 valid True REUSED
+SMOS 4/67 SMOS12 supported 0 valid True REUSED
+SMOS 5/67 SMOS13 supported 0 valid True REUSED
+SMOS 6/67 SMOS14 supported 0 valid True REUSED
+SMOS 7/67 SMOS15 supported 0 valid True REUSED
+SMOS 8/67 SMOS16 supported 0 valid True REUSED
+SMOS 9/67 SMOS17 supported 2 valid True REUSED
+SMOS 10/67 SMOS18 supported 1 valid True REUSED
+SMOS 11/67 SMOS19 supported 0 valid True REUSED
+SMOS 12/67 SMOS2 supported 2 valid True REUSED
+SMOS 13/67 SMOS20 supported 1 valid True REUSED
+SMOS 14/67 SMOS21 supported 4 valid True REUSED
+SMOS 15/67 SMOS22 supported 0 valid True REUSED
+SMOS 16/67 SMOS23 supported 0 valid True REUSED
+SMOS 17/67 SMOS24 supported 0 valid True REUSED
+SMOS 18/67 SMOS25 supported 0 valid True REUSED
+SMOS 19/67 SMOS26 supported 0 valid True REUSED
+SMOS 20/67 SMOS27 supported 0 valid True REUSED
+SMOS 21/67 SMOS28 supported 0 valid True REUSED
+SMOS 22/67 SMOS29 supported 0 valid True REUSED
+SMOS 23/67 SMOS3 supported 3 valid True REUSED
+SMOS 24/67 SMOS30 supported 0 valid True REUSED
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 25/67 SMOS31 supported 3 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 26/67 SMOS32 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 27/67 SMOS33 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 28/67 SMOS34 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 29/67 SMOS35 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+SMOS 30/67 SMOS36 supported 0 valid True NEW
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.

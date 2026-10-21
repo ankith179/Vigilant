@@ -1,0 +1,16 @@
+Using CPython 3.12.14 interpreter at: .venv/bin/python
+WARN Retry attempt #0. Sleeping 1.060619808s before the next attempt
+WARN Retry attempt #0. Sleeping 1.564872514s before the next attempt
+WARN Retry attempt #0. Sleeping 1.097927809s before the next attempt
+Resolved 3 packages in 16.42s
+Downloading numpy (15.8MiB)
+Downloading scipy (33.4MiB)
+Downloading scikit-learn (8.5MiB)
+ Downloaded scikit-learn
+ Downloaded numpy
+ Downloaded scipy
+Prepared 3 packages in 8.49s
+Installed 3 packages in 35ms
+ + numpy==2.3.5
+ + scikit-learn==1.8.0
+ + scipy==1.17.0

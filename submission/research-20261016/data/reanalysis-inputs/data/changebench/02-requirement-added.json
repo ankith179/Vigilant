@@ -1,0 +1,15 @@
+{
+  "id": "02-requirement-added",
+  "repo": "rtmx",
+  "file": ".rtmx/requirements/REQ-VIGILANT-ADDED.md",
+  "mode": "add",
+  "new": "# Controlled benchmark requirement\nThe runner shall record a machine-readable timeout reason.",
+  "status": "UNCERTAIN",
+  "base_commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+  "change_commit": "307504e249b663812c9d5224e7d35cafd3fe782e",
+  "origin": "https://github.com/rtmx-ai/rtmx-bench.git",
+  "expected_affected_artifacts": [],
+  "expected_traceability": [],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

@@ -1,0 +1,69 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-930"[
+label = "Hazard\nUAV-930\nUAV collides with another UAV \n when Dronology issues RTL commands \n to multiple UAVs. "
+shape = "record"
+color = "black"
+];
+"UAV-424"[
+label = "SafetyRequirement\nUAV-424\nReturn home along a unique \n path when issued RTL command "
+shape = "record"
+color = "black"
+];
+"UAV-520"[
+label = "DesignDefinition\nUAV-520\nRTL issued as single waypoint "
+shape = "record"
+color = "black"
+];
+"UAV-520\ncore.flightzone"[
+label = "Package\nUAV-520\ncore.flightzone"
+shape = "record"
+color = "black"
+];
+"UAV-520edu.nd.dronology.core/src/edu/nd/dronology/core/flightzone/FlightZoneManager2.java"[
+label = "Code with \n passed Tests \nFlightZoneManager2.java"
+shape = "record"
+color = "black"
+];
+"UAV-975"[
+label = "Requirement\nUAV-975\nUser issues RTL command using \n GCS. "
+shape = "record"
+color = "black"
+];
+"UAV-457"[
+label = " Delegated \n to Adacent System\nUAV-457\nUAV default RTL uses predefined \n altitude "
+shape = "record"
+color = "black"
+];
+"UAV-974"[
+label = "EnvironmentalAssumption\nUAV-974\nAll UAVs support user defined \n RTL altitudes "
+shape = "record"
+color = "black"
+];
+"UAV-976"[
+label = "Test RTL"
+shape = "record"
+color = "black"
+];
+"UAV-978"[
+label = "ProcessRequirement\nUAV-978\nRTL for multiple UAVs executed \n one at a time "
+shape = "record"
+color = "black"
+];
+"UAV-970"[
+label = "SafetyAnalysis\nUAV-970\nFault analysis for RTL "
+shape = "record"
+color = "black"
+];
+"UAV-930" -> "UAV-424";
+"UAV-424" -> "UAV-520";
+"UAV-520" -> "UAV-520\ncore.flightzone";
+"UAV-520\ncore.flightzone" -> "UAV-520edu.nd.dronology.core/src/edu/nd/dronology/core/flightzone/FlightZoneManager2.java";
+"UAV-424" -> "UAV-975";
+"UAV-975" -> "UAV-457";
+"UAV-457" -> "UAV-974";
+"UAV-424" -> "UAV-976";
+"UAV-424" -> "UAV-978";
+"UAV-930" -> "UAV-970";
+}

@@ -1,0 +1,183 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-945"[
+label = "Hazard\nUAV-945\nArea mapping provides insufficient coverage \n during search and rescue "
+shape = "record"
+color = "black"
+];
+"UAV-1044"[
+label = "SafetyRequirement\nUAV-1044\nAutomate the process of generating \n routes for river search "
+shape = "record"
+color = "black"
+];
+"UAV-1043"[
+label = "SafetyRequirement\nUAV-1043\nUI enables the user to \n map river region over which \n the search will be conducted "
+shape = "record"
+color = "black"
+];
+"UAV-1046"[
+label = "SafetyRequirement\nUAV-1046\nUser Interface must be intuitive \n for user under time pressure \n and use outside in the \n search area. "
+shape = "record"
+color = "black"
+];
+"UAV-783"[
+label = "DesignDefinition\nUAV-783\nThe area mapping system will \n provide search features for locating \n and retrieving existing mappings "
+shape = "record"
+color = "black"
+];
+"UAV-847"[
+label = "DesignDefinition\nUAV-847\nProvide a flight routes tab \n that is intuitive for the \n user. "
+shape = "record"
+color = "black"
+];
+"UAV-784"[
+label = "DesignDefinition\nUAV-784\nThe UI provides features for \n mapping the right and left \n hand side of the river \n banks. "
+shape = "record"
+color = "black"
+];
+"UAV-852"[
+label = "DesignDefinition\nUAV-852\nIcons used to map riverbanks \n shall be different from those \n used to map flight routes. "
+shape = "record"
+color = "black"
+];
+"UAV-855"[
+label = "DesignDefinition\nUAV-855\nThe user shall mark high \n priority search areas on the \n map. "
+shape = "record"
+color = "black"
+];
+"UAV-898"[
+label = "DesignDefinition\nUAV-898\nWhen the user mouseovers a \n high priority area, a description \n and other data about the \n area shall be displayed. "
+shape = "record"
+color = "black"
+];
+"UAV-901"[
+label = "DesignDefinition\nUAV-901\nHigh priority areas shall be \n moved and reshaped "
+shape = "record"
+color = "black"
+];
+"UAV-913"[
+label = "DesignDefinition\nUAV-913\nThe user shall mark critical \n regions of the demarcated riverbank \n as high priority "
+shape = "record"
+color = "black"
+];
+"UAV-1047"[
+label = "Requirement\nUAV-1047\nRoutes are automatically generated, allocated \n to UAVs, and executed during \n  search and rescue "
+shape = "record"
+color = "black"
+];
+"UAV-1048"[
+label = "SafetyRequirement\nUAV-1048\nGiven a demarcated region of \n the river,  generate a \n set of candidate flight routes "
+shape = "record"
+color = "black"
+];
+"UAV-1054"[
+label = "SafetyRequirement\nUAV-1054\nOptimize chance of successful search \n through allocation of routes to \n available UAVs "
+shape = "record"
+color = "black"
+];
+"UAV-1055"[
+label = "Context\nUAV-1055\nA successful search finds a \n live victim as quickly as \n possible while minimizing risk to \n the rescuers. "
+shape = "record"
+color = "black"
+];
+"UAV-1056"[
+label = "DesignDefinition\nUAV-1056\nEstimate the quality of a \n route allocation by computing a \n fitness function based on diverse \n coverage metrics. "
+shape = "record"
+color = "black"
+];
+"UAV-830"[
+label = "DesignDefinition\nUAV-830\nCompute area coverage of a \n set of routes "
+shape = "record"
+color = "black"
+];
+"UAV-842"[
+label = "DesignDefinition\nUAV-842\nEstimate prevalence of downstream versus \n upstream search direction "
+shape = "record"
+color = "black"
+];
+"UAV-1059"[
+label = "EnvironmentalAssumption\nUAV-1059\nRiver searches are more effective \n in a downstream direction. "
+shape = "record"
+color = "black"
+];
+"UAV-843"[
+label = "DesignDefinition\nUAV-843\nEstimate the equality of tasks \n assigned to UAVs. "
+shape = "record"
+color = "black"
+];
+"UAV-845"[
+label = "DesignDefinition\nUAV-845\nCompute overall fitness function for \n the mission "
+shape = "record"
+color = "black"
+];
+"UAV-846"[
+label = "DesignDefinition\nUAV-846\nCompute prioritized coverage "
+shape = "record"
+color = "black"
+];
+"UAV-994"[
+label = "DesignDefinition\nUAV-994\nCompute the total distance flown \n by all UAVs "
+shape = "record"
+color = "black"
+];
+"UAV-841"[
+label = "DesignDefinition\nUAV-841\nCompute distance traveled per UAV "
+shape = "record"
+color = "black"
+];
+"UAV-1057"[
+label = "DesignDefinition\nUAV-1057\nEvaluate route allocations for safety \n violations "
+shape = "record"
+color = "black"
+];
+"UAV-844"[
+label = "DesignDefinition\nUAV-844\nCheck that all UAVs have \n sufficient battery voltage to complete \n their allocated routes. "
+shape = "record"
+color = "black"
+];
+"UAV-1058"[
+label = "EnvironmentalAssumption\nUAV-1058\nUAVs used for search and \n rescue can fly 10km on \n a full battery. "
+shape = "record"
+color = "black"
+];
+"UAV-937"[
+label = "Requirement\nUAV-937\nThe user shall assign a \n set of UAVs to search \n a mapped region of the \n river and request routes to \n be generated for them. "
+shape = "record"
+color = "black"
+];
+"UAV-977"[
+label = "ProcessRequirement\nUAV-977\nRoutes assigned manually "
+shape = "record"
+color = "black"
+];
+"UAV-945" -> "UAV-1044";
+"UAV-1044" -> "UAV-1043";
+"UAV-1043" -> "UAV-1046";
+"UAV-1046" -> "UAV-783";
+"UAV-1046" -> "UAV-847";
+"UAV-1043" -> "UAV-784";
+"UAV-1043" -> "UAV-852";
+"UAV-1043" -> "UAV-855";
+"UAV-855" -> "UAV-898";
+"UAV-855" -> "UAV-901";
+"UAV-855" -> "UAV-913";
+"UAV-1044" -> "UAV-1047";
+"UAV-1047" -> "UAV-1048";
+"UAV-1047" -> "UAV-1054";
+"UAV-1054" -> "UAV-1055";
+"UAV-1054" -> "UAV-1056";
+"UAV-1056" -> "UAV-830";
+"UAV-1056" -> "UAV-842";
+"UAV-842" -> "UAV-1059";
+"UAV-1056" -> "UAV-843";
+"UAV-1056" -> "UAV-845";
+"UAV-1056" -> "UAV-846";
+"UAV-1056" -> "UAV-994";
+"UAV-994" -> "UAV-841";
+"UAV-1054" -> "UAV-1057";
+"UAV-1057" -> "UAV-844";
+"UAV-844" -> "UAV-1058";
+"UAV-1044" -> "UAV-937";
+"UAV-945" -> "UAV-977";
+}

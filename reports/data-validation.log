@@ -1,0 +1,58 @@
+{
+  "SMOS": {
+    "sources": 67,
+    "targets": 100,
+    "links": 1044,
+    "queries_with_links": 67,
+    "dangling_links": 0
+  },
+  "iTrust": {
+    "sources": 131,
+    "targets": 226,
+    "links": 286,
+    "queries_with_links": 105,
+    "dangling_links": 0
+  },
+  "eTour_en": {
+    "sources": 58,
+    "targets": 116,
+    "links": 308,
+    "queries_with_links": 57,
+    "dangling_links": 0
+  },
+  "RTMX-module-valid": {
+    "sources": 22,
+    "targets": 7,
+    "links": 22,
+    "queries_with_links": 22,
+    "dangling_links": 0,
+    "excluded": [
+      {
+        "requirement": "REQ-EXP-002",
+        "missing_test_module": "tests/test_experiments.sh"
+      },
+      {
+        "requirement": "REQ-EXP-003",
+        "missing_test_module": "tests/test_experiments.sh"
+      }
+    ]
+  },
+  "RTMX-function-level": {
+    "status": "BLOCKED",
+    "reason": "Declared function symbols do not resolve"
+  },
+  "Dronology": {
+    "status": "BLOCKED",
+    "reason": "We are not allowed to provide the code for dronology"
+  },
+  "SAFA-V0": {
+    "nodes": 240,
+    "edges": 234,
+    "sha256": "bfc543acfa98e3eb186c2b8d1f3ccc06a05dba4ec06085c0fe546dc126c58dbd"
+  },
+  "SAFA-V1": {
+    "nodes": 360,
+    "edges": 355,
+    "sha256": "5191fe6d06133a8fcab8fa3cf15f44f3168a1a79495846158b49381219a103c0"
+  }
+}

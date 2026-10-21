@@ -1,0 +1,26 @@
+{
+  "id": "06-test-deleted",
+  "repo": "flask",
+  "file": "tests/test_helpers.py",
+  "mode": "remove_function",
+  "old": "test_redirect_no_app",
+  "status": "MISSING_TEST",
+  "target": "src/flask/helpers.py",
+  "target_symbol": "redirect",
+  "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+  "change_commit": "00c9ad7bceacada698041d64facf3d96189e46cd",
+  "origin": "https://github.com/pallets/flask.git",
+  "expected_affected_artifacts": [
+    "5cc0ef4207539c8525d3c812bcb141f3b04893fe06f3727be23514f283f3d41c"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "c4a32294b188d7b9fd3722887c97a81fad85b6250af5083dbccdcb8a55d25d04",
+      "target_artifact": "5cc0ef4207539c8525d3c812bcb141f3b04893fe06f3727be23514f283f3d41c",
+      "relation_type": "TESTS",
+      "method": "reviewed-baseline-call-trace"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

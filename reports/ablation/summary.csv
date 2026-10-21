@@ -1,0 +1,6 @@
+variant,name,cases,correct,status_agreement,schema_citation_validity,uncertainty_rate,known_endpoint_recall,mean_seconds
+E,LLM only,12,3,0.25,1.0,1.0,0.0,12.165285958416698
+F,LLM + hybrid RAG,12,3,0.25,0.9166666666666666,1.0,0.0,18.622768982250033
+G,LLM + RAG + KG,12,3,0.25,0.9166666666666666,1.0,0.2,19.14031269091669
+H,LLM + RAG + KG + bounded investigation,12,3,0.25,0.9166666666666666,1.0,0.32,18.55724263766666
+I,Full VIGILANT with temporal evidence and rules,12,3,0.25,0.8333333333333334,1.0,0.72,20.40207460158335

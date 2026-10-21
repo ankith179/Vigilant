@@ -1,0 +1,249 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-861"[
+label = "Hazard\nUAV-861\nCollision occurs between UAVs at \n takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-862"[
+label = "SafetyRequirement\nUAV-862\nAvoid collisions when flying to \n first waypoint "
+shape = "record"
+color = "black"
+];
+"UAV-1106"[
+label = "Simulation successful \nUAV-1106\nSimulation of Synchronized Takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-448"[
+label = "DesignDefinition\nUAV-448\nEach UAV ascends to a \n unique altitude during coordinated take \n off ascent "
+shape = "record"
+color = "black"
+];
+"UAV-448\nservices.missionplanning.patterns"[
+label = "Package\nUAV-448\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-448\nservices.missionplanning.tasks"[
+label = "Package\nUAV-448\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "black"
+];
+"UAV-893"[
+label = "EnvironmentalAssumption\nUAV-893\nRTK is active "
+shape = "record"
+color = "black"
+];
+"UAV-923"[
+label = "EnvironmentalAssumption\nUAV-923\nRTK is accurate to 10 \n cm "
+shape = "record"
+color = "black"
+];
+"UAV-449"[
+label = "DesignDefinition\nUAV-449\nHover after ascent during coordinated \n takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-449\nservices.missionplanning.patterns"[
+label = "Package\nUAV-449\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-449edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-449\nservices.missionplanning.tasks"[
+label = "Package\nUAV-449\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+];
+"UAV-449edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "black"
+];
+"UAV-537"[
+label = "DesignDefinition\nUAV-537\nMission plan synchronization points "
+shape = "record"
+color = "black"
+];
+"UAV-537\nservices.missionplanning.sync"[
+label = "Package\nUAV-537\nservices.missionplanning.sync"
+shape = "record"
+color = "black"
+];
+"UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SynchronizationManager.java"[
+label = "Code with \n passed Tests \nSynchronizationManager.java"
+shape = "record"
+color = "black"
+];
+"UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SynchronizationPoint.java"[
+label = "Code with \n passed Tests \nSynchronizationPoint.java"
+shape = "record"
+color = "black"
+];
+"UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SyncConstants.java"[
+label = "Code with \n passed Tests \nSyncConstants.java"
+shape = "record"
+color = "black"
+];
+"UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SynchronizationState.java"[
+label = "Code with \n passed Tests \nSynchronizationState.java"
+shape = "record"
+color = "black"
+];
+"UAV-450"[
+label = "DesignDefinition\nUAV-450\nFly to first waypoint at \n assigned altitude during coordinated takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-450\nservices.missionplanning.patterns"[
+label = "Package\nUAV-450\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-450\nservices.missionplanning.tasks"[
+label = "Package\nUAV-450\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "black"
+];
+"UAV-451"[
+label = "DesignDefinition\nUAV-451\nUAV hovers in place at \n start of first route during \n coordinated takeoff awaiting instructions to \n proceed "
+shape = "record"
+color = "black"
+];
+"UAV-451\nservices.missionplanning.patterns"[
+label = "Package\nUAV-451\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-451edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-451\nservices.missionplanning.tasks"[
+label = "Package\nUAV-451\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+];
+"UAV-451edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TakeoffTask.java"[
+label = "Code with \n passed Tests \nTakeoffTask.java"
+shape = "record"
+color = "black"
+];
+"UAV-452"[
+label = "DesignDefinition\nUAV-452\nWhen reaching the first waypoint, \n the UAV descends or ascends \n to the specified altitude duing \n coordinated takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-452\nservices.missionplanning.patterns"[
+label = "Package\nUAV-452\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedLandingPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-453"[
+label = "DesignDefinition\nUAV-453\nTransition to regular flight mode \n after coordinated takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-453\nservices.missionplanning.plan"[
+label = "Package\nUAV-453\nservices.missionplanning.plan"
+shape = "record"
+color = "black"
+];
+"UAV-453edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/plan/FullMissionPlan.java"[
+label = "Code with \n passed Tests \nFullMissionPlan.java"
+shape = "record"
+color = "black"
+];
+"edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/plan/UAVMissionPlan.java"[
+label = "Code with \n passed Tests \nUAVMissionPlan.java"
+shape = "record"
+color = "black"
+];
+"UAV-944"[
+label = "Acceptance test passed \nUAV-944\nTest collision free flight to \n first waypoints "
+shape = "record"
+color = "black"
+];
+"UAV-896"[
+label = "Context\nUAV-896\nOperators place UAVs in random \n positions prior to takeoff which \n could cause them to cross \n routes as they fly to \n their first waypoint. "
+shape = "record"
+color = "black"
+];
+"UAV-861" -> "UAV-862";
+"UAV-862" -> "UAV-1106";
+"UAV-862" -> "UAV-448";
+"UAV-448" -> "UAV-448\nservices.missionplanning.patterns";
+"UAV-448\nservices.missionplanning.patterns" -> "UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-448" -> "UAV-448\nservices.missionplanning.tasks";
+"UAV-448\nservices.missionplanning.tasks" -> "UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java";
+"UAV-448" -> "UAV-893";
+"UAV-448" -> "UAV-923";
+"UAV-862" -> "UAV-449";
+"UAV-449" -> "UAV-449\nservices.missionplanning.patterns";
+"UAV-449\nservices.missionplanning.patterns" -> "UAV-449edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-449" -> "UAV-449\nservices.missionplanning.tasks";
+"UAV-449\nservices.missionplanning.tasks" -> "UAV-449edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java";
+"UAV-449" -> "UAV-537";
+"UAV-537" -> "UAV-537\nservices.missionplanning.sync";
+"UAV-537\nservices.missionplanning.sync" -> "UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SynchronizationManager.java";
+"UAV-537\nservices.missionplanning.sync" -> "UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SynchronizationPoint.java";
+"UAV-537\nservices.missionplanning.sync" -> "UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SyncConstants.java";
+"UAV-537\nservices.missionplanning.sync" -> "UAV-537edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/sync/SynchronizationState.java";
+"UAV-862" -> "UAV-450";
+"UAV-450" -> "UAV-450\nservices.missionplanning.patterns";
+"UAV-450\nservices.missionplanning.patterns" -> "UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-450" -> "UAV-450\nservices.missionplanning.tasks";
+"UAV-450\nservices.missionplanning.tasks" -> "UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java";
+"UAV-862" -> "UAV-451";
+"UAV-451" -> "UAV-451\nservices.missionplanning.patterns";
+"UAV-451\nservices.missionplanning.patterns" -> "UAV-451edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-451" -> "UAV-451\nservices.missionplanning.tasks";
+"UAV-451\nservices.missionplanning.tasks" -> "UAV-451edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TakeoffTask.java";
+"UAV-862" -> "UAV-452";
+"UAV-452" -> "UAV-452\nservices.missionplanning.patterns";
+"UAV-452\nservices.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java";
+"UAV-452\nservices.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-862" -> "UAV-453";
+"UAV-453" -> "UAV-453\nservices.missionplanning.plan";
+"UAV-453\nservices.missionplanning.plan" -> "UAV-453edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/plan/FullMissionPlan.java";
+"UAV-453\nservices.missionplanning.plan" -> "edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/plan/UAVMissionPlan.java";
+"UAV-862" -> "UAV-944";
+"UAV-861" -> "UAV-896";
+}

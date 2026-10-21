@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-07T05:05:09.111319+00:00",
+  "failure": "Package build rejected truncated temporary data ZIP with BadZipFile.",
+  "damaged_bytes": 106058240,
+  "damaged_sha256": "4b7289e9080a1f40ba8ff7a1aa682609604d8d43e7684162b6227f40a81a71f4",
+  "restored_bytes": 136035036,
+  "restored_sha256": "24fb6e42560e4835afc9ad243c02105ad0fcbb0032da756628aebd7c0488d6c5",
+  "restored_library_version": 2,
+  "working_project_overwritten": false
+}

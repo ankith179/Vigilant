@@ -1,0 +1,23 @@
+{
+  "id": "08-api-changed",
+  "repo": "fullstack",
+  "file": "backend/app/api/routes/items.py",
+  "mode": "replace",
+  "old": "prefix=\"/items\"",
+  "new": "prefix=\"/catalog\"",
+  "status": "POTENTIAL_INCONSISTENCY",
+  "target": "frontend/src/client/sdk.gen.ts",
+  "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+  "change_commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+  "expected_affected_artifacts": [
+    "a792528e88d0f1202a9916d50aeab62a1dcd322584a0c886fb88bd9b329b892f",
+    "8b7bdf1338ca77cecd07e2707b86aca527e5fd1cfbe5e84d486ea2a21e19e151",
+    "a25ecba8fe671a7ff755ce0c24bcc2c14deea510dc3dc983171f44ba6afe8522",
+    "f2d12b8a2b3290df53b2259d9219b5fb19520f6df097c208bf513f86575bb528",
+    "5cfa3a5703d16b777db05b6a1d3acc95d9ca3db73b1acc996e62057b5b6861a5"
+  ],
+  "expected_traceability": [],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

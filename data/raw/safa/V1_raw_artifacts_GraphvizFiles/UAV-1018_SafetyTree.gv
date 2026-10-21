@@ -1,0 +1,21 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1018"[
+label = "Hazard\nUAV-1018\nSatellite signals are lost causing \n the UAV to lose accurate \n localization and fly in seemingly \n random directions to achieve its \n target waypoint. "
+shape = "record"
+color = "black"
+];
+"UAV-912"[
+label = "EnvironmentalAssumption\nUAV-912\nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+];
+"UAV-982"[
+label = "ProcessRequirement\nUAV-982\nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+];
+"UAV-1018" -> "UAV-912";
+"UAV-1018" -> "UAV-982";
+}

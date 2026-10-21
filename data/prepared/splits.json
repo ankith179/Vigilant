@@ -1,0 +1,17 @@
+{
+  "strategy": "project-level",
+  "train": [
+    "SMOS"
+  ],
+  "validation": [
+    "iTrust"
+  ],
+  "test": [
+    "eTour_en"
+  ],
+  "external_test": [
+    "RTMX-module-valid"
+  ],
+  "temporal": "SAFA V0 context, V1 evaluation; same project family as Dronology",
+  "rule": "No test labels used for threshold/model fitting; do not random-split artifact pairs"
+}

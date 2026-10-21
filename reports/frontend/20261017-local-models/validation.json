@@ -1,0 +1,109 @@
+{
+  "started_at": "2026-10-17T02:27:42.896Z",
+  "status": "PASSED",
+  "origin": "http://127.0.0.1:52539",
+  "platform": "linux",
+  "pages": [
+    {
+      "page": "Dashboard",
+      "stats": {
+        "projects": 13,
+        "repositories": 16,
+        "commits": 29,
+        "artifacts": 32706,
+        "trace_links": 57169,
+        "graph_nodes": 32719,
+        "graph_edges": 56879,
+        "embeddings": 0,
+        "changes": 44,
+        "evidence": 175,
+        "analysis_runs": 14,
+        "findings": 44,
+        "agent_runs": 14,
+        "experiments": 14,
+        "metrics": 0
+      }
+    },
+    {
+      "page": "Projects",
+      "rows": 13
+    },
+    {
+      "page": "Repository",
+      "rows": 16
+    },
+    {
+      "page": "Artifacts",
+      "rows": 100
+    },
+    {
+      "page": "Traceability",
+      "rows": 100
+    },
+    {
+      "page": "Knowledge Graph",
+      "rows": 120
+    },
+    {
+      "page": "Change Analysis",
+      "rows": 11
+    },
+    {
+      "page": "Impact Analysis",
+      "rows": 33
+    },
+    {
+      "page": "Consistency Findings",
+      "rows": 15
+    },
+    {
+      "page": "Evidence",
+      "rows": 24
+    },
+    {
+      "page": "Agent Investigation",
+      "rows": 1
+    },
+    {
+      "page": "Experiments",
+      "rows": 14
+    },
+    {
+      "page": "Reports",
+      "rows": 1
+    }
+  ],
+  "checks": [
+    "All 13 pages show persisted data without application errors",
+    "Pagination, local filtering, keyboard record selection and snapshot provenance",
+    "Directed graph, relationship filter and keyboard-accessible provenance",
+    "Evidence quote/hash/range and exact JSON export",
+    "Three local model choices and provider switching",
+    "JSON/CSV/HTML report downloads, free OmniRoute selector and access settings",
+    "Transport error shown and real API refresh recovers",
+    "Project creation and complete deterministic investigation through UI on isolated database",
+    "390px mobile dashboard and graph without document overflow"
+  ],
+  "errors": [],
+  "screenshots": [
+    "dashboard.png",
+    "knowledge-graph.png",
+    "evidence.png",
+    "report-detail.png",
+    "mobile-dashboard.png",
+    "mobile-graph.png"
+  ],
+  "source_hashes": {
+    "frontend/src/main.jsx": "4b2f2926641fe1d25f781ee26a6cd2d4315d14f3c96efc01840be50dab2d8e41",
+    "frontend/src/Graph.jsx": "42f9ed3ed3804dafdc3ab3d314d9fdde81a03399b103a8a2daee5a86182f8926",
+    "frontend/src/style.css": "17346d97a7c72e7580671cdcc3df10eac35a3c4fa28b849748a4c25f42d874a3",
+    "backend/app.py": "6e2e53dcc447a2b24f478b2342ed8b282a3debb2e4c4ea5596c6cf9e7eec3ce1",
+    "database/store.py": "f0981f7c26bd9544f59a0617390af50ae8a19ea5ec4b374e9d588a4abb3e133e"
+  },
+  "mutations": true,
+  "browser": "138.0.7204.0",
+  "selected_run": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+  "commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "finished_at": "2026-10-17T02:27:58.344Z"
+}

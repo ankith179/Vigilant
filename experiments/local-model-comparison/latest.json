@@ -1,0 +1,24 @@
+{
+  "new_calls": 0,
+  "results": [
+    {
+      "model": "qwen3:8b",
+      "status": "NOT_RUN",
+      "reason": "[Errno 111] Connection refused",
+      "metrics": null
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "status": "NOT_RUN",
+      "reason": "[Errno 111] Connection refused",
+      "metrics": null
+    },
+    {
+      "model": "qwen3:14b",
+      "status": "NOT_RUN",
+      "reason": "[Errno 111] Connection refused",
+      "metrics": null
+    }
+  ],
+  "status": "INCOMPLETE"
+}

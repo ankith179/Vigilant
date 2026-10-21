@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-10-08T08:14:37.216436+00:00",
+  "slides": 14,
+  "final_sha256": "b258202452f16246370937840adc1831941098e9cac759b19710f6e10f31483f",
+  "checks": [
+    "All slides rendered from final PPTX and inspected",
+    "Final changed slides reviewed separately; six unchanged slides have identical render hashes",
+    "Connector arrow direction corrected",
+    "Two editable charts and three editable tables retain measured data"
+  ],
+  "native_powerpoint_execution": false,
+  "frontend_browser_validation": false
+}

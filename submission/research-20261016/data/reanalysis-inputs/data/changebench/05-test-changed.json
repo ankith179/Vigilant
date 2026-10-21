@@ -1,0 +1,27 @@
+{
+  "id": "05-test-changed",
+  "repo": "flask",
+  "file": "tests/test_helpers.py",
+  "mode": "replace",
+  "old": "def test_redirect_no_app():",
+  "new": "def test_redirect_no_app():\n    # Controlled benchmark: comment-only review",
+  "status": "UNCERTAIN",
+  "target": "src/flask/helpers.py",
+  "target_symbol": "redirect",
+  "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+  "change_commit": "fa37e3665c098ff6b859a9a0885599d08ef7726e",
+  "origin": "https://github.com/pallets/flask.git",
+  "expected_affected_artifacts": [
+    "5bbf19acf1e09e9532c0ff8879de88caa52b18b4d033e5023099358c74c2d923"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "ac1f4590af33eb4d4647e22d27c65a6849ae3372cfb2b95bfea3c15429ac9ed7",
+      "target_artifact": "5bbf19acf1e09e9532c0ff8879de88caa52b18b4d033e5023099358c74c2d923",
+      "relation_type": "TESTS",
+      "method": "reviewed-baseline-call-trace"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

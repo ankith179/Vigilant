@@ -1,0 +1,87 @@
+{
+  "started_at": "2026-10-12T05:58:11.420Z",
+  "status": "FAILED",
+  "origin": "http://127.0.0.1:37791",
+  "platform": "linux",
+  "pages": [
+    {
+      "page": "Dashboard",
+      "stats": {
+        "projects": 13,
+        "repositories": 16,
+        "commits": 29,
+        "artifacts": 32706,
+        "trace_links": 57169,
+        "graph_nodes": 32719,
+        "graph_edges": 56879,
+        "embeddings": 0,
+        "changes": 44,
+        "evidence": 175,
+        "analysis_runs": 14,
+        "findings": 44,
+        "agent_runs": 14,
+        "experiments": 14,
+        "metrics": 0
+      }
+    },
+    {
+      "page": "Projects",
+      "rows": 13
+    },
+    {
+      "page": "Repository",
+      "rows": 16
+    },
+    {
+      "page": "Artifacts",
+      "rows": 100
+    },
+    {
+      "page": "Traceability",
+      "rows": 100
+    },
+    {
+      "page": "Knowledge Graph",
+      "rows": 120
+    },
+    {
+      "page": "Change Analysis",
+      "rows": 11
+    },
+    {
+      "page": "Impact Analysis",
+      "rows": 33
+    },
+    {
+      "page": "Consistency Findings",
+      "rows": 15
+    },
+    {
+      "page": "Evidence",
+      "rows": 24
+    },
+    {
+      "page": "Agent Investigation",
+      "rows": 1
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "screenshots": [
+    "dashboard.png"
+  ],
+  "source_hashes": {
+    "frontend/src/main.jsx": "e53b1695469b9dbf8717d9d0ed0e6ec29da4c416dc1af0560c8a36041104d198",
+    "frontend/src/Graph.jsx": "42f9ed3ed3804dafdc3ab3d314d9fdde81a03399b103a8a2daee5a86182f8926",
+    "frontend/src/style.css": "240edc02126d419577d54e4984b5d97bd6b888f124ce186f54fb03ea703379f6",
+    "backend/app.py": "d8073f02e99bb85c21bd6e072751741ba5bc48af354ce52feea7e9b9ba45d824",
+    "database/store.py": "f0981f7c26bd9544f59a0617390af50ae8a19ea5ec4b374e9d588a4abb3e133e"
+  },
+  "mutations": true,
+  "browser": "153.0.8010.0",
+  "selected_run": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+  "commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "failure": "AssertionError [ERR_ASSERTION]: Experiments must show persisted records for the selected investigation; scope={\"repository\":\"fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1\",\"commit\":\"892a3d5213e950be40467f4a0c8cfb33d12e8132\",\"body\":\"WORKSPACE / EXPERIMENTS\\n↻ Refresh\\n\\nCONTINUOUS TRACEABILITY\\n\\nExperiments\\n\\nInspect recorded artifacts and decisions with their source and version.\\n\\nResearch build\\nRepository\\nSelect repository\\n05-test-changed\\n09-backend-changed\\n10-consumer-changed\\npetclinic\\nflask\\n04-code-deleted\\n11-implementation-test-drift\\nexpress\\n07-frontend-changed\\n06-test-deleted\\n03-code-changed\\n01-requirement-changed\\n02-requirement-added\\n08-api-changed\\n08-api-changed\\n12-requirement-test-drift\\nSnapshot\\nSelect commit\\n892a3d521 · 08-api-changed\\n1762adac6 · 📝 Update release notes\\nResults always retain their original commit.\\n14 visible records\\nKIND\\tSTATUS\\tDATASET\\tMETHOD\\nretrieval\\tCOMPLETED\\t—\\t—\\nretrieval\\tCOMPLETED\\t—\\t—\\nchangebench\\tCOMPLETED\\t—\\t—\\nsafa\\tCOMPLETED\\t—\\t—\\nretrieval\\tCOMPLETED\\t—\\t—\\nranker\\tCOMPLETED\\t—\\t—\\nchangebench\\tCOMPLETED\\t—\\t—\\nablation\\tEXCLUDED_RUNTIME_FAILURE\\t—\\t—\\nablation\\tCOMPLETED\\t—\\t—\\nretrieval\\tCOMPLETED\\t—\\t—\\nretrieval\\tCOMPLETED\\t—\\t—\\nretrieval\\tCOMPLETED\\t—\\t—\\nretrieval\\tCOMPLETED\\t—\\t—\\npipeline\\tCOMPLETED\\t—\\t—\\nPrevious page\\nRecords 1–14\\nNext page\\n\\nFilter searches the loaded page. Select a record for its full evidence and provenance.\\n\\nVIGILANT\\nContinuous software traceability · Evidence-grounded research\"}\n    at /workspace/scratch/e4ff17049f79/VIGILANT/scripts/test_frontend.cjs:66:5",
+  "finished_at": "2026-10-12T05:58:13.538Z"
+}

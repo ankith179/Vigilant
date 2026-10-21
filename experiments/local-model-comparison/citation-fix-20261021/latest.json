@@ -1,0 +1,95 @@
+{
+  "new_calls": 36,
+  "results": [
+    {
+      "model": "qwen3:8b",
+      "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "status": "COMPLETED",
+      "saved_calls": 12,
+      "planned_calls": 12,
+      "split": "diagnostic",
+      "metrics": {
+        "accuracy": 0.3333333333333333,
+        "macro_f1_over_gold_classes": 0.325,
+        "valid_response_rate": 1.0,
+        "uncertainty_rate": 0.16666666666666666,
+        "decisive_coverage": 0.8333333333333334,
+        "majority_baseline": 0.5,
+        "always_uncertain_baseline": 0.25,
+        "confusion": {
+          "POTENTIAL_INCONSISTENCY -> POTENTIAL_INCONSISTENCY": 2,
+          "UNCERTAIN -> UNCERTAIN": 2,
+          "POTENTIAL_INCONSISTENCY -> INCONSISTENT": 2,
+          "BROKEN_TRACE -> CONSISTENT": 1,
+          "UNCERTAIN -> CONSISTENT": 1,
+          "MISSING_TEST -> CONSISTENT": 1,
+          "POTENTIAL_INCONSISTENCY -> CONSISTENT": 2,
+          "BROKEN_TRACE -> INCONSISTENT": 1
+        },
+        "mean_seconds": 15.056689325000056
+      },
+      "target_status": "NOT_ESTABLISHED",
+      "reason": "Independent labels and a preregistered held-out protocol require review; diagnostic scores do not establish >75% accuracy."
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+      "status": "COMPLETED",
+      "saved_calls": 12,
+      "planned_calls": 12,
+      "split": "diagnostic",
+      "metrics": {
+        "accuracy": 0.08333333333333333,
+        "macro_f1_over_gold_classes": 0.1,
+        "valid_response_rate": 1.0,
+        "uncertainty_rate": 0.16666666666666666,
+        "decisive_coverage": 0.8333333333333334,
+        "majority_baseline": 0.5,
+        "always_uncertain_baseline": 0.25,
+        "confusion": {
+          "POTENTIAL_INCONSISTENCY -> CONSISTENT": 5,
+          "UNCERTAIN -> UNCERTAIN": 1,
+          "BROKEN_TRACE -> UNCERTAIN": 1,
+          "UNCERTAIN -> CONSISTENT": 2,
+          "MISSING_TEST -> CONSISTENT": 1,
+          "POTENTIAL_INCONSISTENCY -> INCONSISTENT": 1,
+          "BROKEN_TRACE -> INCONSISTENT": 1
+        },
+        "mean_seconds": 57.83531546666662
+      },
+      "target_status": "NOT_ESTABLISHED",
+      "reason": "Independent labels and a preregistered held-out protocol require review; diagnostic scores do not establish >75% accuracy."
+    },
+    {
+      "model": "qwen3:14b",
+      "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+      "status": "COMPLETED",
+      "saved_calls": 12,
+      "planned_calls": 12,
+      "split": "diagnostic",
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1_over_gold_classes": 0.27142857142857146,
+        "valid_response_rate": 1.0,
+        "uncertainty_rate": 0.16666666666666666,
+        "decisive_coverage": 0.8333333333333334,
+        "majority_baseline": 0.5,
+        "always_uncertain_baseline": 0.25,
+        "confusion": {
+          "POTENTIAL_INCONSISTENCY -> CONSISTENT": 3,
+          "UNCERTAIN -> UNCERTAIN": 2,
+          "POTENTIAL_INCONSISTENCY -> INCONSISTENT": 2,
+          "BROKEN_TRACE -> CONSISTENT": 1,
+          "UNCERTAIN -> CONSISTENT": 1,
+          "MISSING_TEST -> CONSISTENT": 1,
+          "POTENTIAL_INCONSISTENCY -> POTENTIAL_INCONSISTENCY": 1,
+          "BROKEN_TRACE -> INCONSISTENT": 1
+        },
+        "mean_seconds": 69.50678032500007
+      },
+      "target_status": "NOT_ESTABLISHED",
+      "reason": "Independent labels and a preregistered held-out protocol require review; diagnostic scores do not establish >75% accuracy."
+    }
+  ],
+  "status": "COMPLETED"
+}

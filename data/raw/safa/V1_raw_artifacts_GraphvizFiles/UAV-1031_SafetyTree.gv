@@ -1,0 +1,189 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1031"[
+label = "Hazard\nUAV-1031\nAn untrusted UAV registers with \n Dronology, fails to comply with \n commands, and creates chaos in \n the airspace. "
+shape = "record"
+color = "black"
+];
+"UAV-1032"[
+label = "SafetyRequirement\nUAV-1032\nWhen Dronology service is active \n it shall be monitored by \n a human operator. "
+shape = "record"
+color = "black"
+];
+"UAV-120"[
+label = "Requirement\nUAV-120\nReal-Time Flight UI display status \n of all active UAVs "
+shape = "record"
+color = "black"
+];
+"UAV-121"[
+label = "DesignDefinition\nUAV-121\nUpdate UAV location frequency "
+shape = "record"
+color = "black"
+];
+"UAV-121\nui.vaadin.activeflights"[
+label = "Package\nUAV-121\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[
+label = "Code with \n passed Tests \nAFMapComponent.java"
+shape = "record"
+color = "black"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMainLayout.java"[
+label = "Code with \n passed Tests \nAFMainLayout.java"
+shape = "record"
+color = "black"
+];
+"UAV-121\nui.vaadin.start"[
+label = "Package\nUAV-121\nui.vaadin.start"
+shape = "record"
+color = "black"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[
+label = "Code with \n passed Tests \nMyUI.java"
+shape = "record"
+color = "black"
+];
+"UAV-685"[
+label = "DesignDefinition\nUAV-685\nDisplay UAVs on map "
+shape = "record"
+color = "black"
+];
+"UAV-685\nui.vaadin.activeflights"[
+label = "Package\nUAV-685\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[
+label = "Code with \n passed Tests \nAFMapComponent.java"
+shape = "record"
+color = "black"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java"[
+label = "Code with \n passed Tests \nMapDrawingUtil.java"
+shape = "record"
+color = "black"
+];
+"UAV-686"[
+label = "DesignDefinition\nUAV-686\nDifferentiate UAV types "
+shape = "record"
+color = "black"
+];
+"UAV-686\nui.vaadin.activeflights"[
+label = "Package\nUAV-686\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-686edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+];
+"UAV-687"[
+label = "DesignDefinition\nUAV-687\nDisplay UAV information and operations "
+shape = "record"
+color = "black"
+];
+"UAV-687\nui.vaadin.activeflights"[
+label = "Package\nUAV-687\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-687edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+];
+"UAV-688"[
+label = "DesignDefinition\nUAV-688\nPeriodically update UAV location "
+shape = "record"
+color = "black"
+];
+"UAV-688\nui.vaadin.activeflights"[
+label = "Package\nUAV-688\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+];
+"UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java"[
+label = "Code with \n passed Tests \nMapDrawingUtil.java"
+shape = "record"
+color = "black"
+];
+"UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[
+label = "Code with \n passed Tests \nAFMapComponent.java"
+shape = "record"
+color = "black"
+];
+"UAV-688\nui.vaadin.start"[
+label = "Package\nUAV-688\nui.vaadin.start"
+shape = "record"
+color = "black"
+];
+"UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[
+label = "Code with \n passed Tests \nMyUI.java"
+shape = "record"
+color = "black"
+];
+"UAV-1034"[
+label = "ProcessRequirement\nUAV-1034\nDronology operator will manually disable \n GCS in case of unknown \n UAV activation "
+shape = "record"
+color = "black"
+];
+"UAV-1041"[
+label = "SafetyRequirement\nUAV-1041\nUAVs connect to dronology via \n a well defined handshake protocol "
+shape = "record"
+color = "black"
+];
+"UAV-1100"[
+label = " Delegated \n to Adacent System\nUAV-1100\nGround Station Middleware handles all \n communication between Dronology and external \n GCSs. "
+shape = "record"
+color = "black"
+];
+"UAV-1107"[
+label = " Delegated \n to Adacent System\nUAV-1107\nPython Based Ground Control Station \n V1.0 with all control logic \n on the ground. "
+shape = "record"
+color = "black"
+];
+"UAV-1108"[
+label = " Delegated \n to Adacent System\nUAV-1108\nPython Based Ground Control Station \n V1.0 with control logic distributed \n between ground-based GCS and Processor \n onboard the UAV. "
+shape = "record"
+color = "black"
+];
+"UAV-1042"[
+label = "Context\nUAV-1042\nPublic use of Dronology is \n limited to specific events, limiting \n the opportunity for rogue UAVs \n to activate in the system. "
+shape = "record"
+color = "black"
+];
+"UAV-1031" -> "UAV-1032";
+"UAV-1032" -> "UAV-120";
+"UAV-120" -> "UAV-121";
+"UAV-121" -> "UAV-121\nui.vaadin.activeflights";
+"UAV-121\nui.vaadin.activeflights" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java";
+"UAV-121\nui.vaadin.activeflights" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMainLayout.java";
+"UAV-121" -> "UAV-121\nui.vaadin.start";
+"UAV-121\nui.vaadin.start" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java";
+"UAV-120" -> "UAV-685";
+"UAV-685" -> "UAV-685\nui.vaadin.activeflights";
+"UAV-685\nui.vaadin.activeflights" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java";
+"UAV-685\nui.vaadin.activeflights" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java";
+"UAV-120" -> "UAV-686";
+"UAV-686" -> "UAV-686\nui.vaadin.activeflights";
+"UAV-686\nui.vaadin.activeflights" -> "UAV-686edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java";
+"UAV-120" -> "UAV-687";
+"UAV-687" -> "UAV-687\nui.vaadin.activeflights";
+"UAV-687\nui.vaadin.activeflights" -> "UAV-687edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java";
+"UAV-120" -> "UAV-688";
+"UAV-688" -> "UAV-688\nui.vaadin.activeflights";
+"UAV-688\nui.vaadin.activeflights" -> "UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java";
+"UAV-688\nui.vaadin.activeflights" -> "UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java";
+"UAV-688" -> "UAV-688\nui.vaadin.start";
+"UAV-688\nui.vaadin.start" -> "UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java";
+"UAV-1031" -> "UAV-1034";
+"UAV-1031" -> "UAV-1041";
+"UAV-1041" -> "UAV-1100";
+"UAV-1041" -> "UAV-1107";
+"UAV-1041" -> "UAV-1108";
+"UAV-1031" -> "UAV-1042";
+}

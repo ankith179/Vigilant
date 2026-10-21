@@ -1,0 +1,597 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1031Delta"[
+label = "Hazard\nUAV-1031 \nAn untrusted UAV registers with \n Dronology, fails to comply with \n commands, and creates chaos in \n the airspace. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--1031Delta"[
+label = "<Strategy>\nSTRAT--1031 \n Argue that hazard \n  UAV-1031  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1032Delta"[
+label = "SafetyRequirement\nUAV-1032 \nWhen Dronology service is active \n it shall be monitored by \n a human operator. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1032Delta"[
+label = "<Strategy>\nSTRAT-D--1032 \n Argue that safety requirement \n  UAV-1032  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-120Delta"[
+label = "Requirement\nUAV-120 \nReal-Time Flight UI display status \n of all active UAVs "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--120Delta"[
+label = "<Strategy>\nSTRAT-D--120 \n Argue that requirement \n  UAV-120  is fully addressed \n by design decisions and/or processes."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-121Delta"[
+label = "DesignDefinition\nUAV-121 \nUpdate UAV location frequency "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--121Delta"[
+label = "<Strategy>\nSTRAT-C--121 \n Argue that design definition \n  UAV-121  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-121\nui.vaadin.activeflights"[
+label = "Package\nUAV-121\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMainLayout.java"[
+label = "Code with \n passed Tests \nAFMainLayout.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[
+label = "Code with \n passed Tests \nAFMapComponent.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-121\nui.vaadin.start"[
+label = "Package\nUAV-121\nui.vaadin.start"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[
+label = "Code with \n passed Tests \nMyUI.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-121\nui.vaadin.utils"[
+label = "Package\nUAV-121\nui.vaadin.utils"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/utils/Configuration.java"[
+label = "Code with \n passed Tests \nConfiguration.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685Delta"[
+label = "DesignDefinition\nUAV-685 \nDisplay UAVs on map "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--685Delta"[
+label = "<Strategy>\nSTRAT-C--685 \n Argue that design definition \n  UAV-685  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-685\nservices.instances.flightmanager"[
+label = "Package\nUAV-685\nservices.instances.flightmanager"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.services/src/edu/nd/dronology/services/instances/flightmanager/FlightInfoCreator.java"[
+label = "Code with \n passed Tests \nFlightInfoCreator.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685\nui.vaadin.activeflights"[
+label = "Package\nUAV-685\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMainLayout.java"[
+label = "Code with \n passed Tests \nAFMainLayout.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java"[
+label = "Code with \n passed Tests \nMapDrawingUtil.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[
+label = "Code with \n passed Tests \nAFMapComponent.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoPanel.java"[
+label = "Code with \n passed Tests \nAFInfoPanel.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685\nui.vaadin.flightroutes"[
+label = "Package\nUAV-685\nui.vaadin.flightroutes"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRTableDisplay.java"[
+label = "Code with \n passed Tests \nFRTableDisplay.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRMainLayout.java"[
+label = "Code with \n passed Tests \nFRMainLayout.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685\nui.vaadin.start"[
+label = "Package\nUAV-685\nui.vaadin.start"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[
+label = "Code with \n passed Tests \nMyUI.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685\nui.vaadin.utils"[
+label = "Package\nUAV-685\nui.vaadin.utils"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/utils/MapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nMapMarkerUtilities.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/utils/MapAddMarkerListener.java"[
+label = "Code with \n passed Tests \nMapAddMarkerListener.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-686Delta"[
+label = "DesignDefinition\nUAV-686 \nDifferentiate UAV types "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--686Delta"[
+label = "<Strategy>\nSTRAT-C--686 \n Argue that design definition \n  UAV-686  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-686\nui.vaadin.activeflights"[
+label = "Package\nUAV-686\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-686edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-687Delta"[
+label = "DesignDefinition\nUAV-687 \nDisplay UAV information and operations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--687Delta"[
+label = "<Strategy>\nSTRAT-C--687 \n Argue that design definition \n  UAV-687  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-687\nui.vaadin.activeflights"[
+label = "Package\nUAV-687\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-687edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[
+label = "Code with \n passed Tests \nAFInfoBox.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-688Delta"[
+label = "DesignDefinition\nUAV-688 \nPeriodically update UAV location "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--688Delta"[
+label = "<Strategy>\nSTRAT-C--688 \n Argue that design definition \n  UAV-688  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-688\nui.vaadin.activeflights"[
+label = "Package\nUAV-688\nui.vaadin.activeflights"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java"[
+label = "Code with \n passed Tests \nMapDrawingUtil.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[
+label = "Code with \n passed Tests \nAFMapComponent.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-688\nui.vaadin.start"[
+label = "Package\nUAV-688\nui.vaadin.start"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[
+label = "Code with \n passed Tests \nMyUI.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1034Delta"[
+label = "ProcessRequirement\nUAV-1034 \nDronology operator will manually disable \n GCS in case of unknown \n UAV activation "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1041Delta"[
+label = "SafetyRequirement\nUAV-1041 \nUAVs connect to dronology via \n a well defined handshake protocol "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1041Delta"[
+label = "<Strategy>\nSTRAT-D--1041 \n Argue that safety requirement \n  UAV-1041  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1100Delta"[
+label = " Delegated \n to Adacent System\nUAV-1100 \nGround Station Middleware handles all \n communication between Dronology and external \n GCSs. "
+shape = "component"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1107Delta"[
+label = " Delegated \n to Adacent System\nUAV-1107 \nPython Based Ground Control Station \n V1.0 with all control logic \n on the ground. "
+shape = "component"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1108Delta"[
+label = " Delegated \n to Adacent System\nUAV-1108 \nPython Based Ground Control Station \n V1.0 with control logic distributed \n between ground-based GCS and Processor \n onboard the UAV. "
+shape = "component"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1042Delta"[
+label = "Context\nUAV-1042 \nPublic use of Dronology is \n limited to specific events, limiting \n the opportunity for rogue UAVs \n to activate in the system. "
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1031Delta" -> "STRAT--1031Delta"[style = "solid" color = black];
+"STRAT--1031Delta" -> "UAV-1032Delta"[style = "solid" color = black];
+"UAV-1032Delta" -> "STRAT-D--1032Delta"[style = "solid" color = black];
+"STRAT-D--1032Delta" -> "UAV-120Delta"[style = "solid" color = black];
+"UAV-120Delta" -> "STRAT-D--120Delta"[style = "solid" color = black];
+"STRAT-D--120Delta" -> "UAV-121Delta"[style = "solid" color = black];
+"UAV-121Delta" -> "STRAT-C--121Delta"[style = "solid" color = black];
+"STRAT-C--121Delta" -> "UAV-121\nui.vaadin.activeflights"[style = "solid" color = black];
+"UAV-121\nui.vaadin.activeflights" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMainLayout.java"[style = "solid" color = black];
+"UAV-121\nui.vaadin.activeflights" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[style = "solid" color = black];
+"STRAT-C--121Delta" -> "UAV-121\nui.vaadin.start"[style = "solid" color = black];
+"UAV-121\nui.vaadin.start" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[style = "solid" color = black];
+"STRAT-C--121Delta" -> "UAV-121\nui.vaadin.utils"[style = "dotted" color = red];
+"UAV-121\nui.vaadin.utils" -> "UAV-121edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/utils/Configuration.java"[style = "dotted" color = red];
+"STRAT-D--120Delta" -> "UAV-685Delta"[style = "solid" color = black];
+"UAV-685Delta" -> "STRAT-C--685Delta"[style = "solid" color = black];
+"STRAT-C--685Delta" -> "UAV-685\nservices.instances.flightmanager"[style = "dotted" color = red];
+"UAV-685\nservices.instances.flightmanager" -> "UAV-685edu.nd.dronology.services/src/edu/nd/dronology/services/instances/flightmanager/FlightInfoCreator.java"[style = "dotted" color = red];
+"STRAT-C--685Delta" -> "UAV-685\nui.vaadin.activeflights"[style = "solid" color = black];
+"UAV-685\nui.vaadin.activeflights" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMainLayout.java"[style = "dotted" color = red];
+"UAV-685\nui.vaadin.activeflights" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java"[style = "solid" color = black];
+"UAV-685\nui.vaadin.activeflights" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[style = "solid" color = black];
+"UAV-685\nui.vaadin.activeflights" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoPanel.java"[style = "dotted" color = red];
+"STRAT-C--685Delta" -> "UAV-685\nui.vaadin.flightroutes"[style = "dotted" color = red];
+"UAV-685\nui.vaadin.flightroutes" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRTableDisplay.java"[style = "dotted" color = red];
+"UAV-685\nui.vaadin.flightroutes" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRMainLayout.java"[style = "dotted" color = red];
+"STRAT-C--685Delta" -> "UAV-685\nui.vaadin.start"[style = "dotted" color = red];
+"UAV-685\nui.vaadin.start" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[style = "dotted" color = red];
+"STRAT-C--685Delta" -> "UAV-685\nui.vaadin.utils"[style = "dotted" color = red];
+"UAV-685\nui.vaadin.utils" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/utils/MapMarkerUtilities.java"[style = "dotted" color = red];
+"UAV-685\nui.vaadin.utils" -> "UAV-685edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/utils/MapAddMarkerListener.java"[style = "dotted" color = red];
+"STRAT-D--120Delta" -> "UAV-686Delta"[style = "solid" color = black];
+"UAV-686Delta" -> "STRAT-C--686Delta"[style = "solid" color = black];
+"STRAT-C--686Delta" -> "UAV-686\nui.vaadin.activeflights"[style = "solid" color = black];
+"UAV-686\nui.vaadin.activeflights" -> "UAV-686edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[style = "solid" color = black];
+"STRAT-D--120Delta" -> "UAV-687Delta"[style = "solid" color = black];
+"UAV-687Delta" -> "STRAT-C--687Delta"[style = "solid" color = black];
+"STRAT-C--687Delta" -> "UAV-687\nui.vaadin.activeflights"[style = "solid" color = black];
+"UAV-687\nui.vaadin.activeflights" -> "UAV-687edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFInfoBox.java"[style = "solid" color = black];
+"STRAT-D--120Delta" -> "UAV-688Delta"[style = "solid" color = black];
+"UAV-688Delta" -> "STRAT-C--688Delta"[style = "solid" color = black];
+"STRAT-C--688Delta" -> "UAV-688\nui.vaadin.activeflights"[style = "solid" color = black];
+"UAV-688\nui.vaadin.activeflights" -> "UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/MapDrawingUtil.java"[style = "solid" color = black];
+"UAV-688\nui.vaadin.activeflights" -> "UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/activeflights/AFMapComponent.java"[style = "solid" color = black];
+"STRAT-C--688Delta" -> "UAV-688\nui.vaadin.start"[style = "solid" color = black];
+"UAV-688\nui.vaadin.start" -> "UAV-688edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/start/MyUI.java"[style = "solid" color = black];
+"STRAT--1031Delta" -> "UAV-1034Delta"[style = "solid" color = black];
+"STRAT--1031Delta" -> "UAV-1041Delta"[style = "solid" color = black];
+"UAV-1041Delta" -> "STRAT-D--1041Delta"[style = "solid" color = black];
+"STRAT-D--1041Delta" -> "UAV-1100Delta"[style = "solid" color = black];
+"STRAT-D--1041Delta" -> "UAV-1107Delta"[style = "solid" color = black];
+"STRAT-D--1041Delta" -> "UAV-1108Delta"[style = "solid" color = black];
+"UAV-1031Delta" -> "UAV-1042Delta"[style = "solid" color = black];
+}

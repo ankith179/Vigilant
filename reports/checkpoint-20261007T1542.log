@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "/workspace/scratch/e4ff17049f79/VIGILANT-source.zip",
+    "files": 500,
+    "bytes": 2964704,
+    "sha256": "8ab5f93c3d199ef3c0dee87a246bcc311876ddfb2d42529f25022a0ba44b7ff3"
+  },
+  "backup_failures": [],
+  "data": {
+    "path": "/workspace/scratch/e4ff17049f79/VIGILANT-data.zip",
+    "files": 5506,
+    "bytes": 136035036,
+    "sha256": "24fb6e42560e4835afc9ad243c02105ad0fcbb0032da756628aebd7c0488d6c5",
+    "library_file_id": "libfile_b8166c70bb908191adf712a38cba56c5",
+    "verification": "ZIP integrity validated during combined package construction."
+  }
+}

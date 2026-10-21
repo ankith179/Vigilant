@@ -1,0 +1,225 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1006"[
+label = "Hazard\nUAV-1006\nUAV receives a goto directive \n that causes it to fly \n into terrain "
+shape = "record"
+color = "black"
+];
+"UAV-1010"[
+label = "SafetyRequirement\nUAV-1010\nAll waypoints in flight routes \n assigned to UAV must be \n at least 3 meters above \n the highest terrain in the \n flying zone. "
+shape = "record"
+color = "black"
+];
+"UAV-1063"[
+label = "ProcessRequirement\nUAV-1063\nOperator only assigns flight routes \n with waypoints above terrain level "
+shape = "record"
+color = "black"
+];
+"UAV-1064"[
+label = "DesignDefinition\nUAV-1064\nAltitude commands use relative altitude \n which is defined relative to \n the onground coordinates of the \n UAV prior to takeoff. "
+shape = "record"
+color = "black"
+];
+"UAV-1064\ncore.coordinate"[
+label = "Package\nUAV-1064\ncore.coordinate"
+shape = "record"
+color = "black"
+];
+"UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/coordinate/AbstractPosition.java"[
+label = "Code with \n passed Tests \nAbstractPosition.java"
+shape = "record"
+color = "black"
+];
+"UAV-1064\ncore.vehicle.internal"[
+label = "Package\nUAV-1064\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+];
+"UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-1099"[
+label = "Context\nUAV-1099\nUse of global altitude requires \n additional instrumentation in order to \n achieve required degrees of accuracy. "
+shape = "record"
+color = "black"
+];
+"UAV-1065"[
+label = "Context\nUAV-1065\nUAVs are not equipped with \n ground facing sensors "
+shape = "record"
+color = "black"
+];
+"UAV-1066"[
+label = "SafetyRequirement\nUAV-1066\nWaypoint commands sent to the \n UAV will represent valid coordinates \n that will not cause collisions \n with the terrain. "
+shape = "record"
+color = "black"
+];
+"UAV-1068"[
+label = " Delegated \n to Adacent System\nUAV-1068\nThe GCS uses the services \n of Dronekit Python to transform \n waypoint requests into Mavlink and \n to transmit those commands to \n the UAV pixhawk controller. "
+shape = "record"
+color = "black"
+];
+"UAV-1073"[
+label = "ProcessRequirement\nUAV-1073\nAll flight routes imported using \n the mission planner interface are \n constructed using the Dronology UI. "
+shape = "record"
+color = "black"
+];
+"UAV-1074"[
+label = "Requirement\nUAV-1074\nAll dynamically generated waypoints are \n validated to be above ground \n level "
+shape = "record"
+color = "black"
+];
+"UAV-1067"[
+label = "DesignDefinition\nUAV-1067\nWaypoints generated via the Dronology \n UI are validated to check \n that their altitude is greater \n than zero. "
+shape = "record"
+color = "black"
+];
+"UAV-1067\nui.vaadin.flightroutes"[
+label = "Package\nUAV-1067\nui.vaadin.flightroutes"
+shape = "record"
+color = "black"
+];
+"UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRTableDisplay.java"[
+label = "Code with \n passed Tests \nFRTableDisplay.java"
+shape = "record"
+color = "black"
+];
+"UAV-1067\nui.vaadin.flightroutes.mapoperations"[
+label = "Package\nUAV-1067\nui.vaadin.flightroutes.mapoperations"
+shape = "record"
+color = "black"
+];
+"UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/mapoperations/MapAddMarkerListener.java"[
+label = "Code with \n passed Tests \nMapAddMarkerListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-448"[
+label = "DesignDefinition\nUAV-448\nEach UAV ascends to a \n unique altitude during coordinated take \n off ascent "
+shape = "record"
+color = "black"
+];
+"UAV-448\nservices.missionplanning.patterns"[
+label = "Package\nUAV-448\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-448\nservices.missionplanning.tasks"[
+label = "Package\nUAV-448\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "black"
+];
+"UAV-893"[
+label = "EnvironmentalAssumption\nUAV-893\nRTK is active "
+shape = "record"
+color = "black"
+];
+"UAV-923"[
+label = "EnvironmentalAssumption\nUAV-923\nRTK is accurate to 10 \n cm "
+shape = "record"
+color = "black"
+];
+"UAV-450"[
+label = "DesignDefinition\nUAV-450\nFly to first waypoint at \n assigned altitude during coordinated takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-450\nservices.missionplanning.patterns"[
+label = "Package\nUAV-450\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-450\nservices.missionplanning.tasks"[
+label = "Package\nUAV-450\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "black"
+];
+"UAV-452"[
+label = "DesignDefinition\nUAV-452\nWhen reaching the first waypoint, \n the UAV descends or ascends \n to the specified altitude duing \n coordinated takeoff "
+shape = "record"
+color = "black"
+];
+"UAV-452\nservices.missionplanning.patterns"[
+label = "Package\nUAV-452\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedLandingPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-1109"[
+label = "Context\nUAV-1109\nAll directives in Dronology are \n issued via waypoint commands. "
+shape = "record"
+color = "black"
+];
+"UAV-912"[
+label = "EnvironmentalAssumption\nUAV-912\nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+];
+"UAV-1006" -> "UAV-1010";
+"UAV-1010" -> "UAV-1063";
+"UAV-1010" -> "UAV-1064";
+"UAV-1064" -> "UAV-1064\ncore.coordinate";
+"UAV-1064\ncore.coordinate" -> "UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/coordinate/AbstractPosition.java";
+"UAV-1064" -> "UAV-1064\ncore.vehicle.internal";
+"UAV-1064\ncore.vehicle.internal" -> "UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java";
+"UAV-1064" -> "UAV-1099";
+"UAV-1010" -> "UAV-1065";
+"UAV-1006" -> "UAV-1066";
+"UAV-1066" -> "UAV-1068";
+"UAV-1066" -> "UAV-1073";
+"UAV-1066" -> "UAV-1074";
+"UAV-1074" -> "UAV-1067";
+"UAV-1067" -> "UAV-1067\nui.vaadin.flightroutes";
+"UAV-1067\nui.vaadin.flightroutes" -> "UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRTableDisplay.java";
+"UAV-1067" -> "UAV-1067\nui.vaadin.flightroutes.mapoperations";
+"UAV-1067\nui.vaadin.flightroutes.mapoperations" -> "UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/mapoperations/MapAddMarkerListener.java";
+"UAV-1074" -> "UAV-448";
+"UAV-448" -> "UAV-448\nservices.missionplanning.patterns";
+"UAV-448\nservices.missionplanning.patterns" -> "UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-448" -> "UAV-448\nservices.missionplanning.tasks";
+"UAV-448\nservices.missionplanning.tasks" -> "UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java";
+"UAV-448" -> "UAV-893";
+"UAV-448" -> "UAV-923";
+"UAV-1074" -> "UAV-450";
+"UAV-450" -> "UAV-450\nservices.missionplanning.patterns";
+"UAV-450\nservices.missionplanning.patterns" -> "UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-450" -> "UAV-450\nservices.missionplanning.tasks";
+"UAV-450\nservices.missionplanning.tasks" -> "UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java";
+"UAV-1074" -> "UAV-452";
+"UAV-452" -> "UAV-452\nservices.missionplanning.patterns";
+"UAV-452\nservices.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java";
+"UAV-452\nservices.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java";
+"UAV-1066" -> "UAV-1109";
+"UAV-1006" -> "UAV-912";
+}

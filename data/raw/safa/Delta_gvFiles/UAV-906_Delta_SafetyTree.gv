@@ -1,0 +1,487 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-906Delta"[
+label = "Hazard\nUAV-906 \nUAV is no longer controllable \n from Dronology due to communication \n loss. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--906Delta"[
+label = "<Strategy>\nSTRAT--906 \n Argue that hazard \n  UAV-906  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-456Delta"[
+label = "SafetyRequirement\nUAV-456 \nHover in place if no \n pending commands and connectivity to \n GCS is lost "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--456Delta"[
+label = "<Assumption>\nSTRAT-A--456 \n Assume that all environmental assumptions for \n  UAV-456  have been identified."
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-912Delta"[
+label = "EnvironmentalAssumption\nUAV-912 \nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-922Delta"[
+label = "EnvironmentalAssumption\nUAV-922 \nNo unauthorized commands are received "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-928Delta"[
+label = "EnvironmentalAssumption\nUAV-928 \nOne RPIC per UAV in \n flight "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--456Delta"[
+label = "<Strategy>\nSTRAT-D--456 \n Argue that safety requirement \n  UAV-456  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-80Delta"[
+label = "Requirement\nUAV-80 \nNext waypoint sent after previous \n waypoint reached "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--80Delta"[
+label = "<Strategy>\nSTRAT-D--80 \n Argue that requirement \n  UAV-80  is fully addressed \n by design decisions and/or processes."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-527Delta"[
+label = "DesignDefinition\nUAV-527 \nSend first waypoint at start \n of flight plan "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--527Delta"[
+label = "<Strategy>\nSTRAT-C--527 \n Argue that design definition \n  UAV-527  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-527\ncore.flight.internal"[
+label = "Package\nUAV-527\ncore.flight.internal"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/flight/internal/SoloDirector.java"[
+label = "Code with \n passed Tests \nSoloDirector.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-527\ncore.vehicle"[
+label = "Package\nUAV-527\ncore.vehicle"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[
+label = "Code with \n passed Tests \nManagedDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-528Delta"[
+label = "DesignDefinition\nUAV-528 \nCompute distance to next waypoint "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--528Delta"[
+label = "<Strategy>\nSTRAT-C--528 \n Argue that design definition \n  UAV-528  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-528\ncore.vehicle"[
+label = "Package\nUAV-528\ncore.vehicle"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[
+label = "Code with \n passed Tests \nManagedDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-528\ncore.vehicle.internal"[
+label = "Package\nUAV-528\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java"[
+label = "Code with \n passed Tests \nVirtualDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-529Delta"[
+label = "DesignDefinition\nUAV-529 \nDetermine if waypoint is reached "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--529Delta"[
+label = "<Strategy>\nSTRAT-C--529 \n Argue that design definition \n  UAV-529  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-529\ncore.vehicle"[
+label = "Package\nUAV-529\ncore.vehicle"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[
+label = "Code with \n passed Tests \nManagedDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-529\ncore.vehicle.internal"[
+label = "Package\nUAV-529\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java"[
+label = "Code with \n passed Tests \nVirtualDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-530Delta"[
+label = "DesignDefinition\nUAV-530 \nVisiting waypoints during flight plan "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--530Delta"[
+label = "<Strategy>\nSTRAT-C--530 \n Argue that design definition \n  UAV-530  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-530\ncore.vehicle.internal"[
+label = "Package\nUAV-530\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-530edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1096Delta"[
+label = "FormalReview\nUAV-1096 \nTEST REVIEW "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-979Delta"[
+label = "SafetyRequirement\nUAV-979 \nAll UAVs shall have onboard \n failsafe mechanisms "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-454Delta"[
+label = "SafetyRequirement\nUAV-454 \nRTL if UAV reaches onboard \n GeoFence boundary "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--454Delta"[
+label = "<Strategy>\nSTRAT-D--454 \n Argue that safety requirement \n  UAV-454  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-981Delta"[
+label = " Delegated \n to Adacent System\nUAV-981 \nAll UAVs use PixHawk 1.x \n or 2.x controllers with inbuilt \n RTL capabilities including programmable RTL \n triggers and RTL altitudes. "
+shape = "component"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--981Delta"[
+label = "<Assumption>\nSTRAT-A--981 \n Assume that all environmental assumptions for \n  UAV-981  have been identified."
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-924Delta"[
+label = "EnvironmentalAssumption\nUAV-924 \n3rd party RTL at Geofence \n breach "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-926Delta"[
+label = "EnvironmentalAssumption\nUAV-926 \n3rd party customized RTL altitudes "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-982Delta"[
+label = "ProcessRequirement\nUAV-982 \nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-910Delta"[
+label = "Context\nUAV-910 \nAll communication between GCS and \n UAVs uses telemetry "
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-906Delta" -> "STRAT--906Delta"[style = "solid" color = black];
+"STRAT--906Delta" -> "UAV-456Delta"[style = "solid" color = black];
+"UAV-456Delta" -> "STRAT-A--456Delta"[style = "solid" color = black];
+"STRAT-A--456Delta" -> "UAV-912Delta"[style = "solid" color = black];
+"STRAT-A--456Delta" -> "UAV-922Delta"[style = "solid" color = black];
+"STRAT-A--456Delta" -> "UAV-928Delta"[style = "solid" color = black];
+"UAV-456Delta" -> "STRAT-D--456Delta"[style = "solid" color = black];
+"STRAT-D--456Delta" -> "UAV-80Delta"[style = "solid" color = black];
+"UAV-80Delta" -> "STRAT-D--80Delta"[style = "solid" color = black];
+"STRAT-D--80Delta" -> "UAV-527Delta"[style = "solid" color = black];
+"UAV-527Delta" -> "STRAT-C--527Delta"[style = "solid" color = black];
+"STRAT-C--527Delta" -> "UAV-527\ncore.flight.internal"[style = "solid" color = black];
+"UAV-527\ncore.flight.internal" -> "UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/flight/internal/SoloDirector.java"[style = "dotted" color = blue];
+"STRAT-C--527Delta" -> "UAV-527\ncore.vehicle"[style = "solid" color = black];
+"UAV-527\ncore.vehicle" -> "UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[style = "dotted" color = blue];
+"STRAT-D--80Delta" -> "UAV-528Delta"[style = "solid" color = black];
+"UAV-528Delta" -> "STRAT-C--528Delta"[style = "solid" color = black];
+"STRAT-C--528Delta" -> "UAV-528\ncore.vehicle"[style = "solid" color = black];
+"UAV-528\ncore.vehicle" -> "UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[style = "dotted" color = blue];
+"STRAT-C--528Delta" -> "UAV-528\ncore.vehicle.internal"[style = "solid" color = black];
+"UAV-528\ncore.vehicle.internal" -> "UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java"[style = "dotted" color = blue];
+"UAV-528\ncore.vehicle.internal" -> "UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[style = "dotted" color = blue];
+"STRAT-D--80Delta" -> "UAV-529Delta"[style = "solid" color = black];
+"UAV-529Delta" -> "STRAT-C--529Delta"[style = "solid" color = black];
+"STRAT-C--529Delta" -> "UAV-529\ncore.vehicle"[style = "solid" color = black];
+"UAV-529\ncore.vehicle" -> "UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[style = "dotted" color = blue];
+"STRAT-C--529Delta" -> "UAV-529\ncore.vehicle.internal"[style = "solid" color = black];
+"UAV-529\ncore.vehicle.internal" -> "UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java"[style = "dotted" color = blue];
+"UAV-529\ncore.vehicle.internal" -> "UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[style = "dotted" color = blue];
+"STRAT-D--80Delta" -> "UAV-530Delta"[style = "solid" color = black];
+"UAV-530Delta" -> "STRAT-C--530Delta"[style = "solid" color = black];
+"STRAT-C--530Delta" -> "UAV-530\ncore.vehicle.internal"[style = "solid" color = black];
+"UAV-530\ncore.vehicle.internal" -> "UAV-530edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[style = "dotted" color = blue];
+"UAV-530Delta" -> "UAV-1096Delta"[style = "solid" color = black];
+"STRAT--906Delta" -> "UAV-979Delta"[style = "solid" color = black];
+"UAV-979Delta" -> "UAV-454Delta"[style = "solid" color = black];
+"UAV-454Delta" -> "STRAT-D--454Delta"[style = "solid" color = black];
+"STRAT-D--454Delta" -> "UAV-981Delta"[style = "solid" color = black];
+"UAV-981Delta" -> "STRAT-A--981Delta"[style = "solid" color = black];
+"STRAT-A--981Delta" -> "UAV-924Delta"[style = "solid" color = black];
+"STRAT-A--981Delta" -> "UAV-926Delta"[style = "solid" color = black];
+"STRAT--906Delta" -> "UAV-982Delta"[style = "solid" color = black];
+"UAV-906Delta" -> "UAV-910Delta"[style = "solid" color = black];
+}

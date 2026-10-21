@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-12T05:56:28.573Z",
+  "status": "FAILED",
+  "origin": "http://127.0.0.1:51491",
+  "platform": "linux",
+  "pages": [],
+  "checks": [],
+  "errors": [],
+  "screenshots": [],
+  "source_hashes": {
+    "frontend/src/main.jsx": "c4e0e18a7e9734eae70728974d487adb6f387fca6860e50d4166a684e969c851",
+    "frontend/src/Graph.jsx": "003eb7ebc6dca80db3438b6af6fd6bc3ad580cd08492f7611c7c74d1aee9832d",
+    "frontend/src/style.css": "240edc02126d419577d54e4984b5d97bd6b888f124ce186f54fb03ea703379f6",
+    "backend/app.py": "d8073f02e99bb85c21bd6e072751741ba5bc48af354ce52feea7e9b9ba45d824",
+    "database/store.py": "f0981f7c26bd9544f59a0617390af50ae8a19ea5ec4b374e9d588a4abb3e133e"
+  },
+  "mutations": true,
+  "browser": "153.0.8010.0",
+  "selected_run": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+  "commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "failure": "locator.selectOption: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Repository', { exact: true })\u001b[22m\n\n    at /workspace/scratch/e4ff17049f79/VIGILANT/scripts/test_frontend.cjs:53:53",
+  "finished_at": "2026-10-12T05:56:49.344Z"
+}

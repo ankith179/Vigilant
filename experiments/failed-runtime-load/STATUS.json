@@ -1,0 +1,4 @@
+{
+  "status": "FAILED",
+  "reason": "Workspace model weight copy was truncated; no inference executed. Retained as runtime failure evidence."
+}

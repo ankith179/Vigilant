@@ -1,0 +1,13 @@
+case_id,base_commit,head_commit,reviewer_1,reviewer_1_label,reviewer_2,reviewer_2_label,adjudicated_label,evidence_notes
+01-requirement-changed,c2ced5349577a1df6987130961cadc94834ca70c,1afdc595d1090a56f3f6d094fdc42ead8facf034,,,,,,
+02-requirement-added,c2ced5349577a1df6987130961cadc94834ca70c,307504e249b663812c9d5224e7d35cafd3fe782e,,,,,,
+03-code-changed,d73fa1cdcbd8b1465c151db8924ba58b1dd14e35,c3fdd40e99016aeea666351bee7ba379e583cb95,,,,,,
+04-code-deleted,d73fa1cdcbd8b1465c151db8924ba58b1dd14e35,27050d5ba0f60996acf4faf40a41d66b78b8d040,,,,,,
+05-test-changed,d73fa1cdcbd8b1465c151db8924ba58b1dd14e35,fa37e3665c098ff6b859a9a0885599d08ef7726e,,,,,,
+06-test-deleted,d73fa1cdcbd8b1465c151db8924ba58b1dd14e35,00c9ad7bceacada698041d64facf3d96189e46cd,,,,,,
+07-frontend-changed,1762adac607a1b29cfc4da129557780beea71616,76efb979b4f357c88350061ec525336f9df3e955,,,,,,
+08-api-changed,1762adac607a1b29cfc4da129557780beea71616,892a3d5213e950be40467f4a0c8cfb33d12e8132,,,,,,
+09-backend-changed,1762adac607a1b29cfc4da129557780beea71616,ca5a3a1be958c9aecba4687d088a5e66020f4abd,,,,,,
+10-consumer-changed,1762adac607a1b29cfc4da129557780beea71616,66b4f2809d935224fa5ecca0989421968e63f7b4,,,,,,
+11-implementation-test-drift,d73fa1cdcbd8b1465c151db8924ba58b1dd14e35,79db0725d25f4d9cd1ae20f38f26350807696ef7,,,,,,
+12-requirement-test-drift,c2ced5349577a1df6987130961cadc94834ca70c,fcdee3d2618be769f96d744cddbf5902557d9032,,,,,,

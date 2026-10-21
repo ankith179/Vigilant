@@ -1,0 +1,47 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-999Delta"[
+label = "Hazard\nUAV-999 \nUAV receives waypoint commands but \n does not obey them "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--999Delta"[
+label = "<Strategy>\nSTRAT--999 \n Argue that hazard \n  UAV-999  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-982Delta"[
+label = "ProcessRequirement\nUAV-982 \nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-912Delta"[
+label = "EnvironmentalAssumption\nUAV-912 \nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-999Delta" -> "STRAT--999Delta"[style = "solid" color = black];
+"STRAT--999Delta" -> "UAV-982Delta"[style = "solid" color = black];
+"UAV-999Delta" -> "UAV-912Delta"[style = "solid" color = black];
+}

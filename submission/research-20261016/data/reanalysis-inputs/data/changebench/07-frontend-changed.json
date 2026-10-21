@@ -1,0 +1,15 @@
+{
+  "id": "07-frontend-changed",
+  "repo": "fullstack",
+  "file": "frontend/src/routes/_layout/items.tsx",
+  "mode": "append",
+  "new": "// Controlled benchmark: display-only wording review.",
+  "status": "UNCERTAIN",
+  "base_commit": "1762adac607a1b29cfc4da129557780beea71616",
+  "change_commit": "76efb979b4f357c88350061ec525336f9df3e955",
+  "origin": "https://github.com/fastapi/full-stack-fastapi-template.git",
+  "expected_affected_artifacts": [],
+  "expected_traceability": [],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

@@ -1,0 +1,6 @@
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:08<00:21,  2.67s/it]Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Fetching 11 files:  55%|█████▍    | 6/11 [00:08<00:06,  1.38s/it]Fetching 11 files:  82%|████████▏ | 9/11 [00:08<00:01,  1.06it/s]Fetching 11 files: 100%|██████████| 11/11 [00:13<00:00,  1.21s/it]
+embedding 1110a243fdf4706b3f48f1d95db1a4f5529b4d41 runtime /tmp/vigilant-models/embedding
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Fetching 7 files:  43%|████▎     | 3/7 [00:08<00:11,  2.82s/it]Fetching 7 files:  86%|████████▌ | 6/7 [00:08<00:01,  1.46s/it]Fetching 7 files:  86%|████████▌ | 6/7 [00:25<00:04,  4.29s/it]Fetching 7 files: 100%|██████████| 7/7 [00:41<00:00,  5.98s/it]Fetching 7 files: 100%|██████████| 7/7 [00:41<00:00,  5.98s/it]
+llm 989aa7980e4cf806f80c7fef2b1adb7bc71aa306 runtime /tmp/vigilant-models/llm

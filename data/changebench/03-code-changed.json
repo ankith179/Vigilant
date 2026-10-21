@@ -1,0 +1,27 @@
+{
+  "id": "03-code-changed",
+  "repo": "flask",
+  "file": "src/flask/helpers.py",
+  "mode": "replace",
+  "old": "code: int = 303",
+  "new": "code: int = 307",
+  "status": "POTENTIAL_INCONSISTENCY",
+  "target": "tests/test_helpers.py",
+  "target_symbol": "test_redirect_no_app",
+  "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+  "change_commit": "c3fdd40e99016aeea666351bee7ba379e583cb95",
+  "origin": "https://github.com/pallets/flask.git",
+  "expected_affected_artifacts": [
+    "f9410e64687e1a0c9274f8ef4a38eb1d71f641cb683a7324af0bab1ac8ddfa1a"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "f9410e64687e1a0c9274f8ef4a38eb1d71f641cb683a7324af0bab1ac8ddfa1a",
+      "target_artifact": "48b5d8c9e8a94902ee16b12385d6d0e52761faec5920b9e26f9c7cae448f86c9",
+      "relation_type": "TESTS",
+      "method": "reviewed-baseline-call-trace"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

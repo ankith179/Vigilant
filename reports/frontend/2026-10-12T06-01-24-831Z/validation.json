@@ -1,0 +1,107 @@
+{
+  "started_at": "2026-10-12T06:01:24.831Z",
+  "status": "PASSED",
+  "origin": "http://127.0.0.1:41265",
+  "platform": "linux",
+  "pages": [
+    {
+      "page": "Dashboard",
+      "stats": {
+        "projects": 13,
+        "repositories": 16,
+        "commits": 29,
+        "artifacts": 32706,
+        "trace_links": 57169,
+        "graph_nodes": 32719,
+        "graph_edges": 56879,
+        "embeddings": 0,
+        "changes": 44,
+        "evidence": 175,
+        "analysis_runs": 14,
+        "findings": 44,
+        "agent_runs": 14,
+        "experiments": 14,
+        "metrics": 0
+      }
+    },
+    {
+      "page": "Projects",
+      "rows": 13
+    },
+    {
+      "page": "Repository",
+      "rows": 16
+    },
+    {
+      "page": "Artifacts",
+      "rows": 100
+    },
+    {
+      "page": "Traceability",
+      "rows": 100
+    },
+    {
+      "page": "Knowledge Graph",
+      "rows": 120
+    },
+    {
+      "page": "Change Analysis",
+      "rows": 11
+    },
+    {
+      "page": "Impact Analysis",
+      "rows": 33
+    },
+    {
+      "page": "Consistency Findings",
+      "rows": 15
+    },
+    {
+      "page": "Evidence",
+      "rows": 24
+    },
+    {
+      "page": "Agent Investigation",
+      "rows": 1
+    },
+    {
+      "page": "Experiments",
+      "rows": 14
+    },
+    {
+      "page": "Reports",
+      "rows": 1
+    }
+  ],
+  "checks": [
+    "All 13 pages show persisted data without application errors",
+    "Pagination, local filtering, keyboard record selection and snapshot provenance",
+    "Directed graph, relationship filter and keyboard-accessible provenance",
+    "Evidence quote/hash/range and exact JSON export",
+    "Transport error shown and real API refresh recovers",
+    "Project creation and complete deterministic investigation through UI on isolated database",
+    "390px mobile dashboard and graph without document overflow"
+  ],
+  "errors": [],
+  "screenshots": [
+    "dashboard.png",
+    "knowledge-graph.png",
+    "evidence.png",
+    "report-detail.png",
+    "mobile-dashboard.png",
+    "mobile-graph.png"
+  ],
+  "source_hashes": {
+    "frontend/src/main.jsx": "a7dd330d624b9b6f65b6e58110f39a891b4d8c21adea8e27cd4ee91f3e2c0b39",
+    "frontend/src/Graph.jsx": "42f9ed3ed3804dafdc3ab3d314d9fdde81a03399b103a8a2daee5a86182f8926",
+    "frontend/src/style.css": "240edc02126d419577d54e4984b5d97bd6b888f124ce186f54fb03ea703379f6",
+    "backend/app.py": "d8073f02e99bb85c21bd6e072751741ba5bc48af354ce52feea7e9b9ba45d824",
+    "database/store.py": "f0981f7c26bd9544f59a0617390af50ae8a19ea5ec4b374e9d588a4abb3e133e"
+  },
+  "mutations": true,
+  "browser": "153.0.8010.0",
+  "selected_run": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+  "commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "finished_at": "2026-10-12T06:01:35.387Z"
+}

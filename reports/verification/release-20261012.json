@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-12T06:02:34.562603+00:00",
+  "release": "VIGILANT engineering release",
+  "tests": {
+    "passed": 34,
+    "exit_code": 0,
+    "log": "reports/tests-release-20261012.log"
+  },
+  "browser": {
+    "status": "PASSED",
+    "pages": 13,
+    "record": "reports/frontend/2026-10-12T06-01-24-831Z/validation.json"
+  },
+  "rag_generations_verified": 251,
+  "method_rows_verified": 23,
+  "query_rows_verified": 1484,
+  "dashboard_experiment_records": 14,
+  "research_claim": "No general superiority or consistency classification improvement established",
+  "external_requirements": {
+    "independent_review": "Needs external annotation/review; controlled mutation labels are authored.",
+    "venue": "No journal/conference specified; submission and indexing not verified.",
+    "windows": "Hosted Linux session cannot reach the user Windows drive.",
+    "submission_review": "Drafts are complete for their stated scope. Confirmed authorship/institutional requirements, expanded survey coverage as required, external scientific/plagiarism review and acceptance remain unresolved."
+  },
+  "screenshots": "Internal visual QA only; excluded from deliverable archives"
+}

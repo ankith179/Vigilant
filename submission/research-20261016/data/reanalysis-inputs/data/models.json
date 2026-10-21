@@ -1,0 +1,16 @@
+{
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "dtype": "float32",
+    "path": "data/models/embedding",
+    "license": "Apache-2.0"
+  },
+  "llm": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "dtype": "bfloat16",
+    "path": "data/models/llm",
+    "license": "Apache-2.0"
+  }
+}

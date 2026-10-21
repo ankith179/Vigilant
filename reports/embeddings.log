@@ -1,0 +1,15 @@
+SMOS embedding {"precision": 0.2537313432835821, "recall": 0.16283524904214558, "f1": 0.1983663943990665, "tp": 170, "fp": 500, "fn": 874, "mrr": 0.45682177475901853, "map": 0.2858718205297286, "ndcg_at_10": 0.26889161393156485, "recall_at_1": 0.024231782265144865, "recall_at_5": 0.09410675503508552, "recall_at_10": 0.1776056324598444, "queries": 67, "decision_cutoff": 10, "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"}
+SMOS hybrid {"precision": 0.28059701492537314, "recall": 0.18007662835249041, "f1": 0.2193698949824971, "tp": 188, "fp": 482, "fn": 856, "mrr": 0.5675704745941795, "map": 0.3025565166895097, "ndcg_at_10": 0.30923887081129287, "recall_at_1": 0.02834104576630338, "recall_at_5": 0.11416406835056621, "recall_at_10": 0.19162594076646108, "queries": 67, "decision_cutoff": 10, "query_policy": "Only queries with at least one annotated link; unlinked queries excluded consistently"}
+Traceback (most recent call last):
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/run_embeddings.py", line 2, in <module>
+    if __name__=='__main__':run(['embedding','hybrid'],['SMOS','iTrust','eTour_en','RTMX-module-valid'])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/scripts/run_baselines.py", line 12, in run
+    start=time.perf_counter();index=Index(ds['targets'],encoder);index_time=time.perf_counter()-start
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/retrieval/index.py", line 45, in __init__
+    self.bm25=BM25Okapi([tokens(t) or ['empty'] for t in texts]) if texts else None;self.vectors=encoder.encode(texts) if encoder and texts else None
+                                                                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e4ff17049f79/VIGILANT/retrieval/index.py", line 38, in encode
+    self.db.execute('INSERT OR REPLACE INTO embeddings VALUES (?,?,?,?)',(keys[i],self.identity,v.tobytes(),len(v)))
+sqlite3.OperationalError: attempt to write a readonly database

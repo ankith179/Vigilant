@@ -1,0 +1,47 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1018Delta"[
+label = "Hazard\nUAV-1018 \nSatellite signals are lost causing \n the UAV to lose accurate \n localization and fly in seemingly \n random directions to achieve its \n target waypoint. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--1018Delta"[
+label = "<Strategy>\nSTRAT--1018 \n Argue that hazard \n  UAV-1018  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-982Delta"[
+label = "ProcessRequirement\nUAV-982 \nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-912Delta"[
+label = "EnvironmentalAssumption\nUAV-912 \nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1018Delta" -> "STRAT--1018Delta"[style = "solid" color = black];
+"STRAT--1018Delta" -> "UAV-982Delta"[style = "solid" color = black];
+"UAV-1018Delta" -> "UAV-912Delta"[style = "solid" color = black];
+}

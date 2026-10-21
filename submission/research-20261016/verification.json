@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "pages": 5,
+  "page_size_points": [
+    612,
+    792
+  ],
+  "abstract_words": 179,
+  "sections": 8,
+  "references": 14,
+  "first_citation_order_matches": true,
+  "figures": 2,
+  "tables": 2,
+  "vector_figures": true,
+  "png_dpi": 600,
+  "all_fonts_embedded": true,
+  "dominant_body_font": "Times New Roman",
+  "body_size_tex_points": 10,
+  "body_size_pdf_points": 9.96,
+  "official_class": "IEEEtran 1.8b, unmodified",
+  "class_sha256": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+  "no_margin_overrides": true,
+  "no_overfull_boxes": true,
+  "no_undefined_citations_or_references": true,
+  "linked_queries": 251,
+  "method_rows": 23,
+  "historical_records_checked": [
+    {
+      "record": "lexical",
+      "path": "experiments/retrieval/20261006T020645-ee4c5e32/results.json",
+      "sha256": "b75cecec87e37098bc2f063aeb9a62ffbebe9c509f32251a246b7ed4fa719ca5"
+    },
+    {
+      "record": "semantic",
+      "path": "experiments/retrieval/20261006T021326-432d54b3/results.json",
+      "sha256": "81d847fa16673c677f3992cb30629a1f2f1f02eda0d9a2cc998674b1fa41529e"
+    },
+    {
+      "record": "graph",
+      "path": "experiments/retrieval/20261006T142659-bc349a3f/results.json",
+      "sha256": "ca49cf3238dc544bbbe755f0aada11912898ce761379462465f43a8eb3226cc7"
+    },
+    {
+      "record": "ranker",
+      "path": "experiments/ranker/20261006T142709-dea10c63/results.json",
+      "sha256": "99aa8d2aa90fb5618c5cd36385403e7ca92b5353e281b03c1b9c5f69f233fb2c"
+    },
+    {
+      "record": "changebench",
+      "path": "experiments/changebench/20261006T143016-f81c6507/results.json",
+      "sha256": "52ca203511123476c4007a9f4793d784be83d74370449b1c45ed92e333c9c7bd"
+    },
+    {
+      "record": "ablation",
+      "path": "experiments/ablation/20261006T194639-30694b4d/results.json",
+      "sha256": "00a7c63e1fbc24db96e30de7c765a3473a86a2602de30bae3193abe95f7b9363"
+    },
+    {
+      "record": "pipeline",
+      "path": "experiments/pipeline/20261006T195007-e56e6b8d/results.json",
+      "sha256": "fd6ed9a79aefd2b9b0432582cd6c7c03e60259a6d6be611f575735cb7e885721"
+    },
+    {
+      "record": "safa",
+      "path": "experiments/safa/20261006T142403-c681a243/results.json",
+      "sha256": "2c4da49e21ec946887505e9cc4602898154384a9df7fdf99eebe3ebc1de734e9"
+    },
+    {
+      "record": "rag_SMOS",
+      "path": "experiments/retrieval/20261007T104905-4064b602/results.json",
+      "sha256": "38d035786a3ce4d8a1d07a0750959cb2bfbf28f7b36f25c5d6237baab748ec97"
+    },
+    {
+      "record": "rag_iTrust",
+      "path": "experiments/retrieval/20261007T163255-0dfbb833/results.json",
+      "sha256": "382bc8e5518a8b7c2f83afed803f8b7de0cee05fb305df98de0759969ea670a4"
+    },
+    {
+      "record": "rag_eTour_en",
+      "path": "experiments/retrieval/20261007T171402-64fa98d8/results.json",
+      "sha256": "dea7ac2c29a300ef443a3d3d84e30d8359bb44e391e87d8c04a13b6f942aaf0b"
+    },
+    {
+      "record": "rag_RTMX-module-valid",
+      "path": "experiments/retrieval/20261007T210208-3f0803cc/results.json",
+      "sha256": "bd66f7fcedcca826d17f2e7d234e60a31607f065e5f3d84e6883ed457f842af1"
+    }
+  ],
+  "visual_review": "All five final pages rendered and inspected; no clipping or overlap observed.",
+  "external_similarity_check": "NOT RUN",
+  "pdf_express": "NOT RUN",
+  "independent_semantic_review": "NOT RUN",
+  "new_model_inference_calls": 0,
+  "pdf_sha256": "52fce04341b7a9985f8396ef595846bfdadfa958b5e8f0ba42caa10023afe8f9",
+  "font_inventory": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nWDHCLY+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes      4  0\nLUGCGO+TimesNewRomanPS-BoldItalicMT  CID TrueType      Identity-H       yes yes yes      6  0\nMYHNPR+TimesNewRomanPS-BoldMT        CID TrueType      Identity-H       yes yes yes      8  0\nXATREQ+TimesNewRomanPS-ItalicMT      CID TrueType      Identity-H       yes yes yes     14  0\nGPEULT+LMMono10-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes     42  0\nVRGOGY+CMMI10                        Type 1C           Builtin          yes yes yes     46  0\nTOXCKV+CMR10                         Type 1C           Builtin          yes yes yes     47  0\nVJIMOG+CMMI7                         Type 1C           Builtin          yes yes yes     48  0\nDFKAVT+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     29  0\nXQPZTG+CMMI8                         Type 1C           Builtin          yes yes yes     53  0\nTERJVG+CMR8                          Type 1C           Builtin          yes yes yes     54  0\nPNWGER+CMEX10                        Type 1C           Builtin          yes yes yes     57  0\nRLMGEH+CMMI5                         Type 1C           Builtin          yes yes yes     58  0\nZLRLHW+CMR7                          Type 1C           Builtin          yes yes yes     59  0\nARJCIJ+CMSY10                        Type 1C           Builtin          yes yes yes     60  0\nYNKOVI+CMSY7                         Type 1C           Builtin          yes yes yes     61  0\nDFKAVT+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     66  0\n",
+  "date": "2026-10-16",
+  "word": {
+    "native_editable_equations": 2,
+    "editable_table_blocks": 3,
+    "figures": 2,
+    "numbered_references": 14,
+    "body_font": "Times New Roman",
+    "body_points": 10,
+    "native_Microsoft_Word_validation": "NOT RUN",
+    "docx_fonts_embedded": false,
+    "docx_sha256": "7a56bfca5db4106459adc8ebda85e8648ea90297e0b98709613aa90ad5bc854e",
+    "template_original_sha256": "c8e86eabd52a42f4326fd87b9af0269624c6d72d11ea4adc5e6ac4c626b123ed",
+    "rendered_pages": 5,
+    "page_size_points": [
+      612,
+      792
+    ],
+    "renderer": "LibreOffice via documents render_docx.py",
+    "visual_review": "All five final pages inspected; figures, tables, references and native equations are readable without clipping or overlap."
+  },
+  "standalone_reanalysis": "PASS: exact JSON equality",
+  "reanalysis_input_hashes_verified": 36,
+  "historical_experiment_files_preserved": 418,
+  "new_controlled_consistency_experiment": "NOT RUN"
+}

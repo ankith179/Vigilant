@@ -1,0 +1,80 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1101Delta"[
+label = "Hazard\nUAV-1101 \nUAV flies above the altitude \n permitted by FAA regulations. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--1101Delta"[
+label = "<Strategy>\nSTRAT--1101 \n Argue that hazard \n  UAV-1101  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1102Delta"[
+label = "SafetyRequirement\nUAV-1102 \nPrior to flying in a \n controlled airspace, the maximum altitude \n of each UAV is set \n through its internal geofence. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1102Delta"[
+label = "<Strategy>\nSTRAT-D--1102 \n Argue that safety requirement \n  UAV-1102  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1124Delta"[
+label = "ProcessRequirement\nUAV-1124 \nRPIC checks the geofence to \n ensure that the maximum altitude \n is 400 feet above ground \n level as allowed by FAA \n regulations. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1103Delta"[
+label = "Context\nUAV-1103 \nUAVs fly in uncontrolled airspace \n where the maximum altitude is \n 400 feet AGL "
+shape = "Mrecord"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1104Delta"[
+label = "Context\nUAV-1104 \nUAVs may fly in controlled \n airspaces where maximum altitude is \n determined by Air Traffic Controllers \n prior to each flight. "
+shape = "Mrecord"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1101Delta" -> "STRAT--1101Delta"[style = "solid" color = black];
+"STRAT--1101Delta" -> "UAV-1102Delta"[style = "solid" color = black];
+"UAV-1102Delta" -> "STRAT-D--1102Delta"[style = "solid" color = black];
+"STRAT-D--1102Delta" -> "UAV-1124Delta"[style = "solid" color = black];
+"UAV-1102Delta" -> "UAV-1103Delta"[style = "dotted" color = red];
+"UAV-1102Delta" -> "UAV-1104Delta"[style = "dotted" color = darkgreen];
+}

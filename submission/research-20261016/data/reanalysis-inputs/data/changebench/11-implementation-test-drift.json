@@ -1,0 +1,27 @@
+{
+  "id": "11-implementation-test-drift",
+  "repo": "flask",
+  "file": "src/flask/helpers.py",
+  "mode": "replace",
+  "old": "code: int = 303",
+  "new": "code: int = 308",
+  "status": "POTENTIAL_INCONSISTENCY",
+  "target": "tests/test_helpers.py",
+  "target_symbol": "test_redirect_no_app",
+  "base_commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+  "change_commit": "79db0725d25f4d9cd1ae20f38f26350807696ef7",
+  "origin": "https://github.com/pallets/flask.git",
+  "expected_affected_artifacts": [
+    "ecb9b84ee35fafaedf94e3b405ad6cea780978975bce6cf9379051ce32055c13"
+  ],
+  "expected_traceability": [
+    {
+      "source_artifact": "ecb9b84ee35fafaedf94e3b405ad6cea780978975bce6cf9379051ce32055c13",
+      "target_artifact": "e17b583039b49326ddf6c05d8131da1c6ba4c1f873fb9734c7d4abcde684eee6",
+      "relation_type": "TESTS",
+      "method": "reviewed-baseline-call-trace"
+    }
+  ],
+  "oracle": "Authored expectations; partial affected set; not independently reviewed",
+  "scope": "Known-trace maintenance on real structures; changes are explicitly controlled mutations"
+}

@@ -1,0 +1,20 @@
+Command: ['scripts/restore_checkpoint.py']
+Recorded database restored if absent; repository paths repaired.
+Command: ['scripts/sync_dashboard.py']
+Dashboard synchronized with recorded analyses and experiments.
+Command: ['scripts/run_pipeline.py', '--repo', 'data/changebench/08-api-changed', '--base', '1762adac6', '--head', '892a3d521', '--model', 'none']
+{
+  "report": "/tmp/vigilant-portable-2ys1kueh/VIGILANT/experiments/pipeline/20261016T170834-b799d596",
+  "changes": 11,
+  "affected": 33,
+  "findings": 15,
+  "evidence": 25,
+  "model_error": null,
+  "metrics": {
+    "tool_execution_success": 1.0,
+    "quote_verification_rate": 1.0,
+    "model_schema_valid": true,
+    "semantic_grounding_rate": null,
+    "seconds": 5.825055921000057
+  }
+}

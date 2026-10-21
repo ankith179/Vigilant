@@ -1,0 +1,32 @@
+{
+  "lissa": {
+    "name": "lissa",
+    "url": "https://github.com/ardoco/Replication-Package-ICSE25_LiSSA-Toward-Generic-Traceability-Link-Recovery-through-RAG.git",
+    "commit": "a8e652f29bbdcc4bdcd3d98cd85aa4a37cb65480",
+    "downloaded_at": "2026-10-06T14:19:27.716286+00:00",
+    "path": "data/raw/lissa",
+    "licenses": [
+      "LICENSE.md"
+    ]
+  },
+  "rtmx": {
+    "name": "rtmx",
+    "url": "https://github.com/rtmx-ai/rtmx-bench.git",
+    "commit": "c2ced5349577a1df6987130961cadc94834ca70c",
+    "downloaded_at": "2026-10-06T14:19:56.282160+00:00",
+    "path": "data/raw/rtmx",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  "safa": {
+    "name": "safa",
+    "url": "https://github.com/SAREC-Lab/SAFA-Artifacts.git",
+    "commit": "ac201a4a7364cf91110c33a9f5b41df9ffbfe709",
+    "downloaded_at": "2026-10-06T14:20:20.140212+00:00",
+    "path": "data/raw/safa",
+    "licenses": [
+      "LICENSE"
+    ]
+  }
+}

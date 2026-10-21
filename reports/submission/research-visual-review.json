@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "pages": 4,
+  "format": "IEEEtran conference A4 draft",
+  "reviewed_at": "2026-10-08T02:18:07.334205+00:00",
+  "checks": [
+    "All pages rendered and visually inspected",
+    "Final reference columns balanced",
+    "No overfull boxes or unresolved references in final LaTeX log",
+    "Tables derive from audited summary"
+  ],
+  "external_review": false
+}

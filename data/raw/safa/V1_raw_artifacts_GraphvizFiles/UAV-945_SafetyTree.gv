@@ -1,0 +1,897 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-945"[
+label = "Hazard\nUAV-945\nArea mapping provides insufficient coverage \n during search and rescue "
+shape = "record"
+color = "black"
+];
+"UAV-1044"[
+label = "SafetyRequirement\nUAV-1044\nAutomate the process of generating \n routes for river search "
+shape = "record"
+color = "black"
+];
+"UAV-1043"[
+label = "SafetyRequirement\nUAV-1043\nUI enables the user to \n map river region over which \n the search will be conducted "
+shape = "record"
+color = "black"
+];
+"UAV-1046"[
+label = "SafetyRequirement\nUAV-1046\nUser Interface must be intuitive \n for user under time pressure \n and use outside in the \n search area. "
+shape = "record"
+color = "black"
+];
+"UAV-783"[
+label = "DesignDefinition\nUAV-783\nThe area mapping system will \n provide search features for locating \n and retrieving existing mappings "
+shape = "record"
+color = "black"
+];
+"UAV-783\nui.vaadin.areamapping"[
+label = "Package\nUAV-783\nui.vaadin.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditModeController.java"[
+label = "Code with \n passed Tests \nAMEditModeController.java"
+shape = "record"
+color = "black"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMainLayout.java"[
+label = "Code with \n passed Tests \nAMMainLayout.java"
+shape = "record"
+color = "black"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoPanel.java"[
+label = "Code with \n passed Tests \nAMInfoPanel.java"
+shape = "record"
+color = "black"
+];
+"UAV-783\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-783\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "black"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMDeleteMappingConfirmation.java"[
+label = "Code with \n passed Tests \nAMDeleteMappingConfirmation.java"
+shape = "record"
+color = "black"
+];
+"UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java"[
+label = "Code with \n passed Tests \nAMNewMappingWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-847"[
+label = "DesignDefinition\nUAV-847\nProvide a flight routes tab \n that is intuitive for the \n user. "
+shape = "record"
+color = "black"
+];
+"UAV-784"[
+label = "DesignDefinition\nUAV-784\nThe UI provides features for \n mapping the right and left \n hand side of the river \n banks. "
+shape = "record"
+color = "black"
+];
+"UAV-852"[
+label = "DesignDefinition\nUAV-852\nIcons used to map riverbanks \n shall be different from those \n used to map flight routes. "
+shape = "record"
+color = "black"
+];
+"UAV-852\nui.vaadin.areamapping"[
+label = "Package\nUAV-852\nui.vaadin.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-852\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-852\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "black"
+];
+"UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMarkerMouseOverListener.java"[
+label = "Code with \n passed Tests \nAMMarkerMouseOverListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-855"[
+label = "DesignDefinition\nUAV-855\nThe user shall mark high \n priority search areas on the \n map. "
+shape = "record"
+color = "black"
+];
+"UAV-898"[
+label = "DesignDefinition\nUAV-898\nWhen the user mouseovers a \n high priority area, a description \n and other data about the \n area shall be displayed. "
+shape = "record"
+color = "black"
+];
+"UAV-898\nservices.core.items"[
+label = "Package\nUAV-898\nservices.core.items"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java"[
+label = "Code with \n passed Tests \nMappedItem.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java"[
+label = "Code with \n passed Tests \nIMappedItem.java"
+shape = "record"
+color = "black"
+];
+"UAV-898\nui.vaadin.areamapping"[
+label = "Package\nUAV-898\nui.vaadin.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java"[
+label = "Code with \n passed Tests \nAMMapComponent.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMPriorityArea.java"[
+label = "Code with \n passed Tests \nAMPriorityArea.java"
+shape = "record"
+color = "black"
+];
+"UAV-898\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-898\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOverListener.java"[
+label = "Code with \n passed Tests \nAMPriorityMouseOverListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOutListener.java"[
+label = "Code with \n passed Tests \nAMPriorityMouseOutListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMRightClickListener.java"[
+label = "Code with \n passed Tests \nAMRightClickListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-898\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-898\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMWayPointPopupView.java"[
+label = "Code with \n passed Tests \nAMWayPointPopupView.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityCreationWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityInfoWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityInfoWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-901"[
+label = "DesignDefinition\nUAV-901\nHigh priority areas shall be \n moved and reshaped "
+shape = "record"
+color = "black"
+];
+"UAV-901\nservices.core.items"[
+label = "Package\nUAV-901\nservices.core.items"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java"[
+label = "Code with \n passed Tests \nMappedItem.java"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java"[
+label = "Code with \n passed Tests \nIMappedItem.java"
+shape = "record"
+color = "black"
+];
+"UAV-901\nservices.instances.areamapping"[
+label = "Package\nUAV-901\nservices.instances.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.services/src/edu/nd/dronology/services/instances/areamapping/AreaMappingServiceInstance.java"[
+label = "Code with \n passed Tests \nAreaMappingServiceInstance.java"
+shape = "record"
+color = "black"
+];
+"UAV-901\nui.vaadin.areamapping"[
+label = "Package\nUAV-901\nui.vaadin.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java"[
+label = "Code with \n passed Tests \nAMEditPrioritiesController.java"
+shape = "record"
+color = "black"
+];
+"UAV-901\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-901\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMapAddMarkerListener.java"[
+label = "Code with \n passed Tests \nAMMapAddMarkerListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityDragEndListener.java"[
+label = "Code with \n passed Tests \nAMPriorityDragEndListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-901\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-901\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "black"
+];
+"UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityCreationWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-913"[
+label = "DesignDefinition\nUAV-913\nThe user shall mark critical \n regions of the demarcated riverbank \n as high priority "
+shape = "record"
+color = "black"
+];
+"UAV-913\nui.vaadin.areamapping"[
+label = "Package\nUAV-913\nui.vaadin.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditSidesController.java"[
+label = "Code with \n passed Tests \nAMEditSidesController.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java"[
+label = "Code with \n passed Tests \nAMEditPrioritiesController.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java"[
+label = "Code with \n passed Tests \nAMMapMarkerUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoBox.java"[
+label = "Code with \n passed Tests \nAMInfoBox.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java"[
+label = "Code with \n passed Tests \nAMMapComponent.java"
+shape = "record"
+color = "black"
+];
+"UAV-913\nui.vaadin.areamapping.mapoperations"[
+label = "Package\nUAV-913\nui.vaadin.areamapping.mapoperations"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPrioritySideMouseOverListener.java"[
+label = "Code with \n passed Tests \nAMPrioritySideMouseOverListener.java"
+shape = "record"
+color = "black"
+];
+"UAV-913\nui.vaadin.areamapping.windows"[
+label = "Package\nUAV-913\nui.vaadin.areamapping.windows"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMUnsavedChangesConfirmation.java"[
+label = "Code with \n passed Tests \nAMUnsavedChangesConfirmation.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveAreaWithoutFinishWindow.java"[
+label = "Code with \n passed Tests \nAMSaveAreaWithoutFinishWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMEditChoicesWindow.java"[
+label = "Code with \n passed Tests \nAMEditChoicesWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveSideWithoutFinishWindow.java"[
+label = "Code with \n passed Tests \nAMSaveSideWithoutFinishWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPrioritySideCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPrioritySideCreationWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java"[
+label = "Code with \n passed Tests \nAMNewMappingWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityAreaCreationWindow.java"[
+label = "Code with \n passed Tests \nAMPriorityAreaCreationWindow.java"
+shape = "record"
+color = "black"
+];
+"UAV-1047"[
+label = "Requirement\nUAV-1047\nRoutes are automatically generated, allocated \n to UAVs, and executed during \n  search and rescue "
+shape = "record"
+color = "black"
+];
+"UAV-1048"[
+label = "SafetyRequirement\nUAV-1048\nGiven a demarcated region of \n the river,  generate a \n set of candidate flight routes "
+shape = "record"
+color = "black"
+];
+"UAV-1054"[
+label = "SafetyRequirement\nUAV-1054\nOptimize chance of successful search \n through allocation of routes to \n available UAVs "
+shape = "record"
+color = "black"
+];
+"UAV-1055"[
+label = "Context\nUAV-1055\nA successful search finds a \n live victim as quickly as \n possible while minimizing risk to \n the rescuers. "
+shape = "record"
+color = "black"
+];
+"UAV-1056"[
+label = "DesignDefinition\nUAV-1056\nEstimate the quality of a \n route allocation by computing a \n fitness function based on diverse \n coverage metrics. "
+shape = "record"
+color = "black"
+];
+"UAV-830"[
+label = "DesignDefinition\nUAV-830\nCompute area coverage of a \n set of routes "
+shape = "record"
+color = "black"
+];
+"UAV-830\nservices.areamapping.output"[
+label = "Package\nUAV-830\nservices.areamapping.output"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java"[
+label = "Code with \n passed Tests \nAdaptedCreepingLinePrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoint.java"[
+label = "Code with \n passed Tests \nImageWaypoint.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoints.java"[
+label = "Code with \n passed Tests \nImageWaypoints.java"
+shape = "record"
+color = "black"
+];
+"UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "black"
+];
+"UAV-842"[
+label = "DesignDefinition\nUAV-842\nEstimate prevalence of downstream versus \n upstream search direction "
+shape = "record"
+color = "black"
+];
+"UAV-1059"[
+label = "EnvironmentalAssumption\nUAV-1059\nRiver searches are more effective \n in a downstream direction. "
+shape = "record"
+color = "black"
+];
+"UAV-842\nservices.areamapping.output"[
+label = "Package\nUAV-842\nservices.areamapping.output"
+shape = "record"
+color = "black"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java"[
+label = "Code with \n passed Tests \nAdaptedCreepingLinePrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "black"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/RoutePrimitive.java"[
+label = "Code with \n passed Tests \nRoutePrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "black"
+];
+"UAV-843"[
+label = "DesignDefinition\nUAV-843\nEstimate the equality of tasks \n assigned to UAVs. "
+shape = "record"
+color = "black"
+];
+"UAV-843\nservices.areamapping.output"[
+label = "Package\nUAV-843\nservices.areamapping.output"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java"[
+label = "Code with \n passed Tests \nDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignments.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignment.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java"[
+label = "Code with \n passed Tests \nExecuteableSearchPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-845"[
+label = "DesignDefinition\nUAV-845\nCompute overall fitness function for \n the mission "
+shape = "record"
+color = "black"
+];
+"UAV-845\nservices.core.areamapping"[
+label = "Package\nUAV-845\nservices.core.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-845edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[
+label = "Code with \n passed Tests \nMetricsStatistics.java"
+shape = "record"
+color = "black"
+];
+"UAV-846"[
+label = "DesignDefinition\nUAV-846\nCompute prioritized coverage "
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.core.areamapping"[
+label = "Package\nUAV-846\nservices.core.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[
+label = "Code with \n passed Tests \nMetricsStatistics.java"
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.extensions.areamapping.creation"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.creation"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/creation/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.extensions.areamapping.internal"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.internal"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/SourcePoints.java"[
+label = "Code with \n passed Tests \nSourcePoints.java"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/AdaptedCreepingLinePrimitive.java"[
+label = "Code with \n passed Tests \nAdaptedCreepingLinePrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/PriorityPolygonPrimitive.java"[
+label = "Code with \n passed Tests \nPriorityPolygonPrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/RiverBankPrimitive.java"[
+label = "Code with \n passed Tests \nRiverBankPrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.extensions.areamapping.metrics"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.metrics"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.extensions.areamapping.model"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.model"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/model/RoutePrimitive.java"[
+label = "Code with \n passed Tests \nRoutePrimitive.java"
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.extensions.areamapping.selection.random"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.selection.random"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/selection/random/RandomRouteSelector.java"[
+label = "Code with \n passed Tests \nRandomRouteSelector.java"
+shape = "record"
+color = "black"
+];
+"UAV-846\nservices.extensions.areamapping.util"[
+label = "Package\nUAV-846\nservices.extensions.areamapping.util"
+shape = "record"
+color = "black"
+];
+"UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/util/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-994"[
+label = "DesignDefinition\nUAV-994\nCompute the total distance flown \n by all UAVs "
+shape = "record"
+color = "black"
+];
+"UAV-841"[
+label = "DesignDefinition\nUAV-841\nCompute distance traveled per UAV "
+shape = "record"
+color = "black"
+];
+"UAV-841\nservices.areamapping.output"[
+label = "Package\nUAV-841\nservices.areamapping.output"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java"[
+label = "Code with \n passed Tests \nUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignment.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java"[
+label = "Code with \n passed Tests \nExecuteableSearchPattern.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java"[
+label = "Code with \n passed Tests \nGeometry.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java"[
+label = "Code with \n passed Tests \nDroneRouteAssignments.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java"[
+label = "Code with \n passed Tests \nDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java"[
+label = "Code with \n passed Tests \nMapRiver.java"
+shape = "record"
+color = "black"
+];
+"UAV-994\nservices.core.areamapping"[
+label = "Package\nUAV-994\nservices.core.areamapping"
+shape = "record"
+color = "black"
+];
+"UAV-994edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java"[
+label = "Code with \n passed Tests \nMetricsStatistics.java"
+shape = "record"
+color = "black"
+];
+"UAV-994\nservices.extensions.areamapping.metrics"[
+label = "Package\nUAV-994\nservices.extensions.areamapping.metrics"
+shape = "record"
+color = "black"
+];
+"UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-1057"[
+label = "DesignDefinition\nUAV-1057\nEvaluate route allocations for safety \n violations "
+shape = "record"
+color = "black"
+];
+"UAV-844"[
+label = "DesignDefinition\nUAV-844\nCheck that all UAVs have \n sufficient battery voltage to complete \n their allocated routes. "
+shape = "record"
+color = "black"
+];
+"UAV-1058"[
+label = "EnvironmentalAssumption\nUAV-1058\nUAVs used for search and \n rescue can fly 10km on \n a full battery. "
+shape = "record"
+color = "black"
+];
+"UAV-844\nservices.areamapping.output"[
+label = "Package\nUAV-844\nservices.areamapping.output"
+shape = "record"
+color = "black"
+];
+"UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java"[
+label = "Code with \n passed Tests \nMetricsRunner.java"
+shape = "record"
+color = "black"
+];
+"UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java"[
+label = "Code with \n passed Tests \nMetricsUtilities.java"
+shape = "record"
+color = "black"
+];
+"UAV-937"[
+label = "Requirement\nUAV-937\nThe user shall assign a \n set of UAVs to search \n a mapped region of the \n river and request routes to \n be generated for them. "
+shape = "record"
+color = "black"
+];
+"UAV-977"[
+label = "ProcessRequirement\nUAV-977\nRoutes assigned manually "
+shape = "record"
+color = "black"
+];
+"UAV-945" -> "UAV-1044";
+"UAV-1044" -> "UAV-1043";
+"UAV-1043" -> "UAV-1046";
+"UAV-1046" -> "UAV-783";
+"UAV-783" -> "UAV-783\nui.vaadin.areamapping";
+"UAV-783\nui.vaadin.areamapping" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditModeController.java";
+"UAV-783\nui.vaadin.areamapping" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMainLayout.java";
+"UAV-783\nui.vaadin.areamapping" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoPanel.java";
+"UAV-783" -> "UAV-783\nui.vaadin.areamapping.windows";
+"UAV-783\nui.vaadin.areamapping.windows" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMDeleteMappingConfirmation.java";
+"UAV-783\nui.vaadin.areamapping.windows" -> "UAV-783edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java";
+"UAV-1046" -> "UAV-847";
+"UAV-1043" -> "UAV-784";
+"UAV-1043" -> "UAV-852";
+"UAV-852" -> "UAV-852\nui.vaadin.areamapping";
+"UAV-852\nui.vaadin.areamapping" -> "UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java";
+"UAV-852" -> "UAV-852\nui.vaadin.areamapping.mapoperations";
+"UAV-852\nui.vaadin.areamapping.mapoperations" -> "UAV-852edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMarkerMouseOverListener.java";
+"UAV-1043" -> "UAV-855";
+"UAV-855" -> "UAV-898";
+"UAV-898" -> "UAV-898\nservices.core.items";
+"UAV-898\nservices.core.items" -> "UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java";
+"UAV-898\nservices.core.items" -> "UAV-898edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java";
+"UAV-898" -> "UAV-898\nui.vaadin.areamapping";
+"UAV-898\nui.vaadin.areamapping" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java";
+"UAV-898\nui.vaadin.areamapping" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java";
+"UAV-898\nui.vaadin.areamapping" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMPriorityArea.java";
+"UAV-898" -> "UAV-898\nui.vaadin.areamapping.mapoperations";
+"UAV-898\nui.vaadin.areamapping.mapoperations" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOverListener.java";
+"UAV-898\nui.vaadin.areamapping.mapoperations" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityMouseOutListener.java";
+"UAV-898\nui.vaadin.areamapping.mapoperations" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMRightClickListener.java";
+"UAV-898" -> "UAV-898\nui.vaadin.areamapping.windows";
+"UAV-898\nui.vaadin.areamapping.windows" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMWayPointPopupView.java";
+"UAV-898\nui.vaadin.areamapping.windows" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java";
+"UAV-898\nui.vaadin.areamapping.windows" -> "UAV-898edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityInfoWindow.java";
+"UAV-855" -> "UAV-901";
+"UAV-901" -> "UAV-901\nservices.core.items";
+"UAV-901\nservices.core.items" -> "UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/MappedItem.java";
+"UAV-901\nservices.core.items" -> "UAV-901edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/items/IMappedItem.java";
+"UAV-901" -> "UAV-901\nservices.instances.areamapping";
+"UAV-901\nservices.instances.areamapping" -> "UAV-901edu.nd.dronology.services/src/edu/nd/dronology/services/instances/areamapping/AreaMappingServiceInstance.java";
+"UAV-901" -> "UAV-901\nui.vaadin.areamapping";
+"UAV-901\nui.vaadin.areamapping" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java";
+"UAV-901\nui.vaadin.areamapping" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java";
+"UAV-901" -> "UAV-901\nui.vaadin.areamapping.mapoperations";
+"UAV-901\nui.vaadin.areamapping.mapoperations" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMMapAddMarkerListener.java";
+"UAV-901\nui.vaadin.areamapping.mapoperations" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPriorityDragEndListener.java";
+"UAV-901" -> "UAV-901\nui.vaadin.areamapping.windows";
+"UAV-901\nui.vaadin.areamapping.windows" -> "UAV-901edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityCreationWindow.java";
+"UAV-855" -> "UAV-913";
+"UAV-913" -> "UAV-913\nui.vaadin.areamapping";
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditSidesController.java";
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMEditPrioritiesController.java";
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapMarkerUtilities.java";
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMInfoBox.java";
+"UAV-913\nui.vaadin.areamapping" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/AMMapComponent.java";
+"UAV-913" -> "UAV-913\nui.vaadin.areamapping.mapoperations";
+"UAV-913\nui.vaadin.areamapping.mapoperations" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/mapoperations/AMPrioritySideMouseOverListener.java";
+"UAV-913" -> "UAV-913\nui.vaadin.areamapping.windows";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMUnsavedChangesConfirmation.java";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveAreaWithoutFinishWindow.java";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMEditChoicesWindow.java";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMSaveSideWithoutFinishWindow.java";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPrioritySideCreationWindow.java";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMNewMappingWindow.java";
+"UAV-913\nui.vaadin.areamapping.windows" -> "UAV-913edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/areamapping/windows/AMPriorityAreaCreationWindow.java";
+"UAV-1044" -> "UAV-1047";
+"UAV-1047" -> "UAV-1048";
+"UAV-1047" -> "UAV-1054";
+"UAV-1054" -> "UAV-1055";
+"UAV-1054" -> "UAV-1056";
+"UAV-1056" -> "UAV-830";
+"UAV-830" -> "UAV-830\nservices.areamapping.output";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoint.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ImageWaypoints.java";
+"UAV-830\nservices.areamapping.output" -> "UAV-830edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java";
+"UAV-1056" -> "UAV-842";
+"UAV-842" -> "UAV-1059";
+"UAV-842" -> "UAV-842\nservices.areamapping.output";
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/AdaptedCreepingLinePrimitive.java";
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java";
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java";
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/RoutePrimitive.java";
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java";
+"UAV-842\nservices.areamapping.output" -> "UAV-842edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java";
+"UAV-1056" -> "UAV-843";
+"UAV-843" -> "UAV-843\nservices.areamapping.output";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java";
+"UAV-843\nservices.areamapping.output" -> "UAV-843edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java";
+"UAV-1056" -> "UAV-845";
+"UAV-845" -> "UAV-845\nservices.core.areamapping";
+"UAV-845\nservices.core.areamapping" -> "UAV-845edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java";
+"UAV-1056" -> "UAV-846";
+"UAV-846" -> "UAV-846\nservices.core.areamapping";
+"UAV-846\nservices.core.areamapping" -> "UAV-846edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java";
+"UAV-846" -> "UAV-846\nservices.extensions.areamapping.creation";
+"UAV-846\nservices.extensions.areamapping.creation" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/creation/MapRiver.java";
+"UAV-846" -> "UAV-846\nservices.extensions.areamapping.internal";
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/SourcePoints.java";
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/AdaptedCreepingLinePrimitive.java";
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/PriorityPolygonPrimitive.java";
+"UAV-846\nservices.extensions.areamapping.internal" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/internal/RiverBankPrimitive.java";
+"UAV-846" -> "UAV-846\nservices.extensions.areamapping.metrics";
+"UAV-846\nservices.extensions.areamapping.metrics" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java";
+"UAV-846\nservices.extensions.areamapping.metrics" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java";
+"UAV-846" -> "UAV-846\nservices.extensions.areamapping.model";
+"UAV-846\nservices.extensions.areamapping.model" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/model/RoutePrimitive.java";
+"UAV-846" -> "UAV-846\nservices.extensions.areamapping.selection.random";
+"UAV-846\nservices.extensions.areamapping.selection.random" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/selection/random/RandomRouteSelector.java";
+"UAV-846" -> "UAV-846\nservices.extensions.areamapping.util";
+"UAV-846\nservices.extensions.areamapping.util" -> "UAV-846edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/util/Utilities.java";
+"UAV-1056" -> "UAV-994";
+"UAV-994" -> "UAV-841";
+"UAV-841" -> "UAV-841\nservices.areamapping.output";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Utilities.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignment.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/ExecuteableSearchPattern.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Geometry.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/DroneRouteAssignments.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/Drone.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java";
+"UAV-841\nservices.areamapping.output" -> "UAV-841edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MapRiver.java";
+"UAV-994" -> "UAV-994\nservices.core.areamapping";
+"UAV-994\nservices.core.areamapping" -> "UAV-994edu.nd.dronology.services.core/src/edu/nd/dronology/services/core/areamapping/MetricsStatistics.java";
+"UAV-994" -> "UAV-994\nservices.extensions.areamapping.metrics";
+"UAV-994\nservices.extensions.areamapping.metrics" -> "UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsRunner.java";
+"UAV-994\nservices.extensions.areamapping.metrics" -> "UAV-994edu.nd.dronology.services.extensions.areamapping/src/edu/nd/dronology/services/extensions/areamapping/metrics/MetricsUtilities.java";
+"UAV-1054" -> "UAV-1057";
+"UAV-1057" -> "UAV-844";
+"UAV-844" -> "UAV-1058";
+"UAV-844" -> "UAV-844\nservices.areamapping.output";
+"UAV-844\nservices.areamapping.output" -> "UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsRunner.java";
+"UAV-844\nservices.areamapping.output" -> "UAV-844edu.nd.dronology.services/src/edu/nd/dronology/services/areamapping/output/MetricsUtilities.java";
+"UAV-1044" -> "UAV-937";
+"UAV-945" -> "UAV-977";
+}

@@ -1,0 +1,57 @@
+{
+  "status": "DRAFT_FOR_REVIEW",
+  "summary_sha256": "ee125333182cf1ac96ffd657d2b4b9c19c5da484214b0262eb6faf01d9cae2b6",
+  "sources": {
+    "lexical": {
+      "path": "experiments/retrieval/20261006T020645-ee4c5e32/results.json",
+      "sha256": "b75cecec87e37098bc2f063aeb9a62ffbebe9c509f32251a246b7ed4fa719ca5"
+    },
+    "semantic": {
+      "path": "experiments/retrieval/20261006T021326-432d54b3/results.json",
+      "sha256": "81d847fa16673c677f3992cb30629a1f2f1f02eda0d9a2cc998674b1fa41529e"
+    },
+    "graph": {
+      "path": "experiments/retrieval/20261006T142659-bc349a3f/results.json",
+      "sha256": "ca49cf3238dc544bbbe755f0aada11912898ce761379462465f43a8eb3226cc7"
+    },
+    "ranker": {
+      "path": "experiments/ranker/20261006T142709-dea10c63/results.json",
+      "sha256": "99aa8d2aa90fb5618c5cd36385403e7ca92b5353e281b03c1b9c5f69f233fb2c"
+    },
+    "changebench": {
+      "path": "experiments/changebench/20261006T143016-f81c6507/results.json",
+      "sha256": "52ca203511123476c4007a9f4793d784be83d74370449b1c45ed92e333c9c7bd"
+    },
+    "ablation": {
+      "path": "experiments/ablation/20261006T194639-30694b4d/results.json",
+      "sha256": "00a7c63e1fbc24db96e30de7c765a3473a86a2602de30bae3193abe95f7b9363"
+    },
+    "pipeline": {
+      "path": "experiments/pipeline/20261006T195007-e56e6b8d/results.json",
+      "sha256": "fd6ed9a79aefd2b9b0432582cd6c7c03e60259a6d6be611f575735cb7e885721"
+    },
+    "safa": {
+      "path": "experiments/safa/20261006T142403-c681a243/results.json",
+      "sha256": "2c4da49e21ec946887505e9cc4602898154384a9df7fdf99eebe3ebc1de734e9"
+    },
+    "rag_SMOS": {
+      "path": "experiments/retrieval/20261007T104905-4064b602/results.json",
+      "sha256": "38d035786a3ce4d8a1d07a0750959cb2bfbf28f7b36f25c5d6237baab748ec97"
+    },
+    "rag_iTrust": {
+      "path": "experiments/retrieval/20261007T163255-0dfbb833/results.json",
+      "sha256": "382bc8e5518a8b7c2f83afed803f8b7de0cee05fb305df98de0759969ea670a4"
+    },
+    "rag_eTour_en": {
+      "path": "experiments/retrieval/20261007T171402-64fa98d8/results.json",
+      "sha256": "dea7ac2c29a300ef443a3d3d84e30d8359bb44e391e87d8c04a13b6f942aaf0b"
+    },
+    "rag_RTMX-module-valid": {
+      "path": "experiments/retrieval/20261007T210208-3f0803cc/results.json",
+      "sha256": "bd66f7fcedcca826d17f2e7d234e60a31607f065e5f3d84e6883ed457f842af1"
+    }
+  },
+  "reference_record": "docs/LITERATURE_VERIFICATION.md",
+  "independent_review": false,
+  "venue_selected": false
+}

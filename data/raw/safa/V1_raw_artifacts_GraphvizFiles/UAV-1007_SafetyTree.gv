@@ -1,0 +1,21 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1007"[
+label = "Hazard\nUAV-1007\nUAV flies into a fixed \n stationary object such as a \n building or tree "
+shape = "record"
+color = "black"
+];
+"UAV-912"[
+label = "EnvironmentalAssumption\nUAV-912\nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+];
+"UAV-966"[
+label = "ProcessRequirement\nUAV-966\nCarefully plan routes to avoid \n known obstacles "
+shape = "record"
+color = "black"
+];
+"UAV-1007" -> "UAV-912";
+"UAV-1007" -> "UAV-966";
+}

@@ -1,0 +1,873 @@
+digraph g { graph [autosize=false, size="10,20!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1006Delta"[
+label = "Hazard\nUAV-1006 \nUAV receives a goto directive \n that causes it to fly \n into terrain "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT--1006Delta"[
+label = "<Strategy>\nSTRAT--1006 \n Argue that hazard \n  UAV-1006  has been fully mitigated \n by its safety requirements"
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1010Delta"[
+label = "SafetyRequirement\nUAV-1010 \nAll waypoints in flight routes \n assigned to UAV must be \n at least 3 meters above \n the highest terrain in the \n flying zone. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1010Delta"[
+label = "<Strategy>\nSTRAT-D--1010 \n Argue that safety requirement \n  UAV-1010  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1063Delta"[
+label = "ProcessRequirement\nUAV-1063 \nOperator only assigns flight routes \n with waypoints above terrain level "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1064Delta"[
+label = "DesignDefinition\nUAV-1064 \nAltitude commands use relative altitude \n which is defined relative to \n the onground coordinates of the \n UAV prior to takeoff. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--1064Delta"[
+label = "<Strategy>\nSTRAT-C--1064 \n Argue that design definition \n  UAV-1064  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-1064\ncore.coordinate"[
+label = "Package\nUAV-1064\ncore.coordinate"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/coordinate/AbstractPosition.java"[
+label = "Code with \n passed Tests \nAbstractPosition.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1064\ncore.vehicle.internal"[
+label = "Package\nUAV-1064\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1099Delta"[
+label = "Context\nUAV-1099 \nUse of global altitude requires \n additional instrumentation in order to \n achieve required degrees of accuracy. "
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1065Delta"[
+label = "Context\nUAV-1065 \nUAVs are not equipped with \n ground facing sensors "
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1066Delta"[
+label = "SafetyRequirement\nUAV-1066 \nWaypoint commands sent to the \n UAV will represent valid coordinates \n that will not cause collisions \n with the terrain. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1066Delta"[
+label = "<Strategy>\nSTRAT-D--1066 \n Argue that safety requirement \n  UAV-1066  is fully addressed \n by refined requirements and \n design decisions."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1068Delta"[
+label = " Delegated \n to Adacent System\nUAV-1068 \nThe GCS uses the services \n of Dronekit Python to transform \n waypoint requests into Mavlink and \n to transmit those commands to \n the UAV pixhawk controller. "
+shape = "component"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1073Delta"[
+label = "ProcessRequirement\nUAV-1073 \nAll flight routes imported using \n the mission planner interface are \n constructed using the Dronology UI. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "lightcyan"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1074Delta"[
+label = "Requirement\nUAV-1074 \nAll dynamically generated waypoints are \n validated to be above ground \n level "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-D--1074Delta"[
+label = "<Strategy>\nSTRAT-D--1074 \n Argue that requirement \n  UAV-1074  is fully addressed \n by design decisions and/or processes."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.0"
+];
+"UAV-1067Delta"[
+label = "DesignDefinition\nUAV-1067 \nWaypoints generated via the Dronology \n UI are validated to check \n that their altitude is greater \n than zero. "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--1067Delta"[
+label = "<Strategy>\nSTRAT-C--1067 \n Argue that design definition \n  UAV-1067  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-1067\nui.vaadin.flightroutes"[
+label = "Package\nUAV-1067\nui.vaadin.flightroutes"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRTableDisplay.java"[
+label = "Code with \n passed Tests \nFRTableDisplay.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1067\nui.vaadin.flightroutes.mapoperations"[
+label = "Package\nUAV-1067\nui.vaadin.flightroutes.mapoperations"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/mapoperations/MapAddMarkerListener.java"[
+label = "Code with \n passed Tests \nMapAddMarkerListener.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448Delta"[
+label = "DesignDefinition\nUAV-448 \nEach UAV ascends to a \n unique altitude during coordinated take \n off ascent "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--448Delta"[
+label = "<Assumption>\nSTRAT-A--448 \n Assume that all environmental assumptions for \n  UAV-448  have been identified."
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1128Delta"[
+label = "EnvironmentalAssumption\nUAV-1128 \nSufficient vertical airspace exists to \n allocate each UAV its own \n altitude with vertical spacing of \n at least 5 meters from \n all other UAVs. "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-893Delta"[
+label = "EnvironmentalAssumption\nUAV-893 \nRTK is active "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-923Delta"[
+label = "EnvironmentalAssumption\nUAV-923 \nRTK is accurate to 10 \n cm "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-A--448Delta"[
+label = "<Assumption>\nSTRAT-A--448 \n Assume that all environmental assumptions for \n  UAV-448  have been identified."
+shape = "Mrecord"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "0.8"
+];
+"UAV-1128Delta"[
+label = "EnvironmentalAssumption\nUAV-1128 \nSufficient vertical airspace exists to \n allocate each UAV its own \n altitude with vertical spacing of \n at least 5 meters from \n all other UAVs. "
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-893Delta"[
+label = "EnvironmentalAssumption\nUAV-893 \nRTK is active "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-923Delta"[
+label = "EnvironmentalAssumption\nUAV-923 \nRTK is accurate to 10 \n cm "
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--448Delta"[
+label = "<Strategy>\nSTRAT-C--448 \n Argue that design definition \n  UAV-448  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-448\nservices.missionplanning.patterns"[
+label = "Package\nUAV-448\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448\nservices.missionplanning.tasks"[
+label = "Package\nUAV-448\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--448Delta"[
+label = "<Strategy>\nSTRAT-C--448 \n Argue that design definition \n  UAV-448  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-448\nservices.missionplanning.patterns"[
+label = "Package\nUAV-448\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448\nservices.missionplanning.tasks"[
+label = "Package\nUAV-448\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450Delta"[
+label = "DesignDefinition\nUAV-450 \nFly to first waypoint at \n assigned altitude during coordinated takeoff "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--450Delta"[
+label = "<Strategy>\nSTRAT-C--450 \n Argue that design definition \n  UAV-450  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-450\nservices.missionplanning.patterns"[
+label = "Package\nUAV-450\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450\nservices.missionplanning.tasks"[
+label = "Package\nUAV-450\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--450Delta"[
+label = "<Strategy>\nSTRAT-C--450 \n Argue that design definition \n  UAV-450  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-450\nservices.missionplanning.patterns"[
+label = "Package\nUAV-450\nservices.missionplanning.patterns"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450\nservices.missionplanning.tasks"[
+label = "Package\nUAV-450\nservices.missionplanning.tasks"
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[
+label = "Code with \n passed Tests \nTaskFactory.java"
+shape = "record"
+color = "blue"
+style = "filled"
+fillcolor = "skyblue"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452Delta"[
+label = "DesignDefinition\nUAV-452 \nWhen reaching the first waypoint, \n the UAV descends or ascends \n to the specified altitude duing \n coordinated takeoff "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--452Delta"[
+label = "<Strategy>\nSTRAT-C--452 \n Argue that design definition \n  UAV-452  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-452\nservices.extensions.missionplanning.patterns"[
+label = "Package\nUAV-452\nservices.extensions.missionplanning.patterns"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services.extensions.missionplanning/src/edu/nd/dronology/services/extensions/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452\nservices.missionplanning.patterns"[
+label = "Package\nUAV-452\nservices.missionplanning.patterns"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedLandingPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedLandingPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"STRAT-C--452Delta"[
+label = "<Strategy>\nSTRAT-C--452 \n Argue that design definition \n  UAV-452  is fully implemented in code \n and covered by test cases \n which have passed."
+shape = "parallelogram"
+color = "black"
+style = "filled"
+fillcolor = "grey"
+fixedsize = "true"
+width = "3.0"
+height = "1.2000000000000002"
+];
+"UAV-452\nservices.extensions.missionplanning.patterns"[
+label = "Package\nUAV-452\nservices.extensions.missionplanning.patterns"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services.extensions.missionplanning/src/edu/nd/dronology/services/extensions/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "darkgreen"
+style = "filled"
+fillcolor = "limegreen"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452\nservices.missionplanning.patterns"[
+label = "Package\nUAV-452\nservices.missionplanning.patterns"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedLandingPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedLandingPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[
+label = "Code with \n passed Tests \nCoordinatedTakeoffPattern.java"
+shape = "record"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1109Delta"[
+label = "Context\nUAV-1109 \nAll directives in Dronology are \n issued via waypoint commands. "
+shape = "Mrecord"
+color = "red"
+style = "filled"
+fillcolor = "coral"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-912Delta"[
+label = "EnvironmentalAssumption\nUAV-912 \nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+style = "filled"
+fillcolor = "white"
+fixedsize = "true"
+width = "3.0"
+height = "1.2"
+];
+"UAV-1006Delta" -> "STRAT--1006Delta"[style = "solid" color = black];
+"STRAT--1006Delta" -> "UAV-1010Delta"[style = "solid" color = black];
+"UAV-1010Delta" -> "STRAT-D--1010Delta"[style = "solid" color = black];
+"STRAT-D--1010Delta" -> "UAV-1063Delta"[style = "solid" color = black];
+"STRAT-D--1010Delta" -> "UAV-1064Delta"[style = "solid" color = black];
+"UAV-1064Delta" -> "STRAT-C--1064Delta"[style = "solid" color = black];
+"STRAT-C--1064Delta" -> "UAV-1064\ncore.coordinate"[style = "solid" color = black];
+"UAV-1064\ncore.coordinate" -> "UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/coordinate/AbstractPosition.java"[style = "solid" color = black];
+"STRAT-C--1064Delta" -> "UAV-1064\ncore.vehicle.internal"[style = "solid" color = black];
+"UAV-1064\ncore.vehicle.internal" -> "UAV-1064edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[style = "dotted" color = blue];
+"UAV-1064Delta" -> "UAV-1099Delta"[style = "solid" color = black];
+"UAV-1010Delta" -> "UAV-1065Delta"[style = "solid" color = black];
+"STRAT--1006Delta" -> "UAV-1066Delta"[style = "solid" color = black];
+"UAV-1066Delta" -> "STRAT-D--1066Delta"[style = "solid" color = black];
+"STRAT-D--1066Delta" -> "UAV-1068Delta"[style = "solid" color = black];
+"STRAT-D--1066Delta" -> "UAV-1073Delta"[style = "solid" color = black];
+"STRAT-D--1066Delta" -> "UAV-1074Delta"[style = "solid" color = black];
+"UAV-1074Delta" -> "STRAT-D--1074Delta"[style = "solid" color = black];
+"STRAT-D--1074Delta" -> "UAV-1067Delta"[style = "solid" color = black];
+"UAV-1067Delta" -> "STRAT-C--1067Delta"[style = "solid" color = black];
+"STRAT-C--1067Delta" -> "UAV-1067\nui.vaadin.flightroutes"[style = "solid" color = black];
+"UAV-1067\nui.vaadin.flightroutes" -> "UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/FRTableDisplay.java"[style = "solid" color = black];
+"STRAT-C--1067Delta" -> "UAV-1067\nui.vaadin.flightroutes.mapoperations"[style = "solid" color = black];
+"UAV-1067\nui.vaadin.flightroutes.mapoperations" -> "UAV-1067edu.nd.dronology.ui.vaadin/src/main/java/edu/nd/dronology/ui/vaadin/flightroutes/mapoperations/MapAddMarkerListener.java"[style = "solid" color = black];
+"STRAT-D--1074Delta" -> "UAV-448Delta"[style = "solid" color = black];
+"UAV-448Delta" -> "STRAT-A--448Delta"[style = "solid" color = black];
+"STRAT-A--448Delta" -> "UAV-1128Delta"[style = "dotted" color = darkgreen];
+"STRAT-A--448Delta" -> "UAV-893Delta"[style = "dotted" color = red];
+"STRAT-A--448Delta" -> "UAV-923Delta"[style = "dotted" color = red];
+"UAV-448Delta" -> "STRAT-C--448Delta"[style = "solid" color = black];
+"STRAT-C--448Delta" -> "UAV-448\nservices.missionplanning.patterns"[style = "solid" color = black];
+"UAV-448\nservices.missionplanning.patterns" -> "UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[style = "solid" color = black];
+"STRAT-C--448Delta" -> "UAV-448\nservices.missionplanning.tasks"[style = "solid" color = black];
+"UAV-448\nservices.missionplanning.tasks" -> "UAV-448edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[style = "dotted" color = blue];
+"STRAT-D--1074Delta" -> "UAV-450Delta"[style = "solid" color = black];
+"UAV-450Delta" -> "STRAT-C--450Delta"[style = "solid" color = black];
+"STRAT-C--450Delta" -> "UAV-450\nservices.missionplanning.patterns"[style = "solid" color = black];
+"UAV-450\nservices.missionplanning.patterns" -> "UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[style = "solid" color = black];
+"STRAT-C--450Delta" -> "UAV-450\nservices.missionplanning.tasks"[style = "solid" color = black];
+"UAV-450\nservices.missionplanning.tasks" -> "UAV-450edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/tasks/TaskFactory.java"[style = "dotted" color = blue];
+"STRAT-D--1074Delta" -> "UAV-452Delta"[style = "solid" color = black];
+"UAV-452Delta" -> "STRAT-C--452Delta"[style = "solid" color = black];
+"STRAT-C--452Delta" -> "UAV-452\nservices.extensions.missionplanning.patterns"[style = "dotted" color = darkgreen];
+"UAV-452\nservices.extensions.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services.extensions.missionplanning/src/edu/nd/dronology/services/extensions/missionplanning/patterns/CoordinatedTakeoffPattern.java"[style = "dotted" color = darkgreen];
+"STRAT-C--452Delta" -> "UAV-452\nservices.missionplanning.patterns"[style = "dotted" color = red];
+"UAV-452\nservices.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedLandingPattern.java"[style = "dotted" color = red];
+"UAV-452\nservices.missionplanning.patterns" -> "UAV-452edu.nd.dronology.services/src/edu/nd/dronology/services/missionplanning/patterns/CoordinatedTakeoffPattern.java"[style = "dotted" color = red];
+"UAV-1066Delta" -> "UAV-1109Delta"[style = "dotted" color = red];
+"UAV-1006Delta" -> "UAV-912Delta"[style = "solid" color = black];
+}

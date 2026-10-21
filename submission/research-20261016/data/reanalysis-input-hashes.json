@@ -1,0 +1,146 @@
+[
+  {
+    "path": "data/reanalysis-inputs/experiments/retrieval/20261007T104905-4064b602/results.json",
+    "sha256": "38d035786a3ce4d8a1d07a0750959cb2bfbf28f7b36f25c5d6237baab748ec97"
+  },
+  {
+    "path": "data/reanalysis-inputs/experiments/retrieval/20261007T163255-0dfbb833/results.json",
+    "sha256": "382bc8e5518a8b7c2f83afed803f8b7de0cee05fb305df98de0759969ea670a4"
+  },
+  {
+    "path": "data/reanalysis-inputs/experiments/retrieval/20261007T171402-64fa98d8/results.json",
+    "sha256": "dea7ac2c29a300ef443a3d3d84e30d8359bb44e391e87d8c04a13b6f942aaf0b"
+  },
+  {
+    "path": "data/reanalysis-inputs/experiments/retrieval/20261007T210208-3f0803cc/results.json",
+    "sha256": "bd66f7fcedcca826d17f2e7d234e60a31607f065e5f3d84e6883ed457f842af1"
+  },
+  {
+    "path": "data/reanalysis-inputs/experiments/ablation/20261006T194639-30694b4d/results.json",
+    "sha256": "00a7c63e1fbc24db96e30de7c765a3473a86a2602de30bae3193abe95f7b9363"
+  },
+  {
+    "path": "data/reanalysis-inputs/reports/results/summary.json",
+    "sha256": "ee125333182cf1ac96ffd657d2b4b9c19c5da484214b0262eb6faf01d9cae2b6"
+  },
+  {
+    "path": "data/reanalysis-inputs/llm/providers.py",
+    "sha256": "62c4814ce1517b6702281e8b23fa2b56f2dfd69431a234d08d973474431d8535"
+  },
+  {
+    "path": "data/reanalysis-inputs/ingestion/models.py",
+    "sha256": "b54d369bebd100b500ebfa674a3c0b675265d2ad3b2144231a2ccb3db491c118"
+  },
+  {
+    "path": "data/reanalysis-inputs/scripts/run_ablation.py",
+    "sha256": "bbea20fdd2f064ddb097351df2b8f945d5d03bf1bc4751cf781cadf951234992"
+  },
+  {
+    "path": "data/reanalysis-inputs/scripts/run_rag_trace.py",
+    "sha256": "315f7e6dea62a03d9ed8023d53bd7ca70ca62c2d8ce6d92124307dc4df289fab"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/models.json",
+    "sha256": "aa90122358f95736fe36c844b4fb9978e4cb18c348f5f5bafd00ea0a579a42ca"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/source-manifest.json",
+    "sha256": "ae7ea1a93f8506d468bf481f1591c7c526342e6dfbbd24f7e8934876f4d209a2"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/10-consumer-changed.json",
+    "sha256": "d9db57bf5d2b1267a652962d75d0a2525dcee9e76d2ad0ce2ff9a1a12752215c"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/06-test-deleted-report.json",
+    "sha256": "26ab467454a3c21475b6ab9261e2bcde22d251fd37cb6d97919fe8823fe2198d"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/06-test-deleted.json",
+    "sha256": "ff2bad3f3034b5944788a58d8931754058bdbe359cd315f16fd1b134a8f14859"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/01-requirement-changed-report.json",
+    "sha256": "a2b55213285f11392856e9545a7986df391b93215b6bb6469d7142afc72256d7"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/05-test-changed.json",
+    "sha256": "6c5b43d8762a793216ba36f8d4298b8f4980467d77b6105bf08aaf75bbe79cc4"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/01-requirement-changed.json",
+    "sha256": "4637b6296677aede5fbdc1603eb27e7c7f405412892ee1048f42b1e772197d30"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/07-frontend-changed-report.json",
+    "sha256": "9e8f7908c661bc955186349635adce968a805fea87267c98ed428ad5e62268d4"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/09-backend-changed.json",
+    "sha256": "7e96dfdba2cdb5e92a6904447ea5c014ca4d8794503b29f1ec5c2bcd10858837"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/09-backend-changed-report.json",
+    "sha256": "be996847cf903c36c51cbdc4b35f4a73854d1a49de95c8125beef5bfe70c02be"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/11-implementation-test-drift-report.json",
+    "sha256": "48bcc143cab07aef641540ffc26ab3c5efe653cf4364717438c112777dbb436e"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/03-code-changed.json",
+    "sha256": "151673939f923e30bfdb918f504be42b502566d8d4b94c2b48b3a5b720e99f3c"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/02-requirement-added-report.json",
+    "sha256": "987e27932d4b82773c884a3df6091607e0ef6b4c02baf9e036eb93d67080db2a"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/03-code-changed-report.json",
+    "sha256": "262ee46551cc8d46feea6d5a480b591836cc0839d7e9255e4c12bea8313759d6"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/10-consumer-changed-report.json",
+    "sha256": "58ff1d47d37ef87abe56d71d9a19e01e248b14bb2c1f5aa943d36aa6f4ceece5"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/07-frontend-changed.json",
+    "sha256": "ebe5680001f7dde87bcd7aeaf014771d642fc0207898ee3605370b71a4e05de3"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/05-test-changed-report.json",
+    "sha256": "19e881bf8c9d0aff5711d303676ff66b4d567275ee5961f05f75d757f88140e2"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/11-implementation-test-drift.json",
+    "sha256": "50a44bb512b564e36877c566f9a618e1111ee50701a2e83666bcd72968f0cf60"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/08-api-changed.json",
+    "sha256": "36d6bc57ddff5b03cddc5eea17d21e9cd76f6523b3b0eddb683151c7d5ae4ccd"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/08-api-changed-report.json",
+    "sha256": "da1d42c263702138df46176e65a3f9a353a69149cfcc4c691e1891c67df8bd8e"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/04-code-deleted.json",
+    "sha256": "42cc1209f737e80979a22843795157da3cc7948423c4296975cb1d71e8c1cadc"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/12-requirement-test-drift-report.json",
+    "sha256": "f2c65e0dbe127bfd5e7d769fd6c5adda461077607c00f1e12f05b96825de2ca7"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/04-code-deleted-report.json",
+    "sha256": "8aee8f35c61c770908a31278011538602c67a03c71383eeeed84a202616202aa"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/02-requirement-added.json",
+    "sha256": "f6b4850d7796e2569736597bc4354fe85caa82c1c4d0ee6f59a7cfa9f93c5952"
+  },
+  {
+    "path": "data/reanalysis-inputs/data/changebench/12-requirement-test-drift.json",
+    "sha256": "ae523ed4dd6b50b4624655c8af4db2b24a2460264b317d934da0ac1dcfe1b327"
+  }
+]

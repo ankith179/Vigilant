@@ -1,0 +1,27 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-1021"[
+label = "Hazard\nUAV-1021\nUAV compass calibration error causes \n UAV to fly in incorrect \n direction "
+shape = "record"
+color = "black"
+];
+"UAV-1061"[
+label = "SafetyRequirement\nUAV-1061\nUAV is calibrated prior to \n flight "
+shape = "record"
+color = "black"
+];
+"UAV-1062"[
+label = " Delegated \n to Adacent System\nUAV-1062\nMission planner UAV calibration "
+shape = "record"
+color = "black"
+];
+"UAV-982"[
+label = "ProcessRequirement\nUAV-982\nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+];
+"UAV-1021" -> "UAV-1061";
+"UAV-1061" -> "UAV-1062";
+"UAV-1021" -> "UAV-982";
+}

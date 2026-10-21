@@ -1,0 +1,10 @@
+{
+  "dataset": "RTMX-module-valid",
+  "dataset_fingerprint": "731121b2676264b41378ba9589a6b64ad21df0c8527e808e5297d676ce946a9b",
+  "completed_queries": 22,
+  "expected_queries": 22,
+  "actual_inference_observations": 22,
+  "reused_calls": 11,
+  "new_calls": 11,
+  "last_query_id": "REQ-EXP-005"
+}

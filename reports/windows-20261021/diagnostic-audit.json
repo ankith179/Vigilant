@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "observations": 36,
+  "models": [
+    {
+      "model": "qwen2.5-coder:14b",
+      "observations": 12,
+      "correct": 1,
+      "valid": 10,
+      "accuracy": 0.08333333333333333,
+      "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849"
+    },
+    {
+      "model": "qwen3:8b",
+      "observations": 12,
+      "correct": 0,
+      "valid": 0,
+      "accuracy": 0.0,
+      "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+    },
+    {
+      "model": "qwen3:14b",
+      "observations": 12,
+      "correct": 0,
+      "valid": 0,
+      "accuracy": 0.0,
+      "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8"
+    }
+  ],
+  "scope": "Fingerprints, genuine raw responses, zero API cost metadata, accuracy and validity arithmetic; not semantic review."
+}

@@ -1,0 +1,46 @@
+{
+  "flask": {
+    "name": "flask",
+    "url": "https://github.com/pallets/flask.git",
+    "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+    "downloaded_at": "2026-10-06T14:19:24.372917+00:00",
+    "path": "data/repos/flask",
+    "licenses": [
+      "LICENSE.txt"
+    ],
+    "base_commit": "d318b683471101618febed18996405ad26462110"
+  },
+  "petclinic": {
+    "name": "petclinic",
+    "url": "https://github.com/spring-projects/spring-petclinic.git",
+    "commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+    "downloaded_at": "2026-10-06T14:19:48.848744+00:00",
+    "path": "data/repos/petclinic",
+    "licenses": [
+      "LICENSE.txt"
+    ],
+    "base_commit": "0d064b04958da7715a9138459bafbde3bd10949d"
+  },
+  "express": {
+    "name": "express",
+    "url": "https://github.com/expressjs/express.git",
+    "commit": "7ef98448f8b38099ab1ded55e458538ad47a51e7",
+    "downloaded_at": "2026-10-06T14:20:18.437990+00:00",
+    "path": "data/repos/express",
+    "licenses": [
+      "LICENSE"
+    ],
+    "base_commit": "3b7e39fe74371ddabc77fed736dd22aa71c14f5c"
+  },
+  "fullstack": {
+    "name": "fullstack",
+    "url": "https://github.com/fastapi/full-stack-fastapi-template.git",
+    "commit": "1762adac607a1b29cfc4da129557780beea71616",
+    "downloaded_at": "2026-10-06T14:20:46.225707+00:00",
+    "path": "data/repos/fullstack",
+    "licenses": [
+      "LICENSE"
+    ],
+    "base_commit": "7e53197e3f209cd83e147f0a09f2a14562d3644c"
+  }
+}

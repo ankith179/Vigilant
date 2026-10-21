@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "pages": 4,
+  "format": "IEEEtran conference A4 targeted review draft",
+  "reviewed_at": "2026-10-08T02:21:34.427066+00:00",
+  "checks": [
+    "All pages rendered and visually inspected",
+    "Literature table fits page",
+    "No overfull boxes or unresolved references in final LaTeX log"
+  ],
+  "external_review": false
+}

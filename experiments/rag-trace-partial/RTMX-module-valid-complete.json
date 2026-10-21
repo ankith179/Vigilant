@@ -1,0 +1,7 @@
+{
+  "dataset": "RTMX-module-valid",
+  "dataset_fingerprint": "731121b2676264b41378ba9589a6b64ad21df0c8527e808e5297d676ce946a9b",
+  "result_path": "experiments/retrieval/20261007T210208-3f0803cc/results.json",
+  "run_id": "20261007T210208-3f0803cc",
+  "linked_queries": 22
+}

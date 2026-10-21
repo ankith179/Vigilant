@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-10-07T05:08:43.598146+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "dependencies": {
+    "torch": "2.7.1+cpu",
+    "transformers": "4.53.2",
+    "sentence-transformers": "5.0.0",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "lm-format-enforcer": "0.10.12",
+    "safetensors": "0.8.0"
+  },
+  "cpu_quota": "800000 100000",
+  "memory_limit_bytes": 8589934592,
+  "torch_threads": 4,
+  "model_manifest": {
+    "embedding": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dtype": "float32",
+      "path": "data/models/embedding",
+      "license": "Apache-2.0"
+    },
+    "llm": {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "dtype": "bfloat16",
+      "path": "data/models/llm",
+      "license": "Apache-2.0"
+    }
+  },
+  "experiment_protocol": "rag-trace-v2-frozen-2026-10-06",
+  "resumed_observations": 30,
+  "scope": "Runtime restored for continuation; earlier observations retain their original per-call times. Mixed resumed/cold timings are not a causal speed comparison."
+}

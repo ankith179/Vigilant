@@ -1,0 +1,118 @@
+{
+  "source_run": "experiments/ablation/20261006T194639-30694b4d/results.json",
+  "source_sha256": "00a7c63e1fbc24db96e30de7c765a3473a86a2602de30bae3193abe95f7b9363",
+  "inference_calls": 60,
+  "resumed_calls": 17,
+  "new_calls": 43,
+  "expected_statuses": {
+    "POTENTIAL_INCONSISTENCY": 6,
+    "UNCERTAIN": 3,
+    "BROKEN_TRACE": 2,
+    "MISSING_TEST": 1
+  },
+  "summary": [
+    {
+      "variant": "E",
+      "name": "LLM only",
+      "cases": 12,
+      "correct": 3,
+      "status_agreement": 0.25,
+      "schema_citation_validity": 1.0,
+      "uncertainty_rate": 1.0,
+      "known_endpoint_recall": 0.0,
+      "mean_seconds": 12.165285958416698,
+      "prediction_counts": {
+        "UNCERTAIN": 12
+      },
+      "validation_errors": {},
+      "semantic_grounding": null,
+      "hallucination_rate": null
+    },
+    {
+      "variant": "F",
+      "name": "LLM + hybrid RAG",
+      "cases": 12,
+      "correct": 3,
+      "status_agreement": 0.25,
+      "schema_citation_validity": 0.9166666666666666,
+      "uncertainty_rate": 1.0,
+      "known_endpoint_recall": 0.0,
+      "mean_seconds": 18.622768982250033,
+      "prediction_counts": {
+        "UNCERTAIN": 12
+      },
+      "validation_errors": {
+        "ValueError": 1
+      },
+      "semantic_grounding": null,
+      "hallucination_rate": null
+    },
+    {
+      "variant": "G",
+      "name": "LLM + RAG + KG",
+      "cases": 12,
+      "correct": 3,
+      "status_agreement": 0.25,
+      "schema_citation_validity": 0.9166666666666666,
+      "uncertainty_rate": 1.0,
+      "known_endpoint_recall": 0.2,
+      "mean_seconds": 19.14031269091669,
+      "prediction_counts": {
+        "UNCERTAIN": 12
+      },
+      "validation_errors": {
+        "ValueError": 1
+      },
+      "semantic_grounding": null,
+      "hallucination_rate": null
+    },
+    {
+      "variant": "H",
+      "name": "LLM + RAG + KG + bounded investigation",
+      "cases": 12,
+      "correct": 3,
+      "status_agreement": 0.25,
+      "schema_citation_validity": 0.9166666666666666,
+      "uncertainty_rate": 1.0,
+      "known_endpoint_recall": 0.32,
+      "mean_seconds": 18.55724263766666,
+      "prediction_counts": {
+        "UNCERTAIN": 12
+      },
+      "validation_errors": {
+        "ValueError": 1
+      },
+      "semantic_grounding": null,
+      "hallucination_rate": null
+    },
+    {
+      "variant": "I",
+      "name": "Full VIGILANT with temporal evidence and rules",
+      "cases": 12,
+      "correct": 3,
+      "status_agreement": 0.25,
+      "schema_citation_validity": 0.8333333333333334,
+      "uncertainty_rate": 1.0,
+      "known_endpoint_recall": 0.72,
+      "mean_seconds": 20.40207460158335,
+      "prediction_counts": {
+        "UNCERTAIN": 12
+      },
+      "validation_errors": {
+        "ValueError": 2
+      },
+      "semantic_grounding": null,
+      "hallucination_rate": null
+    }
+  ],
+  "limitations": [
+    "Authored, correlated mutation labels; independent review pending.",
+    "Partial affected sets; known endpoint recall is not complete retrieval recall.",
+    "Semantic entailment and hallucination rate NOT MEASURED.",
+    "H is a deterministic bounded workflow, not autonomous tool choice.",
+    "I changes temporal evidence and rule availability together.",
+    "Frozen baseline trace relations are available to G/H/I; status labels are used only after inference.",
+    "Tool success describes scripted preparation; it is not autonomous model tool-use accuracy.",
+    "Latency retains original per-call times for resumed calls; this run wall time excludes prior work."
+  ]
+}

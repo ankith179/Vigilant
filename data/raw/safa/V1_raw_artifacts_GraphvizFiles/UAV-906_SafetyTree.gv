@@ -1,0 +1,207 @@
+digraph g { graph [autosize=false, size="20,10!", resolution=200, rankdir = "TD"];
+node [ fontsize = "10" shape = "record" ];
+edge [];
+"UAV-906"[
+label = "Hazard\nUAV-906\nUAV is no longer controllable \n from Dronology due to communication \n loss. "
+shape = "record"
+color = "black"
+];
+"UAV-456"[
+label = "SafetyRequirement\nUAV-456\nHover in place if no \n pending commands and connectivity to \n GCS is lost "
+shape = "record"
+color = "black"
+];
+"UAV-80"[
+label = "Requirement\nUAV-80\nNext waypoint sent after previous \n waypoint reached "
+shape = "record"
+color = "black"
+];
+"UAV-527"[
+label = "DesignDefinition\nUAV-527\nSend first waypoint at start \n of flight plan "
+shape = "record"
+color = "black"
+];
+"UAV-527\ncore.flight.internal"[
+label = "Package\nUAV-527\ncore.flight.internal"
+shape = "record"
+color = "black"
+];
+"UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/flight/internal/SoloDirector.java"[
+label = "Code with \n passed Tests \nSoloDirector.java"
+shape = "record"
+color = "black"
+];
+"UAV-527\ncore.vehicle"[
+label = "Package\nUAV-527\ncore.vehicle"
+shape = "record"
+color = "black"
+];
+"UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[
+label = "Code with \n passed Tests \nManagedDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-528"[
+label = "DesignDefinition\nUAV-528\nCompute distance to next waypoint "
+shape = "record"
+color = "black"
+];
+"UAV-528\ncore.vehicle"[
+label = "Package\nUAV-528\ncore.vehicle"
+shape = "record"
+color = "black"
+];
+"UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[
+label = "Code with \n passed Tests \nManagedDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-528\ncore.vehicle.internal"[
+label = "Package\nUAV-528\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+];
+"UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java"[
+label = "Code with \n passed Tests \nVirtualDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-529"[
+label = "DesignDefinition\nUAV-529\nDetermine if waypoint is reached "
+shape = "record"
+color = "black"
+];
+"UAV-529\ncore.vehicle"[
+label = "Package\nUAV-529\ncore.vehicle"
+shape = "record"
+color = "black"
+];
+"UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java"[
+label = "Code with \n passed Tests \nManagedDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-529\ncore.vehicle.internal"[
+label = "Package\nUAV-529\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+];
+"UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java"[
+label = "Code with \n passed Tests \nVirtualDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-530"[
+label = "DesignDefinition\nUAV-530\nVisiting waypoints during flight plan "
+shape = "record"
+color = "black"
+];
+"UAV-1096"[
+label = "FormalReview\nUAV-1096\nTEST REVIEW "
+shape = "record"
+color = "black"
+];
+"UAV-530\ncore.vehicle.internal"[
+label = "Package\nUAV-530\ncore.vehicle.internal"
+shape = "record"
+color = "black"
+];
+"UAV-530edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java"[
+label = "Code with \n passed Tests \nPhysicalDrone.java"
+shape = "record"
+color = "black"
+];
+"UAV-912"[
+label = "EnvironmentalAssumption\nUAV-912\nUAV is operated under FAA \n Line of Sight regulations "
+shape = "record"
+color = "black"
+];
+"UAV-922"[
+label = "EnvironmentalAssumption\nUAV-922\nNo unauthorized commands are received "
+shape = "record"
+color = "black"
+];
+"UAV-928"[
+label = "EnvironmentalAssumption\nUAV-928\nOne RPIC per UAV in \n flight "
+shape = "record"
+color = "black"
+];
+"UAV-910"[
+label = "Context\nUAV-910\nAll communication between GCS and \n UAVs uses telemetry "
+shape = "record"
+color = "black"
+];
+"UAV-979"[
+label = "SafetyRequirement\nUAV-979\nAll UAVs shall have onboard \n failsafe mechanisms "
+shape = "record"
+color = "black"
+];
+"UAV-454"[
+label = "SafetyRequirement\nUAV-454\nRTL if UAV reaches onboard \n GeoFence boundary "
+shape = "record"
+color = "black"
+];
+"UAV-981"[
+label = " Delegated \n to Adacent System\nUAV-981\nAll UAVs use PixHawk 1.x \n or 2.x controllers with inbuilt \n RTL capabilities including programmable RTL \n triggers and RTL altitudes. "
+shape = "record"
+color = "black"
+];
+"UAV-924"[
+label = "EnvironmentalAssumption\nUAV-924\n3rd party RTL at Geofence \n breach "
+shape = "record"
+color = "black"
+];
+"UAV-926"[
+label = "EnvironmentalAssumption\nUAV-926\n3rd party customized RTL altitudes "
+shape = "record"
+color = "black"
+];
+"UAV-982"[
+label = "ProcessRequirement\nUAV-982\nRPIC will takeover control with \n the hand-held GCS when deemed \n necessary "
+shape = "record"
+color = "black"
+];
+"UAV-906" -> "UAV-456";
+"UAV-456" -> "UAV-80";
+"UAV-80" -> "UAV-527";
+"UAV-527" -> "UAV-527\ncore.flight.internal";
+"UAV-527\ncore.flight.internal" -> "UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/flight/internal/SoloDirector.java";
+"UAV-527" -> "UAV-527\ncore.vehicle";
+"UAV-527\ncore.vehicle" -> "UAV-527edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java";
+"UAV-80" -> "UAV-528";
+"UAV-528" -> "UAV-528\ncore.vehicle";
+"UAV-528\ncore.vehicle" -> "UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java";
+"UAV-528" -> "UAV-528\ncore.vehicle.internal";
+"UAV-528\ncore.vehicle.internal" -> "UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java";
+"UAV-528\ncore.vehicle.internal" -> "UAV-528edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java";
+"UAV-80" -> "UAV-529";
+"UAV-529" -> "UAV-529\ncore.vehicle";
+"UAV-529\ncore.vehicle" -> "UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/ManagedDrone.java";
+"UAV-529" -> "UAV-529\ncore.vehicle.internal";
+"UAV-529\ncore.vehicle.internal" -> "UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/VirtualDrone.java";
+"UAV-529\ncore.vehicle.internal" -> "UAV-529edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java";
+"UAV-80" -> "UAV-530";
+"UAV-530" -> "UAV-1096";
+"UAV-530" -> "UAV-530\ncore.vehicle.internal";
+"UAV-530\ncore.vehicle.internal" -> "UAV-530edu.nd.dronology.core/src/edu/nd/dronology/core/vehicle/internal/PhysicalDrone.java";
+"UAV-456" -> "UAV-912";
+"UAV-456" -> "UAV-922";
+"UAV-456" -> "UAV-928";
+"UAV-906" -> "UAV-910";
+"UAV-906" -> "UAV-979";
+"UAV-979" -> "UAV-454";
+"UAV-454" -> "UAV-981";
+"UAV-981" -> "UAV-924";
+"UAV-981" -> "UAV-926";
+"UAV-906" -> "UAV-982";
+}

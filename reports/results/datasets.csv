@@ -1,0 +1,5 @@
+dataset,split,requirements,linked_queries,unlinked_excluded,targets,links,commit
+SMOS,train,67,67,0,100,1044,a8e652f29bbdcc4bdcd3d98cd85aa4a37cb65480
+iTrust,validation,131,105,26,226,286,a8e652f29bbdcc4bdcd3d98cd85aa4a37cb65480
+eTour_en,test,58,57,1,116,308,a8e652f29bbdcc4bdcd3d98cd85aa4a37cb65480
+RTMX-module-valid,external_test,22,22,0,7,22,c2ced5349577a1df6987130961cadc94834ca70c
