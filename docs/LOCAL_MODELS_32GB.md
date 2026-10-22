@@ -90,7 +90,43 @@ Repeat the same command to continue. Exit 75 means a bounded partial run, 2 mean
 
 ## Accuracy protocol
 
-The included 12 scenarios are authored and correlated. Their previous model agreement was **25%**, equal to always-UNCERTAIN, with zero decisive coverage. They are diagnostic development inputs, not an independent test set. New model accuracy is **NOT RUN** in this release because no Ollama service or weights were present on the hosted machine. The 74 passing software tests do not measure model accuracy.
+### Native Windows diagnostic follow-up — 22 October 2026
+
+The saved paired-evidence diagnostic scored 1/12 for Qwen2.5 Coder 14B. A
+controlled, separate evidence-v2 run scored 2/12; adding bounded Git/artifact
+change facts scored 4/12. All 12 outputs in both follow-ups were schema/citation
+valid. The majority-class baseline is 6/12, so neither follow-up improves that
+baseline. Results and exact fingerprints are retained in
+`experiments/local-model-comparison/evidence-v2-20261022/` and
+`experiments/local-model-comparison/change-facts-20261022/`.
+
+The change-facts input fixed the deleted-test example and improved an API-change
+example, but still produced false `CONSISTENT` decisions. It is a useful context
+feature, not a demonstrated accuracy solution. Do not tune or claim generalization
+from this correlated 12-case set; independent repository-separated labels remain
+required.
+
+### Requested 200-case milestone
+
+The requested test set is **200 or more independently reviewed cases**. On exactly
+200 cases, at least **182 exact matches** gives 91% observed accuracy. The current
+12 authored cases do not meet the required size or independence. Do not reach 200
+by duplicating, paraphrasing, or synthetically relabeling existing cases. Collect
+independently reviewed repository changes, freeze the system before evaluation, and
+report numerator/denominator, per-class metrics, abstentions, and uncertainty. An
+observed 91% on 200 cases does not by itself prove 91% population accuracy.
+
+The first blind annotation queue, `reports/independent-review-20261022/`, has 79
+real source-changing commits from four local repositories, all still unlabelled.
+It is short by 121 cases. Add unrelated repositories and complete two independent
+reviews plus adjudication before using any of the queue as evaluation data.
+
+The 12 scenarios are authored and correlated. They are diagnostic development
+inputs, not an independent test set. The earlier 60-call ablation's 25% agreement
+matched the always-UNCERTAIN baseline. The October 21 model-selection run and the
+October 22 isolated comparisons are reported separately above; none establishes
+independent accuracy or the 85% goal. Passing software tests do not measure model
+accuracy.
 
 The new evaluator does not put expected labels or executed-rule verdicts into the prompt. It uses changed-file metadata, paired snapshot excerpts and saved retrieved evidence. The saved retrieval can reflect upstream declared traces and the controlled mutation wording remains visible; this is not a clean independent corpus. It reports complete-set accuracy, macro F1 over gold classes, valid response rate, uncertainty, decisive coverage, confusion counts, latency and majority/always-uncertain baselines. Invalid generated responses count as errors. Runtime failures without final text keep the set incomplete and unscored. Completed diagnostic scores, even above 75%, never set `target_status` to achieved.
 

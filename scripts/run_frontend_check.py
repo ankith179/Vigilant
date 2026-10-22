@@ -34,7 +34,8 @@ def main():
             sock.bind(('127.0.0.1', 0))
             port = sock.getsockname()[1]
         env = {**os.environ, 'VIGILANT_DB': 'sqlite:///'+str(database),
-               'VIGILANT_TEST_URL': f'http://127.0.0.1:{port}', 'VIGILANT_TEST_MUTATIONS': '1'}
+             'VIGILANT_TEST_URL': f'http://127.0.0.1:{port}',
+             'VIGILANT_TEST_MUTATIONS': os.getenv('VIGILANT_TEST_MUTATIONS', '1')}
         with (Path(tmp)/'server.log').open('w+') as log:
             server = subprocess.Popen([sys.executable, '-m', 'uvicorn', 'backend.app:app',
                                        '--host', '127.0.0.1', '--port', str(port)],

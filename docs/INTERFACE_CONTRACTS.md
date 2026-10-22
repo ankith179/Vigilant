@@ -17,7 +17,8 @@ The authoritative measurement records are immutable files under `experiments/`.
 | Evidence retrieval: `rag/evidence.py` | Query, current artifacts, graph/seeds and optional encoder | Lexical or hybrid excerpts plus graph/changed-artifact context under an excerpt budget |
 | Evidence verification: `rag/evidence.py` | Evidence entries and versioned artifacts | Missing-version or quote/range/hash errors; pipeline stops on mismatches |
 | Rules: `consistency/rules.py` | Changed artifacts, both snapshots and base relationships | Conservative review findings, affected IDs and attached endpoint evidence; model decisions remain separate |
-| Model provider: `llm/providers.py` | Query, verified excerpts, selected provider | Raw response, parsed decision, usage, latency and validation errors; insufficient/invalid evidence yields uncertainty |
+| Model context: `change_analysis/diff.py`, `llm/context.py` | Git/artifact deltas, question and selected evidence | Bounded change facts identify added/deleted/modified symbols and diff lines; they orient the model but are explicitly not proof or a finding |
+| Model provider: `llm/providers.py` | Question with Git-derived change facts, verified excerpts, selected provider | Raw response, parsed decision, usage, latency and validation errors; insufficient/invalid evidence yields uncertainty |
 | Investigation: `agents/workflow.py` | Store, repository, base/head, project, model and semantic flag | Twelve staged tool outcomes in the executed demonstration, changes, impact paths, trace candidates, evidence, rule findings and model decision |
 | Persistence: `database/store.py` | Canonical/versioned records and generated reports | SQLite-backed project, artifact, graph, evidence, finding, experiment and analysis records |
 | Presentation: `backend/app.py`, `frontend/src/main.jsx` | Stored records, filters and user actions | Local API and frontend pages; dashboard data comes from persisted records |
@@ -72,7 +73,14 @@ completed and audited datasets before writing the paired comparison reports.
 | `GET /api/reports/{run_id}` | Retrieve a persisted analysis or job record |
 | `GET /api/artifacts/{artifact_id}` | Retrieve a particular repository and commit version |
 | `GET /api/graph` | Retrieve a bounded graph for a repository and commit, including truncation flag |
+| `POST /api/chat` | Ask a bounded repository/commit-scoped question; retrieve and verify excerpts, then optionally call a selected provider. Returns source-backed citations, decision status, and explicit unverified semantic-support/confidence notes. Conversation history is client-held and is not persisted. |
 | Listing endpoints | Projects, repositories, commits, artifacts, traceability, changes, evidence, findings, reports, experiments and agents; filter by scope with offset/limit |
+
+The chat panel is read-only: it does not modify repository files or trigger a
+commit comparison. With provider `none`, it returns verified retrieved excerpts
+and explicitly says that no model was called. With a model provider, cited evidence
+IDs must resolve to the returned verified excerpts. This verifies source provenance,
+not semantic entailment; model-reported confidence is not calibrated accuracy.
 
 This is a local research application. Public multiuser deployment, authentication,
 authorization and production operations have not been validated. Hosted-provider

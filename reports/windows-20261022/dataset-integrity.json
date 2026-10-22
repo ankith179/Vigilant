@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "Prepared SMOS, iTrust, eTour_en, and RTMX-module-valid JSON datasets; duplicate IDs/links, dangling endpoints, and referenced raw-file SHA-256 verification. Does not review semantic label validity or licensing beyond recorded notices.",
+  "datasets": [
+    {
+      "dataset": "SMOS",
+      "sources": 67,
+      "targets": 100,
+      "links": 1044,
+      "dangling": 0,
+      "duplicate_sources": 0,
+      "duplicate_targets": 0,
+      "duplicate_links": 0,
+      "artifact_file_hashes_checked": 167,
+      "source_hash_errors": 0
+    },
+    {
+      "dataset": "iTrust",
+      "sources": 131,
+      "targets": 226,
+      "links": 286,
+      "dangling": 0,
+      "duplicate_sources": 0,
+      "duplicate_targets": 0,
+      "duplicate_links": 0,
+      "artifact_file_hashes_checked": 357,
+      "source_hash_errors": 0
+    },
+    {
+      "dataset": "eTour_en",
+      "sources": 58,
+      "targets": 116,
+      "links": 308,
+      "dangling": 0,
+      "duplicate_sources": 0,
+      "duplicate_targets": 0,
+      "duplicate_links": 0,
+      "artifact_file_hashes_checked": 174,
+      "source_hash_errors": 0
+    },
+    {
+      "dataset": "RTMX-module-valid",
+      "sources": 22,
+      "targets": 7,
+      "links": 22,
+      "dangling": 0,
+      "duplicate_sources": 0,
+      "duplicate_targets": 0,
+      "duplicate_links": 0,
+      "artifact_file_hashes_checked": 7,
+      "source_hash_errors": 0
+    }
+  ],
+  "totals": {
+    "sources": 278,
+    "targets": 449,
+    "links": 1660,
+    "artifact_file_hashes_checked": 705,
+    "errors": 0
+  }
+}

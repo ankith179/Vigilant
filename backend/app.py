@@ -7,6 +7,7 @@ from fastapi import FastAPI,HTTPException,Query,Request
 from fastapi.responses import JSONResponse,Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel,Field
+from typing import Literal
 from sqlalchemy import select,func
 from database.store import Store
 from ingestion.models import digest,now
@@ -21,6 +22,13 @@ class ImportInput(BaseModel):
  path:str|None=None;url:str|None=None;project_id:str='vigilant';revision:str='HEAD'
 class AnalysisInput(BaseModel):
  repository:str;base:str='HEAD~1';head:str='HEAD';model:str='none';semantic:bool=False;ollama_model:str|None=None
+class ChatTurn(BaseModel):
+ role:Literal['user','assistant'];content:str=Field(min_length=1,max_length=1000)
+class ChatInput(BaseModel):
+ repository:str;commit_id:str;question:str=Field(min_length=1,max_length=1200)
+ history:list[ChatTurn]=Field(default_factory=list,max_length=6)
+ model:Literal['none','local','ollama','omniroute','cloud','gemini','claude']='none'
+ ollama_model:str|None=None
 
 def create_app(store=None):
  store=store or Store();executor=ThreadPoolExecutor(max_workers=1);capacity=threading.BoundedSemaphore(20)
@@ -155,6 +163,38 @@ def create_app(store=None):
   items=retrieve(query,artifacts,k=limit)
   if verify(items,artifacts):raise HTTPException(500,'Stored evidence failed verification')
   return {'items':items,'method':'bm25','source_verified':True,'semantic_entailment_verified':False}
+ @app.post('/api/chat')
+ def chat(body:ChatInput):
+  from rag.evidence import retrieve,verify
+  from llm.providers import provider
+  artifacts=store.artifacts(body.repository,body.commit_id)
+  if not artifacts:raise HTTPException(404,'Repository snapshot not found')
+  try:
+   if body.model=='ollama':
+    from llm.ollama import MODELS_32GB,OllamaProvider
+    if body.ollama_model is not None and body.ollama_model not in MODELS_32GB:
+     raise HTTPException(400,'Select a supported 32 GB model')
+    engine=OllamaProvider(body.ollama_model)
+   else:engine=provider(body.model)
+  except ValueError as exc:raise HTTPException(400,str(exc))
+  history=body.history[-6:]
+  retrieval_query=' '.join([turn.content for turn in history if turn.role=='user']+[body.question])
+  items=retrieve(retrieval_query,artifacts,k=8)
+  errors=verify(items,artifacts)
+  if errors:raise HTTPException(500,'Retrieved evidence failed source verification')
+  turns='\n'.join(f'{turn.role}: {turn.content}' for turn in history)
+  question=('Prior conversation is context, not repository evidence.\n'+turns+'\nCurrent question: '+body.question)[-8000:]
+  result=engine.investigate(question,items)
+  decision=result['decision'];by_id={item['evidence_id']:item for item in items}
+  citations=[by_id[eid] for eid in decision['evidence_ids'] if eid in by_id]
+  answer=decision['reason'] or decision.get('uncertainty') or 'The available evidence does not establish an answer.'
+  if body.model=='none':
+   answer=f'No model was called. I found {len(items)} source-verified excerpts for this snapshot; select a reasoning provider for an interpretation.'
+  return {'answer':answer,'decision':decision,'citations':citations,'retrieved_evidence':items,
+   'source_verified':True,'semantic_entailment_verified':False,
+   'confidence_note':'Model-reported confidence is not calibrated accuracy.',
+   'validation_error':result['validation_error'],'provider':result['provider'],
+   'repository':body.repository,'commit_id':body.commit_id}
  @app.get('/api/reports/{run_id}/export')
  def export_report(run_id:str,format:str=Query('json',pattern='^(json|csv|html)$')):
   from backend.exports import export

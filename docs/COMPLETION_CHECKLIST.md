@@ -21,9 +21,9 @@ step. A row marked executed does not establish superior research performance.
 | 9. Ablation study | EXECUTED, NEGATIVE RESULT | Sixty generated observations. All five model variants return UNCERTAIN, with 25% authored-label agreement, equal to always-UNCERTAIN |
 | 10. Multiple datasets | EXECUTED WITH DISTINCT SCOPES | SMOS, iTrust, eTour English, RTMX module subset; SAFA evolution and controlled repository changes are reported separately |
 | 11. Existing-work comparison | TARGETED COMPARISON DRAFTED | Verified primary sources in separate survey and research paper; no external scores treated as reproduced results |
-| 12. Frontend | BUILT AND BROWSER VERIFIED | Chromium 153: all 13 pages, pagination, directed graph, evidence export, recovery, deterministic UI investigation and mobile layout passed; see `reports/frontend/2026-10-12T06-01-24-831Z/validation.json` |
+| 12. Frontend | BUILT AND BROWSER VERIFIED | Native Windows Chromium 156: all 13 research pages, pagination, graph, evidence/report exports, recovery, deterministic investigation, repository chat and 390px mobile layout passed; see `reports/frontend/2026-10-22T06-50-58-933Z/validation.json` |
 | 13. Reproducibility | IMPLEMENTED; WINDOWS UNVERIFIED | Pinned dependencies/models/data; exact-run reuse, restore scripts, task ledger, archive manifests and Windows scripts |
-| 14. Testing | 53 TESTS PASSED | Saved pipeline, parser, Git, evidence, API, integration and continuation logs. Linux browser checks passed; user-machine checks remain separate |
+| 14. Testing | 88 TESTS PASSED | Python parser, Git, evidence, API/chat, Git change-facts, review-pool and integration tests pass on native Windows with UTF-8 mode; production frontend build and browser acceptance pass |
 | 15. Tables and figures | MEASURED OUTPUTS COMPLETE | `reports/results/`, `reports/rag/`, `reports/ablation/`; actual tables and scientific plots generated and visually checked |
 | 16. Thesis | TECHNICAL DRAFT COMPLETE | 27-page PDF, editable source and audited result-derived tables; author/institution/supervisor details and prescribed format remain external |
 | 17. Separate survey paper | TARGETED DRAFT COMPLETE | Four-page IEEE draft with nine research records, two model cards, taxonomy and explicit review limitations; broader full-text review pending |

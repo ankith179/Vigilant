@@ -12,7 +12,7 @@ fs.mkdirSync(destination, {recursive:true});
 const result = {started_at:new Date().toISOString(), status:'RUNNING', origin,
   platform:process.platform, pages:[], checks:[], errors:[], screenshots:[],
   source_hashes:{}, mutations:process.env.VIGILANT_TEST_MUTATIONS === '1'};
-for (const name of ['frontend/src/main.jsx','frontend/src/Graph.jsx','frontend/src/style.css','backend/app.py','database/store.py']) {
+for (const name of ['frontend/src/main.jsx','frontend/src/Graph.jsx','frontend/src/Chat.jsx','frontend/src/chat.css','frontend/src/style.css','backend/app.py','database/store.py']) {
   result.source_hashes[name] = require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root, name))).digest('hex');
 }
 let browser;
@@ -143,6 +143,22 @@ let browser;
   assert(await page.getByLabel('Workspace access token').isVisible());
   await page.locator('summary').filter({hasText:'Workspace access'}).click();
   result.checks.push('JSON/CSV/HTML report downloads, free OmniRoute selector and access settings');
+  await page.getByRole('button', {name:'Open VIGILANT chat', exact:true}).click();
+  await page.getByLabel('Chat repository', {exact:true}).selectOption(report.repository);
+  await page.getByLabel('Chat snapshot', {exact:true}).selectOption(report.commit_id);
+  await page.getByLabel('Chat reasoning provider', {exact:true}).selectOption('none');
+  await page.getByLabel('Question', {exact:true}).fill('What repository evidence is available for this snapshot?');
+  const chatResponse = page.waitForResponse(r => new URL(r.url()).pathname === '/api/chat' && r.request().method() === 'POST');
+  await page.getByRole('button', {name:'Send question', exact:true}).click();
+  const chatResult = await (await chatResponse).json();
+  assert.equal(chatResult.source_verified, true);
+  assert.equal(chatResult.semantic_entailment_verified, false);
+  assert(chatResult.retrieved_evidence.length > 0);
+  await page.getByText(/No model was called/).waitFor();
+  await page.getByText('Retrieved evidence, not claimed as support', {exact:true}).waitFor();
+  await shot('chat-assistant');
+  await page.getByRole('button', {name:'Close chat', exact:true}).click();
+  result.checks.push('Repository-scoped chat retrieves verified excerpts and labels no-model/semantic-support limits');
   // An explicit injected transport failure exercises UI recovery only, never accuracy.
   await page.route('**/api/traceability?*', route => route.fulfill({status:503, contentType:'application/json', body:'{"detail":"Validation transport failure"}'}));
   await visit('Traceability');
@@ -182,7 +198,11 @@ let browser;
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth+1), 'No mobile document overflow');
   await visit('Knowledge Graph'); await shot('mobile-graph');
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth+1));
-  result.checks.push('390px mobile dashboard and graph without document overflow');
+  await page.getByRole('button', {name:'Open VIGILANT chat', exact:true}).click();
+  assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth+1), 'Chat panel must fit mobile viewport');
+  await shot('mobile-chat');
+  await page.getByRole('button', {name:'Close chat', exact:true}).click();
+  result.checks.push('390px mobile dashboard, graph and chat without document overflow');
   assert.deepEqual(result.errors, []);
   result.status = 'PASSED';
 })().catch(error => {result.status='FAILED'; result.failure=error.stack; process.exitCode=1; console.error(error);})

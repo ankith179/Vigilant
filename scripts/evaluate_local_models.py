@@ -10,6 +10,7 @@ sys.path.insert(0,str(ROOT))
 from ingestion.models import Artifact, Status
 from typing import get_args
 from rag.evidence import paired_versions, verify
+from change_analysis.diff import format_change_facts
 from llm.ollama import OllamaProvider, MODELS_32GB
 from evaluation.resume import atomic_json, fingerprint
 
@@ -32,9 +33,10 @@ def diagnostic_dataset():
             ev=list(unique.values())
             errors=verify(ev,before+after)
             if errors:raise ValueError(errors)
+            change_facts=format_change_facts(report['changes'])
             cases.append({'case_id':path.stem,'question':'Assess consistency around '+contract['file']+
                 '. Base '+contract['base_commit']+'; head '+contract['change_commit']+
-                '. Identify supported contract, caller, or test problems.', 'evidence':ev,
+                '. Identify supported contract, caller, or test problems.\nGit-derived change facts (not findings):\n'+change_facts, 'evidence':ev,
                 'expected_status':contract['status']})
     return {'split':'diagnostic','label_source':'authored correlated mutations, not independently reviewed','cases':cases}
 
@@ -47,6 +49,15 @@ def validate_dataset(data,models):
     for c in cases:
         if c['expected_status'] not in get_args(Status):raise ValueError('Invalid gold label')
         if not isinstance(c['question'],str) or not isinstance(c['evidence'],list):raise ValueError('Invalid case inputs')
+
+def add_git_change_facts(data,report_dir=None):
+    report_dir=Path(report_dir) if report_dir else ROOT/'data/changebench'
+    for case in data['cases']:
+        report_path=report_dir/(case['case_id']+'-report.json')
+        if not report_path.is_file():raise ValueError('No saved change report for '+case['case_id'])
+        report=json.loads(report_path.read_text(encoding='utf-8'))
+        case['question']+='\nGit-derived change facts (not findings):\n'+format_change_facts(report['changes'])
+    return data
 
 
 def metrics(cases,rows):
@@ -68,7 +79,7 @@ def metrics(cases,rows):
 
 def run(data,models,output,max_calls,provider_factory=OllamaProvider):
     validate_dataset(data,models);output=Path(output);summaries=[];calls=0
-    sources={p:fingerprint((ROOT/p).read_text()) for p in ['llm/context.py','llm/providers.py','llm/ollama.py','ingestion/models.py','scripts/evaluate_local_models.py']}
+    sources={p:fingerprint((ROOT/p).read_text()) for p in ['change_analysis/diff.py','llm/context.py','llm/providers.py','llm/ollama.py','ingestion/models.py','scripts/evaluate_local_models.py']}
     for model in models:
         engine=provider_factory(model)
         try:identity=engine.preflight()
@@ -107,9 +118,15 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--models',nargs='+',choices=MODELS_32GB,default=list(MODELS_32GB))
     p.add_argument('--dataset',type=Path);p.add_argument('--max-calls',type=int,default=6)
     p.add_argument('--output',type=Path,default=ROOT/'experiments/local-model-comparison');p.add_argument('--prepare-only',action='store_true')
+    p.add_argument('--include-git-change-facts',action='store_true',help='Append Git-derived change facts to a supplied diagnostic dataset using matching saved ChangeBench reports; does not include expected labels in the prompt')
     a=p.parse_args()
     if not 1<=a.max_calls<=1000:p.error('--max-calls must be 1..1000')
-    data=json.loads(a.dataset.read_text()) if a.dataset else diagnostic_dataset();validate_dataset(data,a.models)
+    data=json.loads(a.dataset.read_text(encoding='utf-8')) if a.dataset else diagnostic_dataset()
+    if a.include_git_change_facts:
+        if not a.dataset: p.error('--include-git-change-facts requires --dataset')
+        try: data=add_git_change_facts(data)
+        except ValueError as exc: p.error(str(exc))
+    validate_dataset(data,a.models)
     atomic_json(a.output/'dataset.json',data)
     if a.prepare_only:print(json.dumps({'cases':len(data['cases']),'split':data['split'],'inference':'NOT_RUN'}));return 0
     report=run(data,a.models,a.output,a.max_calls);print(json.dumps(report,indent=2))

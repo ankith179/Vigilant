@@ -1,0 +1,114 @@
+{
+  "started_at": "2026-10-22T06:50:58.933Z",
+  "status": "PASSED",
+  "origin": "http://127.0.0.1:63395",
+  "platform": "win32",
+  "pages": [
+    {
+      "page": "Dashboard",
+      "stats": {
+        "projects": 13,
+        "repositories": 16,
+        "commits": 29,
+        "artifacts": 32706,
+        "trace_links": 57169,
+        "graph_nodes": 32719,
+        "graph_edges": 56879,
+        "embeddings": 0,
+        "changes": 44,
+        "evidence": 175,
+        "analysis_runs": 14,
+        "findings": 44,
+        "agent_runs": 14,
+        "experiments": 14,
+        "metrics": 0
+      }
+    },
+    {
+      "page": "Projects",
+      "rows": 13
+    },
+    {
+      "page": "Repository",
+      "rows": 16
+    },
+    {
+      "page": "Artifacts",
+      "rows": 100
+    },
+    {
+      "page": "Traceability",
+      "rows": 100
+    },
+    {
+      "page": "Knowledge Graph",
+      "rows": 120
+    },
+    {
+      "page": "Change Analysis",
+      "rows": 11
+    },
+    {
+      "page": "Impact Analysis",
+      "rows": 11
+    },
+    {
+      "page": "Consistency Findings",
+      "rows": 15
+    },
+    {
+      "page": "Evidence",
+      "rows": 24
+    },
+    {
+      "page": "Agent Investigation",
+      "rows": 1
+    },
+    {
+      "page": "Experiments",
+      "rows": 14
+    },
+    {
+      "page": "Reports",
+      "rows": 1
+    }
+  ],
+  "checks": [
+    "All 13 pages show persisted data without application errors",
+    "Pagination, local filtering, keyboard record selection and snapshot provenance",
+    "Directed graph, relationship filter and keyboard-accessible provenance",
+    "Evidence quote/hash/range and exact JSON export",
+    "Three local model choices and provider switching",
+    "JSON/CSV/HTML report downloads, free OmniRoute selector and access settings",
+    "Repository-scoped chat retrieves verified excerpts and labels no-model/semantic-support limits",
+    "Transport error shown and real API refresh recovers",
+    "Project creation and complete deterministic investigation through UI on isolated database",
+    "390px mobile dashboard, graph and chat without document overflow"
+  ],
+  "errors": [],
+  "screenshots": [
+    "dashboard.png",
+    "knowledge-graph.png",
+    "evidence.png",
+    "chat-assistant.png",
+    "report-detail.png",
+    "mobile-dashboard.png",
+    "mobile-graph.png",
+    "mobile-chat.png"
+  ],
+  "source_hashes": {
+    "frontend/src/main.jsx": "300277139408b9afd9b049d97c99ff001bdcda7979c23155c290986bf429966e",
+    "frontend/src/Graph.jsx": "42f9ed3ed3804dafdc3ab3d314d9fdde81a03399b103a8a2daee5a86182f8926",
+    "frontend/src/Chat.jsx": "039c2dac74b97c718cad4e44e010f81c65396ce8deaf6351c6ede25915c068cf",
+    "frontend/src/chat.css": "1c0a0bc1da957d76676e43d72e6cf2d98e2723fe69752ae522be6eb7a2fbb9ff",
+    "frontend/src/style.css": "17346d97a7c72e7580671cdcc3df10eac35a3c4fa28b849748a4c25f42d874a3",
+    "backend/app.py": "93751a1c552535de910f8092fc9699ab7ee7f05834a9049b6eee25be897b7d80",
+    "database/store.py": "f0981f7c26bd9544f59a0617390af50ae8a19ea5ec4b374e9d588a4abb3e133e"
+  },
+  "mutations": true,
+  "browser": "156.0.8078.4",
+  "selected_run": "dce5609c0e2348c6a3b2ed89a1420aed",
+  "repository": "fcbdf418593a45ccfd9e391227aa8b9b53b2591447e0a001d1876eb3baabdef1",
+  "commit": "892a3d5213e950be40467f4a0c8cfb33d12e8132",
+  "finished_at": "2026-10-22T06:51:34.631Z"
+}

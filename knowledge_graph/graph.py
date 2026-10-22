@@ -5,9 +5,9 @@ from ingestion.models import digest
 
 def build_graph(store,artifacts,declared=()):
  g=nx.MultiDiGraph();by={a.artifact_id:a for a in artifacts};names=defaultdict(list);files={a.file_path:a for a in artifacts if not a.symbol};edges={}
- def edge(s,t,relation,method='static',confidence=1.):
+ def edge(s,t,relation,method='static',confidence=1.,is_declared=False):
   if s==t or s not in by or t not in by:return
-  a=by[s];key=digest(s,t,relation,a.commit_id,method);row={'id':key,'source_artifact':s,'target_artifact':t,'relation_type':relation,'method':method,'confidence':confidence,'score':confidence,'evidence':[s,t],'repository':a.repository,'project_id':a.project_id,'commit_id':a.commit_id};edges[key]=row;g.add_edge(s,t,key=key,**row)
+  a=by[s];key=digest(s,t,relation,a.commit_id,method);row={'id':key,'source_artifact':s,'target_artifact':t,'relation_type':relation,'method':method,'confidence':confidence,'score':confidence,'is_declared':is_declared,'evidence':[s,t],'repository':a.repository,'project_id':a.project_id,'commit_id':a.commit_id};edges[key]=row;g.add_edge(s,t,key=key,**row)
  routes=defaultdict(list)
  for a in artifacts:
   g.add_node(a.artifact_id,artifact_type=a.artifact_type,file_path=a.file_path)
@@ -29,8 +29,10 @@ def build_graph(store,artifacts,declared=()):
    for imp in a.metadata.get('imports',[]):
     module=imp.replace('.','/').lstrip('/');targets=[b for p,b in files.items() if p.endswith(module+'.py') or p.endswith(module+'/__init__.py') or p.endswith(module+'.java')]
     if len(targets)==1:edge(a.artifact_id,targets[0].artifact_id,'IMPORTS','module-path',.9)
- for row in declared:edge(row['source_artifact'],row['target_artifact'],row['relation_type'],row.get('method','declared-trace'),row.get('confidence',1.))
- for k,row in edges.items():store.put('graph_edges',k,row);store.put('trace_links',k,row)
+ for row in declared:edge(row['source_artifact'],row['target_artifact'],row['relation_type'],row.get('method','declared-trace'),row.get('confidence',1.),is_declared=True)
+ for k,row in edges.items():
+  persisted={key:value for key,value in row.items() if key!='is_declared'}
+  store.put('graph_edges',k,persisted);store.put('trace_links',k,persisted)
  return g,list(edges.values())
 
 def impact(g,seeds,depth=2,containment=False):

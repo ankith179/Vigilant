@@ -2,7 +2,7 @@
 from fastapi.testclient import TestClient
 from backend.app import create_app
 from database.store import Store
-from ingestion.models import digest
+from ingestion.models import artifact,digest
 
 
 def test_pagination_ends_at_exact_multiple_and_preserves_scope():
@@ -63,3 +63,48 @@ def test_batched_primary_keys_cross_sqlite_parameter_boundary():
     assert len(store.get_many('graph_nodes', map(str, range(805)))) == 805
     assert store.get_many('graph_nodes', []) == []
     assert len(store.get_many('graph_nodes', ['1', '1', 'missing'])) == 1
+
+
+def test_chat_returns_verified_context_without_claiming_model_support():
+    store = Store('sqlite:///:memory:')
+    source = artifact('p','repo','commit','src/service.py','source_file','','def fetch_user():\n    return "active"')
+    store.put('artifacts', digest(source.artifact_id, source.commit_id), source.model_dump())
+    payload = {'repository':'repo','commit_id':'commit','question':'Where is fetch_user defined?'}
+    with TestClient(create_app(store)) as client:
+        response = client.post('/api/chat', json=payload)
+        assert response.status_code == 200
+        result = response.json()
+        assert result['provider'] == 'none'
+        assert result['source_verified'] is True
+        assert result['semantic_entailment_verified'] is False
+        assert result['citations'] == []
+        assert result['retrieved_evidence'][0]['quote'] == source.content
+        assert result['retrieved_evidence'][0]['content_hash'] == source.content_hash
+        assert 'No model was called' in result['answer']
+        assert client.post('/api/chat', json={**payload,'commit_id':'missing'}).status_code == 404
+        assert client.post('/api/chat', json={**payload,'history':[{'role':'user','content':'x'}]*7}).status_code == 422
+
+
+def test_chat_maps_model_citations_to_verified_excerpts(monkeypatch):
+    import llm.providers
+    store = Store('sqlite:///:memory:')
+    source = artifact('p','repo','commit','src/service.py','source_file','','def fetch_user():\n    return "active"')
+    store.put('artifacts', digest(source.artifact_id, source.commit_id), source.model_dump())
+
+    class StubProvider:
+        name = 'test-provider'
+        def investigate(self, question, evidence):
+            return {'provider':self.name,'validation_error':None,'decision':{
+                'decision':'AFFECTED','consistency':'AFFECTED','confidence':0.5,
+                'evidence_ids':[evidence[0]['evidence_id']],
+                'affected_artifacts':[source.artifact_id],'reason':'The cited function matches the question.',
+                'uncertainty':''}}
+
+    monkeypatch.setattr(llm.providers,'provider',lambda _:StubProvider())
+    payload={'repository':'repo','commit_id':'commit','question':'Where is fetch_user defined?','model':'local'}
+    with TestClient(create_app(store)) as client:
+        result=client.post('/api/chat',json=payload).json()
+    assert result['provider']=='test-provider'
+    assert result['citations'][0]['artifact_id']==source.artifact_id
+    assert result['citations'][0]['quote']==source.content
+    assert result['semantic_entailment_verified'] is False

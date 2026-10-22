@@ -7,7 +7,7 @@ from rag.evidence import evidence,paired_versions,verify
 from llm.context import request
 from llm.providers import LLMProvider,uncertain
 from llm.ollama import OllamaProvider
-from scripts.evaluate_local_models import run,metrics,validate_dataset
+from scripts.evaluate_local_models import run,metrics,validate_dataset,add_git_change_facts
 from scripts.export_graph import export
 
 
@@ -163,6 +163,43 @@ def test_balanced_context_keeps_changed_code_caller_and_test():
     assert {'api.py','client.py','tests/test_api.py','requirements.md'} <= {e['file'] for e in selected}
     assert {e['commit'] for e in selected if e['file']=='api.py'}=={'base','head'}
     assert report['semantic_sufficiency']=='UNREVIEWED'
+
+
+def test_git_change_facts_surface_deleted_symbol_without_gold_label(tmp_path):
+    from change_analysis.diff import format_change_facts
+    changes={'artifacts':[{'kind':'deleted','artifact_type':'test_method','file':'tests/test_helpers.py','symbol':'test_redirect_no_app'}],
+             'files':[{'status':'M','old_path':'tests/test_helpers.py','new_path':'tests/test_helpers.py',
+                       'patch':'@@ -164,4 +163,0 @@\n-def test_redirect_no_app():\n-    assert True'}]}
+    summary=format_change_facts(changes)
+    assert 'deleted test_method tests/test_helpers.py::test_redirect_no_app' in summary
+    assert 'Diff line: -def test_redirect_no_app():' in summary
+    data={'cases':[{'case_id':'06-test-deleted','question':'Assess the snapshot.','expected_status':'MISSING_TEST','evidence':[]}]}
+    report_dir=tmp_path/'reports';report_dir.mkdir()
+    (report_dir/'06-test-deleted-report.json').write_text(json.dumps({'changes':changes}),encoding='utf-8')
+    updated=add_git_change_facts(data,report_dir)
+    assert 'test_redirect_no_app' in updated['cases'][0]['question']
+    assert 'MISSING_TEST' not in updated['cases'][0]['question']
+    with pytest.raises(ValueError):add_git_change_facts({'cases':[{'case_id':'missing','question':'','evidence':[]}]},report_dir)
+
+
+def test_independent_review_candidate_builder_exports_only_unlabeled_source_changes(tmp_path):
+    import subprocess
+    from scripts.prepare_independent_review import collect_repo,round_robin
+    repo=tmp_path/'sample';repo.mkdir()
+    def git(*args):
+        return subprocess.run(['git','-C',str(repo),*args],check=True,capture_output=True)
+    git('init');git('config','user.name','Review fixture');git('config','user.email','review@example.invalid')
+    (repo/'app.py').write_text('value = 1\n',encoding='utf-8')
+    (repo/'README.md').write_text('Initial docs\n',encoding='utf-8')
+    git('add','.');git('commit','-m','baseline')
+    (repo/'app.py').write_text('value = 2\n',encoding='utf-8')
+    git('add','app.py');git('commit','-m','change behavior')
+    pool=collect_repo(repo)
+    assert len(pool)==1
+    assert pool[0]['changed_files']==['app.py']
+    assert 'expected_status' not in pool[0] and 'POTENTIAL_INCONSISTENCY' not in json.dumps(pool[0])
+    assert pool[0]['base_commit']!=pool[0]['head_commit']
+    assert len(round_robin([pool,[]],200))==1
 
 
 def test_api_model_selection_reaches_worker(tmp_path,monkeypatch):

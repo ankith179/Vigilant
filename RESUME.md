@@ -1,4 +1,39 @@
-# Latest checkpoint - native Windows, 21 October 2026
+# Latest checkpoint - native Windows, 22 October 2026
+
+The 2026-10-22 reliability audit is in `reports/windows-20261022/AUDIT.md`.
+Dataset endpoint/duplicate/hash checks passed for the four prepared retrieval sets
+(278 sources, 449 targets, 1,660 links, 705 raw-file hashes). Saved metric and RAG
+audits also pass (23 method rows, 1,484 query rows, 251 RAG generations).
+
+One rule-engine fix prevents inferred graph-edge loss from being labeled a confirmed
+`BROKEN_TRACE`; only explicitly declared edges receive that status. The declared
+marker is transient to preserve immutable graph payloads. Regressions cover both
+cases. A read-only repository/snapshot chat panel and `/api/chat` endpoint now
+retrieve verified excerpts, optionally call a configured provider, and disclose
+that semantic support is not verified. Browser acceptance passed at desktop and
+390px mobile widths in evidence-only mode (`reports/frontend/2026-10-22T06-50-58-933Z/validation.json`). Final Windows run: 88 tests passed,
+frontend build passed, touched-file diagnostics clean. Use `.venv/Scripts/python.exe -X utf8`.
+
+Do not rerun or alter the 36 saved model generations. The best remains Qwen2.5 Coder
+14B originally scored 1/12 on authored, correlated diagnostics. Follow-up scores
+are 2/12 with evidence-v2 and 4/12 with Git-derived change facts; neither beats the
+50% majority baseline. Rules-only development agreement is 11/12 exact status sets
+on these same cases, not independent accuracy. The requested independent test set
+is 200+ cases; at exactly 200, 182 exact matches gives 91% observed. It is NOT RUN
+or established.
+See `reports/windows-20261022/accuracy-debug.json`. Chat history is client-only;
+semantic citation support remains unverified. Independent labels and semantic
+review remain unfinished. The blind review queue has 79 unlabelled source-change
+candidates, short by 121: `reports/independent-review-20261022/`.
+
+Only pytest caches were removed. Preserve `.venv`, `.runtime`, datasets, databases,
+historical experiments, reports, and submission drafts. The refreshed portable
+package must keep the existing SQLite snapshots (`scripts/checkpoint.py
+--preserve-snapshots`).
+
+---
+
+# Prior checkpoint - native Windows, 21 October 2026
 
 Setup and requested local evaluation are complete in this extracted project. The app is running at http://127.0.0.1:8000. After a reboot use Start-Ollama-Local.ps1, then Start-VIGILANT-Local.ps1 in another terminal.
 

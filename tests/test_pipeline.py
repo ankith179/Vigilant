@@ -51,6 +51,48 @@ def test_contradictory_model_labels():
 def test_no_model_is_uncertain():assert NoLLMProvider().investigate('x',[])['decision']['decision']=='UNCERTAIN'
 def test_graph_rules():
  before=extract('p','r','a','x.py','def f():\n return 1\ndef test_f():\n assert f()==1');after=extract('p','r','b','x.py','def f():\n return 2\ndef test_f():\n assert f()==1');s=Store('sqlite:///:memory:');g,edges=build_graph(s,before);f=next(a for a in before if a.symbol=='f');t=next(a for a in before if a.symbol=='test_f');assert t.artifact_id in impact(g,{f.artifact_id});out=check([{'artifact_id':f.artifact_id}],before,after,edges);assert any(x['status']=='POTENTIAL_INCONSISTENCY' for x in out)
+
+def test_inferred_lost_edge_is_not_confirmed_broken_trace():
+ before=extract('p','r','a','x.py','def removed():\n return 1\ndef caller():\n return removed()')
+ after=extract('p','r','b','x.py','def caller():\n return removed()')
+ store=Store('sqlite:///:memory:');_,edges=build_graph(store,before)
+ lost=next(edge for edge in edges if edge['relation_type']=='CALLS')
+
+ findings=check([{'artifact_id':lost['target_artifact']}],before,after,[lost])
+
+ assert any(item['rule']=='inferred-edge-endpoint-removed' and item['status']=='POTENTIAL_INCONSISTENCY' for item in findings)
+ assert not any(item['status']=='BROKEN_TRACE' for item in findings)
+
+def test_declared_lost_edge_is_broken_trace():
+ requirement=artifact('p','r','a','requirements/REQ-1.md','requirement','','Must exist')
+ implementation=artifact('p','r','a','src.py','source_file','','def f(): pass')
+ after=[requirement]
+ store=Store('sqlite:///:memory:')
+ _,edges=build_graph(store,[requirement,implementation],[{'source_artifact':requirement.artifact_id,'target_artifact':implementation.artifact_id,'relation_type':'IMPLEMENTS'}])
+ assert 'is_declared' not in store.get('graph_edges',edges[0]['id'])
+ build_graph(store,[requirement,implementation],[{'source_artifact':requirement.artifact_id,'target_artifact':implementation.artifact_id,'relation_type':'IMPLEMENTS'}])
+
+ findings=check([{'artifact_id':implementation.artifact_id}], [requirement,implementation], after, edges)
+
+ assert any(item['rule']=='deleted-endpoint' and item['status']=='BROKEN_TRACE' for item in findings)
+
+def test_deleted_implementation_does_not_report_test_as_unchanged():
+ before=extract('p','r','a','x.py','def f():\n return 1\ndef test_f():\n assert f()==1')
+ after=extract('p','r','b','x.py','def test_f():\n assert f()==1')
+ store=Store('sqlite:///:memory:');_,edges=build_graph(store,before)
+ implementation=next(a for a in before if a.symbol=='f')
+ findings=check([{'artifact_id':implementation.artifact_id,'kind':'deleted'}],before,after,edges)
+ assert not any(item['rule']=='implementation-changed-test-unchanged' for item in findings)
+
+def test_last_deleted_test_is_reported_as_missing_test_once():
+ before=extract('p','r','a','x.py','def f():\n return 1\ndef test_f():\n assert f()==1')
+ after=[a for a in before if a.symbol!='test_f']
+ store=Store('sqlite:///:memory:');_,edges=build_graph(store,before)
+ test=next(a for a in before if a.symbol=='test_f')
+ implementation=next(a for a in before if a.symbol=='f')
+ findings=check([{'artifact_id':test.artifact_id,'kind':'deleted'}],before,after,edges)
+ assert sum(item['status']=='MISSING_TEST' for item in findings)==1
+ assert not any(item['status']=='BROKEN_TRACE' and implementation.artifact_id in item['affected_artifacts'] for item in findings)
 def test_real_truth_endpoints():
  from scripts.prepare_data import validate
  for p in Path('data/prepared').glob('*.json'):

@@ -1,0 +1,14 @@
+{
+  "status": "INSUFFICIENT_CANDIDATES",
+  "candidate_count": 79,
+  "minimum_required": 200,
+  "shortfall": 121,
+  "label_status": "NO_LABELS_CREATED",
+  "split_status": "NOT_ASSIGNED; group by repository/change family before train/validation/test split.",
+  "repository_counts": {
+    "express": 9,
+    "flask": 39,
+    "fullstack": 8,
+    "petclinic": 23
+  }
+}

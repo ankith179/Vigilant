@@ -1,4 +1,26 @@
-# Native Windows update - native Windows, 21 October 2026
+# Native Windows update - native Windows, 22 October 2026
+
+The current Windows working tree includes the reliability audit and a bounded,
+read-only repository/snapshot chat assistant. It uses verified retrieval, can call
+an explicitly selected provider, and identifies semantic citation support as
+unverified. Conversation history is session-only. The Agent Investigation page
+remains a separate record view.
+
+The inferred-edge rule now downgrades a lost heuristic graph edge to
+`POTENTIAL_INCONSISTENCY`; `BROKEN_TRACE` is reserved for explicitly declared
+relationships. Eighty-eight tests, production build, and mutation-enabled browser
+acceptance (including chat and 390px mobile layout) pass. Dataset, metric and RAG
+audits are recorded under `reports/windows-20261022/`. Two separate 12-call local
+diagnostic comparisons are also preserved; neither establishes independent accuracy.
+
+Accuracy remains unestablished: original best saved model score is 1/12; follow-ups
+scored 2/12 and 4/12. Rules-only agreement is 11/12 on the same authored development
+cases and is not held-out accuracy. Independent labels, semantic evidence review,
+and C++/Swift adapters remain unfinished. See `reports/windows-20261022/AUDIT.md`.
+
+---
+
+# Prior native Windows update - 21 October 2026
 
 Setup and requested local evaluation are complete in this extracted project. The app is running at http://127.0.0.1:8000. After a reboot use Start-Ollama-Local.ps1, then Start-VIGILANT-Local.ps1 in another terminal.
 
@@ -22,7 +44,7 @@ The implementation and frozen experiments are complete for their stated scope. T
 - Sixty-call consistency ablation: all variants 100% UNCERTAIN, 25% authored-label agreement, equal to always-UNCERTAIN. No classification improvement established.
 - Full local-model investigation with 12 tools and 24 verified excerpts; model UNCERTAIN. Fifteen rule findings share a route-renaming cause.
 - Sixty-two passing tests and a real-data frontend production build.
-- Chromium browser acceptance passed across all 13 pages, with graph navigation, evidence export, error recovery, isolated UI investigation and mobile layout checks.
+- Chromium browser acceptance passed across all 13 pages, with graph navigation, evidence export, error recovery, isolated UI investigation and mobile layout checks. The 22 October run additionally validates repository chat and its mobile layout.
 - Complete measured tables and visually inspected scientific plots, raw outputs and reproducibility records.
 - Reviewable thesis and separate paper drafts with verified source references and actual mixed/negative findings.
 - Fourteen-slide demonstration deck with editable charts/tables, graph relationships and the recorded API-change evidence.
@@ -40,7 +62,7 @@ Results are mixed. Top-five reranking cannot improve Recall@5/@10; RTMX has only
 
 ## Remaining work
 
-Linux browser acceptance is verified; actual Windows execution remains unverified. Drafts still need external review and institutional completion. External requirements include independent semantic/label review, author and institutional details, final formatting, plagiarism review, selected venue/indexing verification and actual Windows execution. Other provider adapters have not been experimentally evaluated. No submission is authorized.
+Native Windows execution and browser acceptance are verified for the documented local scope. Drafts still need external review and institutional completion. External requirements include independent semantic/label review, author and institutional details, final formatting, plagiarism review, and selected venue/indexing verification. Other provider adapters have not been experimentally evaluated. No submission is authorized.
 
 See PROJECT_STATE.json, RESUME.md, docs/COMPLETION_CHECKLIST.md and reports/results/RESULTS.md. All authored work remains under this project root.
 

@@ -1,0 +1,21 @@
+{
+  "model": {
+    "model": "qwen2.5-coder:14b",
+    "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+    "size_bytes": 8988124298,
+    "quantization": "Q4_K_M",
+    "supports_thinking": false,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "temperature": 0,
+    "think": false
+  },
+  "dataset_sha256": "120fe3f48e8d8193e6d68fac1d191d5f76b679a4ac0a7bdab4b977a37536e716",
+  "sources": {
+    "llm/context.py": "4a3b3b3f4ddef1060f4876a9681e8649dfbd1f40c5c9e5325b00f9ea31764f08",
+    "llm/providers.py": "dec7712d7b588c78795c47268b513ccf23f9b10cabc12c376ebcc927aa6eec73",
+    "llm/ollama.py": "5e2b09dd42b945fe57018cf89dd0a005e160e4e89023fc09929e89fd4e557fca",
+    "ingestion/models.py": "f3a8d65f40ad5a99540d9088c03ab1e06f13d260abed994b64febcf7b0610ef9",
+    "scripts/evaluate_local_models.py": "3d104346fd3982585a867931e7e043eb972e30ee3370e892b8878eeeea013f09"
+  }
+}

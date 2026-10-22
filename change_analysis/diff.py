@@ -1,6 +1,19 @@
 import re
 from ingestion.git import git,revision
 
+def format_change_facts(changes,max_chars=2400):
+ facts=[]
+ for item in changes.get('artifacts',[])[:24]:
+  symbol='::'+item['symbol'] if item.get('symbol') else ''
+  facts.append(f"Artifact delta: {item.get('kind','changed')} {item.get('artifact_type','artifact')} {item.get('file','')}"+symbol)
+ for item in changes.get('files',[])[:12]:
+  old=item.get('old_path') or '';new=item.get('new_path') or ''
+  facts.append(f"Git file status {item.get('status','?')}: {old}"+(f" -> {new}" if new!=old else ''))
+  changed=[line for line in item.get('patch','').splitlines() if line.startswith(('+','-')) and not line.startswith(('+++','---'))]
+  facts.extend('Diff line: '+line[:240] for line in changed[:12])
+ text='\n'.join(facts)
+ return text[:max_chars]
+
 def detect(repo,base,head,before,after):
  base=revision(repo,base);head=revision(repo,head);fields=git(repo,'diff','--name-status','-z','-M',base,head,binary=True).decode().split('\0');files=[];i=0
  while i<len(fields) and fields[i]:

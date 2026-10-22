@@ -5,7 +5,7 @@ from ingestion.git import revision
 from ingestion.service import import_repository
 from knowledge_graph.graph import build_graph,impact
 from rag.evidence import retrieve,evidence,verify,paired_versions
-from change_analysis.diff import detect
+from change_analysis.diff import detect,format_change_facts
 from consistency.rules import check
 from traceability.recovery import recover
 from retrieval.index import Encoder
@@ -25,7 +25,7 @@ def analyze(store,repo,base,head='HEAD',project='vigilant',model='none',semantic
   seeds={x['artifact_id'] for x in changes['artifacts']}|{x['new_artifact_id'] for x in changes['artifacts'] if x.get('new_artifact_id')};paths=stage('Change Investigator','two-snapshot-impact',lambda:impact(nx.compose(bg,hg),seeds))
   encoder=Encoder() if semantic else None
   candidates=stage('Traceability Investigator','bounded-trace-recovery',lambda:recover(store,after,encoder))
-  query='Assess changes to '+', '.join((x['symbol'] or x['file']) for x in changes['artifacts'][:8])+'. Does existing caller/test evidence need review?'
+  query='Assess changes to '+', '.join((x['symbol'] or x['file']) for x in changes['artifacts'][:8])+'. Does existing caller/test evidence need review?\nGit-derived change facts (not findings):\n'+format_change_facts(changes)
   ev=stage('Evidence Investigator','retrieve-grounded-context',lambda:retrieve(query,after,hg,seeds,encoder))
   ev=paired_versions(changes,before,after)+ev
   for a in before:

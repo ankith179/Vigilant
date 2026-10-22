@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-22",
+  "scope": "Twelve authored, correlated ChangeBench diagnostic cases. Not independent held-out evaluation.",
+  "baselines": {
+    "majority_label": {
+      "correct": 6,
+      "total": 12,
+      "accuracy": 0.5
+    },
+    "always_uncertain": {
+      "correct": 3,
+      "total": 12,
+      "accuracy": 0.25
+    }
+  },
+  "model_runs": [
+    {
+      "name": "Qwen2.5 Coder 14B original paired evidence",
+      "directory": "experiments/local-model-comparison/windows-20261021",
+      "correct": 1,
+      "total": 12,
+      "accuracy": 0.08333333333333333,
+      "valid_responses": 10,
+      "macro_f1": 0.1
+    },
+    {
+      "name": "Qwen2.5 Coder 14B evidence-v2",
+      "directory": "experiments/local-model-comparison/evidence-v2-20261022",
+      "correct": 2,
+      "total": 12,
+      "accuracy": 0.16666666666666666,
+      "macro_f1": 0.2,
+      "valid_responses": 12
+    },
+    {
+      "name": "Qwen2.5 Coder 14B evidence-v2 plus Git change facts",
+      "directory": "experiments/local-model-comparison/change-facts-20261022",
+      "correct": 4,
+      "total": 12,
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.47916666666666663,
+      "valid_responses": 12
+    }
+  ],
+  "rules_only": {
+    "correct_exact_status_sets": 11,
+    "total": 12,
+    "development_match_rate": 0.9166666666666666,
+    "mismatch": {
+      "case": "10-consumer-changed",
+      "expected_authored_status": "BROKEN_TRACE",
+      "observed_rule_status": "POTENTIAL_INCONSISTENCY",
+      "reason": "No explicit declared trace supports the stronger BROKEN_TRACE status; retain the conservative finding pending oracle review."
+    },
+    "interpretation": "Same authored development scenarios informed rule work; this is not independent accuracy and must not be reported as a held-out result."
+  },
+  "root_causes": [
+    "The original model prompt did not include explicit Git-derived deleted/added/modified artifact facts, and balanced evidence windows could omit the changed symbol itself.",
+    "Providing source-verified evidence-v2 alone raised Qwen2.5 Coder from 1/12 to 2/12, so evidence selection was not the only bottleneck.",
+    "Adding Git-derived symbol and diff facts raised the diagnostic result to 4/12, but the model still often predicts CONSISTENT for potential inconsistencies.",
+    "The status labels are not interchangeable: the model confuses INCONSISTENT, POTENTIAL_INCONSISTENCY, and UNCERTAIN despite valid citations.",
+    "Two Qwen3 model variants in the original run produced invalid citation aliases on all cases; strict validation correctly counts those outputs as errors."
+  ],
+  "changes_under_test": [
+    "Added bounded Git/artifact delta facts to production and diagnostic prompts; facts orient the model but are explicitly not proof of a defect.",
+    "Versioned the prompt as paired-neutral-v3-change-facts and fingerprinted change_analysis/diff.py in the evaluator.",
+    "Fixed duplicate/contradictory deterministic findings for deleted implementation/test relationships."
+  ],
+  "target_status": "NOT_ESTABLISHED",
+  "85_percent_status": "NOT_REACHED",
+  "independent_accuracy": "NOT_MEASURED",
+  "requested_milestone": {
+    "independent_cases_required": 200,
+    "minimum_exact_matches_at_200": 182,
+    "observed_accuracy": 0.91,
+    "status": "NOT_RUN; 200 independently reviewed repository-change cases are not available. Do not pad the existing 12 authored cases."
+  },
+  "next_valid_step": "Obtain independently double-reviewed labels on repository-separated changes, freeze policy/model/prompt on validation data, then evaluate once on held-out repositories. Do not tune repeatedly on these 12 cases."
+}

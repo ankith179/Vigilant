@@ -6,8 +6,15 @@ def check(changes,before,after,edges):
  for e in edges:
   s,t=e['source_artifact'],e['target_artifact'];r=e['relation_type']
   if r not in {'IMPLEMENTS','VALIDATES','TESTS','CONSUMES_API','EXPOSES_API','CALLS'}:continue
-  if s in old and t in old and (s not in new or t not in new) and (s in new or t in new):emit('BROKEN_TRACE','deleted-endpoint',[s,t],f'Previously evidenced {r} relation lost an endpoint. Revalidate its replacement.')
-  if r=='TESTS' and t in changed and s not in changed and s in new:emit('POTENTIAL_INCONSISTENCY','implementation-changed-test-unchanged',[s,t],'Implementation changed; a statically associated test did not. Review needed, not a proven defect.')
+  if s in old and t in old and (s not in new or t not in new) and (s in new or t in new):
+   deleted_test=s not in new and t in new and r=='TESTS' and old[s].artifact_type in {'test','test_method'}
+   if deleted_test:
+    pass
+   elif e.get('is_declared'):
+    emit('BROKEN_TRACE','deleted-endpoint',[s,t],f'Explicitly declared {r} relation lost an endpoint. Revalidate its replacement.')
+   else:
+    emit('POTENTIAL_INCONSISTENCY','inferred-edge-endpoint-removed',[s,t],f'Inferred {r} relation lost an endpoint; confirm the relationship and any replacement.')
+  if r=='TESTS' and t in changed and t in new and s not in changed and s in new:emit('POTENTIAL_INCONSISTENCY','implementation-changed-test-unchanged',[s,t],'Implementation changed; a statically associated test did not. Review needed, not a proven defect.')
   if r in {'IMPLEMENTS','VALIDATES'} and s in changed and t not in changed and t in new:emit('POTENTIAL_INCONSISTENCY','requirement-changed-linked-artifact-unchanged',[s,t],'A changed requirement retains a link to an unchanged artifact.')
   if r=='TESTS' and s not in new and t in new and not any(x['relation_type']=='TESTS' and x['target_artifact']==t and x['source_artifact'] in new for x in edges):emit('MISSING_TEST','last-known-test-deleted',[s,t],'No remaining test in the observed trace graph; coverage may be incomplete.')
   if r=='CONSUMES_API' and s in new and t not in new:

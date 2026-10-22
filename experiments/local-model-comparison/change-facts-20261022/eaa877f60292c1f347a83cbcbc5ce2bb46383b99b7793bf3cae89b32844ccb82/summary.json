@@ -1,0 +1,30 @@
+{
+  "model": "qwen2.5-coder:14b",
+  "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+  "status": "COMPLETED",
+  "saved_calls": 12,
+  "planned_calls": 12,
+  "split": "diagnostic",
+  "metrics": {
+    "accuracy": 0.3333333333333333,
+    "macro_f1_over_gold_classes": 0.47916666666666663,
+    "valid_response_rate": 1.0,
+    "uncertainty_rate": 0.25,
+    "decisive_coverage": 0.75,
+    "majority_baseline": 0.5,
+    "always_uncertain_baseline": 0.25,
+    "confusion": {
+      "POTENTIAL_INCONSISTENCY -> UNCERTAIN": 1,
+      "UNCERTAIN -> UNCERTAIN": 2,
+      "POTENTIAL_INCONSISTENCY -> CONSISTENT": 4,
+      "BROKEN_TRACE -> INCONSISTENT": 1,
+      "UNCERTAIN -> CONSISTENT": 1,
+      "MISSING_TEST -> MISSING_TEST": 1,
+      "POTENTIAL_INCONSISTENCY -> POTENTIAL_INCONSISTENCY": 1,
+      "BROKEN_TRACE -> POTENTIAL_INCONSISTENCY": 1
+    },
+    "mean_seconds": 50.06600353333332
+  },
+  "target_status": "NOT_ESTABLISHED",
+  "reason": "Independent labels and a preregistered held-out protocol require review; diagnostic scores do not establish >75% accuracy."
+}

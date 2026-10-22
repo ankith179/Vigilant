@@ -1,15 +1,11 @@
 {
   "project": "VIGILANT",
   "version": 1,
-  "updated_at": "2026-10-21T06:15:54.778480+00:00",
+  "updated_at": "2026-10-22T14:10:55+05:30",
   "requested_destination": "C:\\Users\\Ankith\\Downloads\\Code- Vigilant",
   "automation_id": "6ac5074cf11881918f2f9e8db081c398",
   "automation_cadence": "hourly continuation check, not an exact quota-reset trigger",
-  "active_lease": {
-    "owner": "citation-fix-20261021",
-    "updated_at": "2026-10-21T06:31:51.234042+00:00",
-    "purpose": "Citation-only controlled comparison and evidence/label audit"
-  },
+  "active_lease": null,
   "tasks": [
     {
       "id": "implementation",
@@ -208,7 +204,7 @@
       "depends_on": [
         "implementation"
       ],
-      "verified_tests": 74,
+      "verified_tests": 82,
       "logs": [
         "reports/tests-after-resume-refactor.log",
         "reports/tests-resume-20261006.log",
@@ -216,7 +212,7 @@
       ],
       "finished_at": "2026-10-17T02:30:05.239782+00:00",
       "log": "reports/accuracy-20261017/tests-after.log",
-      "passed": 74,
+      "passed": 82,
       "exit_code": 0
     },
     {
@@ -442,7 +438,7 @@
     "research_paper": "libfile_ad5d31a0c35c8191ba978c75f1c53244",
     "survey_paper": "libfile_22df1f33c14081918b8a4ee486932985"
   },
-  "next_action": "Windows setup and three-model diagnostic comparison are complete. Do not repeat saved generations. Review citation failures and authored labels; evaluate any revised protocol separately on development data, then select/freeze using independently annotated validation/test data. Independent accuracy remains unestablished.",
+  "next_action": "Do not tune further against the 12 authored ChangeBench cases. Expand the blind queue by at least 121 real changes from additional repositories; obtain two independent labels and adjudication for 200+ cases, then freeze rules/model/prompt before one held-out evaluation. At 200 cases, 182 exact matches is 91% observed; NOT RUN and NOT ESTABLISHED.",
   "research_claim_status": "Not established: current local-model ablation does not outperform always-UNCERTAIN; independent labels and semantic grounding review remain pending.",
   "restoration": "All twelve controlled Git worktrees restored at exact saved change_commit hashes; contracts and completed benchmark results unchanged.",
   "continuation_events": [
@@ -655,5 +651,36 @@
     "evaluation_output": "experiments/local-model-comparison/windows-20261021",
     "package": "../VIGILANT-project.zip",
     "persistence": "Local files; saved Library file IDs describe historical releases."
+  },
+  "audit_20261022": {
+    "report": "reports/windows-20261022/AUDIT.md",
+    "accuracy_debug": "reports/windows-20261022/accuracy-debug.json",
+    "dataset_integrity": "reports/windows-20261022/dataset-integrity.json",
+    "dataset_status": "PASS: 278 sources, 449 targets, 1660 links, 705 prepared-artifact file hashes; zero duplicate or dangling records and zero hash errors.",
+    "saved_result_audits": {
+      "metrics": "reports/windows-20261022/metrics-audit.json",
+      "verified_method_rows": 23,
+      "verified_query_rows": 1484,
+      "rag": "reports/windows-20261022/rag-audit.json",
+      "verified_rag_generations": 251
+    },
+    "tests_passed": 88,
+    "frontend_build": "PASS",
+    "browser_chat": "PASS: complete mutation-enabled browser suite including source-verified chat and 390px mobile layout; reports/frontend/2026-10-22T06-50-58-933Z/validation.json",
+    "model_runs": {
+      "original_qwen25": "1/12; preserved under experiments/local-model-comparison/windows-20261021",
+      "evidence_v2_qwen25": "2/12; 12/12 valid; experiments/local-model-comparison/evidence-v2-20261022",
+      "git_change_facts_qwen25": "4/12; 12/12 valid; experiments/local-model-comparison/change-facts-20261022"
+    },
+    "rules_only_development_match": "11/12 exact status sets on authored correlated ChangeBench; not independent accuracy",
+    "review_pool": {
+      "report": "reports/independent-review-20261022/README.md",
+      "candidate_count": 79,
+      "reviewer_labels": 0,
+      "additional_candidates_needed": 121,
+      "status": "UNLABELLED; NOT AN EVALUATION SET"
+    },
+    "accuracy_claim": "Requested 91% observed on 200+ independent cases NOT RUN or ESTABLISHED; latest model diagnostic is 4/12 authored cases",
+    "chatbot": "IMPLEMENTED: POST /api/chat and floating read-only frontend panel; semantic citation entailment remains unverified."
   }
 }
