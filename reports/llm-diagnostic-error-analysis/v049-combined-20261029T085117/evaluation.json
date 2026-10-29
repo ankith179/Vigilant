@@ -1,0 +1,124 @@
+{
+  "run_id": "v049-combined-20261029T085117",
+  "condition": "V3_RULES_PLUS_BM25_RAG_PLUS_LOCAL_QWEN3_1_7B_SEMANTIC_RESIDUE",
+  "evaluation_population": "12-case development/regression set; authored labels, not independent accuracy",
+  "status": "COMPLETED",
+  "metric": "authored_label_agreement_under_frozen_V047_axis_projection",
+  "n": 12,
+  "matches": 11,
+  "agreement": 0.9166666666666666,
+  "target": "11/12",
+  "target_met": true,
+  "pre_registered_model_calls": 37,
+  "model_scope_budget_per_case": 1,
+  "inference_status_counts": {
+    "BUDGET_EXHAUSTED": 11,
+    "COMPLETED": 10
+  },
+  "case_results": [
+    {
+      "case_id": "01-requirement-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "axis": "consistency",
+      "expected": "POTENTIAL_INCONSISTENCY",
+      "predicted": "POTENTIAL_INCONSISTENCY",
+      "match": true
+    },
+    {
+      "case_id": "02-requirement-added",
+      "authored_label": "UNCERTAIN",
+      "axis": "consistency",
+      "expected": "UNCERTAIN",
+      "predicted": "UNCERTAIN",
+      "match": true
+    },
+    {
+      "case_id": "03-code-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "axis": "consistency",
+      "expected": "POTENTIAL_INCONSISTENCY",
+      "predicted": "POTENTIAL_INCONSISTENCY",
+      "match": true
+    },
+    {
+      "case_id": "04-code-deleted",
+      "authored_label": "BROKEN_TRACE",
+      "axis": "trace",
+      "expected": "BROKEN_TRACE",
+      "predicted": "BROKEN_TRACE",
+      "match": true
+    },
+    {
+      "case_id": "05-test-changed",
+      "authored_label": "UNCERTAIN",
+      "axis": "consistency",
+      "expected": "UNCERTAIN",
+      "predicted": "UNCERTAIN",
+      "match": true
+    },
+    {
+      "case_id": "06-test-deleted",
+      "authored_label": "MISSING_TEST",
+      "axis": "test_obligation",
+      "expected": "UNSATISFIED",
+      "predicted": "UNVERIFIED",
+      "match": false
+    },
+    {
+      "case_id": "07-frontend-changed",
+      "authored_label": "UNCERTAIN",
+      "axis": "consistency",
+      "expected": "UNCERTAIN",
+      "predicted": "UNCERTAIN",
+      "match": true
+    },
+    {
+      "case_id": "08-api-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "axis": "consistency",
+      "expected": "POTENTIAL_INCONSISTENCY",
+      "predicted": "POTENTIAL_INCONSISTENCY",
+      "match": true
+    },
+    {
+      "case_id": "09-backend-changed",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "axis": "consistency",
+      "expected": "POTENTIAL_INCONSISTENCY",
+      "predicted": "POTENTIAL_INCONSISTENCY",
+      "match": true
+    },
+    {
+      "case_id": "10-consumer-changed",
+      "authored_label": "BROKEN_TRACE",
+      "axis": "trace",
+      "expected": "BROKEN_TRACE",
+      "predicted": "BROKEN_TRACE",
+      "match": true
+    },
+    {
+      "case_id": "11-implementation-test-drift",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "axis": "consistency",
+      "expected": "POTENTIAL_INCONSISTENCY",
+      "predicted": "POTENTIAL_INCONSISTENCY",
+      "match": true
+    },
+    {
+      "case_id": "12-requirement-test-drift",
+      "authored_label": "POTENTIAL_INCONSISTENCY",
+      "axis": "consistency",
+      "expected": "POTENTIAL_INCONSISTENCY",
+      "predicted": "POTENTIAL_INCONSISTENCY",
+      "match": true
+    }
+  ],
+  "limitations": [
+    "The 12 cases informed development; result is regression agreement, not generalization or independent accuracy.",
+    "Qwen3 receives only one semantic scope per case under a bounded budget; uncapped semantic coverage is not evaluated.",
+    "BM25 candidates are verified against immutable snapshot artifacts; upstream Git objects were not reverified.",
+    "Authored labels are used only after prediction artifacts are saved; no independent human adjudication is available."
+  ],
+  "historical_case_analysis_sha256_after": "c29b442b72950e4f8a8721c843a1ba40caf4a0dd32e51941fc64715d2a20a864",
+  "snapshot_database_sha256_after": "753402edf070259d3576b32c6c0bcff1366c358c9dc575c17e94504fcba8407c"
+}

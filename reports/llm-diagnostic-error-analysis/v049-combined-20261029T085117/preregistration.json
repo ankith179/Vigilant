@@ -1,0 +1,93 @@
+{
+  "run_id": "v049-combined-20261029T085117",
+  "condition": "V3_RULES_PLUS_BM25_RAG_PLUS_LOCAL_QWEN3_1_7B_SEMANTIC_RESIDUE",
+  "status": "FROZEN_BEFORE_GENERATION",
+  "evaluation_population": "12-case development/regression set; authored labels, not independent accuracy",
+  "target": "11/12 authored-label agreement under the existing V047 axis projection",
+  "model": {
+    "model": "qwen3:1.7b",
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "size_bytes": 1359293444,
+    "quantization": "Q4_K_M",
+    "supports_thinking": true,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "temperature": 0,
+    "think": false
+  },
+  "generation": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "three-vote-and-citation-check": true
+  },
+  "runtime": {
+    "keep_alive": "10m",
+    "per_call_cache": true,
+    "runtime_source_sha256": "f974cce7e9315615f4832bd962d01bd6dfce929c8afe76238e711f68b057a6af"
+  },
+  "retrieval": {
+    "method": "existing RAG BM25 retrieval on exact HEAD snapshot",
+    "k": 8,
+    "graph": false,
+    "labels_exposed": false
+  },
+  "rule_policy": "existing agents.decision_rules V3 decide/apply_llm_guard; rules are not overridden; LLM budget 1 semantic scope per case",
+  "scope_budget_per_case": 1,
+  "case_aggregation": {
+    "trace_priority": [
+      "BROKEN_TRACE",
+      "MISSING_TRACE",
+      "UNCERTAIN",
+      "LINKED"
+    ],
+    "consistency_priority": [
+      "INCONSISTENT",
+      "POTENTIAL_INCONSISTENCY",
+      "UNCERTAIN",
+      "NO_ASSURANCE_IMPACT",
+      "CONSISTENT"
+    ],
+    "test_obligation_priority": [
+      "UNSATISFIED",
+      "UNVERIFIED",
+      "SATISFIED",
+      "NOT_APPLICABLE"
+    ],
+    "rule": "For each axis, select the first value in its priority list present in any changed-artifact scope; if no scope exists, return UNCERTAIN for trace/consistency and UNVERIFIED for test obligation."
+  },
+  "label_projection": {
+    "BROKEN_TRACE": {
+      "axis": "trace",
+      "expected_axis_value": "BROKEN_TRACE"
+    },
+    "MISSING_TEST": {
+      "axis": "test_obligation",
+      "expected_axis_value": "UNSATISFIED"
+    },
+    "POTENTIAL_INCONSISTENCY": {
+      "axis": "consistency",
+      "expected_axis_value": "POTENTIAL_INCONSISTENCY"
+    },
+    "UNCERTAIN": {
+      "axis": "consistency",
+      "expected_axis_value": "UNCERTAIN"
+    }
+  },
+  "frozen_case_manifest_sha256": "8ef1f5bd56eef2eb75448671f84d9d00b04a8152f3a99e86ed36cfa782f924b2",
+  "snapshot_database_sha256": "753402edf070259d3576b32c6c0bcff1366c358c9dc575c17e94504fcba8407c",
+  "historical_case_analysis_sha256_before": "c29b442b72950e4f8a8721c843a1ba40caf4a0dd32e51941fc64715d2a20a864",
+  "source_sha256": {
+    "agents/decision_rules.py": "5a377794f9cf3ad5b794133d9d9ddef964f17282b023838bcb84e4dc796bbfb6",
+    "agents/assurance.py": "d52808ad1a9b7b36948a8ae49324267f04b50802eb9c2b61ac1fd6e510bb3d68",
+    "rag/evidence.py": "76d06778c7f553924aca41f4911b09e15606f6e4a2096ae1a9f075e61d110355",
+    "llm/context_v3.py": "8b325c6562a0776907f575b2cb6589e7c568a147b4a57f9833534df72540b3e2",
+    "llm/providers.py": "852f015108c9a184907cff610d5ddb2c96707bd208955db60fb018138c364114",
+    "llm/ollama.py": "aa7fd212b2dcbaddab30b9a7c7e737e41d8becdfd52d0b8ba0792e0e23a9efc0",
+    "ingestion/models.py": "61244b08aa438fb67e94a1d4751250f3d67d6502c76ec3d04f384e423dc9dc83",
+    "ingestion/parsers.py": "4dcfe5e813d315347f35c90f13781872e51d69abd6952b13245cd8b74166c198"
+  },
+  "runner_sha256": "0309b295d246436c9f12b805c52e323ffdbaf8f5f88bb0f7e55ac89deb452f09",
+  "upstream_git_objects_reverified": false
+}

@@ -1,0 +1,47 @@
+{
+  "run_id": "v049-combined-20261029T085117",
+  "status": "COMPLETED",
+  "population": "12-case development/regression set; authored labels, not independent accuracy",
+  "metric": "authored_label_agreement_under_frozen_V047_axis_projection",
+  "matches": 11,
+  "n": 12,
+  "agreement": 0.9166666666666666,
+  "historical_case_analysis_sha256": "c29b442b72950e4f8a8721c843a1ba40caf4a0dd32e51941fc64715d2a20a864",
+  "files": [
+    {
+      "path": "V049_FINAL_REPORT.md",
+      "bytes": 3569,
+      "sha256": "081a7941864c9936a5983765e850029d6b4a953d5d85d9e331253d8612473535"
+    },
+    {
+      "path": "evaluation.json",
+      "bytes": 4154,
+      "sha256": "89768e527c365930a4bf4003c49b79abd935b911b1e8fe0865b0a6761e4671ab"
+    },
+    {
+      "path": "predictions.json",
+      "bytes": 493237,
+      "sha256": "ebba8f9af1eca9574a68d3b2f4f120cc6f493446d16245ef149cf5123227a58e"
+    },
+    {
+      "path": "preregistration.json",
+      "bytes": 3693,
+      "sha256": "468981c8700ef7d4abd34016ec5b35ce5be0471556936ba72686c514d49f0c66"
+    },
+    {
+      "path": "raw_outputs.jsonl",
+      "bytes": 42581,
+      "sha256": "18597e11612e1776cb962545b504f396e5bf36607e1c85cfe348ab7df7e8304a"
+    },
+    {
+      "path": "execution_log.jsonl",
+      "bytes": 7833,
+      "sha256": "6dff86f2cf1509b2cbe1320bafa309fc77dc392fb276d156e25c8bc4480b8334"
+    },
+    {
+      "path": "call_progress.jsonl",
+      "bytes": 10021,
+      "sha256": "2dc4576d9f03fca1175acd446fb4553a7296f53dcbb71a43ba7565f28391aed9"
+    }
+  ]
+}
