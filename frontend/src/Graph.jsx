@@ -63,12 +63,12 @@ export default function Graph({data, onSelect}) {
       })}
     </svg> : <p className="empty">No recorded relationships for this selection.</p>}
     {edges.length > 0 && <div className="table-wrap"><table aria-label="Graph relationships">
-      <thead><tr><th>Source</th><th>Relationship</th><th>Target</th><th>Method</th></tr></thead>
+      <thead><tr><th>Source</th><th>Relationship</th><th>Target</th><th>Method</th><th>Provenance</th><th>Resolution</th></tr></thead>
       <tbody>{edges.map((edge, i) => <tr key={edge.id || i} tabIndex="0"
         onClick={() => onSelect(edge)} onKeyDown={event => event.key === 'Enter' && onSelect(edge)}>
         <td title={edge.source_artifact}>{label(byId.get(edge.source_artifact))}</td>
         <td>{edge.relation_type}</td><td title={edge.target_artifact}>{label(byId.get(edge.target_artifact))}</td>
-        <td>{edge.method || 'Recorded relation'}</td>
+        <td>{edge.method || 'Recorded relation'}</td><td>{edge.provenance_type||'Unrecorded'}</td><td>{edge.resolution_status||'Unrecorded'}</td>
       </tr>)}</tbody>
     </table></div>}
   </>;

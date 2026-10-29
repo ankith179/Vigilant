@@ -1,0 +1,108 @@
+{
+  "additionalProperties": false,
+  "description": "Orthogonal V3 assessment; confidence is raw model output, never calibration.",
+  "properties": {
+    "schema_version": {
+      "const": 3,
+      "default": 3,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "trace": {
+      "default": "UNCERTAIN",
+      "enum": [
+        "LINKED",
+        "BROKEN_TRACE",
+        "MISSING_TRACE",
+        "UNCERTAIN"
+      ],
+      "title": "Trace",
+      "type": "string"
+    },
+    "consistency": {
+      "default": "UNCERTAIN",
+      "enum": [
+        "CONSISTENT",
+        "INCONSISTENT",
+        "POTENTIAL_INCONSISTENCY",
+        "NO_ASSURANCE_IMPACT",
+        "UNCERTAIN"
+      ],
+      "title": "Consistency",
+      "type": "string"
+    },
+    "test_obligation": {
+      "default": "NOT_APPLICABLE",
+      "enum": [
+        "SATISFIED",
+        "UNSATISFIED",
+        "UNVERIFIED",
+        "NOT_APPLICABLE"
+      ],
+      "title": "Test Obligation",
+      "type": "string"
+    },
+    "contract_authority": {
+      "default": "NOT_ESTABLISHED",
+      "enum": [
+        "NORMATIVE",
+        "INFORMATIONAL",
+        "NOT_ESTABLISHED"
+      ],
+      "title": "Contract Authority",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "rationale": {
+      "default": "",
+      "maxLength": 1000,
+      "title": "Rationale",
+      "type": "string"
+    },
+    "raw_confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Raw Confidence"
+    },
+    "rule_id": {
+      "default": "R0_INSUFFICIENT_EVIDENCE",
+      "maxLength": 100,
+      "title": "Rule Id",
+      "type": "string"
+    },
+    "needs_review": {
+      "default": true,
+      "title": "Needs Review",
+      "type": "boolean"
+    },
+    "needs_llm": {
+      "default": false,
+      "title": "Needs Llm",
+      "type": "boolean"
+    },
+    "blockers": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Blockers",
+      "type": "array"
+    }
+  },
+  "title": "DecisionV3",
+  "type": "object"
+}

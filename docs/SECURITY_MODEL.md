@@ -1,0 +1,15 @@
+# Security model and boundaries
+
+Default tools inspect already imported Git snapshots and persist local analysis records. Repository text is data. No tool executes repository code, installs project packages, writes source patches, pushes changes or makes inference calls. Existing Git reads disable configured hooks, external diff and text conversion helpers. Scope requires an imported repository, exact commit and matching parser identity. Artifact inputs are identities, not arbitrary host paths.
+
+HTTP tools inherit the existing workspace token middleware. Unknown-history mutation is omitted from HTTP and default MCP; it requires explicit local invocation or MCP opt-in. Local database state is not multi-user authorization. Do not expose the research server to the public Internet as a certified multi-tenant service.
+
+Remote repository import now accepts only HTTPS URLs for exact `github.com` or `gitlab.com` hosts, with no credentials, query, fragment, control characters, backslashes, or nonstandard ports. Git redirects are disabled; `file` and `ext` protocols are denied; system/global Git config and askpass helpers are suppressed; cloning occurs from an isolated temporary working directory and uses `--no-checkout` to avoid running checkout filters. Clones remain shallow and byte/time bounded. The API performs this validation before starting Git. The focused tests use a mocked Git process; they do not claim a live network clone or egress-firewall acceptance.
+
+Residual network risk remains: the application does not pin GitHub/GitLab DNS answers or enforce operating-system egress policy, so DNS compromise/rebinding or a permissive network route is not ruled out by the URL allowlist. Keep the service local and apply outbound network restrictions before any untrusted deployment. This control is a targeted SSRF/redirect hardening step, not a security certification.
+
+The new tool boundary withholds common secret-looking excerpts and arguments (private-key headers, known token formats and long credential assignments). This pattern check is limited and is not complete secret detection. Existing exact-source views intentionally expose source to an authorized local user; review content before using any external model route. Source excerpts can contain sensitive material not caught by patterns.
+
+Input schemas, pagination, graph/snapshot/output budgets and Git timeouts limit work. Saved source identity is reverified against Git before reuse. Unknown append histories use optimistic revision conflict detection. SQLite shared-connection locking remains in place. PostgreSQL/Supabase production deployment and RLS are not certified by SQLite tests; no remote database was modified.
+
+The threat/control/residual-risk matrix is maintained in `docs/THREAT_MODEL.md`. This release does not certify all SSRF, package supply-chain, memory, hostile compiler input, secret-exfiltration, denial-of-service or deployment scenarios. Native language adapters and imports retain their documented limitations. A general patch execution agent and runtime debugger are outside this release.

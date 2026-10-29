@@ -5,8 +5,11 @@ import csv
 import hashlib
 import json
 import subprocess
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from ingestion.git import git
 SOURCE_SUFFIXES={'.c','.cc','.cpp','.cs','.go','.h','.hpp','.java','.js','.jsx','.kt','.m','.mm','.php','.py','.rs','.swift','.ts','.tsx'}
 IGNORED_PARTS={'build','dist','generated','node_modules','target','vendor'}
 REVIEW_FIELDS=[
@@ -15,10 +18,6 @@ REVIEW_FIELDS=[
  'reviewer_2_id','reviewer_2_label','reviewer_2_sufficient','reviewer_2_missing_evidence','reviewer_2_rationale',
  'adjudicator_id','adjudicated_label','adjudication_rationale'
 ]
-
-def git(repo,*args):
- result=subprocess.run(['git','-C',str(repo),'--no-pager',*args],check=True,capture_output=True,timeout=180)
- return result.stdout.decode('utf-8',errors='replace').strip()
 
 def eligible(path):
  parts=Path(path).parts

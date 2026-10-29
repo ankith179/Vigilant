@@ -1,5 +1,23 @@
 import re
+import io
+import tokenize
 from ingestion.git import git,revision
+
+def _python_tokens(text):
+ try:return [(token.type,token.string) for token in tokenize.generate_tokens(io.StringIO(text).readline) if token.type not in {tokenize.COMMENT,tokenize.NL,tokenize.ENCODING}]
+ except (IndentationError,tokenize.TokenError):return None
+
+def _python_comments(text):
+ try:return [token.string for token in tokenize.generate_tokens(io.StringIO(text).readline) if token.type==tokenize.COMMENT]
+ except (IndentationError,tokenize.TokenError):return None
+
+def _change_semantics(path,old_text,new_text):
+ if path.endswith('.py') and old_text is not None and new_text is not None and old_text!=new_text:
+  before,after=_python_tokens(old_text),_python_tokens(new_text)
+  old_comments,new_comments=_python_comments(old_text),_python_comments(new_text)
+  if before is not None and before==after and old_comments is not None and new_comments is not None and old_comments!=new_comments:
+   return 'COMMENT_ONLY'
+ return 'NOT_CLASSIFIED'
 
 def format_change_facts(changes,max_chars=2400):
  facts=[]
@@ -19,8 +37,12 @@ def detect(repo,base,head,before,after):
  while i<len(fields) and fields[i]:
   status=fields[i];old=fields[i+1];new=old;i+=2
   if status.startswith(('R','C')):new=fields[i];i+=1
-  patch=git(repo,'diff','--unified=0',base,head,'--',old,new);hunks=[{'old_start':int(m[1]),'old_count':int(m[2] or 1),'new_start':int(m[3]),'new_count':int(m[4] or 1)} for m in re.finditer(r'@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@',patch)]
-  files.append({'status':status,'old_path':old,'new_path':new,'hunks':hunks,'patch':patch})
+  patch=git(repo,'diff','--unified=0',base,head,'--',old,new);hunks=[{'old_start':int(m[1]),'old_count':int(m[2] or 1),'new_start':int(m[3]),'new_count':int(m[4] or 1)} for m in re.finditer(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@',patch,re.M)]
+  old_file=next((a for a in before if not a.symbol and a.file_path==old),None)
+  new_file=next((a for a in after if not a.symbol and a.file_path==new),None)
+  files.append({'status':status,'old_path':old,'new_path':new,'hunks':hunks,'patch':patch,
+                'text_changed':bool(old_file and new_file and old_file.content!=new_file.content),
+                'change_semantics':_change_semantics(new or old,old_file.content if old_file else None,new_file.content if new_file else None)})
  old={a.artifact_id:a for a in before};new={a.artifact_id:a for a in after};changes=[];paired=set();renames={f['old_path']:f['new_path'] for f in files if f['status'].startswith('R')}
  for aid,a in old.items():
   b=new.get(aid)

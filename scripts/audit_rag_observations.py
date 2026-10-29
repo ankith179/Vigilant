@@ -40,15 +40,15 @@ def strict_schema_issues(raw, aliases):
 
 
 def audit(provider_source=None):
-    provider_source = Path(provider_source) if provider_source else ROOT / 'llm/providers.py'
-    manifest = json.loads((ROOT / 'data/models.json').read_text())
+    provider_source = Path(provider_source) if provider_source else ROOT / 'evaluation/frozen/20261007/providers.py.txt'
+    manifest = json.loads((ROOT / 'data/models.json').read_text(encoding='utf-8'))
     model, embedding = manifest['llm'], manifest['embedding']
     encoder_id = embedding['model'] + '@' + embedding['revision'] + ';180words;8chunks;mean-normalized'
-    baseline = {r['dataset']: r for r in json.loads((ROOT / BASELINE).read_text())['results'] if r['method'] == 'hybrid'}
+    baseline = {r['dataset']: r for r in json.loads((ROOT / BASELINE).read_text(encoding='utf-8'))['results'] if r['method'] == 'hybrid'}
     datasets = []
     for name in DATASETS:
         prepared = ROOT / 'data/prepared' / (name + '.json')
-        data = json.loads(prepared.read_text())
+        data = json.loads(prepared.read_text(encoding='utf-8'))
         queries = {q['id']: q for q in data['sources']}
         targets = {t['id']: t for t in data['targets']}
         truth = {q for q, _ in data['links']}
@@ -69,7 +69,7 @@ def audit(provider_source=None):
             path = ROOT / 'experiments/rag-trace-partial' / (name + '-' + hashlib.sha256(qid.encode()).hexdigest()[:14] + '.json')
             if not path.exists():
                 continue
-            row = json.loads(path.read_text())
+            row = json.loads(path.read_text(encoding='utf-8'))
             if not row.get('inference_executed'):
                 excluded_runtime.append(qid)
                 continue
@@ -102,8 +102,8 @@ def audit(provider_source=None):
                             'decision_sha256': fingerprint(row['decision'])})
         completion = ROOT / 'experiments/rag-trace-partial' / (name + '-complete.json')
         if completion.exists():
-            pointer = json.loads(completion.read_text())
-            final = json.loads((ROOT / pointer['result_path']).read_text())['results'][0]
+            pointer = json.loads(completion.read_text(encoding='utf-8'))
+            final = json.loads((ROOT / pointer['result_path']).read_text(encoding='utf-8'))['results'][0]
             assert final['dataset_fingerprint'] == dataset_fp
             records = {r['query_id']: r for r in checked}
             assert set(records) == truth and len(final['calls']) == len(truth)
@@ -130,5 +130,5 @@ if __name__ == '__main__':
     parser.add_argument('--provider-source', type=Path, help='Exact archived provider source used for the saved run; mismatches still fail.')
     args = parser.parse_args()
     report = audit(args.provider_source); path = ROOT / args.output; path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(report, indent=2) + '\n')
+    path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(report['status'], report['verified_observations'], 'verified actual generations')

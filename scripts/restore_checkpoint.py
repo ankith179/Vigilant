@@ -4,7 +4,18 @@ from contextlib import closing
 import json, sqlite3, subprocess, os
 ROOT = Path(__file__).resolve().parents[1]
 
+def require_database(path):
+    """A GitHub source archive may contain an LFS pointer instead of SQLite bytes."""
+    with Path(path).open('rb') as stream:
+        header = stream.read(64)
+    if header.startswith(b'version https://git-lfs.github.com/spec/v1'):
+        raise ValueError(f'Unresolved Git LFS database: {path}. Fetch its exact object with git lfs pull, or use a complete project archive. Do not overwrite a live database with an older snapshot.')
+    if not header.startswith(b'SQLite format 3\x00'):
+        raise ValueError(f'Not a SQLite database: {path}')
+
 def main():
+    destination=ROOT/'data/vigilant.db'
+    if destination.exists():require_database(destination)
     for parent in [ROOT/'data/raw', ROOT/'data/repos']:
         for repo in parent.iterdir() if parent.exists() else []:
             if (repo/'.git').is_dir():
@@ -14,7 +25,6 @@ def main():
                         (worktree/'.git').write_text('gitdir: '+entry.as_posix()+'\n', encoding='utf-8', newline='\n')
                         (entry/'gitdir').write_text((worktree/'.git').as_posix()+'\n', encoding='utf-8', newline='\n')
                 subprocess.run(['git', '-C', str(repo), 'worktree', 'repair'], check=True)
-    destination=ROOT/'data/vigilant.db'
     if not destination.exists():
         source=ROOT/'data/snapshots/vigilant.db'
         if not source.exists():source=ROOT/'data/snapshots/changebench.db'
@@ -34,6 +44,7 @@ def main():
 
 def restore_database(source,destination):
     """Preserve frozen snapshots; include committed WAL data in an atomic backup."""
+    require_database(source)
     destination.parent.mkdir(parents=True,exist_ok=True)
     temporary=destination.with_suffix(destination.suffix+'.restore-tmp')
     try:

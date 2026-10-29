@@ -19,6 +19,23 @@ frontend/dist/
 
 **/.git/
 
+# External development clones listed in data/repos.json; do not commit or package them.
+/data/repos/pallets_flask/
+/data/repos/pallets_werkzeug/
+/data/repos/pallets_click/
+/data/repos/psf_requests/
+/data/repos/tornadoweb_tornado/
+/data/repos/marshmallow-code_marshmallow/
+/data/repos/falconry_falcon/
+/data/repos/encode_starlette/
+/data/repos/encode_httpx/
+/data/repos/fastapi_fastapi/
+/data/repos/aio-libs_aiohttp/
+/data/repos/django_django/
+/data/repos/spring-projects_spring-petclinic/
+/data/repos/google_gson/
+/data/repos/apache_commons-lang/
+
 data/vigilant.db.restore-tmp
 data/**/embedding-cache.sqlite
 data/**/*.db-wal

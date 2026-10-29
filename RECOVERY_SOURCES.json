@@ -1,0 +1,11 @@
+{
+  "baseline_project_library_id": "libfile_62832ff34ccc8191947359933746ec53",
+  "baseline_version_before_this_increment": 54,
+  "research_overlay_library_id": "libfile_c614ab1d6c408191ab7233c10fc9607e",
+  "restore": "Use the newest full project archive. If its research state is older, overlay the newest VIGILANT-realworld-work.zip, retaining existing databases and completed case records.",
+  "do_not_claim": "Unsaved benchmark outputs deleted by workspace maintenance are not recovered measurements.",
+  "overlay_version_before_this_increment": 53,
+  "latest_increment": "reports/lineage-tools-20261025/RELEASE.json",
+  "interim_overlay_saved_version": 54,
+  "restored_overlay_version": 53
+}

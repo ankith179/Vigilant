@@ -1,3 +1,247 @@
+# Current continuation index
+
+Read ../RESUME.md and ../PROJECT_STATE.json for the latest verified implementation,
+source identity, open tasks and independent quality-gate status. The dated records
+below retain their original scope and are not the current completion checklist.
+See VIGILANT_MASTER_TASK_REGISTER.md and COORDINATION_LOG.md for project-wide work.
+
+---
+
+# Latest saved-report obligation integration — 24 October 2026
+
+The opt-in scripts/attach_obligations.py now creates a separately versioned saved
+report from a completed investigation and source-verified development registry.
+Parent report/model/graph records remain unchanged. New reports retain all obligation
+assessments, scoped citations, counterevidence, fingerprints and inherited metrics.
+Existing report API, exports and chat read the derived ID. No global graph/finding
+insertion, upload UI, model inference or independent labels. No-registry abstention
+is unchanged. 163 tests pass, one dependency warning; five new integration checks.
+
+Read docs/VERIFICATION_OBLIGATIONS.md and
+reports/obligation-integration-20261024/VERIFICATION.md. Independent 91% remains
+NOT_EVALUATED. Next local engineering task: machine-checkable reviewed search
+inventories/exclusions against pinned Git, keeping unknown regions explicit and
+avoiding negative labels inferred from absent links. Real reviewed registries,
+semantic review and frozen disjoint final cases remain external requirements.
+No historical model runs or Java absence diagnoses were repeated. Full archive
+v28 and overlay v8 were restored/checked and match the prior local checkpoint.
+
+---
+
+# Latest bounded obligation increment — 24 October 2026
+
+Added an offline source-backed verification-obligation registry with append-history
+fingerprints, lifecycle, explicit reviewed search boundary, counterevidence and
+source-backed root-cause grouping. 158 tests pass (13 registry checks), one existing
+dependency warning. Saved metric audit passes 31 rows / 1,986 query rows. No LLM
+calls, independent labels, final-test exposure, historical changes or Windows run.
+The 91% gate stays NOT_EVALUATED. Existing no-obligation/no-MISSING_TEST guard is
+unchanged. Source verification is not semantic verification or reviewer authentication.
+
+Read docs/VERIFICATION_OBLIGATIONS.md and reports/obligations-20261024/VERIFICATION.md.
+This is offline intake only, not yet wired into application/graph/report workflows.
+Next local step: connect reviewed development registries to a separately versioned
+investigation/report path, retaining absent-registry abstention, scoped search,
+counterevidence and all per-obligation records. Real independent review is still
+required; do not use authored registry fixtures as research gold. Use canonical
+parser IDs from separate imports; never rewrite frozen artifacts. Full v27 was
+newer than overlay v7, so no older overlay was applied. No old runs were repeated.
+
+---
+
+# Latest completion pass — 24 October 2026
+
+Implemented bounded C/C++ Clang references, Swift extraction with actual Swift
+frontend syntax validation, explicit pinned comparison chat, source-linked test
+review questions, independent review intake and a shared SQLite connection fix.
+145 tests pass (one existing dependency deprecation); production build and all
+13 Linux browser pages pass, including chat comparison and saved follow-up.
+No new LLM inference or real independent labels. All 550 historical files match;
+31 method rows / 1,986 query rows and 251 saved observations audit successfully.
+
+All 22 Java references previously requiring diagnosis are absent at their exact
+pinned base paths. Across all 51 outside references, 43 paths are absent and 8
+non-Java paths are present/excluded. No new-file/rename inference or score change.
+
+Latest technical drafts: submission/research-20261024/ (six-page paper PDF and
+editable Word, 29-page thesis PDF). All pages rendered and reviewed. Older dated
+manuscripts and model studies remain intact. Review handoff:
+reports/completion-20261024/review-handoff-final. Reviewer forms remain blank;
+canonical imported repository/artifact IDs are required before adjudication.
+
+Independent 91% remains NOT_EVALUATED. All tasks are not complete: independent
+labels/semantic review/final freeze, broader semantic/obligation/security
+acceptance, full LLM-weight RL, live eligible OmniRoute, native Windows acceptance
+of current changes, and institutional/publication requirements remain unresolved.
+Read docs/COMPLETION_STATUS_20261024.md for exact boundaries and next local work.
+Do not restart, reparse frozen artifacts in place, or replay old model calls.
+Hourly continuation resumes after this checkpoint is saved; no calendar waiting.
+
+---
+
+# Latest real-project checkpoint — 24 October 2026
+
+Completed all 314 pinned TEBench development retrieval cases and the separate
+109-case fetch recovery; 205 successful rankings were reused. Full-set best
+Recall@10 is 85.11% (rank fusion). Training-only LinUCB (531 events) gives 84.27%
+on 137 held-development cases versus fixed fusion 85.64%; negative result retained.
+These are developer test-file retrieval results, not independent consistency or
+traceability correctness. The 91% gate remains NOT_EVALUATED. Zero LLM calls.
+
+137 tests, frontend build and 13-page Linux browser acceptance pass. Historical
+550 files and saved metric arithmetic (31 rows / 1,986 queries) verify. Snapshot
+project overview and Dashboard loading-state race fix are included. Independent
+review and native Windows acceptance for these changes remain open.
+
+Read reports/realworld-20261024/VERIFICATION.md and docs/IMMEDIATE_EXECUTION.md.
+Completed runs must not rerun on resume. Use the source fingerprints and per-case
+records, preserve original failures, and use a separate recovery output/cache.
+Roadmap dates are not waiting periods. Hourly bounded continuation is enabled.
+
+---
+
+# Contextual-bandit retrieval update — 23 October 2026
+
+The bounded training-only contextual-bandit comparison is complete. It reuses
+frozen TF-IDF, BM25, embedding and hybrid rankings and makes zero LLM calls. Its
+MAP is 0.361789 on iTrust validation (0.016871 below the best fixed arm) and
+0.308150 on the exposed eTour development test (0.141007 below the best fixed
+arm). This negative result is preserved. The full suite passes 133 tests; all
+550 protected historical files match, and 31 saved method rows/1,986 query rows
+pass arithmetic checks. Full LLM-weight RL is NOT_RUN.
+
+This is trace-ranking development evidence, not fault localization, complete
+impact truth or consistency classification. The projects were previously exposed
+and cannot establish the independent 91% gate, which remains NOT_EVALUATED. See
+`docs/REAL_WORLD_RESEARCH_PLAN.md` and
+`reports/contextual-bandit-20261023/VERIFICATION.md`.
+
+---
+
+# Detailed audit v2 follow-up — 23 October 2026
+
+The confirmed extraction, graph-path, coverage, report-chat and scoring defects
+from this engineering pass are fixed. **131 tests passed**, production build
+passed and fresh Linux Chromium acceptance passed all **13 pages**, including
+coverage, exact source navigation, exports, graph/evidence, deterministic
+investigation and mobile layout. One Python dependency deprecation warning remains.
+Vite is pinned to 6.4.5; npm audit reports zero vulnerabilities. This does not
+certify Python dependencies, application security, licences or native Windows.
+
+The **91% quality gate remains NOT_EVALUATED**. Independent labels, semantic
+review and held-out predictions are missing. There were zero new model calls.
+32 real-change pilot packets and strict reviewed-case/verification-obligation
+schemas are prepared; their labels remain null. No gold labels were invented.
+The original 12 authored diagnostics remain development-only. All **550** canonical
+historical files are unchanged; metric and saved RAG provenance audits pass.
+
+New investigations traverse base/head graphs separately and save edge-by-edge
+path provenance. Full Git inventory/language coverage is recorded and visible.
+Report chat has typed intents, scoped follow-up context and per-claim support.
+Missing graph/contract/test proof returns NOT_ESTABLISHED. The scorer rejects
+malformed flags and keeps missing/invalid predictions in the denominator.
+
+Read docs/AUDIT_V2_RESOLUTION.md and reports/audit-v2-20261023/RELEASE.json.
+Next: two independent reviews of the pilot, separate adjudication records,
+reviewed evidence experiments and a repository/change-family-separated test.
+Keep evaluation/quality-target.json in DRAFT_NOT_FROZEN until the actual freeze.
+Do not rerun historical generations merely to resume. No Git commit/push occurred.
+
+Old snapshot artifacts retain their parser policy. Use the separate identity
+created by scripts/reindex_repository.py for syntax-scope-fetch-v3; never rewrite
+frozen artifacts. Extract the ZIP separately and preserve your Windows live DB.
+Runtime binaries and weights are excluded. Fresh native Windows validation remains
+NOT RUN. Archive verification is in the sibling project-checksum JSON.
+
+---
+
+# Correctness and input-audit follow-up — 23 October 2026
+
+The requested Phase 0 baseline and bounded correctness/input-audit pass are complete.
+Independent annotation and semantic review remain REQUIRED; Phase 1 as a scientific
+review phase is not complete. The 91% target remains **NOT_EVALUATED**.
+
+- Fixed configured Git diff/textconv helper execution during reads, final-budget
+  pair splitting/stale counters, duplicate request construction for audit, and
+  model calls with no retained source evidence. No database migration.
+- **121 tests passed** (baseline 115); production frontend build passed. One
+  dependency deprecation warning remains. No fresh Windows or full browser
+  acceptance was performed for this follow-up.
+- Audited **96 saved observations / 12 authored cases**, with zero fingerprint,
+  evidence mapping, snapshot quote, foreign revision or count errors. This is
+  provenance validation, not independent semantic correctness.
+- Offline 12-case final-budget comparison: split pairs **5→0**, stale counts
+  **12→0**. Four corrected packets cannot fit complete evidence pairs and must
+  abstain without inference. No new model calls or historical label changes.
+- All **550** files in the new preservation manifest match. Three canonical
+  frozen databases pass integrity. Saved metric audit covers 31 method rows and
+  1,986 query rows; saved RAG provenance audit covers 251 observations.
+
+Read docs/IMPROVEMENT_AUDIT.md, ARCHITECTURE_CURRENT.md, IMPROVEMENT_ROADMAP.md,
+EVALUATION_PROTOCOL.md and DEPENDENCY_COMPATIBILITY.md. Machine-readable results
+are in reports/improvement-20261023/RELEASE.json. Review packet instructions are
+in reports/improvement-20261023/input-audit/review/README.md. Two reviewer forms
+and an adjudicator form are blank; do not treat them as completed annotation.
+
+Next: independent development packet review, separate adjudication records,
+controlled evidence improvements and a disjoint real-change benchmark. The 79
+real-change candidates remain unlabelled; historical diagnostics stay development-only.
+Do not rerun saved generations just to resume. No commit or push was made.
+
+Extract the updated ZIP into a separate empty folder. Keep the existing Windows
+installation and live database intact. Runtime binaries/weights are excluded.
+See the sibling VIGILANT-project-checksum.json for final archive verification.
+
+---
+
+# Latest release — 23 October 2026
+
+The evidence-first code and bug-audit fixes are complete for the documented scope.
+GitHub main at `7eba731b99dc63c66e2872da1fcc8b723ce30945` was reviewed and merged
+into this package; changes have not been pushed to GitHub.
+
+**115 tests passed**, production build passed, and Linux Chromium acceptance
+passed all 13 pages, saved-report chat, exact-source navigation, exports, isolated
+deterministic investigation and 390px mobile layout. One dependency deprecation
+warning remains. This is not a new native Windows acceptance run.
+
+New investigations establish Git/static facts before retrieval and bounded
+advisory interpretation. Graph provenance and dependency direction are explicit;
+heuristic links are candidates. Chat explains saved runs without new inference.
+The supplied P0/B1–B11 audit fixes and limitations are recorded in
+`reports/evidence-first-20261022/BUG-AUDIT.md` and `docs/EVIDENCE_FIRST.md`.
+
+**91% correctness is NOT_EVALUATED, not achieved.** Trace precision/recall/F1 and
+consistency accuracy/macro-F1 have separate gates. The draft protocol is not
+frozen. Independent annotations, semantic review and a disjoint held-out test
+remain necessary; see `docs/QUALITY_TARGET.md`. The 79-candidate review queue is
+unlabelled and short of 200; it cannot be counted as evaluation evidence.
+
+All 514 files in the recovery manifest and all 549 files in the merged-history
+manifest match their hashes. Four SQLite databases pass integrity checks.
+Arithmetic audits cover 31 method rows and 1,986 query rows; provenance audits
+cover 251 RAG observations. The original and citation-repair diagnostic runs
+(72 observations) replay using their archived sources; two upstream 12-case runs
+pass score/fingerprint audits. No new model inference or cloud fallback was used.
+The eight-row lexical run was already complete and was not rerun for packaging.
+
+Keep your existing Windows directory and live database intact. Extract this ZIP
+into a separate empty folder first. In a fresh extraction use Setup-Windows.ps1,
+then Start-VIGILANT.ps1 for evidence-only operation. Runtime binaries and model
+weights remain separate reproducible dependencies. The package contains frozen
+historical snapshots; it does not claim to contain a newer live Windows database.
+To apply parser improvements to previously imported revisions, use the separate
+project identity created by scripts/reindex_repository.py; never rewrite old
+artifact versions. Full instructions: docs/EVIDENCE_FIRST.md.
+
+Next scientific task: obtain independent reviewed labels and semantic citation
+review, record all tuning repositories/change families, freeze selection, then
+perform one held-out evaluation. Do not tune against the final test or rerun
+historical generations merely to resume. Full release record:
+reports/evidence-first-20261022/RELEASE.json.
+
+---
+
 # Native Windows update - native Windows, 22 October 2026
 
 The current Windows working tree includes the reliability audit and a bounded,

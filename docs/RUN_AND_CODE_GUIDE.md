@@ -32,7 +32,7 @@ system policy change is required. Windows execution has not been performed here.
 ```bash
 cd VIGILANT
 bash scripts/setup.sh
-.venv/bin/python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --workers 1
+.venv/bin/python -m uvicorn backend.app:create_app --factory --host 127.0.0.1 --port 8000 --workers 1
 ```
 
 Setup creates `.venv`, installs pinned core dependencies, builds React, restores a

@@ -11,7 +11,7 @@ from evaluation.resume import atomic_json,fingerprint,reusable_model,preserve_pr
 NAMES={'E':'LLM only','F':'LLM + hybrid RAG','G':'LLM + RAG + KG','H':'LLM + RAG + KG + bounded investigation','I':'Full VIGILANT with temporal evidence and rules'}
 def main():
  import argparse
- p=argparse.ArgumentParser();p.add_argument('--model',default='local');p.add_argument('--cases',nargs='*');a=p.parse_args();s=Store(os.getenv('VIGILANT_BENCH_DB','sqlite:///'+str(ROOT/'data/snapshots/changebench.db')));model=provider(a.model);encoder=Encoder();rows=[];start=time.perf_counter();out=ROOT/'experiments/ablation-partial';out.mkdir(exist_ok=True)
+ p=argparse.ArgumentParser();p.add_argument('--model',default='local');p.add_argument('--cases',nargs='*');a=p.parse_args();s=Store(os.getenv('VIGILANT_BENCH_DB','sqlite:///'+str(ROOT/'data/snapshots/changebench.db')));model=provider(a.model);encoder=Encoder();rows=[];start=time.perf_counter();out=ROOT/'experiments/ablation-v2-partial';out.mkdir(exist_ok=True)
  identity=json.loads((ROOT/'data/models.json').read_text())['llm'];reused=0;generated=0;preflight_done=False
  for path in sorted((ROOT/'data/changebench').glob('[0-9][0-9]-*.json')):
   if path.stem.endswith('-report'):continue
@@ -47,12 +47,12 @@ def main():
     if a.model=='local' and not result.get('usage',{}).get('output_tokens'):
      atomic_json(out/'runtime-failure.json',{'case_id':case,'variant':variant,'model':result,'excluded_from_accuracy':True})
      raise RuntimeError('Inference did not execute: '+str(result.get('validation_error')))
-   decision=result['decision']['decision'];oracle=set(contract['expected_affected_artifacts']);tools=['JSON/citation validation']
+   decision=result['decision']['decision'] if result['validation_error'] is None else 'INVALID';oracle=set(contract['expected_affected_artifacts']);tools=['JSON/citation validation']
    if variant in 'FGHI':tools+=['hybrid retrieval']
    if variant in 'GHI':tools+=['structural graph']
    if variant in 'HI':tools+=['endpoint inspection','quote verification']
    if variant=='I':tools+=['Git diff','before/after comparison','conservative rules']
-   row={'case_id':case,'variant':variant,'name':NAMES[variant],'expected_status':contract['status'],'predicted_status':decision,'correct_status':decision==contract['status'],'schema_and_citations_valid':result['validation_error'] is None,'known_endpoint_recall':len(oracle&{x['artifact_id'] for x in ev})/len(oracle) if oracle else None,'tools_executed':tools,'tool_execution_success':1.,'quote_verification_rate':1. if ev else None,'semantic_grounding':None,'hallucination_rate':None,'evidence':ev,'model':result,'seconds':elapsed,'call_fingerprint':call_key,'resumed_from_saved_inference':can_reuse};rows.append(row);preserve_previous(target);atomic_json(target,row);print(case,variant,decision,'expected',contract['status'],'valid',row['schema_and_citations_valid'],'REUSED' if can_reuse else 'NEW',flush=True)
+   row={'case_id':case,'variant':variant,'name':NAMES[variant],'expected_status':contract['status'],'predicted_status':decision,'correct_status':decision==contract['status'],'schema_and_citations_valid':result['validation_error'] is None,'known_endpoint_recall':len(oracle&{x['artifact_id'] for x in ev})/len(oracle) if oracle else None,'tools_executed':tools,'tool_execution_success':None,'quote_verification_rate':None,'verification_scope':'stored-artifact quotes; not independently re-read Git','semantic_grounding':None,'hallucination_rate':None,'evidence':ev,'model':result,'seconds':elapsed,'call_fingerprint':call_key,'resumed_from_saved_inference':can_reuse};rows.append(row);preserve_previous(target);atomic_json(target,row);print(case,variant,decision,'expected',contract['status'],'valid',row['schema_and_citations_valid'],'REUSED' if can_reuse else 'NEW',flush=True)
  summary=[]
  for variant,name in NAMES.items():
   group=[x for x in rows if x['variant']==variant];known=[x['known_endpoint_recall'] for x in group if x['known_endpoint_recall'] is not None];summary.append({'variant':variant,'name':name,'cases':len(group),'status_accuracy':sum(x['correct_status'] for x in group)/len(group),'schema_valid_rate':sum(x['schema_and_citations_valid'] for x in group)/len(group),'uncertain_rate':sum(x['predicted_status']=='UNCERTAIN' for x in group)/len(group),'known_endpoint_recall':sum(known)/len(known) if known else None,'mean_seconds':sum(x['seconds'] for x in group)/len(group)})

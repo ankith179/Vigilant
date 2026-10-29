@@ -87,7 +87,7 @@ def test_restart_recovers_only_unstarted_jobs(tmp_path,monkeypatch):
     s.put('repositories','r',{'repository':'r','project_id':'p','path':'repo'})
     request={'repository':'r','base':'base','head':'head','model':'none','semantic':False}
     for name,status in [('pending','QUEUED'),('inflight','RUNNING')]:s.put('analysis_runs',name,{'run_id':name,'kind':'job','request':request,'status':status})
-    def analyze(*args):calls.append(args);return {'run_id':'result'}
+    def analyze(*args,**kwargs):calls.append(args);return {'run_id':'result'}
     monkeypatch.setattr(backend,'analyze',analyze)
     with TestClient(create_app(s))as c:
         end=time.monotonic()+5
@@ -102,7 +102,7 @@ def test_queue_capacity_and_revision_pinning(tmp_path,monkeypatch):
     gate=threading.Event();s=Store('sqlite:///'+str(tmp_path/'queue.db'))
     s.put('repositories','r',{'repository':'r','project_id':'p','path':'repo'})
     monkeypatch.setattr(backend,'revision',lambda path,ref:'pinned-'+ref)
-    def analyze(*args):gate.wait(10);return {'run_id':'result'}
+    def analyze(*args,**kwargs):gate.wait(10);return {'run_id':'result'}
     monkeypatch.setattr(backend,'analyze',analyze)
     with TestClient(create_app(s))as c:
         try:

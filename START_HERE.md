@@ -1,3 +1,15 @@
+# New investigation tools and 95% evaluation
+
+Extract into a new folder and preserve your current Windows database. Follow the setup below, then open Investigation Tools for source-verified snapshot tools and retained unknowns. Read docs/CLI_REFERENCE.md, docs/MCP_REFERENCE.md and docs/EVALUATION_PROTOCOL.md. The new target is 95%, not an achieved accuracy. Current measurement and test evidence are under reports/final-95/.
+
+# Updated release — 23 October 2026
+
+Extract into a separate empty folder first. Keep your existing Windows working directory, live databases and local model weights intact. This package preserves historical snapshots; it must not replace a newer live database. The updated pipeline and chat instructions are in `docs/EVIDENCE_FIRST.md`. The 91% correctness target remains NOT_EVALUATED; see `docs/QUALITY_TARGET.md`.
+
+The earlier Windows execution results below are historical evidence, not a new Windows run for this release. In a fresh extraction use `Setup-Windows.ps1`, then `Start-VIGILANT.ps1` for evidence-only operation. Add local Ollama separately when needed.
+
+---
+
 # Open VIGILANT
 
 Native Windows continuation, 21 October 2026: continue in this extracted folder.

@@ -55,7 +55,7 @@ python scripts/check_omniroute.py --list-models
 export OMNIROUTE_MODEL='EXACT_PROVIDER/MODEL_FROM_YOUR_GATEWAY'
 export OMNIROUTE_FREE_MODELS="$OMNIROUTE_MODEL"
 python scripts/check_omniroute.py
-python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+python -m uvicorn backend.app:create_app --factory --host 127.0.0.1 --port 8000
 ```
 
 Use the project's installed Python environment. `.env.example` is documentation;

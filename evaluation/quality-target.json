@@ -1,0 +1,13 @@
+{
+  "protocol": "vigilant-separate-quality-gates-v1",
+  "target": 0.91,
+  "minimum_test_cases": 200,
+  "training_repositories": [],
+  "validation_repositories": [],
+  "training_change_families": [],
+  "validation_change_families": [],
+  "frozen_pipeline_sha256": null,
+  "operational_checks_passed": null,
+  "status": "DRAFT_NOT_FROZEN",
+  "requirements": ["Record all tuning repositories and change families before freezing", "Two independent reviewers and adjudication", "Preserve invalid and missing responses in the denominator", "Trace precision, recall and F1 each >= 0.91", "Consistency accuracy and macro-F1 each >= 0.91", "Semantic citation review independent of syntax validation", "Report operational checks separately", "Do not equate observed 182/200 with a population lower bound of 91%"]
+}

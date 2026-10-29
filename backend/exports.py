@@ -14,11 +14,11 @@ def export(report,format):
             values=[finding.get(k,'')for k in ['status','rule','reason','affected_artifacts','evidence_ids']]
             values=[json.dumps(v)if isinstance(v,(dict,list))else str(v)for v in values]
             # Avoid spreadsheet formula execution when exporting repository text.
-            writer.writerow(["'"+v if v.lstrip().startswith(('=','+','-','@'))else v for v in values])
+            writer.writerow(["'"+v if v.startswith(('\t','\r')) or v.lstrip().startswith(('=','+','-','@'))else v for v in values])
         return out.getvalue(),'text/csv'
     if format!='html':raise ValueError('Unsupported export format')
     esc=lambda x:html.escape(str(x))
-    model=report.get('model',{}).get('decision',{})
+    model=(report.get('model') or {}).get('decision') or {}
     content=['<!doctype html><html lang="en"><meta charset="utf-8"><title>VIGILANT report</title>',
              '<style>body{font:16px/1.5 system-ui;max-width:960px;margin:32px auto;padding:20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;padding:12px}section{break-inside:avoid}h1,h2{color:#12364d}@media print{body{margin:0}}</style>',
              '<h1>VIGILANT evidence report</h1>',f'<p>Run: {esc(report.get("run_id",""))}<br>Revision: {esc(report.get("commit_id",""))}</p>',
@@ -26,6 +26,13 @@ def export(report,format):
              '<p>Source fidelity does not prove semantic correctness. Rule findings are review hypotheses.</p>',
              '<p>Use your browser’s Print → Save as PDF to export this document.</p><h2>Rule findings</h2>']
     for f in report.get('findings',[]):content.append(f'<section><h3>{esc(f.get("status",""))}</h3><p>{esc(f.get("reason",""))}</p><pre>{esc(json.dumps(f,indent=2))}</pre></section>')
+    assessments=report.get('assurance_v3',{}).get('assessments',[])
+    if assessments:content.append('<h2>V3 scoped decisions</h2>')
+    for item in assessments:
+        d=item['decision']
+        content.append('<section><h3>'+esc(item.get('path',''))+' :: '+esc(item.get('symbol',''))+'</h3>')
+        content.append('<dl>'+''.join('<dt>'+esc(k)+'</dt><dd>'+esc(d.get(k))+'</dd>' for k in ('trace','consistency','test_obligation','contract_authority','raw_confidence'))+'</dl>')
+        content.append('<p>'+esc(d.get('rationale',''))+'</p><p>Raw confidence is model-reported and uncalibrated.</p></section>')
     content.append('<h2>Versioned evidence</h2>')
     for e in report.get('evidence',[]):content.append(f'<section><h3>{esc(e.get("file",""))}:{esc(e.get("start_line",""))}–{esc(e.get("end_line",""))}</h3><p>Commit: {esc(e.get("commit",""))}<br>Hash: {esc(e.get("content_hash",""))}</p><pre>{esc(e.get("quote",""))}</pre></section>')
     content.append('<h2>Full record</h2><pre>'+esc(json.dumps(report,indent=2))+'</pre></html>')

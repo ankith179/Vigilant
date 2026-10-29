@@ -48,6 +48,16 @@ def test_unknown_model_citations():
  with pytest.raises(ValueError):validate(json.dumps(data),[])
 def test_contradictory_model_labels():
  with pytest.raises(ValueError):Decision(decision='INCONSISTENT',consistency='UNCERTAIN',confidence=.5,evidence_ids=['a'],affected_artifacts=[],reason='x',uncertainty='')
+def test_v2_separates_trace_disposition_and_consistency_without_rewriting_confidence():
+ result=Decision(schema_version=2,decision='BROKEN_TRACE',consistency='UNCERTAIN',confidence=.95,evidence_ids=['a'],affected_artifacts=[],reason='Declared endpoint missing at head.',uncertainty='Contract semantics require review.')
+ assert result.schema_version==2 and result.decision=='BROKEN_TRACE' and result.consistency=='UNCERTAIN'
+ assert result.confidence==.95
+def test_v2_rejects_non_consistency_label_on_consistency_axis():
+ with pytest.raises(ValueError):Decision(schema_version=2,decision='BROKEN_TRACE',consistency='MISSING_TEST',confidence=.5,evidence_ids=['a'],affected_artifacts=[],reason='x',uncertainty='')
+ with pytest.raises(ValueError,match='Conflicting v2 consistency outcomes'):Decision(schema_version=2,decision='CONSISTENT',consistency='INCONSISTENT',confidence=.5,evidence_ids=['a'],affected_artifacts=[],reason='x',uncertainty='')
+def test_new_prompt_requires_explicit_v2():
+ raw=json.dumps({'decision':'BROKEN_TRACE','consistency':'UNCERTAIN','confidence':.95,'evidence_ids':['e'],'affected_artifacts':[],'reason':'missing endpoint','uncertainty':'contract review'})
+ with pytest.raises(ValueError,match='Expected schema_version 2'):validate(raw,[{'evidence_id':'e','artifact_id':'a'}],2)
 def test_no_model_is_uncertain():assert NoLLMProvider().investigate('x',[])['decision']['decision']=='UNCERTAIN'
 def test_graph_rules():
  before=extract('p','r','a','x.py','def f():\n return 1\ndef test_f():\n assert f()==1');after=extract('p','r','b','x.py','def f():\n return 2\ndef test_f():\n assert f()==1');s=Store('sqlite:///:memory:');g,edges=build_graph(s,before);f=next(a for a in before if a.symbol=='f');t=next(a for a in before if a.symbol=='test_f');assert t.artifact_id in impact(g,{f.artifact_id});out=check([{'artifact_id':f.artifact_id}],before,after,edges);assert any(x['status']=='POTENTIAL_INCONSISTENCY' for x in out)
@@ -60,7 +70,7 @@ def test_inferred_lost_edge_is_not_confirmed_broken_trace():
 
  findings=check([{'artifact_id':lost['target_artifact']}],before,after,[lost])
 
- assert any(item['rule']=='inferred-edge-endpoint-removed' and item['status']=='POTENTIAL_INCONSISTENCY' for item in findings)
+ assert any(item['rule']=='deleted-endpoint' and item['status']=='POTENTIAL_INCONSISTENCY' for item in findings)
  assert not any(item['status']=='BROKEN_TRACE' for item in findings)
 
 def test_declared_lost_edge_is_broken_trace():
@@ -69,10 +79,10 @@ def test_declared_lost_edge_is_broken_trace():
  after=[requirement]
  store=Store('sqlite:///:memory:')
  _,edges=build_graph(store,[requirement,implementation],[{'source_artifact':requirement.artifact_id,'target_artifact':implementation.artifact_id,'relation_type':'IMPLEMENTS'}])
- assert 'is_declared' not in store.get('graph_edges',edges[0]['id'])
+ assert store.get('graph_edges',edges[0]['id'])['provenance_type']=='DECLARED'
  build_graph(store,[requirement,implementation],[{'source_artifact':requirement.artifact_id,'target_artifact':implementation.artifact_id,'relation_type':'IMPLEMENTS'}])
 
- findings=check([{'artifact_id':implementation.artifact_id}], [requirement,implementation], after, edges)
+ findings=check([{'artifact_id':implementation.artifact_id,'kind':'deleted'}], [requirement,implementation], after, edges,[{'status':'D','old_path':'src.py'}])
 
  assert any(item['rule']=='deleted-endpoint' and item['status']=='BROKEN_TRACE' for item in findings)
 
@@ -84,17 +94,18 @@ def test_deleted_implementation_does_not_report_test_as_unchanged():
  findings=check([{'artifact_id':implementation.artifact_id,'kind':'deleted'}],before,after,edges)
  assert not any(item['rule']=='implementation-changed-test-unchanged' for item in findings)
 
-def test_last_deleted_test_is_reported_as_missing_test_once():
+def test_last_deleted_test_requires_obligation_review():
  before=extract('p','r','a','x.py','def f():\n return 1\ndef test_f():\n assert f()==1')
  after=[a for a in before if a.symbol!='test_f']
  store=Store('sqlite:///:memory:');_,edges=build_graph(store,before)
  test=next(a for a in before if a.symbol=='test_f')
  implementation=next(a for a in before if a.symbol=='f')
  findings=check([{'artifact_id':test.artifact_id,'kind':'deleted'}],before,after,edges)
- assert sum(item['status']=='MISSING_TEST' for item in findings)==1
+ assert not any(item['status']=='MISSING_TEST' for item in findings)
+ assert any(item['rule']=='last-known-test-deleted' for item in findings)
  assert not any(item['status']=='BROKEN_TRACE' and implementation.artifact_id in item['affected_artifacts'] for item in findings)
 def test_real_truth_endpoints():
  from scripts.prepare_data import validate
  for p in Path('data/prepared').glob('*.json'):
-  d=json.loads(p.read_text())
+  d=json.loads(p.read_text(encoding='utf-8'))
   if 'sources' in d:assert validate(d)['dangling_links']==0

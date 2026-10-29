@@ -15,7 +15,6 @@ from llm.providers import LLMProvider
 
 class OmniRouteProvider(LLMProvider):
     name = 'omniroute'
-    prompt_version = 'paired-neutral-v2'
     evidence_budget = 48000
     evidence_limit = 24
 

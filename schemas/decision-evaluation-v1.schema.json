@@ -1,0 +1,8 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"vigilant-decision-evaluation-v1",
+ "type":"object","additionalProperties":false,"required":["schema_version","cohort","split","independent_evaluation","cases"],
+ "properties":{"schema_version":{"const":1},"cohort":{"type":"string"},"split":{"type":"string"},
+ "independent_evaluation":{"type":"boolean"},"cases":{"type":"array","items":{"type":"object",
+ "required":["case_id","truth","predictions"],"properties":{"case_id":{"type":"string"},
+ "truth":{"type":"object"},"predictions":{"type":"object","description":"Condition -> axes plus format_valid, evidence_support_review, raw_confidence"}}}}}
+}

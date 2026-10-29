@@ -3,7 +3,7 @@ import json
 import os
 from urllib.parse import urlsplit
 import httpx
-from ingestion.models import Decision
+from ingestion.models import DecisionV2
 from llm.providers import LLMProvider
 
 MODELS_32GB = ('qwen3:8b', 'qwen2.5-coder:14b', 'qwen3:14b')
@@ -52,7 +52,7 @@ class OllamaProvider(LLMProvider):
     @staticmethod
     def citation_schema(messages):
         """Constrain aliases to the exact excerpts that survived context selection."""
-        schema = Decision.model_json_schema()
+        schema = DecisionV2.model_json_schema()
         excerpts = json.loads(messages[-1]['content'])['evidence']
         for field, key in [('evidence_ids', 'evidence_id'), ('affected_artifacts', 'artifact_id')]:
             allowed = list(dict.fromkeys(e[key] for e in excerpts))

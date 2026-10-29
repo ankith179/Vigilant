@@ -1,5 +1,6 @@
 """Populate the thesis draft's tables directly from audited immutable results."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import subprocess
@@ -14,6 +15,11 @@ def table(headers, rows):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path, default=ROOT / 'submission/thesis-content.md')
+    parser.add_argument('--output', type=Path, default=OUT)
+    args = parser.parse_args()
+    output = args.output.resolve()
     data_path = ROOT / "reports/results/summary.json"
     data = json.loads(data_path.read_text())
     assert data["status"] == "COMPLETED" and not data["missing_rag_datasets"]
@@ -37,27 +43,27 @@ def main():
         "PROVENANCE": "\n\n".join(f"- {key}: `{value['path']}`" for key,value in data["provenance"].items()),
         "REFERENCES": (ROOT / "submission/references.md").read_text(),
     }
-    content = (ROOT / "submission/thesis-content.md").read_text()
+    content = args.source.read_text()
     for key,value in replacements.items():
         content = content.replace("@" + key + "@", value)
     hits = sum(r["known_affected_recovered"] for r in data["changebench"])
     misses = sum(r["known_affected_missed"] for r in data["changebench"])
     content = content.replace("@KNOWN_TOTAL@",str(hits+misses)).replace("@KNOWN_HITS@",str(hits)).replace("@KNOWN_MISSES@",str(misses))
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "Thesis-Draft.md").write_text(content)
-    cmd = ["pandoc", str(OUT / "Thesis-Draft.md"), "--standalone", "--toc", "--toc-depth=1", "--number-sections",
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "Thesis-Draft.md").write_text(content)
+    cmd = ["pandoc", str(output / "Thesis-Draft.md"), "--standalone", "--toc", "--toc-depth=1", "--number-sections",
            "--top-level-division=chapter", "-V", "documentclass=report", "-V", "fontsize=11pt",
            "-V", "papersize=a4", "-V", "geometry:margin=25mm", "-V", "colorlinks=true", "--resource-path", str(ROOT / "submission")]
     logs = ROOT / "reports/submission"; logs.mkdir(parents=True,exist_ok=True)
     with (logs / "thesis-build.log").open("w") as log:
-        subprocess.run(cmd + ["-o", str(OUT / "Thesis-Draft.tex")], cwd=ROOT / "submission", stdout=log, stderr=subprocess.STDOUT, check=True)
-        subprocess.run(cmd + ["--pdf-engine=pdflatex", "-o", str(OUT / "Thesis-Draft.pdf")], cwd=ROOT / "submission", stdout=log, stderr=subprocess.STDOUT, check=True)
+        subprocess.run(cmd + ["-o", str(output / "Thesis-Draft.tex")], cwd=ROOT / "submission", stdout=log, stderr=subprocess.STDOUT, check=True)
+        subprocess.run(cmd + ["--pdf-engine=pdflatex", "-o", str(output / "Thesis-Draft.pdf")], cwd=ROOT / "submission", stdout=log, stderr=subprocess.STDOUT, check=True)
     (logs / "thesis-source-provenance.json").write_text(json.dumps({
         "summary_sha256": hashlib.sha256(data_path.read_bytes()).hexdigest(),
         "status":"DRAFT_FOR_REVIEW", "known_affected_recovered":hits, "known_affected_missed":misses,
         "institutional_format_verified":False, "independent_semantic_review":False,
         "sources":data["provenance"]},indent=2)+"\n")
-    print(OUT / "Thesis-Draft.pdf")
+    print(output / "Thesis-Draft.pdf")
 
 
 if __name__ == "__main__": main()

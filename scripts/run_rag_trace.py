@@ -239,7 +239,7 @@ def main():
         baseline_metrics, baseline_per_query = ranking(truth, baseline_rankings)
         metrics, per_query = ranking(truth, rag_rankings)
         status_counts = Counter(status for row in calls
-                                for status in row['decision']['statuses'].values())
+                                for status in (row['decision']['statuses'].values() if row['validation_error'] is None else ['INVALID']*len(row['aliases'])))
         result = {
             'dataset': name,
             'method': 'hybrid_rag_top5',

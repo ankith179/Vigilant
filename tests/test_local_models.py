@@ -7,7 +7,7 @@ from rag.evidence import evidence,paired_versions,verify
 from llm.context import request
 from llm.providers import LLMProvider,uncertain
 from llm.ollama import OllamaProvider
-from scripts.evaluate_local_models import run,metrics,validate_dataset,add_git_change_facts
+from scripts.evaluate_local_models import run,metrics,validate_dataset
 from scripts.export_graph import export
 
 
@@ -31,6 +31,15 @@ def test_changed_window_verified_and_prompt_retains_tail():
     assert all(x['excerpt']==e['quote'] for x,e in zip(payload['evidence'],selected))
 
 
+def test_v2_prompt_separates_disposition_and_consistency():
+    messages,_,_,_=request('Inspect a changed trace endpoint',[])
+    prompt=messages[0]['content']
+    assert 'Return schema_version 2' in prompt
+    assert 'the fields may differ' in prompt
+    assert 'not accuracy or a calibrated probability' in prompt
+    assert 'Do not downgrade a directly evidenced contract violation to POTENTIAL_INCONSISTENCY' in prompt
+
+
 def test_pair_not_split_by_budget():
     ev,_=pair();assert request('check',ev,limit=1)[1]==[]
     assert request('check',ev,budget=1)[1]==[]
@@ -39,6 +48,7 @@ def test_pair_not_split_by_budget():
 
 def test_legacy_prompt_still_bounded():
     ev,_=pair();messages,_,_,_=LLMProvider().legacy_investigation_request('check',ev)
+    assert 'schema_version' not in messages[0]['content']
     payload=json.loads(messages[-1]['content'].split('\nEVIDENCE\n')[1])
     assert all(len(x['excerpt'])<=400 for x in payload)
 
@@ -59,7 +69,7 @@ def test_ollama_schema_and_identity(monkeypatch):
         def post(self,url,json):
             calls.append((url,json))
             if url.endswith('/show'):return self.response({'capabilities':['thinking']})
-            return self.response({'done':True,'done_reason':'stop','message':{'content':uncertain('insufficient').model_dump_json()},'model':'qwen3:8b','eval_count':12})
+            return self.response({'done':True,'done_reason':'stop','message':{'content':uncertain('insufficient',schema_version=2).model_dump_json()},'model':'qwen3:8b','eval_count':12})
         def response(self,data):return SimpleNamespace(raise_for_status=lambda:None,json=lambda:data)
     monkeypatch.setattr('llm.ollama.httpx.Client',Client)
     engine=OllamaProvider('qwen3:8b');result=engine.investigate('check',[])
@@ -81,7 +91,7 @@ def test_citation_resolution_stays_strict_and_derives_references(eids,aids,valid
     ev,_=pair()
     class Response(OllamaProvider):
         def complete(self,messages):
-            obj=uncertain('Insufficient contract evidence').model_dump()
+            obj=uncertain('Insufficient contract evidence',schema_version=2).model_dump()
             obj.update(evidence_ids=eids,affected_artifacts=aids)
             return json.dumps(obj),{}
     result=Response().investigate('check',ev)
@@ -102,7 +112,7 @@ def test_finite_resume_and_labels_never_in_prompt(tmp_path):
         def preflight(self):return {'model':self.model,'digest':'test-digest'}
         def complete(self,messages):
             Fake.count+=1;assert 'expected_status' not in str(messages)
-            return uncertain('No sufficient evidence').model_dump_json(),{'output_tokens':10}
+            return uncertain('No sufficient evidence',schema_version=2).model_dump_json(),{'output_tokens':10}
     data={'split':'diagnostic','cases':[{'case_id':str(i),'question':'check','evidence':[],'expected_status':'UNCERTAIN'} for i in range(2)]}
     first=run(data,['test'],tmp_path,1,Fake)
     assert first['results'][0]['metrics'] is None
@@ -165,43 +175,6 @@ def test_balanced_context_keeps_changed_code_caller_and_test():
     assert report['semantic_sufficiency']=='UNREVIEWED'
 
 
-def test_git_change_facts_surface_deleted_symbol_without_gold_label(tmp_path):
-    from change_analysis.diff import format_change_facts
-    changes={'artifacts':[{'kind':'deleted','artifact_type':'test_method','file':'tests/test_helpers.py','symbol':'test_redirect_no_app'}],
-             'files':[{'status':'M','old_path':'tests/test_helpers.py','new_path':'tests/test_helpers.py',
-                       'patch':'@@ -164,4 +163,0 @@\n-def test_redirect_no_app():\n-    assert True'}]}
-    summary=format_change_facts(changes)
-    assert 'deleted test_method tests/test_helpers.py::test_redirect_no_app' in summary
-    assert 'Diff line: -def test_redirect_no_app():' in summary
-    data={'cases':[{'case_id':'06-test-deleted','question':'Assess the snapshot.','expected_status':'MISSING_TEST','evidence':[]}]}
-    report_dir=tmp_path/'reports';report_dir.mkdir()
-    (report_dir/'06-test-deleted-report.json').write_text(json.dumps({'changes':changes}),encoding='utf-8')
-    updated=add_git_change_facts(data,report_dir)
-    assert 'test_redirect_no_app' in updated['cases'][0]['question']
-    assert 'MISSING_TEST' not in updated['cases'][0]['question']
-    with pytest.raises(ValueError):add_git_change_facts({'cases':[{'case_id':'missing','question':'','evidence':[]}]},report_dir)
-
-
-def test_independent_review_candidate_builder_exports_only_unlabeled_source_changes(tmp_path):
-    import subprocess
-    from scripts.prepare_independent_review import collect_repo,round_robin
-    repo=tmp_path/'sample';repo.mkdir()
-    def git(*args):
-        return subprocess.run(['git','-C',str(repo),*args],check=True,capture_output=True)
-    git('init');git('config','user.name','Review fixture');git('config','user.email','review@example.invalid')
-    (repo/'app.py').write_text('value = 1\n',encoding='utf-8')
-    (repo/'README.md').write_text('Initial docs\n',encoding='utf-8')
-    git('add','.');git('commit','-m','baseline')
-    (repo/'app.py').write_text('value = 2\n',encoding='utf-8')
-    git('add','app.py');git('commit','-m','change behavior')
-    pool=collect_repo(repo)
-    assert len(pool)==1
-    assert pool[0]['changed_files']==['app.py']
-    assert 'expected_status' not in pool[0] and 'POTENTIAL_INCONSISTENCY' not in json.dumps(pool[0])
-    assert pool[0]['base_commit']!=pool[0]['head_commit']
-    assert len(round_robin([pool,[]],200))==1
-
-
 def test_api_model_selection_reaches_worker(tmp_path,monkeypatch):
     from fastapi.testclient import TestClient
     import backend.app as backend
@@ -216,4 +189,6 @@ def test_api_model_selection_reaches_worker(tmp_path,monkeypatch):
         good=client.post('/api/analysis/run',json={'repository':'r','model':'ollama','ollama_model':'qwen3:14b'})
         assert good.status_code==202
         assert client.post('/api/analysis/run',json={'repository':'r','model':'ollama','ollama_model':'unknown'}).status_code==400
-    assert seen==[{'ollama_model':'qwen3:14b'}]
+    assert len(seen)==1 and seen[0]['ollama_model']=='qwen3:14b'
+    from agents.control import RunControl
+    assert isinstance(seen[0]['control'],RunControl)

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "created_at": "2026-10-26T14:41:09.867473+00:00",
+  "source": "C:\\Users\\Ankith\\Documents\\Codex\\2026-10-25\\master-execution-prompt-vigilant-complete-development\\work\\VIGILANT",
+  "destination": "C:\\Users\\Ankith\\Downloads\\vigilant project code",
+  "source_and_destination_files": 15126,
+  "file_path_and_size_mismatches": 0,
+  "code_and_document_files_sha256_verified": 7394,
+  "code_and_document_hash_mismatches": 0,
+  "excluded": [
+    ".runtime",
+    ".uv-cache",
+    ".pytest_cache",
+    ".cache",
+    "__pycache__",
+    "tmp",
+    "node_modules",
+    ".env",
+    "12 .git worktree-pointer files whose contents refer to stale /workspace/scratch paths"
+  ],
+  "runtime": {
+    "venv": "Copied; installed dependencies retained.",
+    "original_runtime": "Unchanged at the source checkout.",
+    "runtime_cache": "The source checkout's .runtime contains only the TEBench Git cache; it was not duplicated."
+  },
+  "target_focused_tests": {
+    "command": "rtk .venv/Scripts/python.exe -X utf8 -m pytest -q --basetemp=tmp/pytest-short-path-20261026 tests/test_test_evolution.py tests/test_lineage_observations.py::test_source_observations_retain_known_ambiguities[rename]",
+    "result": "7 passed"
+  },
+  "release_archive": {
+    "path": "C:\\Users\\Ankith\\Documents\\Codex\\2026-10-25\\master-execution-prompt-vigilant-complete-development\\outputs\\VIGILANT-project-20261026-95target.zip",
+    "sha256": "6c8b77842f834b2459b1b44e9dfd13ccfac223988b1bc7cad28a331ccf08dd26",
+    "manifest_files_verified": 26594,
+    "historical_files_verified": 550,
+    "status": "PASS"
+  },
+  "quality": "95% assurance gates remain NOT_EVALUATED; independent labels remain 0."
+}

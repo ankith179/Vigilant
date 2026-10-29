@@ -1,0 +1,47 @@
+/* Controlled lifecycle acceptance; fixture outcomes are never research labels. */
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'),origin=process.env.VIGILANT_TEST_URL,out=process.env.VIGILANT_BROWSER_REPORT;
+const modulePath=process.env.VIGILANT_BROWSER_MODULE||path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright');
+const {chromium}=require(modulePath);
+const result={status:'RUNNING',fixture_only:true,started_at:new Date().toISOString(),checks:[],errors:[],jobs:[],model_calls:0,independent_labels_created:0,quality_target:'NOT_EVALUATED',source_hashes:{}};
+for(const file of ['agents/control.py','agents/workflow.py','backend/app.py','frontend/src/main.jsx','frontend/src/Chat.jsx','scripts/check_job_control_browser.py','scripts/test_job_controls.cjs'])result.source_hashes[file]=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
+let browser;
+(async()=>{
+  browser=await chromium.launch({headless:true,...(process.env.VIGILANT_BROWSER_EXECUTABLE?{executablePath:process.env.VIGILANT_BROWSER_EXECUTABLE}:{})});
+  result.browser=browser.version();result.playwright=require(modulePath+'/package.json').version;
+  const context=await browser.newContext({viewport:{width:1440,height:1000}});
+  const token=process.env.VIGILANT_ACCESS_TOKEN;
+  if(token)await context.addInitScript(t=>sessionStorage.setItem('vigilant-token',t),token);
+  const page=await context.newPage();page.setDefaultTimeout(15000);page.on('pageerror',e=>result.errors.push(e.message));
+  await page.goto(origin,{waitUntil:'networkidle'});await page.getByLabel('Repository',{exact:true}).selectOption('fixture');
+  await page.getByLabel('Run budget in seconds').fill('20');
+  let posted=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/analysis/run'&&r.request().method()==='POST');
+  await page.getByRole('button',{name:'Investigate change →',exact:true}).click();let first=await (await posted).json();
+  await page.getByRole('button',{name:'Cancel investigation',exact:true}).click();
+  await page.getByRole('status').filter({hasText:'Investigation status: CANCELLED.'}).waitFor();
+  const headers=token?{Authorization:'Bearer '+token}:{};
+  let row=await (await context.request.get(origin+'/api/reports/'+first.job_id,{headers})).json();
+  assert.equal(row.status,'CANCELLED');assert(!row.result_run_id);result.jobs.push({job_id:first.job_id,status:row.status});
+  result.checks.push('Dashboard cancellation reaches the actual authenticated job API and exits polling at CANCELLED');
+  await page.getByLabel('Run budget in seconds').fill('1');
+  posted=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/analysis/run'&&r.request().method()==='POST');
+  await page.getByRole('button',{name:'Investigate change →',exact:true}).click();const second=await (await posted).json();
+  await page.getByRole('status').filter({hasText:'Investigation status: TIMED_OUT.'}).waitFor();
+  row=await (await context.request.get(origin+'/api/reports/'+second.job_id,{headers})).json();
+  assert.equal(row.status,'TIMED_OUT');assert.equal(row.request.timeout_seconds,1);assert(!row.result_run_id);
+  result.jobs.push({job_id:second.job_id,status:row.status});result.checks.push('One-second cooperative fixture budget becomes TIMED_OUT and re-enables the investigation button');
+  await page.getByRole('button',{name:'Open VIGILANT chat',exact:true}).click();
+  await page.getByLabel('Question',{exact:true}).fill('compare HEAD~1 with HEAD');
+  posted=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/chat'&&r.request().method()==='POST');
+  await page.getByRole('button',{name:'Send question',exact:true}).click();const chat=await (await posted).json();
+  assert(chat.job_id);const cancelled=await context.request.post(origin+'/api/analysis/jobs/'+chat.job_id+'/cancel',{headers});assert(cancelled.ok());
+  await page.getByText('Comparison cancelled:',{exact:false}).waitFor();
+  assert(await page.getByLabel('Question',{exact:true}).isEditable());result.jobs.push({job_id:chat.job_id,status:'CANCELLED'});
+  result.checks.push('Comparison chat preserves CANCELLED rather than relabelling it RUNNING');
+  await page.setViewportSize({width:390,height:844});
+  await page.getByRole('button',{name:'Close chat',exact:true}).click();
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile overflow');
+  assert.equal(result.errors.length,0);result.checks.push('390px dashboard budget/status controls have no document overflow');result.status='PASS';
+})().catch(e=>{result.status='FAIL';result.errors.push(e.stack);process.exitCode=1}).finally(async()=>{
+  if(browser)await browser.close();result.finished_at=new Date().toISOString();fs.writeFileSync(path.join(out,'validation.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+});

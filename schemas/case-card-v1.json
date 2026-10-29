@@ -1,0 +1,360 @@
+{
+  "$defs": {
+    "Adjudication": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "PENDING",
+            "IN_REVIEW",
+            "ADJUDICATED",
+            "UNRESOLVED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reviewer Ids",
+          "type": "array"
+        },
+        "rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rationale"
+        }
+      },
+      "required": [
+        "status",
+        "reviewer_ids",
+        "rationale"
+      ],
+      "title": "Adjudication",
+      "type": "object"
+    },
+    "Artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "revision": {
+          "minLength": 1,
+          "title": "Revision",
+          "type": "string"
+        },
+        "content_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "revision",
+        "content_hash"
+      ],
+      "title": "Artifact",
+      "type": "object"
+    },
+    "Artifacts": {
+      "additionalProperties": false,
+      "properties": {
+        "requirement": {
+          "items": {
+            "$ref": "#/$defs/Artifact"
+          },
+          "title": "Requirement",
+          "type": "array"
+        },
+        "code": {
+          "items": {
+            "$ref": "#/$defs/Artifact"
+          },
+          "title": "Code",
+          "type": "array"
+        },
+        "test": {
+          "items": {
+            "$ref": "#/$defs/Artifact"
+          },
+          "title": "Test",
+          "type": "array"
+        }
+      },
+      "required": [
+        "requirement",
+        "code",
+        "test"
+      ],
+      "title": "Artifacts",
+      "type": "object"
+    },
+    "RequirementSource": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "NORMATIVE",
+            "DOCUMENTATION_DERIVED",
+            "AUTHORED"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "reference": {
+          "minLength": 1,
+          "title": "Reference",
+          "type": "string"
+        },
+        "review_id": {
+          "minLength": 1,
+          "title": "Review Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "reference",
+        "review_id"
+      ],
+      "title": "RequirementSource",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "minLength": 1,
+      "title": "Case Id",
+      "type": "string"
+    },
+    "d_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "D Ids",
+      "type": "array"
+    },
+    "priority_tier": {
+      "enum": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "title": "Priority Tier",
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "MINED",
+        "CURATED",
+        "SYNTHETIC"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "source_id": {
+      "minLength": 1,
+      "title": "Source Id",
+      "type": "string"
+    },
+    "family": {
+      "minLength": 1,
+      "title": "Family",
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "dev",
+        "test"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "history_source": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "History Source",
+      "type": "string"
+    },
+    "base_revision": {
+      "minLength": 1,
+      "title": "Base Revision",
+      "type": "string"
+    },
+    "head_revision": {
+      "minLength": 1,
+      "title": "Head Revision",
+      "type": "string"
+    },
+    "artifacts": {
+      "$ref": "#/$defs/Artifacts"
+    },
+    "change_facts": {
+      "additionalProperties": true,
+      "title": "Change Facts",
+      "type": "object"
+    },
+    "requirement_source": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/RequirementSource"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "expected_trace": {
+      "anyOf": [
+        {
+          "enum": [
+            "LINKED",
+            "BROKEN_TRACE",
+            "MISSING_TRACE",
+            "UNCERTAIN"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expected Trace"
+    },
+    "expected_consistency": {
+      "anyOf": [
+        {
+          "enum": [
+            "CONSISTENT",
+            "INCONSISTENT",
+            "POTENTIAL_INCONSISTENCY",
+            "NO_ASSURANCE_IMPACT",
+            "UNCERTAIN"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expected Consistency"
+    },
+    "expected_test_obligation": {
+      "anyOf": [
+        {
+          "enum": [
+            "SATISFIED",
+            "UNSATISFIED",
+            "UNVERIFIED",
+            "NOT_APPLICABLE"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expected Test Obligation"
+    },
+    "expected_authority": {
+      "anyOf": [
+        {
+          "enum": [
+            "NORMATIVE",
+            "INFORMATIONAL",
+            "NOT_ESTABLISHED"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expected Authority"
+    },
+    "impact_ground_truth": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Impact Ground Truth"
+    },
+    "supporting_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Evidence Ids",
+      "type": "array"
+    },
+    "adjudication": {
+      "$ref": "#/$defs/Adjudication"
+    },
+    "notes": {
+      "title": "Notes",
+      "type": "string"
+    },
+    "allow_synthetic_test": {
+      "default": false,
+      "title": "Allow Synthetic Test",
+      "type": "boolean"
+    },
+    "label_status": {
+      "enum": [
+        "UNREVIEWED_SILVER",
+        "ADJUDICATED"
+      ],
+      "title": "Label Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id",
+    "d_ids",
+    "priority_tier",
+    "origin",
+    "source_id",
+    "family",
+    "split",
+    "history_source",
+    "base_revision",
+    "head_revision",
+    "artifacts",
+    "change_facts",
+    "requirement_source",
+    "expected_trace",
+    "expected_consistency",
+    "expected_test_obligation",
+    "expected_authority",
+    "impact_ground_truth",
+    "supporting_evidence_ids",
+    "adjudication",
+    "notes",
+    "label_status"
+  ],
+  "title": "CaseCard",
+  "type": "object"
+}

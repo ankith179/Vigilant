@@ -42,7 +42,7 @@ def diagnostic_dataset():
 
 
 def validate_dataset(data,models):
-    if data.get('split') not in {'diagnostic','validation','test'}:raise ValueError('Declare dataset split')
+    if data.get('split') not in {'diagnostic','development','validation','test'}:raise ValueError('Declare dataset split')
     if data['split']=='test' and len(models)!=1:raise ValueError('Choose one model on validation before held-out test')
     cases=data['cases']
     if not cases or len({x['case_id'] for x in cases})!=len(cases):raise ValueError('Nonempty unique case IDs required')

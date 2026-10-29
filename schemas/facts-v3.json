@@ -1,0 +1,181 @@
+{
+  "$defs": {
+    "FactSource": {
+      "additionalProperties": false,
+      "properties": {
+        "revision": {
+          "enum": [
+            "BASE",
+            "HEAD"
+          ],
+          "title": "Revision",
+          "type": "string"
+        },
+        "commit_id": {
+          "minLength": 1,
+          "title": "Commit Id",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "start_line": {
+          "minimum": 1,
+          "title": "Start Line",
+          "type": "integer"
+        },
+        "end_line": {
+          "minimum": 1,
+          "title": "End Line",
+          "type": "integer"
+        },
+        "content_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "extraction_method": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Extraction Method",
+          "type": "string"
+        },
+        "artifact_role": {
+          "default": "unknown",
+          "enum": [
+            "requirement",
+            "implementation",
+            "test",
+            "consumer",
+            "contract",
+            "unknown"
+          ],
+          "title": "Artifact Role",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "revision",
+        "commit_id",
+        "path",
+        "start_line",
+        "end_line",
+        "content_hash",
+        "extraction_method",
+        "evidence_id"
+      ],
+      "title": "FactSource",
+      "type": "object"
+    },
+    "SourcedFact": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "default": null,
+          "title": "Value"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/FactSource"
+          },
+          "title": "Sources",
+          "type": "array"
+        },
+        "unknown_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unknown Reason"
+        }
+      },
+      "title": "SourcedFact",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "evidence_sufficient": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "has_head_evidence_for_req_impl_test": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "symbol_deleted_at_head": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "renamed_to": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "declared_link_to_symbol": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "head_refs_symbol": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "stale_consumer": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "expected_link": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "link_present": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "change_kind": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "comment_has_contract_markers": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "doc_default": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "sig_default": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "default_changed_base_to_head": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "contract_authority": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "requirement_default": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "route_changed": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "route_alias_kept": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "consumer_exists": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "consumer_matches_new_route": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "test_deleted": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "obligation_explicit": {
+      "$ref": "#/$defs/SourcedFact"
+    },
+    "other_test_covers_path": {
+      "$ref": "#/$defs/SourcedFact"
+    }
+  },
+  "title": "FactsV3",
+  "type": "object"
+}

@@ -66,7 +66,7 @@ def test_oversized_evidence_omitted_explicitly_without_truncating_others():
 
 
 def test_transport_maps_citations_and_records_requested_and_reported_models(monkeypatch, configured):
-    obj = {'decision':'AFFECTED','consistency':'AFFECTED','confidence':.8,'evidence_ids':['E1'],
+    obj = {'schema_version':2,'decision':'AFFECTED','consistency':'UNCERTAIN','confidence':.8,'evidence_ids':['E1'],
            'affected_artifacts':['A1'],'reason':'Relevant changed symbol','uncertainty':''}
     seen = reply_transport(monkeypatch, 200, {'id':'reply-1','model':'reported-model',
         'choices':[{'finish_reason':'stop','message':{'content':json.dumps(obj)}}],
@@ -93,7 +93,7 @@ def test_failure_stops_after_one_call_without_fallback(monkeypatch, configured, 
 
 
 def test_unknown_citation_remains_invalid(monkeypatch, configured):
-    obj = {'decision':'AFFECTED','consistency':'AFFECTED','confidence':.8,'evidence_ids':['E999'],
+    obj = {'schema_version':2,'decision':'AFFECTED','consistency':'UNCERTAIN','confidence':.8,'evidence_ids':['E999'],
            'affected_artifacts':['A1'],'reason':'Unsupported','uncertainty':''}
     reply_transport(monkeypatch, 200, {'choices':[{'finish_reason':'stop','message':{'content':json.dumps(obj)}}]})
     result = provider('omniroute').investigate('Inspect change', evidence())

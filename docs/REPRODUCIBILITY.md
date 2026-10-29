@@ -34,7 +34,7 @@ npm.cmd --prefix frontend run build
 ./.venv/Scripts/python.exe scripts/restore_checkpoint.py
 ./.venv/Scripts/python.exe scripts/download_models.py
 ./.venv/Scripts/python.exe -m pytest -q
-./.venv/Scripts/python.exe -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+./.venv/Scripts/python.exe -m uvicorn backend.app:create_app --factory --host 127.0.0.1 --port 8000
 ```
 
 Open `http://127.0.0.1:8000`. View the ledger without running anything with
@@ -50,7 +50,7 @@ npm --prefix frontend ci
 npm --prefix frontend run build
 .venv/bin/python scripts/restore_checkpoint.py
 .venv/bin/python scripts/download_models.py
-.venv/bin/python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+.venv/bin/python -m uvicorn backend.app:create_app --factory --host 127.0.0.1 --port 8000
 ```
 
 `scripts/setup.sh` uses uv. An ordinary Python virtual environment and pip can

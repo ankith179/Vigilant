@@ -1,5 +1,11 @@
 # Independent review still required
 
+The current handoff bundle has a detailed reviewer procedure and agreement
+summarizer in `docs/REVIEWER_WORKFLOW.md` and
+`scripts/summarize_reviewer_agreement.py`. The existing 32-case pilot is
+development material only; use neither it nor its reviewers to claim the
+independent 95% gate has passed.
+
 The project does not claim semantic grounding or hallucination accuracy from
 schema checks. The ablation summarizer generates `reports/ablation/review-packets.json`
 with actual prompts, evidence and model outputs, alongside blank review fields.

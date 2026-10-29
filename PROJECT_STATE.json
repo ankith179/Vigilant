@@ -1,8 +1,8 @@
 {
   "project": "VIGILANT",
   "version": 1,
-  "updated_at": "2026-10-22T14:10:55+05:30",
-  "requested_destination": "C:\\Users\\Ankith\\Downloads\\Code- Vigilant",
+  "updated_at": "2026-10-28T00:00:00+05:30",
+  "requested_destination": "C:\\Users\\Ankith\\Downloads\\vigilant project code",
   "automation_id": "6ac5074cf11881918f2f9e8db081c398",
   "automation_cadence": "hourly continuation check, not an exact quota-reset trigger",
   "active_lease": null,
@@ -204,15 +204,15 @@
       "depends_on": [
         "implementation"
       ],
-      "verified_tests": 82,
+      "verified_tests": 145,
       "logs": [
         "reports/tests-after-resume-refactor.log",
         "reports/tests-resume-20261006.log",
         "reports/tests-experiment-view.log"
       ],
-      "finished_at": "2026-10-17T02:30:05.239782+00:00",
-      "log": "reports/accuracy-20261017/tests-after.log",
-      "passed": 82,
+      "finished_at": "2026-10-24T04:18:08.085317+00:00",
+      "log": "reports/completion-20261024/tests-final.log",
+      "passed": 145,
       "exit_code": 0
     },
     {
@@ -229,8 +229,8 @@
       "depends_on": [
         "implementation"
       ],
-      "finished_at": "2026-10-17T02:30:05.239782+00:00",
-      "log": "reports/accuracy-20261017/frontend-build.log"
+      "finished_at": "2026-10-24T04:18:08.085317+00:00",
+      "log": "reports/completion-20261024/frontend-build.log"
     },
     {
       "id": "frontend_browser",
@@ -243,7 +243,7 @@
       "depends_on": [
         "frontend_build"
       ],
-      "last_checked": "2026-10-16T17:05:15.858923+00:00",
+      "last_checked": "2026-10-24T04:18:08.085317+00:00",
       "evidence": [
         "reports/browser-install-20261007T2103.log",
         "reports/browser-download-probe-20261008.log",
@@ -251,9 +251,9 @@
       ],
       "finished_at": "2026-10-17T02:30:05.239782+00:00",
       "outputs": [
-        "reports/frontend/20261017-local-models/validation.json"
+        "reports/completion-20261024/browser-final/validation.json"
       ],
-      "scope": "Chromium 138 Linux: all 13 pages, graph/evidence, report JSON/CSV/HTML exports, free provider selector, settings, isolated deterministic investigation and mobile layout passed.",
+      "scope": "Linux Chromium: 13 pages, exact source, exports, coverage, explicit chat comparison, saved follow-up, test review suggestions, mobile; not native Windows.",
       "extension_scope": "Live OmniRoute inference and native Windows remain unverified."
     },
     {
@@ -280,12 +280,10 @@
       "depends_on": [
         "tables_figures"
       ],
-      "finished_at": "2026-10-08T02:13:11.882584+00:00",
-      "scope": "27-page technical draft; author/institution formatting and independent review remain external.",
+      "finished_at": "2026-10-24T04:18:08.085317+00:00",
+      "scope": "29-page technical revision; institution/template/review external. Earlier drafts preserved.",
       "outputs": [
-        "submission/output/Thesis-Draft.pdf",
-        "submission/thesis-content.md",
-        "reports/submission/thesis-source-provenance.json"
+        "submission/research-20261024/thesis/Thesis-Draft.pdf"
       ]
     },
     {
@@ -296,13 +294,11 @@
       "depends_on": [
         "tables_figures"
       ],
-      "finished_at": "2026-10-16T11:06:25.684105+00:00",
-      "scope": "Five-page reviewed IEEE PDF and editable Word manuscript; additional saved-result analysis. Consistency capability and independent/external review remain unresolved.",
+      "finished_at": "2026-10-24T04:18:08.085317+00:00",
+      "scope": "6-page technical revision, 15 references; independent review, final venue formatting and submission unresolved.",
       "outputs": [
-        "submission/research-20261016/VIGILANT-Research-Paper.pdf",
-        "submission/research-20261016/VIGILANT-Research-Paper.docx",
-        "submission/research-20261016/REVIEW-RESPONSE.md",
-        "submission/research-20261016/VERIFICATION.md"
+        "submission/research-20261024/VIGILANT-Research-Paper.pdf",
+        "submission/research-20261024/VIGILANT-Research-Paper.docx"
       ]
     },
     {
@@ -366,8 +362,8 @@
       "depends_on": [],
       "library_file_id": "libfile_62832ff34ccc8191947359933746ec53",
       "refresh_required_after_changes": true,
-      "release_date": "2026-10-16",
-      "scope": "Full local research application release; 62 tests, browser exports/settings, free-only selection, persisted queue, immutable restore and run/code guide. Broader production architecture remains partial.",
+      "release_date": "2026-10-23",
+      "scope": "Full project plus the bounded training-only contextual-bandit retrieval comparison; 133 tests, preserved browser evidence, zero new LLM calls and unchanged historical experiments. Broader independent evaluation remains incomplete.",
       "windows_refresh_at": "2026-10-21T06:15:54.778480+00:00",
       "latest_local_package": "../VIGILANT-project.zip",
       "latest_local_checksum": "../VIGILANT-project-checksum.json",
@@ -418,6 +414,393 @@
       "result": "experiments/local-model-comparison/windows-20261021/latest.json",
       "new_generations": 36,
       "resume_check_new_calls": 0
+    },
+    {
+      "id": "evidence_first_20261023",
+      "title": "Evidence-first facts, retrieval, advisory interpretation and saved-report chat",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "bug_audit_20261023",
+      "title": "P0 and B1\u2013B11 fixes and regression checks",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "quality_target_91",
+      "title": "Independent 91% traceability and consistency evaluation",
+      "status": "BLOCKED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "input_audit_20261023",
+      "title": "Baseline, reproducible correctness fixes and saved-input audit",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "diagnostic_independent_review_20261023",
+      "title": "Two independent reviews and adjudication of development packets",
+      "status": "BLOCKED_EXTERNAL",
+      "command": null,
+      "depends_on": [
+        "input_audit_20261023"
+      ]
+    },
+    {
+      "id": "audit_v2_engineering_20261023",
+      "title": "Revision-isolated paths, coverage, bounded report chat, extraction and scorer fixes",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "change_pilot_review_20261023",
+      "title": "Independently annotate/adjudicate the 32 real-change pilot cases",
+      "status": "BLOCKED_EXTERNAL",
+      "command": null,
+      "depends_on": [
+        "audit_v2_engineering_20261023"
+      ]
+    },
+    {
+      "id": "contextual_bandit_20261023",
+      "title": "Training-only contextual-bandit retrieval comparison on pinned real trace datasets",
+      "status": "COMPLETED",
+      "command": [
+        "{python}",
+        "scripts/run_contextual_bandit.py"
+      ],
+      "depends_on": [
+        "lexical",
+        "embeddings"
+      ],
+      "result": "experiments/contextual-bandit/20261023T162437-621839da/results.json",
+      "conclusion": "Negative held-out development result: policy MAP trailed the best fixed baseline by 0.016871 on iTrust and 0.141007 on eTour. No LLM calls or weight RL; 91% remains NOT_EVALUATED."
+    },
+    {
+      "id": "realworld_test_evolution_20261024",
+      "title": "314 pinned TEBench cases, retrieval, cache recovery and offline audits",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "realworld_policy_20261024",
+      "title": "Training-only LinUCB comparison on real-project test-evolution references",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "project_overview_20261024",
+      "title": "Revision-scoped project overview and cancelled-navigation loading fix",
+      "status": "COMPLETED",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "miss_decomposition_20261024",
+      "title": "Reproducible per-project retrieval loss and denominator audit",
+      "status": "COMPLETED",
+      "result": "reports/realworld-20261024/MISS-DECOMPOSITION.md"
+    },
+    {
+      "id": "native_adapters_20261024",
+      "title": "Bounded Clang C/C++ and Swift syntax adapters",
+      "status": "COMPLETED",
+      "scope": "Fixtures pass, actual Swift frontend syntax validated; full project semantics/compile database/SourceKit not completed.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "chat_comparison_20261024",
+      "title": "Pinned comparison chat and source-backed test review questions",
+      "status": "COMPLETED",
+      "scope": "Browser comparison queue/report follow-up and unexecuted suggestions validated.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "review_intake_20261024",
+      "title": "Independent reviewer and adjudication source validator",
+      "status": "COMPLETED",
+      "scope": "Tooling only; 32 real pilot labels remain null. Actual pinned Git and forged-database fixture checks pass.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "inventory_paths_20261024",
+      "title": "Inspect all 51 exposed outside-inventory reference paths at pinned bases",
+      "status": "COMPLETED",
+      "scope": "43 exact paths absent, 8 non-Java present/excluded; all22 Java paths absent. No rankings or labels changed.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "full_weight_rl",
+      "title": "Full LLM-weight reinforcement-learning experiment",
+      "status": "BLOCKED_EXTERNAL",
+      "scope": "Missing reliable independently reviewed rewards, suitable hardware and frozen protocol. LinUCB is a different completed experiment.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "current_windows_acceptance_20261024",
+      "title": "Native Windows acceptance of the current changes",
+      "status": "BLOCKED_EXTERNAL",
+      "scope": "Requires target Windows execution; historical native Windows evidence remains intact.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "remaining_semantic_obligation_acceptance",
+      "title": "Broader audit semantic resolvers, production obligations and release acceptance",
+      "status": "PENDING",
+      "scope": "See docs/COMPLETION_STATUS_20261024.md. Next bounded increment: source-backed obligation registry, counterevidence and root-cause fixtures; no fabricated contracts.",
+      "command": null,
+      "depends_on": []
+    },
+    {
+      "id": "verification_obligation_registry_20261024",
+      "title": "Bounded source-backed offline obligation registry",
+      "status": "COMPLETED",
+      "scope": "Offline development intake; no application/report/graph integration yet",
+      "tests_passed": 158,
+      "new_llm_calls": 0,
+      "new_independent_labels": 0,
+      "outputs": [
+        "consistency/obligations.py",
+        "scripts/assess_obligations.py",
+        "docs/VERIFICATION_OBLIGATIONS.md",
+        "reports/obligations-20261024/RELEASE.json"
+      ],
+      "next": "Integrate reviewed development registries into a separately versioned investigation/report path; keep unknowns and no-obligation guard"
+    },
+    {
+      "id": "obligation_report_integration_20261024",
+      "title": "Immutable reviewed-obligation saved reports",
+      "status": "BOUNDED_SAVED_REPORT_INTEGRATION_PASS",
+      "created_at": "2026-10-24T08:58:36.487123+00:00",
+      "tests_passed": 163,
+      "new_integration_tests": 5,
+      "warnings": 1,
+      "new_llm_calls": 0,
+      "new_independent_labels": 0,
+      "quality_target_91": "NOT_EVALUATED",
+      "scope": "Opt-in CLI creates separately versioned report; existing API, exports and saved-report chat; no graph or global findings mutation",
+      "next": "Machine-checkable reviewed search inventories/exclusions against pinned Git, preserving unknown regions"
+    },
+    {
+      "id": "search_provenance_20261024",
+      "title": "Pinned identity and historical search inventory validation",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/search-provenance-20261024/RELEASE.json",
+      "next": "Verify scoped search intake on independently reviewed development registries; review exclusion rationales and unknown regions; independent disjoint labels/freeze still required"
+    },
+    {
+      "id": "search_draft_preparation_20261024",
+      "status": "COMPLETED_BOUNDED",
+      "title": "Protect review work and prepare pinned UNKNOWN search drafts",
+      "result": "reports/search-drafts-20261024/RELEASE.json",
+      "next": "Prepare separate parser-identity artifact maps for pilot snapshot sources already available; retain missing-source gaps and do not edit original packets"
+    },
+    {
+      "id": "offline_pilot_artifact_maps_20261024",
+      "title": "Partial source-backed maps under separate canonical parser identity",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/pilot-artifacts-20261024/RELEASE.json",
+      "next": "Stage mapped artifacts in a separate development-only Store for reviewer source navigation; preserve partial-coverage manifests and original databases"
+    },
+    {
+      "id": "pilot_review_store_20261024",
+      "title": "Isolated partial-source Store for review navigation",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/pilot-store-20261024/RELEASE.json",
+      "next": "Generate separate canonical-ID source packets for the existing development pilot, keeping all review judgments null and source gaps explicit"
+    },
+    {
+      "id": "canonical_review_packets_20261024",
+      "title": "Separate canonical-ID unlabelled development source packets",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/canonical-review-20261024/RELEASE.json",
+      "next": "Check existing local worktree/cache candidates for the 79 exact missing Git blob IDs; retain every unresolved or mismatched source in a separate recovery record"
+    },
+    {
+      "id": "exact_pilot_source_recovery_20261024",
+      "title": "Separate exact-byte source cache with retained negative local audit",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/local-source-recovery-20261024/RELEASE.json",
+      "next": "Use validated upstream cache in separately versioned partial artifact maps under a new parser identity; preserve original maps/store/packets and all unknowns"
+    },
+    {
+      "id": "verified_cache_maps_20261024",
+      "title": "Separate pilot artifact maps consuming exact verified recovery cache",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/verified-cache-maps-20261024/RELEASE.json",
+      "model_calls": 0
+    },
+    {
+      "id": "recovered_review_store_packets_20261024",
+      "status": "COMPLETED_BOUNDED",
+      "title": "New isolated verified-cache reviewer Store and null-judgment canonical packets",
+      "result": "reports/recovered-review-20261024/RELEASE.json"
+    },
+    {
+      "id": "review_source_readiness_20261024",
+      "title": "Pinned-tree and scoped-cache source readiness without fabricated reviews",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/review-source-readiness-20261024/RELEASE.json"
+    },
+    {
+      "id": "offline_review_source_policy_20261025",
+      "title": "Explicit scoped offline reviewer-intake policy with source receipts",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/offline-review-policy-20261025/RELEASE.json"
+    },
+    {
+      "id": "offline_obligation_assessment_20261025",
+      "title": "Scoped offline obligation assessment and tree-only UNKNOWN search verification",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/obligation-source-policy-20261025/RELEASE.json"
+    },
+    {
+      "id": "offline_obligation_report_20261025",
+      "title": "Scoped offline source policy for immutable saved-report attachment",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/offline-obligation-report-20261025/RELEASE.json"
+    },
+    {
+      "id": "staged_routing_audit_20261025",
+      "title": "Read-only staged investigation routing audit and pre-write importer guard",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/staged-routing-20261025/RELEASE.json"
+    },
+    {
+      "id": "staged_source_reader_20261025",
+      "title": "Checksum-pinned read-only staged-source access with explicit partial coverage",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/staged-source-reader-20261025/RELEASE.json"
+    },
+    {
+      "id": "staged_comparison_20261025",
+      "title": "Coverage-aware read-only staged comparison with explicit UNKNOWN outcomes",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/staged-comparison-20261025/RELEASE.json"
+    },
+    {
+      "id": "staged_inspection_20261025",
+      "title": "Opt-in bounded staged source inspection using exact offline source policy",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/staged-inspection-20261025/RELEASE.json"
+    },
+    {
+      "id": "master_directive_and_partial_report_ui_20261025",
+      "title": "Project-wide assessment and production partial-report integration",
+      "status": "VERIFIED_BOUNDED_SCOPE",
+      "result": "reports/partial-report-ui-20261025/RELEASE.json",
+      "remaining": "docs/VIGILANT_MASTER_TASK_REGISTER.md"
+    },
+    {
+      "id": "cooperative_job_controls_20261025",
+      "title": "Cooperative cancellation, persisted job budgets and lifecycle UI",
+      "status": "VERIFIED_BOUNDED_SCOPE",
+      "result": "reports/job-controls-20261025/RELEASE.json",
+      "limits": "Hard operation preemption, strict wall-clock bounds and deeper ownership/crash acceptance remain open"
+    },
+    {
+      "id": "partial_report_presentation_20261025",
+      "title": "Six guided report topics and freshly validated JSON/HTML export",
+      "status": "VERIFIED_BOUNDED_SCOPE",
+      "result": "reports/partial-report-delivery-20261025/RELEASE.json",
+      "limitations": "No free-form semantic interpretation or independent accuracy claim"
+    },
+    {
+      "id": "reviewer_agreement_handoff_20261026",
+      "title": "Independent review workflow and descriptive reviewer-agreement reporting",
+      "status": "COMPLETED_BOUNDED",
+      "result": "reports/review-handoff-20261026/VERIFICATION.json",
+      "tests": "8 passed; one existing dependency warning",
+      "remaining": "External qualified reviewers, actual labels/adjudication, authenticated independence and untouched independent final set remain blocked."
+    },
+    {
+      "id": "dependency_consistency_20261026",
+      "title": "Local Python and frontend dependency consistency checks",
+      "status": "COMPLETED_BOUNDED",
+      "result": "PROJECT_STATE.json and reports/execution/latest-status.json",
+      "evidence": [
+        "uv pip check --python .venv/Scripts/python.exe: 39 compatible",
+        "npm --prefix frontend ls --depth=0: React, React DOM and Vite present"
+      ],
+      "remaining": "Advisory vulnerability scan and native deployment dependency checks remain unverified."
+    },
+    {
+      "id": "test_evolution_candidate_policy_20261026",
+      "title": "Test-source/resource candidate-policy development experiment",
+      "status": "COMPLETED",
+      "command": [
+        "{python} scripts/test_evolution.py run --output experiments/test-evolution/broad-candidates-20261026 --workers 3",
+        "{python} scripts/recover_test_evolution_failures.py --baseline experiments/test-evolution/broad-candidates-20261026 --output experiments/test-evolution/broad-candidates-recovery-20261026"
+      ],
+      "result": "314 exposed development cases; RRF Recall@10 84.995% versus 85.112% original; no promotion",
+      "outputs": [
+        "reports/realworld-20261026/95-percent-target-update.md",
+        "reports/realworld-20261026/miss-decomposition-broad-candidates.json"
+      ],
+      "new_llm_calls": 0,
+      "limitations": [
+        "Not traceability, consistency, end-to-end, or independent performance.",
+        "Four initial infrastructure failures were preserved and retried once in separate output."
+      ]
+    },
+    {
+      "id": "target_copy_verification_20261026",
+      "title": "Copy project to user-requested Windows code folder",
+      "status": "COMPLETED",
+      "result": "15,126 files compared; 7,394 code/document hashes matched; 7 focused Windows tests passed from the destination.",
+      "outputs": [
+        "COPY-VERIFICATION.json",
+        "RUNTIME-ENVIRONMENT.md"
+      ]
+    },
+    {
+      "id": "llm_diagnostic_ablation_20261026",
+      "title": "Saved LLM diagnostic analysis and controlled ablation preparation",
+      "status": "IMPLEMENTED",
+      "result": "12 case analysis; 48 label-blind prompt inputs; saved TEBench baseline arithmetic re-audited; 15 focused tests passed",
+      "evidence": [
+        "reports/llm-diagnostic-error-analysis/README.md",
+        "reports/llm-diagnostic-error-analysis/retrieval-baseline-audit.json",
+        "experiments/llm-ablation-20261026/plan.json"
+      ],
+      "remaining": "No fresh model inference: local Ollama/model assets unavailable. E3 needs adjudicated evidence IDs; independent reviewers and a frozen disjoint final cohort remain external prerequisites. No 95% claim."
+    },
+    {
+      "id": "llm_decision_contract_v2_20261026",
+      "title": "Versioned LLM decision and consistency contract",
+      "status": "IMPLEMENTED",
+      "result": "Modern schema v2 separates disposition from consistency; legacy v1 remains compatible; 14 focused tests passed.",
+      "evidence": [
+        "reports/llm-diagnostic-error-analysis/decision-schema-v2.md",
+        "reports/llm-diagnostic-error-analysis/schema-v2-focused.xml"
+      ],
+      "remaining": "No inference, calibration, semantic accuracy gain, or 95% acceptance established; broad touched-path tests remain incomplete."
+    },
+    {
+      "id": "llm_frozen_diagnostic_isolation_20261027",
+      "title": "Frozen LLM diagnostic prompt/schema isolation",
+      "status": "IMPLEMENTED",
+      "result": "Archived context and decision model are hash-verified; local ablation transport uses the frozen schema; reconstructed baseline prompts match all 12 saved cases; four focused, 99 touched-module, and one isolated API worker test passed.",
+      "evidence": [
+        "reports/decision-contract-20261027/V040-evaluation-isolation.md",
+        "reports/execution/latest-status.json"
+      ],
+      "remaining": "Offline contract tests only. No inference, calibration, score gain, or independent labels; 95% quality gates and release readiness remain unmet."
     }
   ],
   "blockers": {
@@ -425,7 +808,8 @@
     "venue": "No journal/conference specified; submission and indexing not verified.",
     "submission_review": "Drafts are complete for their stated scope. Confirmed authorship/institutional requirements, expanded survey coverage as required, external scientific/plagiarism review and acceptance remain unresolved.",
     "omniroute_live_evaluation": "No connected local gateway or eligible provider credentials. Adapter tests are synthetic; live accuracy NOT RUN. Configure free-only routing, no paid billing/fallback, then run bounded evaluation.",
-    "independent_accuracy": "Diagnostic agreement is 0%, 8.33%, 0%; citation failures and semantic/label disagreement remain. Independent labels and a frozen held-out protocol are still needed. No >75% accuracy established."
+    "independent_accuracy": "91% is a target, not a measured result. Need at least 200 independently reviewed repository/change-family-separated cases and a frozen selection protocol; the 79-candidate queue is unlabelled. Invalid/missing responses remain in the denominator.",
+    "institutional_details": "Institution, department, supervisor, author email, template and venue not supplied; author Ankith Singh retained."
   },
   "saved_files": {
     "source": "libfile_f68b012833688191a771b623813ccd24",
@@ -438,8 +822,8 @@
     "research_paper": "libfile_ad5d31a0c35c8191ba978c75f1c53244",
     "survey_paper": "libfile_22df1f33c14081918b8a4ee486932985"
   },
-  "next_action": "Do not tune further against the 12 authored ChangeBench cases. Expand the blind queue by at least 121 real changes from additional repositories; obtain two independent labels and adjudication for 200+ cases, then freeze rules/model/prompt before one held-out evaluation. At 200 cases, 182 exact matches is 91% observed; NOT RUN and NOT ESTABLISHED.",
-  "research_claim_status": "Not established: current local-model ablation does not outperform always-UNCERTAIN; independent labels and semantic grounding review remain pending.",
+  "next_action": "V040: check authorized local Ollama and pinned model availability without relaxing WinError 10013. If unavailable, continue feasible non-inference engineering; run the 12-case frozen prompt-equivalence regression before any ablation.",
+  "research_claim_status": "Independent 91% NOT_EVALUATED. TEBench developer test-file Recall@10 is 85.11%, a separate exposed development task; LinUCB underperformed. No new LLM calls or independent labels.",
   "restoration": "All twelve controlled Git worktrees restored at exact saved change_commit hashes; contracts and completed benchmark results unchanged.",
   "continuation_events": [
     {
@@ -559,6 +943,24 @@
       "at": "2026-10-21T06:14:40.574241+00:00",
       "event": "Completed native Windows continuation: 75 tests and browser acceptance pass; 36 genuine local generations, scores 0/12, 1/12, 0/12. Exact resume makes zero calls. All 423 historical files unchanged. No paid/cloud inference or high-accuracy claim.",
       "result": "reports/windows-20261021/VERIFICATION.md"
+    },
+    {
+      "at": "2026-10-23T16:27:42.705165+00:00",
+      "event": "Completed bounded training-only LinUCB retrieval selector over frozen TF-IDF/BM25/embedding/hybrid rankings. It underperformed the best fixed arm on iTrust validation and exposed eTour development test, so the negative result is retained. 133 tests pass; 550 protected historical files and 31 method/1986 query metric rows verify. Zero LLM calls; full weight RL NOT_RUN; 91% remains NOT_EVALUATED.",
+      "result": "experiments/contextual-bandit/20261023T162437-621839da/results.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-26T14:05:49+00:00",
+      "event": "Completed a development-only test-source/resource retrieval policy comparison. Expanded candidates did not improve RRF Recall@10; 95% assurance gates remain NOT_EVALUATED. Full Windows pytest is not green. Next copy project into requested Downloads code folder and verify the shorter path."
+    },
+    {
+      "at": "2026-10-26T14:05:49+00:00",
+      "event": "Completed a development-only test-source/resource retrieval policy comparison. Expanded candidates did not improve RRF Recall@10; 95% assurance gates remain NOT_EVALUATED. Full Windows pytest is not green. Next copy project into requested Downloads code folder and verify the shorter path."
+    },
+    {
+      "at": "2026-10-26T14:41:09.867473+00:00",
+      "event": "Verified the user-requested Downloads code folder and its shorter-path focused tests. Runtime preserved; independent 95% quality gates remain NOT_EVALUATED."
     }
   ],
   "metric_verification": {
@@ -574,6 +976,10 @@
     {
       "at": "2026-10-16T11:06:25.684105+00:00",
       "event": "Completed review revision and editable Word after recovery of saved v14 project. Recomputed descriptive paired-query intervals and consistency diagnostics with zero inference calls. Both documents five pages; all pages inspected. All 418 experiment files preserved. Independent labels, controlled follow-up and external submission validation remain open."
+    },
+    {
+      "at": "2026-10-23T02:01:32.505362+00:00",
+      "event": "Merged upstream 7eba731, completed evidence-first and bug-audit fixes. 115 tests, production build, 13-page Linux browser acceptance pass. Historical hashes and offline metric/provenance audits pass. No new model inference. Independent 91% target remains NOT_EVALUATED."
     }
   ],
   "engineering_release": {
@@ -682,5 +1088,1857 @@
     },
     "accuracy_claim": "Requested 91% observed on 200+ independent cases NOT RUN or ESTABLISHED; latest model diagnostic is 4/12 authored cases",
     "chatbot": "IMPLEMENTED: POST /api/chat and floating read-only frontend panel; semantic citation entailment remains unverified."
+  },
+  "evidence_first_release_20261023": {
+    "date": "2026-10-23",
+    "platform": "Linux",
+    "upstream_commit": "7eba731b99dc63c66e2872da1fcc8b723ce30945",
+    "github_pushed": false,
+    "implementation": "evidence-first-v2",
+    "tests": {
+      "passed": 115,
+      "warnings": 1,
+      "log": "reports/evidence-first-20261022/tests-final.log"
+    },
+    "frontend_build": "PASS",
+    "browser": {
+      "status": "PASSED",
+      "pages": 13,
+      "report": "reports/frontend/evidence-first-20261023/validation.json",
+      "checks": [
+        "All 13 pages show persisted data without application errors",
+        "Pagination, local filtering, keyboard record selection and snapshot provenance",
+        "Directed graph, relationship filter and keyboard-accessible provenance",
+        "Evidence quote/hash/range and exact JSON export",
+        "Three local model choices and provider switching",
+        "JSON/CSV/HTML report downloads, free OmniRoute selector and access settings",
+        "Saved-investigation explanation, exact source navigation and unsupported-request boundary",
+        "Repository-scoped chat retrieves verified excerpts and labels no-model/semantic-support limits",
+        "Transport error shown and real API refresh recovers",
+        "Project creation and complete deterministic investigation through UI on isolated database",
+        "390px mobile dashboard, graph and chat without document overflow"
+      ]
+    },
+    "preservation": {
+      "status": "PASS",
+      "historical_manifests": [
+        {
+          "manifest": "preserved-before.json",
+          "files": 514,
+          "mismatches": []
+        },
+        {
+          "manifest": "merged-history-before.json",
+          "files": 549,
+          "mismatches": []
+        }
+      ],
+      "databases": [
+        {
+          "database": "data/snapshots/changebench.db",
+          "integrity_check": "ok"
+        },
+        {
+          "database": "data/snapshots/embedding-cache.sqlite",
+          "integrity_check": "ok"
+        },
+        {
+          "database": "data/snapshots/vigilant.db",
+          "integrity_check": "ok"
+        },
+        {
+          "database": "data/vigilant.db",
+          "integrity_check": "ok"
+        }
+      ],
+      "new_inference_calls": 0
+    },
+    "retrieval_arithmetic_audit": {
+      "method_rows": 31,
+      "query_rows": 1986
+    },
+    "rag_observations_audited": 251,
+    "original_and_citation_fix_observations_replayed": 72,
+    "upstream_observations_score_audited": 24,
+    "new_model_inference_calls": 0,
+    "quality_target": {
+      "requested": 0.91,
+      "status": "NOT_EVALUATED",
+      "independent_accuracy_established": false
+    },
+    "native_windows_this_release": "NOT_RUN; historical Windows checks preserved",
+    "remaining": [
+      "Independent reviewed repository/change-family-separated test set",
+      "Independent semantic citation review",
+      "Frozen model/prompt/pipeline selection before final test",
+      "Full compiler symbol resolution and unsupported language adapters",
+      "Institutional/authorship/publication completion"
+    ],
+    "portable_historical_files": 543,
+    "packaging_excludes": [
+      "Reproducible dependencies",
+      "Browser QA screenshots",
+      "Noncanonical database staging files"
+    ]
+  },
+  "improvement_phase_20261023": {
+    "updated_at": "2026-10-23T08:47:51.860400+00:00",
+    "scope": "Phase 0 baseline and C01-C04 correctness/input-audit pass; independent review incomplete",
+    "baseline_tests": 115,
+    "final_tests": 121,
+    "test_warning": "Starlette/AnyIO deprecation",
+    "frontend_build": "PASS",
+    "new_inference_calls": 0,
+    "native_windows_acceptance": "NOT_RUN_THIS_PHASE",
+    "browser_acceptance": "PRIOR_RELEASE_ONLY",
+    "preservation": {
+      "status": "PASS",
+      "files_verified": 550,
+      "changed_or_missing": [],
+      "manifest": "preserved-before.json"
+    },
+    "input_audit": {
+      "observations": 96,
+      "unique_authored_cases": 12,
+      "new_inference_calls": 0,
+      "historical_fingerprint_errors": 0,
+      "historical_count_mismatches": 0,
+      "historical_mapping_errors": 0,
+      "historical_snapshot_quote_errors": 0,
+      "historical_foreign_revision_aliases": 0,
+      "historical_split_pairs": 0,
+      "historical_pair_mapping_unresolved_observations": 0,
+      "budget_cases": 12,
+      "budget_before_split_pairs": 5,
+      "budget_after_split_pairs": 0,
+      "budget_before_count_mismatches": 12,
+      "budget_after_count_mismatches": 0,
+      "budget_after_empty_packets": 4,
+      "independent_label_review": "REQUIRED",
+      "semantic_support_review": "REQUIRED",
+      "target_91_percent": "NOT_EVALUATED"
+    },
+    "quality_target": {
+      "target": 0.91,
+      "status": "NOT_EVALUATED"
+    },
+    "package_verification": "See sibling VIGILANT-project-checksum.json after packaging",
+    "git_commit_or_push": false,
+    "next_action": "Obtain independent development packet reviews; adjudicate separately; address empty packet coverage under frozen development protocol; build disjoint real-change benchmark."
+  },
+  "audit_v2_followup_20261023": {
+    "updated_at": "2026-10-23T15:37:40.545603+00:00",
+    "baseline_archive_sha256": "00d11a18a426d9526bffac90627c9a4e5135bc4c36ce533a1f8fc870fcf96470",
+    "baseline_tests": 121,
+    "final_tests": 131,
+    "warnings": [
+      "Starlette/AnyIO deprecation",
+      "npm http-proxy environment configuration warning"
+    ],
+    "frontend_build": "PASS",
+    "browser_status": "PASSED",
+    "browser_pages": 13,
+    "browser_record": "reports/frontend/audit-v2-20261023-final/validation.json",
+    "new_inference_calls": 0,
+    "new_independently_reviewed_cases": 0,
+    "unlabelled_pilot_cases": 32,
+    "historical_files_verified": 550,
+    "npm_audit_reported_vulnerabilities": 0,
+    "python_dependency_check": "PASS",
+    "python_vulnerability_scan": "NOT_RUN",
+    "native_windows_acceptance": "NOT_RUN",
+    "git_commit_or_push": false,
+    "quality_target": {
+      "status": "NOT_EVALUATED",
+      "target": 0.91,
+      "reason": "Independent frozen labels and matching predictions not supplied",
+      "accuracy_claim_supported": false,
+      "inference_calls": 0
+    },
+    "resolution_document": "docs/AUDIT_V2_RESOLUTION.md",
+    "package_validation": "See sibling VIGILANT-project-checksum.json",
+    "next_action": "Two independent pilot annotations and evidence-backed adjudication, then frozen development experiments and an unseen real-change benchmark. Do not fabricate labels or claim 91% from engineering tests."
+  },
+  "contextual_bandit_20261023": {
+    "updated_at": "2026-10-23T16:24:37+00:00",
+    "status": "COMPLETED_NEGATIVE_RESULT",
+    "policy": "linucb-saved-ranking-selector-v1",
+    "training_project": "SMOS",
+    "validation_project": "iTrust",
+    "development_test_project": "eTour_en",
+    "external_sanity_project": "RTMX-module-valid",
+    "training_observations": 1675,
+    "validation_map": 0.3617888818337503,
+    "validation_delta_vs_best_fixed": -0.01687103071227325,
+    "development_test_map": 0.3081499096852389,
+    "development_test_delta_vs_best_fixed": -0.14100707886061614,
+    "focused_tests": 2,
+    "full_tests": 133,
+    "test_warning": "Starlette/AnyIO deprecation",
+    "historical_files_verified": 550,
+    "saved_metric_rows_verified": 31,
+    "saved_query_metric_rows_verified": 1986,
+    "llm_calls": 0,
+    "full_weight_rl": "NOT_RUN",
+    "historical_experiments_modified": false,
+    "result": "experiments/contextual-bandit/20261023T162437-621839da/results.json",
+    "verification": "reports/contextual-bandit-20261023/VERIFICATION.md",
+    "quality_target": "NOT_EVALUATED"
+  },
+  "realworld_20261024": {
+    "status": "COMPLETED_DEVELOPMENT_EVALUATION",
+    "source": "scripts/test_evolution.py",
+    "target": 0.91,
+    "quality_gate": "NOT_EVALUATED",
+    "recovery": "Saved source restored; unsaved prior benchmark outputs removed by maintenance. They are not claimed as new measured results.",
+    "tests_passed": 137,
+    "historical_files_verified": 550,
+    "frontend_build": "PASS",
+    "latest_checkpoint_library_id": "libfile_c614ab1d6c408191ab7233c10fc9607e",
+    "browser_acceptance": "PASS_13_PAGES",
+    "browser_report": "reports/frontend/realworld-20261024-verified/validation.json",
+    "prefetched_base_commits": 314,
+    "prefetch_missing": 0,
+    "manual_fetch_export": "reports/realworld-20261024/manual-fetch",
+    "saved_case_count": 276,
+    "new_llm_calls": 0,
+    "all_cases": 314,
+    "original_fetch_failures": 109,
+    "recovered_fetch_failures": 0,
+    "successful_originals_reused": 205,
+    "full_set_best_test_file_recall_at_10": 0.8511197047821251,
+    "policy_held_development_test_file_recall_at_10": 0.8427007299270073,
+    "policy_training_events": 531,
+    "independent_correctness_established": false,
+    "automation_enabled": true,
+    "remaining": "Independent reviewed traceability/impact/consistency labels and semantic support; frozen disjoint final evaluation"
+  },
+  "events": [
+    {
+      "at": "2026-10-24T03:01:20.909310+00:00",
+      "event": "Restored saved project after maintenance; completed pinned 314-case TEBench development retrieval and separate infrastructure recovery, training-only policy, project overview and Dashboard loading fix. Original 109 failures retained, all 314 recovered. No LLM calls or independent 91% claim.",
+      "result": "reports/realworld-20261024/VERIFICATION.md"
+    },
+    {
+      "at": "2026-10-24T03:40:08.427487+00:00",
+      "event": "Added offline per-project retrieval loss decomposition over all 314 saved cases; 29 non-Java exclusions and 22 unresolved Java absences. One focused stdlib test and saved policy arithmetic audit pass. No new inference or independent labels.",
+      "result": "reports/realworld-20261024/MISS-DECOMPOSITION.md"
+    },
+    {
+      "at": "2026-10-24T04:18:08.085317+00:00",
+      "event": "Completed native adapter/chat/intake/transaction fixes, 145 tests, 13-page Linux browser, exact pinned-tree absence diagnosis and updated six-page paper / 29-page thesis technical drafts. Broader engineering and independent research remain open. No inference or labels created."
+    },
+    {
+      "at": "2026-10-24T09:28:17.656324+00:00",
+      "event": "Implemented shared scoped investigation tools, retained evidence/unknown histories, five bounded recipes, CLI/MCP/API/UI, pinned reviewed-search inventories and separate 95% traceability/impact/consistency gate. Saved retrieval recomputed; no new inference or labels; 95% remains unestablished.",
+      "result": "reports/final-95/measurement.json"
+    },
+    {
+      "at": "2026-10-24T10:32:40.458244+00:00",
+      "event": "Verified search-inventory path; closed identity rebinding and superseded inventory gaps. 191 tests pass, 550 protected files preserved; no inference or labels.",
+      "result": "reports/search-provenance-20261024/RELEASE.json"
+    },
+    {
+      "at": "2026-10-24T11:54:56.788240+00:00",
+      "event": "Protected existing review outputs and prepared UNKNOWN-only inventories for all 32 development pilot cases; 53 snapshots, 10970 unknown entries; 192 tests pass; no inference or labels.",
+      "result": "reports/search-drafts-20261024/RELEASE.json"
+    },
+    {
+      "at": "2026-10-24T12:39:55.237780+00:00",
+      "event": "Prepared separate offline-parser-identity source maps for all 53 development snapshots; 28291 artifact versions, all 10970 file entries retained; 194 tests pass, no inference or labels.",
+      "result": "reports/pilot-artifacts-20261024/RELEASE.json"
+    },
+    {
+      "at": "2026-10-24T13:26:40.430378+00:00",
+      "event": "Staged isolated review store for all 53 pilot snapshots; all coverage rows retained; 200 tests, 53 API/pinned-Git sample checks; no inference or labels.",
+      "result": "reports/pilot-store-20261024/RELEASE.json"
+    },
+    {
+      "at": "2026-10-24T14:03:47.259498+00:00",
+      "event": "Prepared 32 separate canonical-ID blind development packets; 44 stored references / 43 pinned-Git excerpt checks; missing 92 entries and 4 absent paths retained; 204 tests; no inference or labels.",
+      "result": "reports/canonical-review-20261024/RELEASE.json"
+    },
+    {
+      "at": "2026-10-24T15:36:37.183591+00:00",
+      "event": "Preserved negative local candidate audit, then recovered all 79 queued Git blobs through read-only upstream access; 92 occurrences covered, 4 absent paths remain; 208 tests, zero model calls/labels.",
+      "result": "reports/local-source-recovery-20261024/RELEASE.json"
+    },
+    {
+      "at": "2026-10-24T16:49:28.108079+00:00",
+      "event": "Prepared new parser-identity maps from exact verified cache; all 53 snapshots/10970 entries retained, 29647 artifact versions, 89 recovered rows covering 92 queued occurrences. 215 tests pass. No independent labels or inference; quality gates remain NOT_EVALUATED.",
+      "result": "reports/verified-cache-maps-20261024/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T17:02:11.708321+00:00",
+      "event": "Staged new isolated recovered-source Store and 32 canonical packets; 29647 artifact versions, 136 source references, 53 API checks; labels remain null and independent gates NOT_EVALUATED.",
+      "result": "reports/recovered-review-20261024/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T18:12:22.838064+00:00",
+      "event": "Verified all 136 available reviewer-packet sources offline: 44 local Git and 92 scoped cache references, with four absent paths retained under denominator 140. 223 tests pass. Actual intake remains NOT_RUN with blank forms; no independent labels or inference.",
+      "result": "reports/review-source-readiness-20261024/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T19:43:47.538640+00:00",
+      "event": "Connected opt-in offline source policy to reviewer intake and CLI; 136 available source receipts verify, four missing-reference entries retained. 234 tests and three negative CLI checks pass. Actual independent intake NOT_RUN, no labels/inference.",
+      "result": "reports/offline-review-policy-20261025/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T20:36:31.430967+00:00",
+      "event": "Connected scoped source policy to obligation assessment/search enumeration and standalone CLI. All 53 saved boundaries/10970 UNKNOWN entries verify with zero fetches. 248 tests pass; initial authored fixture failure retained and corrected without weakening UNMET guard. No real reviewed registries, labels or inference.",
+      "result": "reports/obligation-source-policy-20261025/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T21:36:48.177573+00:00",
+      "event": "Connected scoped policy to immutable attachment and CLI; parent/derived/reused citations rechecked, source/code-bound IDs and receipts retained. 259 tests pass. No real canonical parent investigation/reviewed registry supplied; actual project attachment NOT_RUN. No labels or inference.",
+      "result": "reports/offline-obligation-report-20261025/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T22:56:46.521648+00:00",
+      "event": "Audited all 53 staged routes: canonical project IDs match, default IDs differ; guard rejects staged import before metadata writes. 266 tests pass. Full diff/coverage/source tools still need explicit partial-aware routing; actual staged investigations NOT_RUN, no labels/inference/fetches.",
+      "result": "reports/staged-routing-20261025/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-24T23:13:39.887234+00:00",
+      "event": "Validated read-only staged reader passes all 53 snapshots/29647 artifact versions and retains 10970 UNKNOWN rows. 277 tests pass; no subprocesses, imports, fetches, source mutations, investigations or labels. Comparison adapter remains next; independent gates NOT_EVALUATED.",
+      "result": "reports/staged-source-reader-20261025/RELEASE.json",
+      "new_calls": 0
+    },
+    {
+      "at": "2026-10-25T00:48:30.903279+00:00",
+      "event": "Bounded partial comparison completed; 32 unlabelled development cases, zero model/source-fetch/review-label calls; 293 tests pass",
+      "evidence": "reports/staged-comparison-20261025/RELEASE.json"
+    }
+  ],
+  "miss_analysis_20261024": {
+    "result": "reports/realworld-20261024/miss-decomposition-20261024.json",
+    "cases": 314,
+    "reference_pairs": 592,
+    "outside_inventory_java_unresolved": 22,
+    "outside_inventory_non_java": 29,
+    "new_llm_calls": 0,
+    "focused_tests_passed": 1,
+    "quality_gate": "NOT_EVALUATED"
+  },
+  "scheduled_checkpoint_merged": {
+    "source_version": 44,
+    "details": "merge-summary.json",
+    "incoming_updated_at": "2026-10-24T03:40:08.427487+00:00"
+  },
+  "completion_pass_20261024": {
+    "status": "BOUNDED_ENGINEERING_AND_TECHNICAL_DRAFTS_COMPLETED",
+    "tests_passed": 145,
+    "browser_pages": 13,
+    "native_adapters": "Fixture-validated C/C++ snapshot compiler references; Swift syntax compiler validation only",
+    "chat": "Explicit pinned comparison worker, saved-report follow-up and unexecuted test review suggestions",
+    "review_handoff": "reports/completion-20261024/review-handoff-final",
+    "reviewed_real_cases": 0,
+    "paper_pages": 6,
+    "thesis_pages": 29,
+    "new_llm_calls": 0,
+    "independent_quality_gate": "NOT_EVALUATED",
+    "all_tasks_complete": false,
+    "broader_remaining_scope": "docs/COMPLETION_STATUS_20261024.md",
+    "automation_resume_after_save": true,
+    "archive_verification": "Sibling VIGILANT-release-verification.json"
+  },
+  "latest_obligation_increment": {
+    "status": "BOUNDED_OFFLINE_REGISTRY_PASS",
+    "created_at": "2026-10-24T08:52:15.340470+00:00",
+    "tests": {
+      "passed": 158,
+      "warnings": 1,
+      "log": "full-tests.log",
+      "registry_checks": 13
+    },
+    "new_llm_calls": 0,
+    "new_independent_labels": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "source_verification": "Stored artifacts plus pinned Git; self-consistent forged-store fixture rejected",
+    "scope": "Offline development intake; no application/report/graph integration yet",
+    "historical_preservation": "preservation.json",
+    "saved_metrics": "saved-metrics.json",
+    "browser": "Prior 13-page evidence retained; UI unchanged; not rerun",
+    "windows": "NOT_RUN for current increment",
+    "next": "Integrate reviewed development registries into a separately versioned investigation/report path; keep unknowns and no-obligation guard"
+  },
+  "latest_obligation_report_integration": {
+    "status": "BOUNDED_SAVED_REPORT_INTEGRATION_PASS",
+    "created_at": "2026-10-24T08:58:36.487123+00:00",
+    "tests_passed": 163,
+    "new_integration_tests": 5,
+    "warnings": 1,
+    "new_llm_calls": 0,
+    "new_independent_labels": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "scope": "Opt-in CLI creates separately versioned report; existing API, exports and saved-report chat; no graph or global findings mutation",
+    "next": "Machine-checkable reviewed search inventories/exclusions against pinned Git, preserving unknown regions"
+  },
+  "current_requested_quality_target": 0.95,
+  "investigation_tools_release": {
+    "status": "ENGINEERING_CHECKS_PASSED",
+    "policy": "vigilant-investigation-tools-v1",
+    "source": "investigation/service.py",
+    "mcp": "investigation/mcp.py",
+    "cli": "vigilant.py",
+    "ui": "frontend/src/InvestigationTools.jsx",
+    "new_tables": [
+      "tool_results",
+      "unknown_revisions"
+    ],
+    "quality_target": 0.95,
+    "independent_quality_gate": "NOT_EVALUATED",
+    "saved_test_file_recall_at_10": 0.8511197047821251,
+    "new_model_calls": 0,
+    "new_independent_labels": 0,
+    "code_copied_from_reference": false,
+    "reference_cloned": false,
+    "github_pushed": false,
+    "remote_database_modified": false,
+    "remaining_scope": "docs/IMPLEMENTATION_ROADMAP.md",
+    "verification_directory": "reports/final-95",
+    "tests_passed": 186,
+    "browser_pages": 14,
+    "frontend_build": "PASS",
+    "npm_audit_vulnerabilities": 0,
+    "historical_files_preserved": 550
+  },
+  "latest_search_provenance_increment": {
+    "status": "BOUNDED_PROVENANCE_CHECKS_PASS",
+    "created_at": "2026-10-24T10:32:40.458244+00:00",
+    "restored_full_version": 30,
+    "overlay_version_available": 9,
+    "overlay_applied": false,
+    "overlay_reason": "Older than full archive",
+    "tests_passed": 191,
+    "focused_tests_passed": 30,
+    "new_regression_cases": 5,
+    "test_warning": "Existing Starlette/AnyIO deprecation",
+    "historical_files_verified": 550,
+    "new_model_calls": 0,
+    "new_independent_labels": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "current_saved_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "browser": "Prior 14-page acceptance retained; UI unchanged; not rerun",
+    "native_windows": "NOT_RUN",
+    "full_weight_rl": "NOT_RUN",
+    "next": "Verify scoped search intake on independently reviewed development registries; review exclusion rationales and unknown regions; independent disjoint labels/freeze still required"
+  },
+  "latest_search_draft_increment": {
+    "status": "BOUNDED_UNKNOWN_DRAFT_PREPARATION_PASS",
+    "created_at": "2026-10-24T11:54:56.788240+00:00",
+    "full_archive_restored": 31,
+    "older_overlay_inspected": 10,
+    "overlay_applied": false,
+    "pilot_cases": 32,
+    "repositories": 4,
+    "unique_snapshots": 53,
+    "unknown_file_entries": 10970,
+    "failed_snapshots": 0,
+    "independent_labels_created": 0,
+    "new_model_calls": 0,
+    "tests_passed": 192,
+    "focused_tests_passed": 11,
+    "new_regression_tests": 1,
+    "test_warning": "Existing Starlette/AnyIO deprecation",
+    "source_content_verification": "NOT_RUN for tree-only drafts",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "quality_target_91": "NOT_EVALUATED",
+    "historical_protected_files_unchanged": 550,
+    "frozen_input_result_pilot_files_unchanged": 1226,
+    "initial_attempt": "Interrupted size-enumeration/lazy-fetch attempt retained in INTERRUPTION.json; no deleted or unsaved results claimed recovered",
+    "native_windows": "NOT_RUN",
+    "browser": "Existing 14-page acceptance retained; scripts-only increment, not rerun",
+    "next_feasible_local_step": "Prepare separate parser-identity artifact maps for pilot snapshot sources already available; retain missing-source gaps and do not edit original packets",
+    "external_research_requirement": "Real independent development reviews, exclusion rationale review, semantic adjudication and disjoint frozen final test"
+  },
+  "latest_pilot_artifact_maps": {
+    "snapshots": 53,
+    "cases": 32,
+    "files": 10970,
+    "artifacts_identity_hash_span_verified": 28291,
+    "file_statuses": {
+      "UNSUPPORTED_SUFFIX": 2485,
+      "PARSED": 7354,
+      "MISSING_LOCAL_BLOB": 1071,
+      "NON_REGULAR_FILE": 48,
+      "PARSED_WITH_ERRORS": 12
+    },
+    "per_repository_file_statuses": {
+      "express": {
+        "UNSUPPORTED_SUFFIX": 650,
+        "PARSED": 2023,
+        "MISSING_LOCAL_BLOB": 96
+      },
+      "flask": {
+        "PARSED": 2439,
+        "UNSUPPORTED_SUFFIX": 600,
+        "MISSING_LOCAL_BLOB": 471
+      },
+      "fullstack": {
+        "NON_REGULAR_FILE": 48,
+        "PARSED": 2373,
+        "UNSUPPORTED_SUFFIX": 468,
+        "MISSING_LOCAL_BLOB": 135,
+        "PARSED_WITH_ERRORS": 12
+      },
+      "petclinic": {
+        "UNSUPPORTED_SUFFIX": 767,
+        "PARSED": 519,
+        "MISSING_LOCAL_BLOB": 369
+      }
+    },
+    "protected_files_unchanged": 550,
+    "frozen_input_result_pilot_and_draft_files_unchanged": 1293,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target": "NOT_EVALUATED",
+    "status": "BOUNDED_PARTIAL_ARTIFACT_MAP_PASS",
+    "created_at": "2026-10-24T12:39:55.237780+00:00",
+    "full_archive_restored": 32,
+    "older_overlay_inspected": 12,
+    "overlay_applied": false,
+    "full_tests_passed": 194,
+    "focused_tests_passed": 13,
+    "new_regression_tests": 2,
+    "warning": "Existing Starlette/AnyIO deprecation",
+    "new_remote_fetches": 0,
+    "subject_code_executed": false,
+    "database_or_graph_mutations": false,
+    "native_windows": "NOT_RUN",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "quality_target_91": "NOT_EVALUATED",
+    "next_feasible_local_step": "Stage mapped artifacts in a separate development-only Store for reviewer source navigation; preserve partial-coverage manifests and original databases",
+    "external_requirement": "Independent reviews/adjudication, semantic claim support and repository/change-family-disjoint frozen final test"
+  },
+  "latest_pilot_review_store": {
+    "status": "BOUNDED_ISOLATED_REVIEW_STORE_PASS",
+    "api_snapshot_checks": 53,
+    "pinned_git_sample_checks": 53,
+    "stats": {
+      "projects": 1,
+      "repositories": 4,
+      "commits": 53,
+      "artifacts": 28291,
+      "trace_links": 0,
+      "graph_nodes": 0,
+      "graph_edges": 0,
+      "embeddings": 0,
+      "changes": 0,
+      "evidence": 0,
+      "analysis_runs": 0,
+      "findings": 0,
+      "agent_runs": 0,
+      "experiments": 0,
+      "metrics": 0,
+      "tool_results": 0,
+      "unknown_revisions": 0
+    },
+    "coverage": {
+      "UNSUPPORTED_SUFFIX": 2485,
+      "PARSED": 7354,
+      "MISSING_LOCAL_BLOB": 1071,
+      "NON_REGULAR_FILE": 48,
+      "PARSED_WITH_ERRORS": 12
+    },
+    "case_routes": 32,
+    "snapshot_integrity": "ok",
+    "snapshot_sha256": "a27f79a36d7c3d752661c0ace55196a1279c4d94f3dd7f321857bf1a4909baa8",
+    "snapshot_unchanged_by_navigation": true,
+    "protected_historical_files_unchanged": 550,
+    "frozen_input_result_pilot_draft_map_files_unchanged": 1354,
+    "new_model_calls": 0,
+    "independent_labels": 0,
+    "created_at": "2026-10-24T13:26:40.430378+00:00",
+    "full_archive_restored": 33,
+    "older_overlay_inspected": 14,
+    "overlay_applied": false,
+    "tests_passed": 200,
+    "focused_tests_passed": 6,
+    "new_regression_cases": 6,
+    "warning": "Existing Starlette/AnyIO deprecation",
+    "quality_target_91": "NOT_EVALUATED",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "browser": "Prior 14-page acceptance retained; scripts-only change, not rerun",
+    "next_feasible_local_step": "Generate separate canonical-ID source packets for the existing development pilot, keeping all review judgments null and source gaps explicit",
+    "external_requirements": "Actual independent reviews, adjudication and semantic support; repository/change-family-disjoint final-test freeze"
+  },
+  "latest_canonical_review_packets": {
+    "status": "BOUNDED_CANONICAL_REVIEW_PACKETS_PASS",
+    "cases": 32,
+    "manifest_files_verified": 37,
+    "changed_file_side_entries": 140,
+    "source_statuses": {
+      "MISSING_LOCAL_BLOB": 92,
+      "PARSED": 44,
+      "NOT_IN_PINNED_TREE": 4
+    },
+    "source_references_verified": 44,
+    "unique_pinned_git_excerpt_checks": 43,
+    "blank_reviewer_forms": 2,
+    "blank_adjudication_cases": 32,
+    "snapshot_unchanged": true,
+    "protected_files_unchanged": 550,
+    "frozen_input_result_pilot_draft_map_store_handoff_files_unchanged": 1369,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "created_at": "2026-10-24T14:03:47.259498+00:00",
+    "full_archive_restored": 34,
+    "older_overlay_inspected": 16,
+    "overlay_applied": false,
+    "tests_passed": 204,
+    "focused_tests_passed": 4,
+    "new_regression_tests": 4,
+    "warning": "Existing Starlette/AnyIO deprecation",
+    "unique_missing_blob_ids": 79,
+    "source_recovery_queue": "SOURCE_RECOVERY_QUEUE.json",
+    "review_ready": false,
+    "quality_target_91": "NOT_EVALUATED",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "browser": "Prior 14-page evidence retained; scripts-only work, not rerun",
+    "new_source_fetches": 0,
+    "next_feasible_local_step": "Check existing local worktree/cache candidates for the 79 exact missing Git blob IDs; retain every unresolved or mismatched source in a separate recovery record",
+    "external_requirements": "Actual independent reviews/adjudication, semantic support and repository/change-family-disjoint frozen final evaluation"
+  },
+  "latest_exact_source_recovery": {
+    "status": "BOUNDED_EXACT_SOURCE_RECOVERY_PASS",
+    "local_objects_recovered": 0,
+    "local_attempt_statuses": {
+      "MISSING": 79,
+      "BYTE_MISMATCH": 886,
+      "UNAVAILABLE": 4
+    },
+    "upstream_blobs_verified_with_git_hash_object": 79,
+    "upstream_file_side_entries_covered": 92,
+    "unchanged_absent_pinned_paths": 4,
+    "local_scan_errors": [],
+    "authorized_github_read_requests": 79,
+    "repository_commits_or_pushes": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "protected_historical_files_unchanged": 550,
+    "frozen_input_result_source_pilot_draft_map_store_packet_handoff_files_unchanged": 2594,
+    "created_at": "2026-10-24T15:36:37.183591+00:00",
+    "full_archive_restored": 35,
+    "older_overlay_inspected": 18,
+    "overlay_applied": false,
+    "tests_passed": 208,
+    "focused_tests_passed": 4,
+    "new_regression_tests": 4,
+    "warning": "Existing Starlette/AnyIO deprecation",
+    "quality_target_91": "NOT_EVALUATED",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "browser": "Prior 14-page evidence retained; scripts-only change, not rerun",
+    "frozen_artifact_maps_updated": false,
+    "review_labels_created": 0,
+    "next_feasible_local_step": "Use validated upstream cache in separately versioned partial artifact maps under a new parser identity; preserve original maps/store/packets and all unknowns",
+    "external_requirements": "Real independent annotations, semantic review/adjudication and repository/change-family-disjoint frozen final evaluation"
+  },
+  "latest_verified_cache_maps": {
+    "status": "BOUNDED_VERIFIED_CACHE_MAPS_PASS",
+    "snapshots": 53,
+    "cases": 32,
+    "files": 10970,
+    "artifact_versions_identity_hash_span_verified": 29647,
+    "parser_identity": "review-development-offline::native-compiler-coverage-v4::verified-cache-v1::a0bd3272e7560ffb::9b13d8eca683b1f7::255036ed8d9f44ef",
+    "recovered_snapshot_file_rows": 89,
+    "recovered_file_statuses": {
+      "PARSED": 89
+    },
+    "unique_recovered_blob_ids": 79,
+    "queued_case_side_occurrences_covered": 92,
+    "unchanged_absent_pinned_tree_paths": 4,
+    "file_statuses": {
+      "UNSUPPORTED_SUFFIX": 2485,
+      "PARSED": 7443,
+      "MISSING_LOCAL_BLOB": 982,
+      "NON_REGULAR_FILE": 48,
+      "PARSED_WITH_ERRORS": 12
+    },
+    "baseline_archive_sha256": "fe7c9922830a8bdf036eea06a8213472ad5c4d416e98eb2467c72fc5a833efd7",
+    "unchanged_baseline_files": 8496,
+    "old_new_artifact_id_overlap": 0,
+    "model_calls": 0,
+    "new_fetches": 0,
+    "independent_labels_created": 0,
+    "quality_target": "NOT_EVALUATED",
+    "created_at": "2026-10-24T16:49:28.108079+00:00",
+    "full_archive_restored": 36,
+    "overlay_inspected": 20,
+    "overlay_applied": false,
+    "tests_passed": 215,
+    "focused_tests_passed": 26,
+    "new_regression_tests": 7,
+    "warning": "Existing Starlette/AnyIO deprecation",
+    "protected_historical_files_unchanged": 550,
+    "quality_target_91": "NOT_EVALUATED",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "browser": "Prior 14-page evidence retained; scripts-only change, not rerun",
+    "original_maps_store_packets_unchanged": true,
+    "new_store_staged": false,
+    "next_feasible_local_step": "Stage verified-cache maps in a new isolated development Store under their new parser identity, then create new canonical packets with null judgments",
+    "external_requirements": "Real independent annotations, semantic review/adjudication and repository/change-family-disjoint frozen final evaluation"
+  },
+  "latest_recovered_review_store": {
+    "status": "BOUNDED_RECOVERED_REVIEW_STORE_PACKETS_PASS",
+    "artifact_versions_verified": 29647,
+    "snapshots": 53,
+    "api_navigation_checks": 53,
+    "cases": 32,
+    "packet_manifest_files": 37,
+    "source_references_verified": 136,
+    "changed_file_side_statuses": {
+      "PARSED": 136,
+      "NOT_IN_PINNED_TREE": 4
+    },
+    "unchanged_baseline_files": 8564,
+    "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "blank_reviewer_forms": 2,
+    "blank_adjudication_cases": 32,
+    "model_calls": 0,
+    "new_fetches": 0,
+    "independent_labels_created": 0,
+    "quality_target": "NOT_EVALUATED",
+    "created_at": "2026-10-24T17:02:11.708321+00:00",
+    "restored_full_version": 37,
+    "inspected_overlay_version": 23,
+    "overlay_applied": false,
+    "tests_passed": 215,
+    "new_model_calls": 0,
+    "protected_historical_files_unchanged": 550,
+    "quality_target_91": "NOT_EVALUATED",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "original_maps_store_packets_unchanged": true,
+    "independent_review_complete": false,
+    "next_feasible_local_step": "Verify reviewer-intake readiness against exact recovered-cache sources, keeping Git/source checks fail-closed and independent reviewer/adjudication requirements intact"
+  },
+  "latest_review_source_readiness": {
+    "policy": "offline-review-source-readiness-v1",
+    "denominator": 140,
+    "cases": 32,
+    "local_statuses": {
+      "UNAVAILABLE_BLOB": 92,
+      "VERIFIED_LOCAL_GIT": 44,
+      "NOT_IN_PINNED_TREE": 4
+    },
+    "with_cache_statuses": {
+      "VERIFIED_RECOVERY_CACHE": 92,
+      "VERIFIED_LOCAL_GIT": 44,
+      "NOT_IN_PINNED_TREE": 4
+    },
+    "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "packet_manifest_sha256": "d016e458ba89859d01a94cf8f3f3ae9e236cb0cf63b9521fe7cc61991f7e5e56",
+    "cache_manifest_sha256": "255036ed8d9f44ef92b297b54d45cded71b956a48cebc0f11813d4a3db7c0b85",
+    "queue_sha256": "bbcfe932f8b404a8f7e6681d4ba45b07548b1a80cd0c2945c7a9d2e7d7669b15",
+    "default_review_intake": "NOT_RUN_WITH_BLANK_FORMS; cache policy not connected to validate_reviews",
+    "semantic_support": "NOT_REVIEWED",
+    "independent_labels_created": 0,
+    "model_calls": 0,
+    "new_fetches": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "status": "BOUNDED_OFFLINE_REVIEW_SOURCE_READINESS_PASS",
+    "created_at": "2026-10-24T18:12:22.838064+00:00",
+    "restored_full_version": 38,
+    "inspected_overlay_version": 25,
+    "overlay_applied": false,
+    "tests_passed": 223,
+    "focused_tests_passed": 8,
+    "new_regression_tests": 8,
+    "unchanged_baseline_files": 8615,
+    "protected_historical_files_unchanged": 550,
+    "native_windows": "NOT_RUN",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "next_feasible_local_step": "Integrate the scoped offline source verifier into an explicit opt-in reviewer-intake policy with provenance receipts; preserve default validation, independent review attestations and all unknowns"
+  },
+  "latest_offline_review_source_policy": {
+    "policy": {
+      "policy": "offline-scoped-review-intake-v1",
+      "cache_manifest_sha256": "255036ed8d9f44ef92b297b54d45cded71b956a48cebc0f11813d4a3db7c0b85",
+      "queue_sha256": "bbcfe932f8b404a8f7e6681d4ba45b07548b1a80cd0c2945c7a9d2e7d7669b15",
+      "source_verifier_sha256": "334a7ae95fcba002eb845d2e7fb6679051e82ca44047b2ff85ea348aaf06e55d",
+      "cache_loader_sha256": "9b13d8eca683b1f7855dd442a8ed775ddb5b9038edfa2a17f036c94e7acf7a13"
+    },
+    "denominator": 140,
+    "cases": 32,
+    "source_statuses": {
+      "VERIFIED_RECOVERY_CACHE": 92,
+      "VERIFIED_LOCAL_GIT": 44,
+      "NO_SOURCE_REFERENCE": 4
+    },
+    "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "packet_manifest_sha256": "d016e458ba89859d01a94cf8f3f3ae9e236cb0cf63b9521fe7cc61991f7e5e56",
+    "blank_forms_rejected": 2,
+    "actual_review_intake": "NOT_RUN; no real reviewer judgments supplied",
+    "independent_labels_created": 0,
+    "model_calls": 0,
+    "new_fetches": 0,
+    "semantic_review": "NOT_PERFORMED",
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "status": "BOUNDED_OPT_IN_REVIEW_SOURCE_POLICY_PASS",
+    "created_at": "2026-10-24T19:43:47.538640+00:00",
+    "restored_full_version": 39,
+    "inspected_overlay_version": 27,
+    "overlay_applied": false,
+    "tests_passed": 234,
+    "focused_tests_passed": 21,
+    "new_regression_tests": 11,
+    "negative_cli_checks_passed": 3,
+    "unchanged_baseline_files": 8625,
+    "protected_historical_files_unchanged": 550,
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "next_feasible_local_step": "Audit optional reviewed-obligation intake for reuse of the scoped source policy and receipts, preserving lifecycle/search validation and the no-obligation/no-MISSING_TEST guard"
+  },
+  "latest_offline_obligation_assessment": {
+    "policy": {
+      "policy": "offline-scoped-review-intake-v1",
+      "intake_source_sha256": "6a408b67835a3d4a2084f8b8a2f46e99042747992b6137b6aaafa10d78288d02",
+      "cache_manifest_sha256": "255036ed8d9f44ef92b297b54d45cded71b956a48cebc0f11813d4a3db7c0b85",
+      "queue_sha256": "bbcfe932f8b404a8f7e6681d4ba45b07548b1a80cd0c2945c7a9d2e7d7669b15",
+      "source_verifier_sha256": "334a7ae95fcba002eb845d2e7fb6679051e82ca44047b2ff85ea348aaf06e55d",
+      "cache_loader_sha256": "9b13d8eca683b1f7855dd442a8ed775ddb5b9038edfa2a17f036c94e7acf7a13"
+    },
+    "snapshot_denominator": 53,
+    "failed_snapshots": 0,
+    "cases": 32,
+    "dispositions": {
+      "UNKNOWN": 10970
+    },
+    "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "draft_index_sha256": "3ec13d86dd0d04a84d0baa94e5957c21a14c7f13d9d595a1973cb1366d5a9506",
+    "actual_reviewed_registry_intake": "NOT_RUN; no real reviewed registry supplied",
+    "source_fetches": 0,
+    "independent_labels_created": 0,
+    "model_calls": 0,
+    "whole_repository_semantics": false,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "status": "BOUNDED_OFFLINE_OBLIGATION_ASSESSMENT_PASS",
+    "created_at": "2026-10-24T20:36:31.430967+00:00",
+    "restored_full_version": 40,
+    "inspected_overlay_version": 29,
+    "overlay_applied": false,
+    "tests_passed": 248,
+    "focused_tests_passed": 53,
+    "new_regression_tests": 14,
+    "negative_cli_checks_passed": 2,
+    "unchanged_baseline_files": 8636,
+    "protected_historical_files_unchanged": 550,
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "saved_report_policy_integration": "NOT_IMPLEMENTED; default path unchanged",
+    "initial_fixture_failure": "Retained; partial search cannot declare UNMET. Corrected authored fixture to UNKNOWN satisfaction; production guard unchanged.",
+    "next_feasible_local_step": "Connect the explicit scoped source policy to immutable obligation-report attachment and its CLI, rechecking parent/derived citations and fingerprinting policy-specific report identities without rewriting parents or graphs"
+  },
+  "latest_offline_obligation_report": {
+    "status": "BOUNDED_OFFLINE_OBLIGATION_REPORT_PASS",
+    "created_at": "2026-10-24T21:36:48.177573+00:00",
+    "restored_full_version": 41,
+    "inspected_overlay_version": 31,
+    "overlay_applied": false,
+    "tests_passed": 259,
+    "focused_tests_passed": 30,
+    "new_regression_tests": 11,
+    "negative_cli_checks_passed": 1,
+    "unchanged_baseline_files": 8653,
+    "protected_historical_files_unchanged": 550,
+    "source_policy_mode": "EXPLICIT_OPT_IN",
+    "default_report_identity": "PRESERVED",
+    "opt_in_report_identity": "PARENT_REGISTRY_POLICY_AND_ATTACHMENT_SOURCE_FINGERPRINTS",
+    "citation_passes": [
+      "parent",
+      "derived",
+      "existing-derived-on-idempotent-reuse"
+    ],
+    "model_calls": 0,
+    "source_fetches": 0,
+    "independent_labels_created": 0,
+    "actual_reviewed_report_attachment": "NOT_RUN; no real reviewed registry and no completed canonical source investigation in this staged Store",
+    "canonical_staged_store_completed_investigations": 0,
+    "unlabelled_cases": 32,
+    "quality_target_91": "NOT_EVALUATED",
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "next_feasible_local_step": "Audit existing-snapshot investigation routing for the canonical partial Store, avoiding re-import, fetching and parser-ID rewrites while keeping unknown coverage explicit"
+  },
+  "latest_staged_routing_audit": {
+    "policy": "staged-investigation-routing-audit-v1",
+    "snapshot_denominator": 53,
+    "cases": 32,
+    "guarded_snapshots": 53,
+    "failed_or_unexpected_snapshots": 0,
+    "metadata_write_attempts": 0,
+    "default_project_route_mismatches": 53,
+    "explicit_project_route_mismatches": 0,
+    "file_statuses_preserved": {
+      "UNSUPPORTED_SUFFIX": 2485,
+      "PARSED": 7443,
+      "MISSING_LOCAL_BLOB": 982,
+      "NON_REGULAR_FILE": 48,
+      "PARSED_WITH_ERRORS": 12
+    },
+    "store_counts_unchanged": {
+      "analysis_runs": 0,
+      "artifacts": 29647,
+      "graph_nodes": 0,
+      "graph_edges": 0
+    },
+    "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "metadata_git_commands": {
+      "remote": 106,
+      "rev-parse": 53
+    },
+    "routing_barriers": [
+      "Default project identity differs from staged canonical identity.",
+      "Full-import metadata writes occur before the prior-artifact shortcut; staged guard now rejects before writes.",
+      "Full workflow still uses Git blob diff/rename detection, size-based coverage and Git-only evidence verification.",
+      "Investigation tool exploration still requests size-based inventory; it is not an offline partial-snapshot adapter.",
+      "Missing extracted artifacts cannot be interpreted as artifact deletion/addition without coverage-aware comparison."
+    ],
+    "source_fetches": 0,
+    "reparses": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "actual_staged_investigations": "NOT_RUN; existing-snapshot workflow adapter not implemented",
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "status": "BOUNDED_STAGED_ROUTING_AUDIT_AND_IMPORT_GUARD_PASS",
+    "created_at": "2026-10-24T22:56:46.521648+00:00",
+    "restored_full_version": 42,
+    "inspected_overlay_version": 33,
+    "overlay_applied": false,
+    "tests_passed": 266,
+    "focused_tests_passed": 17,
+    "new_regression_tests": 7,
+    "unchanged_baseline_files": 8665,
+    "protected_historical_files_unchanged": 550,
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "next_feasible_local_step": "Implement validated read-only access to staged source snapshots and explicit file-status coverage, then connect an opt-in partial-aware investigation route without re-importing or treating unavailable artifacts as deletions"
+  },
+  "latest_staged_source_reader": {
+    "policy": "validated-staged-source-reader-audit-v1",
+    "snapshot_denominator": 53,
+    "failed_snapshots": 0,
+    "cases": 32,
+    "artifact_versions_validated": 29647,
+    "file_statuses": {
+      "UNSUPPORTED_SUFFIX": 2485,
+      "PARSED": 7443,
+      "MISSING_LOCAL_BLOB": 982,
+      "NON_REGULAR_FILE": 48,
+      "PARSED_WITH_ERRORS": 12
+    },
+    "search_dispositions": {
+      "UNKNOWN": 10970
+    },
+    "binding": {
+      "policy": "validated-staged-source-reader-v1",
+      "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+      "source_index_sha256": "c8fbbc9c18623c4335a0afdac943528e02db5d372bdcc79226c8a8ed6d5b6436",
+      "staging_sha256": "916b9d43aea9c9739ebc9ff8f74a1b7afc51085a2a11b1b83860bcbdf8869619"
+    },
+    "write_attempt_rejected": true,
+    "store_counts_unchanged": {
+      "artifacts": 29647,
+      "analysis_runs": 0,
+      "graph_nodes": 0,
+      "graph_edges": 0
+    },
+    "source_fetches": 0,
+    "imports": 0,
+    "reparses": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "raw_git_verification": "NOT_PERFORMED_BY_READER; existing source-policy receipts remain separate",
+    "actual_staged_investigations": "NOT_RUN; comparison/investigation adapters not implemented",
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "status": "BOUNDED_VALIDATED_STAGED_SOURCE_READER_PASS",
+    "created_at": "2026-10-24T23:13:39.887234+00:00",
+    "restored_full_version": 43,
+    "inspected_overlay_version": 35,
+    "overlay_applied": false,
+    "tests_passed": 277,
+    "focused_tests_passed": 17,
+    "new_regression_tests": 11,
+    "unchanged_baseline_files": 8679,
+    "protected_historical_files_unchanged": 550,
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "next_feasible_local_step": "Implement coverage-aware comparison of validated staged snapshots, retaining unknown/unavailable file and artifact outcomes; do not infer addition/deletion or negative links from partial extraction absence"
+  },
+  "latest_staged_comparison": {
+    "policy": "partial-staged-comparison-audit-v1",
+    "case_denominator": 32,
+    "failed_cases": 0,
+    "case_weighted_observation_denominators": {
+      "file_union": 6618,
+      "file_side_slots": 13236,
+      "file_rows_observed": 13232,
+      "file_rows_unavailable": 4,
+      "artifact_union": 17879,
+      "artifact_side_slots": 35758,
+      "artifact_versions_observed": 35395,
+      "artifact_versions_unavailable": 363
+    },
+    "case_weighted_outcomes": {
+      "files": {
+        "SAME_OBJECT_ID": 6504,
+        "DIFFERENT_OBJECT_ID": 110,
+        "UNKNOWN": 4
+      },
+      "artifacts": {
+        "SAME_EXTRACTED_CONTENT": 17367,
+        "DIFFERENT_EXTRACTED_CONTENT": 141,
+        "UNKNOWN": 371
+      }
+    },
+    "binding": {
+      "policy": "validated-staged-source-reader-v1",
+      "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+      "source_index_sha256": "c8fbbc9c18623c4335a0afdac943528e02db5d372bdcc79226c8a8ed6d5b6436",
+      "staging_sha256": "916b9d43aea9c9739ebc9ff8f74a1b7afc51085a2a11b1b83860bcbdf8869619"
+    },
+    "store_counts_unchanged": {
+      "artifacts": 29647,
+      "analysis_runs": 0,
+      "graph_nodes": 0,
+      "graph_edges": 0
+    },
+    "source_fetches": 0,
+    "imports": 0,
+    "reparses": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "actual_staged_investigations": "NOT_RUN; comparison only",
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "scope": "Development observations over unions of partial maps, not all project files/artifacts or quality denominators; no addition/deletion/impact/consistency/negative-link claims",
+    "status": "BOUNDED_PARTIAL_STAGED_COMPARISON_PASS",
+    "created_at": "2026-10-25T00:48:30.903279+00:00",
+    "restored_full_version": 44,
+    "inspected_overlay_version": 37,
+    "overlay_applied": false,
+    "tests_passed": 293,
+    "focused_tests_passed": 27,
+    "new_regression_tests": 16,
+    "unchanged_baseline_files": 8693,
+    "protected_historical_files_unchanged": 550,
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "next_feasible_local_step": "Add an explicit opt-in partial-aware investigation route using validated staged reads/comparisons, scoped raw-source verification and separately versioned graph/report provenance; keep unknowns and do not bypass the importer guard",
+    "initial_fixture_failure": "Retained focused-tests-initial-fixture-failure.log; change fixture initially selected README with no numeric literal. Selected .py row; no production rule changed.",
+    "fresh_release_verification": "See sibling VIGILANT-release-verification.json after packaging"
+  },
+  "latest_staged_inspection": {
+    "policy": "staged-inspection-audit-v1",
+    "denominator": 140,
+    "cases": 32,
+    "source_statuses": {
+      "VERIFIED_RECOVERY_CACHE": 92,
+      "VERIFIED_LOCAL_GIT": 44,
+      "NO_SOURCE_REFERENCE": 4
+    },
+    "binding": {
+      "policy": "validated-staged-source-reader-v1",
+      "database_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+      "source_index_sha256": "c8fbbc9c18623c4335a0afdac943528e02db5d372bdcc79226c8a8ed6d5b6436",
+      "staging_sha256": "916b9d43aea9c9739ebc9ff8f74a1b7afc51085a2a11b1b83860bcbdf8869619"
+    },
+    "source_policy": {
+      "policy": "offline-scoped-review-intake-v1",
+      "intake_source_sha256": "6a408b67835a3d4a2084f8b8a2f46e99042747992b6137b6aaafa10d78288d02",
+      "cache_manifest_sha256": "255036ed8d9f44ef92b297b54d45cded71b956a48cebc0f11813d4a3db7c0b85",
+      "queue_sha256": "bbcfe932f8b404a8f7e6681d4ba45b07548b1a80cd0c2945c7a9d2e7d7669b15",
+      "source_verifier_sha256": "334a7ae95fcba002eb845d2e7fb6679051e82ca44047b2ff85ea348aaf06e55d",
+      "cache_loader_sha256": "9b13d8eca683b1f7855dd442a8ed775ddb5b9038edfa2a17f036c94e7acf7a13"
+    },
+    "store_counts_unchanged": {
+      "artifacts": 29647,
+      "analysis_runs": 0,
+      "graph_nodes": 0,
+      "graph_edges": 0,
+      "tool_results": 0
+    },
+    "model_calls": 0,
+    "source_fetches": 0,
+    "independent_labels_created": 0,
+    "full_staged_workflow": "NOT_RUN; bounded source navigation only",
+    "semantic_support": "NOT_ESTABLISHED",
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "created_at": "2026-10-25T01:12:06.534347+00:00",
+    "status": "BOUNDED_STAGED_INSPECTION_PASS",
+    "tests_passed": 302,
+    "focused_tests_passed": 9,
+    "new_regression_tests": 9,
+    "restored_full_version": 45,
+    "inspected_overlay_version": 39,
+    "overlay_applied": false,
+    "unchanged_baseline_files": 8741,
+    "current_target": 0.95,
+    "current_target_status": "NOT_EVALUATED",
+    "native_windows": "NOT_RUN",
+    "next_feasible_local_step": "Connect staged comparison and verified inspection receipts to a separately versioned partial-aware report/graph path on disposable writable copies; retain all UNKNOWNs and no-obligation/no-MISSING_TEST guard; full workflow and independent reviewed registries remain unfinished"
+  },
+  "latest_staged_graph": {
+    "policy": "staged-graph-audit-v1",
+    "snapshot_scopes": 53,
+    "packet_source_entries": 140,
+    "available_reference_occurrences": 136,
+    "unavailable_reference_occurrences": 4,
+    "projection_requests": 53,
+    "statuses": {
+      "PROJECTED": 53
+    },
+    "request_weighted_denominators": {
+      "snapshot_artifacts": 29647,
+      "eligible_artifacts": 29635,
+      "artifacts_with_unavailable_or_error_file": 12,
+      "incident_candidate_edges": 1885,
+      "page_candidate_edges": 1172,
+      "source_verified_edges": 1151,
+      "withheld_edges": 21
+    },
+    "frozen_store_counts": {
+      "artifacts": 29647,
+      "analysis_runs": 0,
+      "graph_nodes": 0,
+      "graph_edges": 0,
+      "tool_results": 0
+    },
+    "scope": "First bounded incident-edge page per selection; not a complete application graph or independent quality evaluation",
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "status": "BOUNDED_STAGED_GRAPH_PROJECTION_PASS",
+    "tests_passed": 308,
+    "new_tests": 6,
+    "restored_full_version": 46,
+    "inspected_overlay_version": 41,
+    "overlay_applied": false,
+    "created_at": "2026-10-25T04:15:17.417122+00:00",
+    "full_staged_report_workflow": "NOT_RUN; graph projection only",
+    "next_feasible_local_step": "Connect partial comparisons, verified inspection and candidate graph projections into a separately versioned report on a disposable Store; retain UNKNOWNs and no-obligation guard"
+  },
+  "latest_staged_report": {
+    "policy": "partial-staged-report-audit-v1",
+    "cases": 32,
+    "statuses": {
+      "COMPOSED": 32
+    },
+    "counts": {
+      "unknown_artifact_observations": 371,
+      "changed_artifact_observations": 141,
+      "verified_source_occurrences": 136,
+      "withheld_source_occurrences": 0
+    },
+    "unavailable_reference_occurrences": 4,
+    "packet_source_entries": 140,
+    "frozen_store_counts": {
+      "artifacts": 29647,
+      "analysis_runs": 0,
+      "graph_nodes": 0,
+      "graph_edges": 0,
+      "tool_results": 0
+    },
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "application_integration": "NOT_RUN; separate report artifacts, no canonical analysis_runs",
+    "status": "BOUNDED_PARTIAL_REPORT_COMPOSITION_PASS",
+    "tests_passed": 313,
+    "new_tests": 5,
+    "created_at": "2026-10-25T04:20:59.992751+00:00",
+    "next_feasible_local_step": "Add explicit read-only application delivery for separate partial reports, revalidating source/report identity and preserving unknowns; independent adjudication remains pending"
+  },
+  "latest_partial_report_api": {
+    "policy": "partial-report-api-audit-v1",
+    "cases": 32,
+    "statuses": {
+      "REVALIDATED": 32
+    },
+    "unknown_artifact_outcomes_retained": 371,
+    "source_store_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "canonical_store_writes": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "ui_browser_acceptance": "NOT_RUN",
+    "status": "BOUNDED_READ_ONLY_PARTIAL_REPORT_API_PASS",
+    "tests_passed": 322,
+    "new_tests": 9,
+    "restored_full_version": 48,
+    "inspected_overlay_version": 43,
+    "overlay_applied": false,
+    "created_at": "2026-10-25T04:59:10.749005+00:00",
+    "next_feasible_local_step": "Build a clearly marked partial-development-report UI over the opt-in API, with source navigation and uncertainty, then browser acceptance; independent adjudication/final freeze remains pending"
+  },
+  "latest_master_directive_assessment": {
+    "policy": "vigilant-master-assessment-and-partial-ui-v1",
+    "created_at": "2026-10-25T06:55:05.426785+00:00",
+    "status": "BOUNDED_APPLICATION_INTEGRATION_VERIFIED",
+    "project_completion": "IN_PROGRESS",
+    "git_commit": null,
+    "git_branch": null,
+    "input_full_version": 49,
+    "input_overlay_version": 44,
+    "input_overlay_applied": false,
+    "source_fingerprint": "92bca439c336b6c4e936bd20bccaa492ce6597d0a0be3e1e4be66c60c7730a9f",
+    "source_files": 207,
+    "tests_passed": 324,
+    "focused_source_api_tests_passed": 11,
+    "existing_dependency_warnings": 1,
+    "legacy_browser_pages": 14,
+    "legacy_browser_checks": 16,
+    "partial_reports_browser_verified": 32,
+    "unknown_artifact_outcomes_retained": 371,
+    "frozen_graph_identities_verified": 53,
+    "report_identities_verified": 32,
+    "rea_source_files_git_blob_verified": 68,
+    "rea_commit": "8e6a95788688439baeeec8e54c9b3e845226f79d",
+    "rea_tool_contracts": 229,
+    "rea_cli_command_names": 175,
+    "rea_prompts": 6,
+    "rea_parity_established": false,
+    "master_tasks": 35,
+    "source_store_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "canonical_store_writes": 0,
+    "inference_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "next_action": "V015 bounded job cancellation/deadline controls; V035 partial-report grounded chat/human exports; independent review/final protocol prerequisites remain open"
+  },
+  "latest_partial_report_ui": {
+    "policy": "vigilant-master-assessment-and-partial-ui-v1",
+    "created_at": "2026-10-25T06:55:05.426785+00:00",
+    "status": "BOUNDED_APPLICATION_INTEGRATION_VERIFIED",
+    "project_completion": "IN_PROGRESS",
+    "git_commit": null,
+    "git_branch": null,
+    "input_full_version": 49,
+    "input_overlay_version": 44,
+    "input_overlay_applied": false,
+    "source_fingerprint": "92bca439c336b6c4e936bd20bccaa492ce6597d0a0be3e1e4be66c60c7730a9f",
+    "source_files": 207,
+    "tests_passed": 324,
+    "focused_source_api_tests_passed": 11,
+    "existing_dependency_warnings": 1,
+    "legacy_browser_pages": 14,
+    "legacy_browser_checks": 16,
+    "partial_reports_browser_verified": 32,
+    "unknown_artifact_outcomes_retained": 371,
+    "frozen_graph_identities_verified": 53,
+    "report_identities_verified": 32,
+    "rea_source_files_git_blob_verified": 68,
+    "rea_commit": "8e6a95788688439baeeec8e54c9b3e845226f79d",
+    "rea_tool_contracts": 229,
+    "rea_cli_command_names": 175,
+    "rea_prompts": 6,
+    "rea_parity_established": false,
+    "master_tasks": 35,
+    "source_store_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "canonical_store_writes": 0,
+    "inference_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "next_action": "V015 bounded job cancellation/deadline controls; V035 partial-report grounded chat/human exports; independent review/final protocol prerequisites remain open"
+  },
+  "latest_job_controls": {
+    "policy": "cooperative-job-control-verification-v1",
+    "created_at": "2026-10-25T07:58:23.597307+00:00",
+    "status": "COOPERATIVE_JOB_CONTROLS_VERIFIED",
+    "project_completion": "IN_PROGRESS",
+    "task": "V015",
+    "broader_task_status": "IN_PROGRESS",
+    "source_fingerprint": "98f3b129d50705e35f7d6f6a970495d3188d85acf40cf4bc8781e2f74ba2420a",
+    "source_files": 211,
+    "git_commit": null,
+    "git_branch": null,
+    "restored_full_version": 50,
+    "checked_overlay_version": 46,
+    "overlay_applied": false,
+    "tests_passed": 332,
+    "new_lifecycle_tests": 8,
+    "focused_regression_tests_passed": 35,
+    "later_source_guard_tests_passed": 8,
+    "dependency_warnings": 1,
+    "frontend_build": "PASS",
+    "control_browser_status": "PASS",
+    "control_browser_checks": 4,
+    "control_browser_fixture_only": true,
+    "control_browser_job_statuses": [
+      "CANCELLED",
+      "TIMED_OUT",
+      "CANCELLED"
+    ],
+    "legacy_browser_status": "PASSED",
+    "legacy_browser_pages": 14,
+    "legacy_browser_checks": 16,
+    "stop_mode": "COOPERATIVE_STAGE_BOUNDARY",
+    "hard_operation_preemption": "NOT_IMPLEMENTED",
+    "strict_wallclock_bound": "NOT_ESTABLISHED",
+    "canonical_historical_results_modified": false,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "next_action": "V035 grounded partial-report chat and human-readable exports; retain V015 hard-preemption/crash/ownership limits and independent-review/final-evaluation prerequisites",
+    "control_browser_receipt": "browser-controls-final/validation.json"
+  },
+  "latest_partial_report_presentation": {
+    "policy": "partial-report-presentation-release-v1",
+    "created_at": "2026-10-25T08:30:00.073673+00:00",
+    "status": "BOUNDED_GUIDED_PRESENTATION_VERIFIED",
+    "project_completion": "IN_PROGRESS",
+    "task": "V035",
+    "scope": "Six typed exact-field explanations and freshly verified JSON/HTML exports; no open-ended semantic interpretation",
+    "source_fingerprint": "67d3ddc763583927b55780df149e2b6c6f90aae10d9a18112c306350b22d2c6d",
+    "source_files": 214,
+    "git_commit": null,
+    "git_branch": null,
+    "restored_full_version": 51,
+    "checked_overlay_version": 48,
+    "overlay_applied": false,
+    "tests_passed": 342,
+    "new_presentation_tests": 10,
+    "focused_tests_passed": 21,
+    "dependency_warnings": 1,
+    "frontend_build": "PASS",
+    "api_cases": 32,
+    "api_explanation_requests": 32,
+    "api_export_requests": 64,
+    "api_intents": {
+      "scope": 6,
+      "changes": 6,
+      "unknowns": 5,
+      "graph": 5,
+      "evidence": 5,
+      "limitations": 5
+    },
+    "unknown_artifact_outcomes_retained": 371,
+    "source_store_sha256": "047556683a223c5f17a81b66a3a89a615b14499c2fc74d4ce1010e8699698661",
+    "partial_browser_status": "PASS",
+    "partial_browser_cases": 32,
+    "partial_browser_checks": 9,
+    "legacy_browser_status": "PASSED",
+    "legacy_browser_pages": 14,
+    "legacy_browser_checks": 16,
+    "canonical_writes": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "prior_master_rea_job_control_records": "PRESERVED",
+    "next_action": "V008 bounded source-backed rename/move lineage audit under separate records; preserve unknowns/frozen identities and independent-review/final-evaluation requirements"
+  },
+  "latest_artifact_lineage_audit": {
+    "policy": "artifact-lineage-audit-release-v1",
+    "created_at": "2026-10-25T09:50:16.668669+00:00",
+    "status": "AUTHORED_BEHAVIOR_AUDIT_VERIFIED",
+    "task": "V008",
+    "task_status": "IN_PROGRESS",
+    "project_completion": "IN_PROGRESS",
+    "source_fingerprint": "431c3a89c5f2f2e8a67eaf1c3203edd942a8cd697a0edae55971bcb9eff73a62",
+    "source_files": 216,
+    "git_commit": null,
+    "git_branch": null,
+    "restored_full_version": 52,
+    "checked_overlay_version": 50,
+    "overlay_applied": false,
+    "baseline_zip_sha256": "7aa98a5f5a75664319152d0f8afdaf93d79c8337f57adc55d1917c25e1384d6e",
+    "interim_overlay_saved_version": 51,
+    "tests_passed": 344,
+    "new_audit_tests": 2,
+    "authored_cases": 9,
+    "retained_lineage_limits": 5,
+    "production_lineage_implemented": false,
+    "production_behavior_changed": false,
+    "frontend_changed": false,
+    "frontend_build": "REUSED_UNCHANGED_PRODUCTION_BUNDLE",
+    "browser_acceptance": "NOT_RERUN; preceding evidence preserved",
+    "model_calls": 0,
+    "canonical_writes": 0,
+    "independent_labels_created": 0,
+    "final_test_exposure": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "next_action": "V008 implement an opt-in separately versioned lineage-observation sidecar with source/revision validation and explicit duplicate/move/history ambiguity; preserve frozen IDs and keep production consumers gated until acceptance"
+  },
+  "latest_lineage_observations": {
+    "policy": "lineage-observations-release-v1",
+    "created_at": "2026-10-25T12:34:05.689905+00:00",
+    "status": "BOUNDED_SOURCE_OBSERVER_VERIFIED",
+    "task": "V008",
+    "task_status": "IN_PROGRESS",
+    "project_completion": "IN_PROGRESS",
+    "source_fingerprint": "bc63f95b9561c50047a40c544027eee1a5eec31c1d5bc4fc9c539de889fe8488",
+    "source_files": 220,
+    "git_commit": null,
+    "git_branch": null,
+    "restored_full_version": 53,
+    "restored_overlay_version": 53,
+    "overlay_applied": true,
+    "baseline_zip_sha256": "842f92962224ba3e79d86e2e64b522078bf05b86145a13aec2ae46977e56c9d9",
+    "overlay_sha256": "d8edd6b8bdd2303365de3634cf11b08b954d76ab523be10f9f1efb3004911c6a",
+    "workspace_recovery": "Saved source/acceptance restored; lost unsaved final verification rebuilt, not recovered",
+    "tests_passed": 359,
+    "new_observer_test_cases": 15,
+    "dependency_warnings": 1,
+    "authored_case_denominator": 9,
+    "sidecars_revalidated": 8,
+    "unknown_missing_revision_cases": 1,
+    "base_artifacts": 19,
+    "head_artifacts": 20,
+    "candidate_pairs": 11,
+    "unknown_observations": 17,
+    "selected_files_request_weighted": 13,
+    "unavailable_selected_file_sides": 7,
+    "initial_saved_acceptance_matches_fresh": true,
+    "observer_implemented": true,
+    "canonical_workflow_changed": false,
+    "production_consumers": "NOT_INTEGRATED",
+    "reviewer_lifecycle": "UNREVIEWED_ONLY",
+    "logical_continuity": "UNKNOWN",
+    "semantic_equivalence": "NOT_ESTABLISHED",
+    "frontend_build": "REUSED_UNCHANGED_BUNDLE",
+    "browser_acceptance": "NOT_RERUN; prior evidence preserved",
+    "canonical_writes": 0,
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "final_test_exposure": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "next_action": "V008 opt-in existing-repository investigation-tool integration for source-backed lineage observations; enforce exact source/revision/identity/authentication scope and no automatic graph/citation/obligation transfer"
+  },
+  "latest_lineage_tools": {
+    "policy": "lineage-investigation-tools-release-v1",
+    "created_at": "2026-10-25T12:57:56.990534+00:00",
+    "status": "BOUNDED_SHARED_TOOL_VERIFIED",
+    "task": "V008",
+    "task_status": "IN_PROGRESS",
+    "project_completion": "IN_PROGRESS",
+    "source_fingerprint": "f76f5611e7085c70d102032c9adb5de9bf6dbba3f6445e6d42f579a6d0223557",
+    "source_files": 222,
+    "git_commit": null,
+    "git_branch": null,
+    "restored_full_version": 54,
+    "checked_overlay_version": 53,
+    "overlay_applied": false,
+    "baseline_zip_sha256": "b642559eb37d11e8a52b2a2c1e5690f0faf796ba103c4d977b115db21eb0ad8a",
+    "interim_overlay_saved_version": 54,
+    "tool": "inspect_lineage",
+    "default_enabled": false,
+    "enable_env": "VIGILANT_LINEAGE_TOOLS=1",
+    "transports": [
+      "HTTP",
+      "CLI",
+      "MCP",
+      "retained-result resource"
+    ],
+    "tests_passed": 368,
+    "new_tool_tests": 9,
+    "initial_focused_tests_passed": 20,
+    "dependency_warnings": 1,
+    "http_case_denominator": 9,
+    "accepted_and_retained_revalidated": 8,
+    "missing_revision_unknowns": 1,
+    "unauthenticated_requests_rejected": 9,
+    "candidate_pairs": 11,
+    "unknown_observations": 17,
+    "tool_unknowns": 16,
+    "base_artifacts": 19,
+    "head_artifacts": 20,
+    "selected_files_request_weighted": 13,
+    "unavailable_file_sides": 7,
+    "disposable_store_writes": "fixture imports, tool results and unknown revisions only",
+    "frozen_production_database_writes": 0,
+    "graph_and_report_propagation": false,
+    "frontend_controls": "NOT_IMPLEMENTED",
+    "frontend_build": "REUSED_UNCHANGED_BUNDLE",
+    "browser_acceptance": "NOT_RERUN; prior evidence retained",
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "final_test_exposure": 0,
+    "quality_target_91": "NOT_EVALUATED",
+    "quality_target_95": "NOT_EVALUATED",
+    "native_windows_acceptance": "NOT_RUN",
+    "next_action": "V008 explicit lineage inspection controls in the existing investigation UI, with pinned base/head/path selection, paired canonical source navigation, retained-read revalidation and stale-result clearing; keep independent review/final evaluation requirements"
+  },
+  "latest_execution": {
+    "task": "V026",
+    "status": "IN_PROGRESS",
+    "milestone_status": "FOCUSED_URL_AND_CLONE_HARDENING_VERIFIED",
+    "release_readiness": "NOT_MET",
+    "quality_target_95": "NOT_EVALUATED",
+    "checkpoint": "docs/EXECUTION_CHECKPOINT.md",
+    "latest_status": "reports/execution/latest-status.json",
+    "resume_prompt": "docs/EXECUTION_RESUME_PROMPT.md",
+    "focused_tests_passed": 40,
+    "warnings": 1,
+    "duration_seconds": 115.85,
+    "junit": "reports/import-security-20261026/focused-regression.xml",
+    "included_v015_tests": 22,
+    "no_model_calls": true,
+    "no_label_changes": true,
+    "next_action": "Continue P0 security/release work: egress/dependency/resource checks where available, then proceed through unresolved evaluation and platform gates.",
+    "updated_at": "2026-10-26T03:55:00+00:00"
+  },
+  "latest_job_controls_20261026": {
+    "policy": "process-isolated-job-control-release-v4",
+    "created_at": "2026-10-26T03:38:10Z",
+    "task": "V015",
+    "task_status": "IN_PROGRESS",
+    "milestone_status": "WINDOWS_TREE_SINGLE_SERVER_CRASH_RECOVERY_AND_POSIX_ESCALATION_CONTRACT_VERIFIED",
+    "project_completion": "IN_PROGRESS",
+    "source_files_changed_in_v015_continuation": [
+      "agents/control.py",
+      "agents/workflow.py",
+      "backend/app.py",
+      "database/store.py",
+      "frontend/src/main.jsx",
+      "tests/test_integration.py",
+      "tests/test_job_controls.py"
+    ],
+    "source_sha256": {
+      "backend/app.py": "33d90492aa8e39dc3e082952549ec6aef549f1835c53774dfa8a4ae064da4bcf",
+      "agents/control.py": "ad07beb85d7e3d120319806b19b42012cd36dd3116224b2bc06d6a1c19bf6f51",
+      "agents/workflow.py": "d85acc066ccb59e82db1cf10a4f0c61f5d73ce0effaf26c2b29c1bca9147629c",
+      "database/store.py": "7989dfff295a592e9dbd945660433db28b94c35f3e511f92755b3a45226b6ecd",
+      "frontend/src/main.jsx": "e99e6a2e447f51ced244b2a3eda8a3695f7ae8d1cb03a6abe92941e1b0f56b1a",
+      "tests/test_integration.py": "5698a194c89761cf65469ae27e0afa77f243af584313bb94885117d8991126cf",
+      "tests/test_job_controls.py": "1cc4268952ce3e234b7ebabcb8dd2f7c192669d1f5b0fbbfc227a270027119f2",
+      "backend/repository_import.py": "11ddb37c0a23d1266e4e08f65bdebc3e5a81fc3745c04fe16385cfee57595f24",
+      "tests/test_input_audit_hardening.py": "7f9d18562f82d3b9ff38761d31cbc5fda53a81d7aa3a0d69b028270cc436cd17",
+      "tests/test_audit_regressions.py": "7653f86fa385f555a2c04378962438200619b00001e0b0fe97353161a9768ef1"
+    },
+    "checks": {
+      "focused_regression": "22 passed, 1 existing Starlette/AnyIO deprecation warning, 107.24s",
+      "process_tree": "PASS on Windows: cancellation and abrupt server termination stopped worker and descendant; POSIX TERM/KILL group-order contract passes mocked test, no POSIX host execution",
+      "server_ownership": "PASS: spawned process rejected while SQLite sidecar lock held; lock reacquired after clean shutdown and abrupt server termination",
+      "browser": "13 pages passed; zero page errors; evidence predates latest worker lifecycle changes",
+      "frontend_build": "PASS after V015 UI update; frontend unchanged in this milestone",
+      "historical_full_suite": "368 reported historically; not rerun",
+      "crash_recovery": "PASS: live RUNNING job became FAILED after server death; second server did not replay runner",
+      "combined_current_source_regression": "40 passed; includes all 22 V015 control/integration/transaction tests after the V026 app request validation edits"
+    },
+    "evidence": {
+      "tests": "tests-v015-final-verified.xml",
+      "verification": "VERIFICATION.md",
+      "server_lock_test": "tests/test_job_controls.py::test_file_backed_sqlite_has_single_server_owner",
+      "process_tree_test": "tests/test_job_controls.py::test_file_backed_worker_cancellation_stops_child_process_tree",
+      "browser": "../frontend/2026-10-26T02-17-03-746Z/validation.json",
+      "server_crash_recovery_test": "tests/test_job_controls.py::test_server_crash_terminates_worker_tree_and_restart_does_not_replay",
+      "posix_escalation_test": "tests/test_job_controls.py::test_posix_group_escalates_even_when_worker_leader_exits",
+      "combined_current_source_regression": "../import-security-20261026/focused-regression.xml"
+    },
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_95": "NOT_EVALUATED",
+    "release_readiness": "NOT_MET",
+    "next_action": "Evaluate descendant-process termination and multiworker ownership before claiming broader V015 acceptance.",
+    "limitations": [
+      "POSIX process-group escalation is covered by mocked ordering only; host execution not performed",
+      "In-memory/non-SQLite/custom-thread jobs remain cooperative",
+      "Sidecar lock rejects a second server; distributed multi-server coordination is not implemented",
+      "Strict wall-clock completion and broader recovery-under-load remain unverified",
+      "Historical full suite not rerun"
+    ],
+    "task_update": "reports/job-controls-20261026/task-update.json",
+    "verification": "reports/job-controls-20261026/VERIFICATION.md"
+  },
+  "latest_import_security_20261026": {
+    "policy": "repository-import-url-git-hardening-v1",
+    "created_at": "2026-10-26T03:54:47+00:00",
+    "task": "V026",
+    "task_status": "IN_PROGRESS",
+    "milestone_status": "FOCUSED_URL_AND_CLONE_HARDENING_VERIFIED",
+    "project_status": "IN_PROGRESS",
+    "release_readiness": "NOT_MET",
+    "source_sha256": {
+      "backend/app.py": "33d90492aa8e39dc3e082952549ec6aef549f1835c53774dfa8a4ae064da4bcf",
+      "backend/repository_import.py": "11ddb37c0a23d1266e4e08f65bdebc3e5a81fc3745c04fe16385cfee57595f24",
+      "tests/test_input_audit_hardening.py": "7f9d18562f82d3b9ff38761d31cbc5fda53a81d7aa3a0d69b028270cc436cd17",
+      "tests/test_audit_regressions.py": "7653f86fa385f555a2c04378962438200619b00001e0b0fe97353161a9768ef1",
+      "agents/control.py": "ad07beb85d7e3d120319806b19b42012cd36dd3116224b2bc06d6a1c19bf6f51",
+      "agents/workflow.py": "d85acc066ccb59e82db1cf10a4f0c61f5d73ce0effaf26c2b29c1bca9147629c",
+      "database/store.py": "7989dfff295a592e9dbd945660433db28b94c35f3e511f92755b3a45226b6ecd",
+      "frontend/src/main.jsx": "e99e6a2e447f51ced244b2a3eda8a3695f7ae8d1cb03a6abe92941e1b0f56b1a",
+      "tests/test_integration.py": "5698a194c89761cf65469ae27e0afa77f243af584313bb94885117d8991126cf",
+      "tests/test_job_controls.py": "1cc4268952ce3e234b7ebabcb8dd2f7c192669d1f5b0fbbfc227a270027119f2"
+    },
+    "checks": {
+      "focused_import_security": "19 passed, 1 existing deprecation warning, 26.26s",
+      "combined_touched_path_regression": "40 passed, 1 existing deprecation warning, 115.85s",
+      "url_allowlist": "PASS for exact public HTTPS GitHub/GitLab hosts; invalid/private/ambiguous inputs rejected",
+      "redirects_and_protocols": "PASS by command-policy test: redirects disabled; file/ext protocols denied",
+      "git_configuration": "PASS by mocked clone-policy test: system/global config, askpass and inherited Git path/config injection removed; isolated temp cwd and no-checkout enforced",
+      "live_network_clone": "NOT_RUN",
+      "egress_and_dns_pinning": "NOT_VERIFIED"
+    },
+    "evidence": {
+      "focused_tests": "reports/import-security-20261026/tests.xml",
+      "combined_tests": "reports/import-security-20261026/focused-regression.xml",
+      "verification": "reports/import-security-20261026/VERIFICATION.md",
+      "security_model": "docs/SECURITY_MODEL.md"
+    },
+    "model_calls": 0,
+    "independent_labels_created": 0,
+    "quality_target_95": "NOT_EVALUATED",
+    "limitations": [
+      "No live GitHub/GitLab clone or redirect-server interaction was run",
+      "No DNS pinning or outbound firewall validation",
+      "Hostile compilers, parser limits, dependency advisories, secret completeness and multi-tenant isolation remain open",
+      "Git for Windows local upload-pack fixture produced an MSYS NtCreateDirectoryObject error; local URLs are not accepted by the public API"
+    ],
+    "task_update": "reports/import-security-20261026/task-update.json",
+    "verification": "reports/import-security-20261026/VERIFICATION.md",
+    "combined_tests": "reports/import-security-20261026/focused-regression.xml",
+    "updated_at": "2026-10-26T03:55:00+00:00",
+    "threat_model": "docs/THREAT_MODEL.md"
+  },
+  "latest_reviewer_agreement_handoff": {
+    "status": "COMPLETED_BOUNDED",
+    "result": "reports/review-handoff-20261026/VERIFICATION.json",
+    "forms_remain_blank": true,
+    "independent_labels_created": 0,
+    "quality_target_95": "NOT_EVALUATED",
+    "release_readiness": "NOT_MET"
+  },
+  "latest_clean_packaging_20261026": {
+    "status": "IMPLEMENTED_BOUNDED",
+    "changes": [
+      "prune tmp/release-debug-restore during source/data inventory",
+      "exclude .uv-cache dependency cache",
+      "reject either path in release verification"
+    ],
+    "checks": [
+      "scripts/checkpoint.py and scripts/verify_release_archive.py py_compile",
+      "12,610-file manifest and 550 historical files passed for first clean build"
+    ],
+    "limit": "A final archive is rebuilt after this state update; the latest sibling verification JSON is authoritative for its hash. Restore application health did not return during bounded smoke observation."
+  },
+  "latest_dependency_consistency_20261026": {
+    "status": "COMPLETED_BOUNDED",
+    "python": "PASS: uv inspected 39 installed packages; all compatible",
+    "frontend": "PASS: npm ls --depth=0; direct dependency tree consistent",
+    "vulnerability_advisories": "NOT_VERIFIED",
+    "limitations": "Dependency compatibility is not a vulnerability scan; no security-free claim."
+  },
+  "requested_quality_targets": {
+    "target": 0.95,
+    "independent": "NOT_EVALUATED",
+    "dependent": "NOT_EVALUATED",
+    "overall": "NOT_EVALUATED",
+    "independent_labels": 0,
+    "release_readiness": "NOT_MET"
+  },
+  "target_copy_verification": {
+    "status": "PASS",
+    "created_at": "2026-10-26T14:41:09.867473+00:00",
+    "source": "C:\\Users\\Ankith\\Documents\\Codex\\2026-10-25\\master-execution-prompt-vigilant-complete-development\\work\\VIGILANT",
+    "destination": "C:\\Users\\Ankith\\Downloads\\vigilant project code",
+    "source_and_destination_files": 15126,
+    "file_path_and_size_mismatches": 0,
+    "code_and_document_files_sha256_verified": 7394,
+    "code_and_document_hash_mismatches": 0,
+    "excluded": [
+      ".runtime",
+      ".uv-cache",
+      ".pytest_cache",
+      ".cache",
+      "__pycache__",
+      "tmp",
+      "node_modules",
+      ".env",
+      "12 .git worktree-pointer files whose contents refer to stale /workspace/scratch paths"
+    ],
+    "runtime": {
+      "venv": "Copied; installed dependencies retained.",
+      "original_runtime": "Unchanged at the source checkout.",
+      "runtime_cache": "The source checkout's .runtime contains only the TEBench Git cache; it was not duplicated."
+    },
+    "target_focused_tests": {
+      "command": "rtk .venv/Scripts/python.exe -X utf8 -m pytest -q --basetemp=tmp/pytest-short-path-20261026 tests/test_test_evolution.py tests/test_lineage_observations.py::test_source_observations_retain_known_ambiguities[rename]",
+      "result": "7 passed"
+    },
+    "release_archive": {
+      "path": "C:\\Users\\Ankith\\Documents\\Codex\\2026-10-25\\master-execution-prompt-vigilant-complete-development\\outputs\\VIGILANT-project-20261026-95target.zip",
+      "sha256": "6c8b77842f834b2459b1b44e9dfd13ccfac223988b1bc7cad28a331ccf08dd26",
+      "manifest_files_verified": 26594,
+      "historical_files_verified": 550,
+      "status": "PASS"
+    },
+    "quality": "95% assurance gates remain NOT_EVALUATED; independent labels remain 0."
+  },
+  "latest_llm_diagnostic_improvement_20261026": {
+    "status": "IMPLEMENTED_NOT_SCIENTIFICALLY_VALIDATED",
+    "baseline": "saved Qwen3:8B diagnostic 4/12 (33.33%), authored correlated labels",
+    "inference_calls": 0,
+    "prepared_conditions": [
+      "E1",
+      "E2",
+      "E5",
+      "E6"
+    ],
+    "saved_development_retrieval_replay": {
+      "cases": 314,
+      "projects": 10,
+      "rrf_recall_at_10": 0.8511197047821251
+    },
+    "independent_labels": 0,
+    "quality_95": "NOT_MET / NOT_EVALUATED",
+    "files": [
+      "scripts/llm_ablation_harness.py",
+      "scripts/evaluate_local_models.py",
+      "tests/test_llm_ablation_harness.py",
+      "docs/RESEARCH_GUIDED_EXPERIMENTS.md",
+      "reports/llm-diagnostic-error-analysis/README.md",
+      "reports/llm-diagnostic-error-analysis/case-analysis.json",
+      "reports/llm-diagnostic-error-analysis/retrieval-baseline-audit.json",
+      "experiments/llm-ablation-20261026/plan.json",
+      "reports/llm-diagnostic-error-analysis/evidence-package-input-diagnostic.json"
+    ],
+    "local_model_preflight": "BLOCKED: WinError 10013 socket access denied; no model generation call",
+    "e2_input_diagnostic": {
+      "baseline_target_path_rows": 79,
+      "e2_target_path_rows": 80,
+      "cases_with_target_path_evidence": {
+        "baseline": 12,
+        "E2": 12
+      },
+      "status": "DESCRIPTIVE_ONLY_NOT_RELEVANCE_OR_QUALITY",
+      "report": "reports/llm-diagnostic-error-analysis/evidence-package-input-diagnostic.json"
+    },
+    "decision_contract_v2": "IMPLEMENTED: versioned v2 disposition/consistency separation; v1 compatibility retained; 14 focused contract/provider tests passed; no inference or accuracy gain"
+  },
+  "latest_llm_decision_contract_20261026": {
+    "status": "IMPLEMENTED",
+    "prompt_version": "paired-neutral-v4-orthogonal-decisions",
+    "legacy_schema_version": 1,
+    "modern_schema_version": 2,
+    "raw_model_confidence_preserved": true,
+    "calibration": "NOT_ESTABLISHED",
+    "focused_tests": "14 passed in 8.06 seconds",
+    "test_report": "reports/llm-diagnostic-error-analysis/schema-v2-focused.xml",
+    "broad_touched_path_tests": "INCOMPLETE; interrupted before summary",
+    "fresh_inference": "NOT_RUN",
+    "independent_labels": 0,
+    "quality_95": "NOT_MET / NOT_EVALUATED",
+    "files": [
+      "ingestion/models.py",
+      "llm/context.py",
+      "llm/providers.py",
+      "llm/omniroute.py",
+      "tests/test_pipeline.py",
+      "tests/test_local_models.py",
+      "tests/test_omniroute.py",
+      "tests/test_local_audit.py",
+      "tests/test_input_audit_hardening.py"
+    ]
+  },
+  "latest_v041_root_cause_repair_20261027": {
+    "status": "IMPLEMENTED_FOCUSED_TESTED",
+    "report": "reports/decision-contract-20261027/V041-root-cause-repair.md",
+    "focused_tests": "19 passed",
+    "raw_confidence_preserved": true,
+    "inference": "NOT_RUN",
+    "independent_labels": 0,
+    "quality_95": "NOT_MET / NOT_EVALUATED",
+    "release": "NOT MET"
+  },
+  "latest_v042_verification_20261027": {
+    "status": "FOCUSED_TESTED_SELECTED_INTEGRATION_TESTED",
+    "report": "reports/decision-contract-20261027/V042-verification.md",
+    "focused_tests": "26 passed",
+    "selected_pipeline_integration_tests": "32 passed; 1 existing warning",
+    "api_cli_mcp": "stalled/interrupted, not passed",
+    "full_suite": "not run",
+    "inference": "not run; executable/model assets unavailable",
+    "independent_labels": 0,
+    "quality_95": "NOT_ESTABLISHED",
+    "release": "NOT MET"
+  },
+  "latest_v043_confidence_threshold_audit_20261027": {
+    "status": "OFFLINE_REPLAY_FOCUSED_TESTED",
+    "report": "reports/confidence-threshold-20261027/V043-confidence-threshold-audit.md",
+    "production_threshold_changed": false,
+    "historical_4_of_12_preserved": true,
+    "errors_eliminated": {
+      "0.80": 0,
+      "0.95": 0
+    },
+    "inference": "not run",
+    "independent_labels": 0,
+    "research_acceptance_95": "NOT_ESTABLISHED"
+  },
+  "latest_v044_diagnostic_repairs_20261027": {
+    "status": "IMPLEMENTED_FOCUSED_TESTED_SELECTED_INTEGRATION_TESTED",
+    "report": "reports/diagnostic-improvements-20261027/V044-report.md",
+    "tests": "62 passed",
+    "original_4_of_12_preserved": true,
+    "fresh_inference": "not run",
+    "research_acceptance_95": "NOT_ESTABLISHED"
+  },
+  "latest_v045_frozen_replay_20261027": {
+    "status": "BLOCKED_FOR_INFERENCE",
+    "report": "reports/diagnostic-validation-20261027/V045-blocker-report.md",
+    "focused_tests": "62 passed",
+    "new_predictions": 0,
+    "historical_score": "4/12 unchanged",
+    "independent_labels": 0,
+    "research_acceptance_95": "NOT_ESTABLISHED"
+  },
+  "latest_verification": {
+    "id": "v047_maintenance_20261028",
+    "focused_tests": "13 passed, 0 failed/errors/skipped",
+    "full_suite": "513 passed, 3 failed, 0 errors/skipped",
+    "failure_cause": "Three WinError 1314 symlink privilege failures",
+    "diagnostic_replay": "11/12 authored regression only",
+    "inference": "NOT_RUN",
+    "independent_accuracy": "NOT_ESTABLISHED",
+    "95_percent_target": "NOT_ESTABLISHED",
+    "report": "reports/v047/V047_MAINTENANCE_FOLLOWUP-007.md"
   }
 }

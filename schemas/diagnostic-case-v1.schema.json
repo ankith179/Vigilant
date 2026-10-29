@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"vigilant-diagnostic-case-v1",
+  "type":"object","additionalProperties":false,
+  "required":["case_id","repository_id","base_revision","head_revision","artifact_hashes","evidence_packet","labels","review","adjudication_status","split"],
+  "properties":{
+    "case_id":{"type":"string","minLength":1},
+    "repository_id":{"type":"string","minLength":1},
+    "base_revision":{"type":"string","minLength":1},
+    "head_revision":{"type":"string","minLength":1},
+    "artifact_hashes":{"type":"array","items":{"type":"string","pattern":"^[0-9a-f]{64}$"}},
+    "evidence_packet":{"type":"string","minLength":1},
+    "labels":{"type":"object","additionalProperties":false,"required":["trace","consistency","test_obligation"],"properties":{
+      "trace":{"enum":["LINKED","BROKEN_TRACE","MISSING_TRACE","UNCERTAIN",null]},
+      "consistency":{"enum":["CONSISTENT","INCONSISTENT","POTENTIAL_INCONSISTENCY","NO_ASSURANCE_IMPACT","UNCERTAIN",null]},
+      "test_obligation":{"enum":["SATISFIED","UNSATISFIED","UNVERIFIED","NOT_APPLICABLE",null]} }},
+    "review":{"type":"object","additionalProperties":false,"required":["reviewer_id","rationale","timestamp"],"properties":{
+      "reviewer_id":{"type":["string","null"]},"rationale":{"type":["string","null"]},"timestamp":{"type":["string","null"]}}},
+    "adjudication_status":{"enum":["PENDING","IN_REVIEW","ADJUDICATED","UNRESOLVED"]},
+    "split":{"enum":["development","validation","test"],"description":"test assignments must be repository-disjoint from all development data"}
+  }
+}

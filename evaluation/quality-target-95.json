@@ -1,0 +1,26 @@
+{
+  "protocol": "vigilant-assurance-95-v2",
+  "target": 0.95,
+  "minimum_test_cases": 200,
+  "status": "DRAFT_NOT_FROZEN",
+  "training_repositories": [],
+  "validation_repositories": [],
+  "training_change_families": [],
+  "validation_change_families": [],
+  "frozen_pipeline_sha256": null,
+  "frozen_dataset_sha256": null,
+  "operational_checks_passed": null,
+  "requirements": [
+    "Two independent reviewer labels, adjudication and separate semantic citation review",
+    "Repository-family-disjoint training, validation and final test; record every tuning source before freezing",
+    "At least 200 reviewed real-change cases with exact base/head revisions and at least two consistency classes",
+    "Freeze dataset and pipeline fingerprints before running final test predictions",
+    "Bind every prediction to pipeline, repository and base/head revisions",
+    "Traceability precision, recall and F1 each >= 0.95",
+    "Impact precision, recall and F1 each >= 0.95",
+    "Consistency accuracy and macro-F1 each >= 0.95",
+    "Missing, invalid and abstained decisions stay in the denominator",
+    "No inference that observed scores establish a population lower bound",
+    "Report engineering tests and test-file retrieval separately from assurance correctness"
+  ]
+}

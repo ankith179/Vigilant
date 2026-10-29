@@ -1,0 +1,13 @@
+{
+  "status": "RUNNING",
+  "pid": 9980,
+  "started_epoch": 1793244071.0239887,
+  "deadline_seconds": 7200,
+  "command": [
+    "C:\\Users\\Ankith\\Downloads\\vigilant project code\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Ankith\\OneDrive\\Documents\\ChatGPT\\Vigilant ---2\\work\\v049_combined_snapshot_replay.py"
+  ],
+  "new_attempts_allowed": 0
+}

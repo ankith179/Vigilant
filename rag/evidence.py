@@ -1,8 +1,23 @@
 from ingestion.models import digest
-from retrieval.index import Index
+from retrieval.index import Index,RETRIEVAL_POLICY
 from knowledge_graph.graph import impact
 import re
-from collections import Counter
+from collections import Counter,OrderedDict
+from threading import Lock
+_INDEX_CACHE=OrderedDict()
+_INDEX_LOCK=Lock()
+
+def lexical_index(candidates):
+ key=digest(RETRIEVAL_POLICY,[(a["artifact_id"],a["commit_id"],a["content_hash"]) for a in candidates])
+ with _INDEX_LOCK:
+  if key in _INDEX_CACHE:
+   _INDEX_CACHE.move_to_end(key);return _INDEX_CACHE[key]
+ index=Index(candidates)
+ with _INDEX_LOCK:
+  _INDEX_CACHE[key]=index
+  while len(_INDEX_CACHE)>2:_INDEX_CACHE.popitem(last=False)
+ return index
+
 
 def evidence(a,method='source',score=1.,max_lines=None,focus_line=None):
  lines=a.content.splitlines();offset=0
@@ -10,7 +25,7 @@ def evidence(a,method='source',score=1.,max_lines=None,focus_line=None):
   if focus_line is not None:offset=max(0,min(len(lines)-max_lines,focus_line-a.start_line-max_lines//2))
   lines=lines[offset:offset+max_lines]
  start=a.start_line+offset;quote='\n'.join(lines);end=start+max(1,len(lines))-1
- return {'evidence_id':digest(a.artifact_id,a.commit_id,str(start),str(end),quote),'artifact_id':a.artifact_id,'repository':a.repository,'project_id':a.project_id,'file':a.file_path,'start_line':start,'end_line':end,'commit':a.commit_id,'commit_id':a.commit_id,'content_hash':a.content_hash,'quote':quote,'score':float(score),'retrieval_method':method}
+ return {'evidence_id':digest(a.artifact_id,a.commit_id,str(start),str(end),quote),'artifact_id':a.artifact_id,'repository':a.repository,'project_id':a.project_id,'file':a.file_path,'start_line':start,'end_line':end,'commit':a.commit_id,'commit_id':a.commit_id,'content_hash':a.content_hash,'quote':quote,'score':float(score),'retrieval_method':method,'revision':a.commit_id,'path':a.file_path,'extraction_method':method}
 
 def paired_versions(changes,before,after,max_pairs=4):
  """Choose bounded before/after windows around actual Git changes, never gold labels."""
@@ -32,8 +47,32 @@ def verify(items,artifacts):
  for e in items:
   a=by.get((e['artifact_id'],e['commit']))
   if a is None:errors.append('Missing version '+e['evidence_id']);continue
+  if (e.get('repository')!=a.repository or e.get('project_id')!=a.project_id or e.get('file')!=a.file_path or e.get('commit_id',e['commit'])!=a.commit_id or e['end_line']<e['start_line'] or e['evidence_id']!=digest(a.artifact_id,a.commit_id,str(e['start_line']),str(e['end_line']),e['quote'])):errors.append('Identity/scope mismatch '+e['evidence_id'])
   start=e['start_line']-a.start_line;end=e['end_line']-a.start_line+1;lines=a.content.splitlines()
   if start<0 or end>max(1,len(lines)) or '\n'.join(lines[start:end])!=e['quote'] or e['content_hash']!=a.content_hash:errors.append('Quote/range/hash mismatch '+e['evidence_id'])
+ return errors
+
+
+def verify_git(items,artifacts,repo):
+ """Re-read immutable Git source independently of the stored artifact."""
+ from ingestion.git import git,revision
+ errors=verify(items,artifacts);cache={};by={(a.artifact_id,a.commit_id):a for a in artifacts};checked=set()
+ for e in items:
+  key=e['commit'],e['file']
+  try:
+   if key not in cache:
+    if revision(repo,e['commit'])!=e['commit']:raise ValueError('Expected immutable commit SHA')
+    raw=git(repo,'show',e['commit']+':'+e['file'],binary=True)
+    try:text=raw.decode('utf-8-sig')
+    except UnicodeDecodeError:text=raw.decode('cp1252',errors='replace')
+    cache[key]=text.splitlines()
+   lines=cache[key]
+   a=by.get((e['artifact_id'],e['commit']))
+   if a and (a.artifact_id,a.commit_id) not in checked:
+    checked.add((a.artifact_id,a.commit_id))
+    if a.content.splitlines()!=lines[a.start_line-1:a.end_line]:errors.append('Git blob artifact content mismatch '+e['evidence_id'])
+   if e['start_line']<1 or e['end_line']>max(1,len(lines)) or '\n'.join(lines[e['start_line']-1:e['end_line']])!=e['quote']:errors.append('Git blob quote mismatch '+e['evidence_id'])
+  except Exception as exc:errors.append('Git blob unavailable '+e['evidence_id']+': '+type(exc).__name__)
  return errors
 
 
@@ -49,7 +88,7 @@ def balanced_change_context(changes,before,after,edges=(),max_lines=30):
  terms=Counter(re.findall(r'[A-Za-z_][A-Za-z_0-9]{2,}', ' '.join(
   line[1:] for f in changes['files'] for line in f.get('patch','').splitlines()
   if line.startswith(('+','-')) and not line.startswith(('+++','---')))))
- for word in ('def','return','assert','self','None','True','False','import','from','const','the','and','with','include','Controlled','benchmark','change'):
+ for word in ('def','return','assert','self','None','True','False','import','from','const','the','and','with','include'):
   terms.pop(word,None)
  neighbors=set()
  for edge in edges:
@@ -106,7 +145,7 @@ def balanced_change_context(changes,before,after,edges=(),max_lines=30):
   add(a,kind,pair)
  errors=verify(result,before+after)
  if errors:raise ValueError(errors)
- return result,{'policy':'balanced-change-context-v1','candidate_role_excerpts':coverage,
+ return result,{'policy':'balanced-change-context-v2','candidate_role_excerpts':coverage,
                 'missing_roles':[r for r,n in coverage.items() if not n],
                 'changed_hunks_considered':hunks,'semantic_sufficiency':'UNREVIEWED',
                 'limitations':['At most four changed hunks and one additional candidate per role.',
@@ -115,14 +154,15 @@ def balanced_change_context(changes,before,after,edges=(),max_lines=30):
 def retrieve(query,artifacts,graph=None,seeds=(),encoder=None,k=8,max_chars=8000):
  by={a.artifact_id:a for a in artifacts};candidates=[a.model_dump() for a in artifacts if a.content.strip() and a.artifact_type!='configuration']
  if not candidates:return []
- index=Index(candidates,encoder);found={}
- for hit in index.search(query,'hybrid' if encoder else 'bm25',k):found[hit['artifact_id']]=evidence(by[hit['artifact_id']],hit['retrieval_method'],hit['score'],24)
+ index=Index(candidates,encoder) if encoder else lexical_index(candidates);found={}
+ for rank,hit in enumerate(index.search(query,'hybrid' if encoder else 'bm25',k),1):
+  if hit['score']>0:found[hit['artifact_id']]={**evidence(by[hit['artifact_id']],hit['retrieval_method'],hit['score'],24),'selection_rank':rank,'selection_arm':'retrieval'}
  if graph is not None:
-  for aid,path in sorted(impact(graph,seeds,2).items(),key=lambda x:(len(x[1]),x[0]))[:k]:
-   if aid in by:found[aid]={**evidence(by[aid],'graph',1/len(path),24),'graph_path':path}
- for seed in seeds:
-  if seed in by:found[seed]=evidence(by[seed],'changed-artifact',1.,24)
+  for rank,(aid,path) in enumerate(sorted(impact(graph,seeds,2).items(),key=lambda x:(len(x[1]),x[0]))[:k],1):
+   if aid in by:found[aid]={**evidence(by[aid],'graph',1/len(path),24),'graph_path':path,'selection_rank':min(rank,found.get(aid,{}).get('selection_rank',rank)),'selection_arm':'graph'}
+ for seed in sorted(seeds):
+  if seed in by:found[seed]={**evidence(by[seed],'changed-artifact',1.,24),'selection_rank':0,'selection_arm':'changed'}
  result=[]
- for e in sorted(found.values(),key=lambda e:(e['artifact_id'] not in seeds,-e['score'],e['evidence_id'])):
+ for e in sorted(found.values(),key=lambda e:(e['selection_rank'],e['selection_arm'],e['evidence_id'])):
   if sum(len(x['quote']) for x in result)+len(e['quote'])<=max_chars:result.append(e)
  return result

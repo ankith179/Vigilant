@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL_RUN_SNAPSHOT",
+  "completed_cases_at_snapshot": 9,
+  "total_cases": 12,
+  "score": "NOT_MEASURED",
+  "independent_evaluation": "NOT_ESTABLISHED",
+  "historical_case_analysis_sha256": "c29b442b72950e4f8a8721c843a1ba40caf4a0dd32e51941fc64715d2a20a864"
+}

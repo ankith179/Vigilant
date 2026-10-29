@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param([switch]$DownloadModels, [string[]]$Models=@('qwen3:8b','qwen2.5-coder:14b','qwen3:14b'),
- [string]$Output='experiments/local-model-comparison/windows-20261021')
+ [string]$Output='experiments/local-model-comparison/citation-fix-20261021')
 $ErrorActionPreference='Stop'
 $env:PYTHONUTF8='1'
 Set-Location -LiteralPath $PSScriptRoot
