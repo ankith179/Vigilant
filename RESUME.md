@@ -1,3 +1,19 @@
+# GitHub import repair — 4 November 2026
+
+Restored eight omitted investigation source files from the local continuation
+folder; all eight raw SHA-256 hashes match the tracked PACKAGE-MANIFEST.json.
+Added investigation to setuptools package discovery. All 544 tests collect;
+API/MCP imports, package discovery and the MCP subprocess smoke test pass.
+See reports/github-import-repair-20261104/VERIFICATION.md and the repair PR for
+focused execution results and remaining validation limits. Linux CI must run
+on the proposed tree before release readiness can be assessed. Independent
+accuracy remains unestablished. Do not rerun historical inference.
+
+Separate existing wheel blocker: requirements.txt contains a pip -r directive
+that setuptools cannot parse as dynamic dependency metadata.
+
+---
+
 # Latest continuation - 28 October 2026, V047 maintenance 007
 
 Focused suite: 13 passed, 0 failed/errors/skipped. Full suite: 513 passed, 3 failed, 0 errors/skipped; all three failures are WinError 1314 symlink privilege failures before assertions. See reports/v047/V047_MAINTENANCE_FOLLOWUP-007.md.

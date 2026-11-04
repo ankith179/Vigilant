@@ -1,7 +1,18 @@
 {
   "project": "VIGILANT",
   "version": 1,
-  "updated_at": "2026-10-28T00:00:00+05:30",
+  "updated_at": "2026-11-04T00:00:00+05:30",
+  "github_import_repair_20261104": {
+    "status": "PREPARED_FOR_REVIEW",
+    "base_commit": "f699de8388c2213e7b0b55b384aa63d83cd500ba",
+    "restored_source_files": 8,
+    "source_provenance": "All eight raw SHA-256 hashes match tracked PACKAGE-MANIFEST.json",
+    "collection": "544 tests collected successfully",
+    "mcp_subprocess_smoke": "PASSED",
+    "verification": "reports/github-import-repair-20261104/VERIFICATION.md",
+    "linux_ci": "REQUIRED_ON_PROPOSED_TREE",
+    "independent_accuracy": "NOT_ESTABLISHED"
+  },
   "requested_destination": "C:\\Users\\Ankith\\Downloads\\vigilant project code",
   "automation_id": "6ac5074cf11881918f2f9e8db081c398",
   "automation_cadence": "hourly continuation check, not an exact quota-reset trigger",
